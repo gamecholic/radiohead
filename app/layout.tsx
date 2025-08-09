@@ -28,10 +28,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen text-foreground bg-background-gradient`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-[100dvh] text-foreground bg-background-gradient`}
       >
         <AudioProvider>
-          <div className="flex min-h-screen max-h-screen flex-col">
+          <div className="flex min-h-[100dvh] max-h-[100dvh] flex-col">
             <div className="flex flex-1 overflow-hidden">
               <Sidebar />
 

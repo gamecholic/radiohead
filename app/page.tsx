@@ -53,7 +53,7 @@ export default function Home() {
   // Render loading state while data is being fetched
   if (categories.length === 0 || Object.keys(stationsByCategory).length === 0) {
     return (
-      <div className="flex flex-col h-screen">
+      <div className="flex flex-col h-[100dvh]">
         <Header onMobileMenuOpen={() => setIsMobileMenuOpen(true)} />
         <div className="flex-1 flex items-center justify-center">
           <p>Loading...</p>
@@ -67,7 +67,7 @@ export default function Home() {
   }
 
   return (
-    <div className="flex flex-col h-screen">
+    <div className="flex flex-col h-[100dvh]">
       <Header onMobileMenuOpen={() => setIsMobileMenuOpen(true)} />
 
       {/* Main Content Area - This should take remaining space */}

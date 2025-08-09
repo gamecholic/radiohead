@@ -6,7 +6,7 @@ export async function Sidebar() {
   const radioGroups = await getRadioGroupsWithSlugs();
 
   return (
-    <aside className="hidden w-64 max-h-screen flex-col border-r border-gray-800 bg-black/30 backdrop-blur-md md:flex">
+    <aside className="hidden w-64 max-h-[100dvh] flex-col border-r border-gray-800 bg-black/30 backdrop-blur-md md:flex">
       <div className="p-6">
         <h1 className="text-2xl font-bold text-white">RadioHead</h1>
       </div>
