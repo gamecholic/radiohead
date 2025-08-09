@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { StationCard } from './station-card';
+import { useAudio } from '@/contexts/AudioContext';
 
 interface Station {
   stationName: string;
@@ -16,12 +17,10 @@ interface Station {
 interface CarouselProps {
   title: string;
   stations: Station[];
-  onPlay: (stationId: string) => void;
-  currentStation: string | null;
-  isPlaying: boolean;
 }
 
-export function Carousel({ title, stations, onPlay, currentStation, isPlaying }: CarouselProps) {
+export function Carousel({ title, stations }: CarouselProps) {
+  const { isPlaying, currentStation, togglePlay } = useAudio();
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
@@ -108,9 +107,9 @@ export function Carousel({ title, stations, onPlay, currentStation, isPlaying }:
             <div key={station.stationName} className="flex-shrink-0">
               <StationCard
                 station={station}
-                onPlay={onPlay}
-                isPlaying={currentStation === station.stationName && isPlaying}
-                isActive={currentStation === station.stationName}
+                onPlay={togglePlay}
+                isPlaying={currentStation?.stationName === station.stationName && isPlaying}
+                isActive={currentStation?.stationName === station.stationName}
               />
             </div>
           ))}

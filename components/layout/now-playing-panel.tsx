@@ -3,30 +3,11 @@
 import { Play, Pause, Volume2, SkipBack, SkipForward } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { StationIcon } from '@/components/station-icon';
+import { useAudio } from '@/contexts/AudioContext';
 
-interface Station {
-  stationName: string;
-  stationIconUrl: string;
-  stationCategories: string[];
-  stationPlaybackUrl: string;
-  radioGroups: string[];
-}
+export function NowPlayingPanel() {
+  const { currentStation, isPlaying, volume, togglePlay, setVolume } = useAudio();
 
-interface NowPlayingPanelProps {
-  currentStation: Station | null;
-  isPlaying: boolean;
-  volume: number;
-  onTogglePlay: (stationId: string) => void;
-  onVolumeChange: (volume: number) => void;
-}
-
-export function NowPlayingPanel({ 
-  currentStation, 
-  isPlaying, 
-  volume, 
-  onTogglePlay, 
-  onVolumeChange 
-}: NowPlayingPanelProps) {
   if (!currentStation) return null;
 
   return (
@@ -53,7 +34,7 @@ export function NowPlayingPanel({
             <Button
               className="h-10 w-10 rounded-full bg-hero-gradient hover:opacity-90"
               size="icon"
-              onClick={() => onTogglePlay(currentStation.stationName)}
+              onClick={() => togglePlay(currentStation)}
             >
               {isPlaying ? (
                 <Pause className="h-5 w-5" />
@@ -72,7 +53,7 @@ export function NowPlayingPanel({
               min="0"
               max="100"
               value={volume}
-              onChange={(e) => onVolumeChange(Number(e.target.value))}
+              onChange={(e) => setVolume(Number(e.target.value))}
               className="w-24"
             />
           </div>

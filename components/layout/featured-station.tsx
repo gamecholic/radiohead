@@ -2,6 +2,7 @@
 
 import { Button } from '@/components/ui/button';
 import { StationIcon } from '@/components/station-icon';
+import { useAudio } from '@/contexts/AudioContext';
 
 interface Station {
   stationName: string;
@@ -13,10 +14,11 @@ interface Station {
 
 interface FeaturedStationProps {
   station: Station;
-  onListenNow: () => void;
 }
 
-export function FeaturedStation({ station, onListenNow }: FeaturedStationProps) {
+export function FeaturedStation({ station }: FeaturedStationProps) {
+  const { togglePlay } = useAudio();
+
   if (!station) return null;
 
   return (
@@ -37,7 +39,7 @@ export function FeaturedStation({ station, onListenNow }: FeaturedStationProps) 
           <Button 
             className="mt-2 bg-primary-gradient text-white hover:opacity-90" 
             size="sm" 
-            onClick={onListenNow}
+            onClick={() => togglePlay(station)}
           >
             Listen Now
           </Button>

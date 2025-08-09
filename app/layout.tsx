@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Sidebar } from "@/components/layout";
+import { AudioProvider } from "@/contexts/AudioContext";
+import { NowPlayingPanel } from "@/components/layout/now-playing-panel";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,16 +30,19 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen text-foreground bg-background-gradient`}
       >
-        <div className="flex min-h-screen max-h-screen flex-col">
-          <div className="flex flex-1 overflow-hidden">
-            <Sidebar />
+        <AudioProvider>
+          <div className="flex min-h-screen max-h-screen flex-col">
+            <div className="flex flex-1 overflow-hidden">
+              <Sidebar />
 
-            {/* Main Content */}
-            <main className="flex-1 flex flex-col overflow-hidden">
-              {children}
-            </main>
+              {/* Main Content */}
+              <main className="flex-1 flex flex-col overflow-hidden relative">
+                {children}
+                <NowPlayingPanel />
+              </main>
+            </div>
           </div>
-        </div>
+        </AudioProvider>
       </body>
     </html>
   );

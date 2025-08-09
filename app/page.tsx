@@ -1,13 +1,7 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
-import {
-  Header,
-  Sidebar,
-  NowPlayingPanel,
-  MobileMenu,
-  FeaturedStation,
-} from "@/components/layout";
+import { useState, useEffect } from "react";
+import { Header, MobileMenu, FeaturedStation } from "@/components/layout";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Carousel } from "@/components/carousel";
 import {
@@ -15,18 +9,16 @@ import {
   getStationsByCategory,
   getFeaturedStations,
 } from "@/lib/api";
+import { useAudio } from "@/contexts/AudioContext";
 
 export default function Home() {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [currentStation, setCurrentStation] = useState<string | null>(null);
-  const [volume, setVolume] = useState(80);
+  const { isPlaying, currentStation, togglePlay } = useAudio();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [categories, setCategories] = useState<string[]>([]);
   const [stationsByCategory, setStationsByCategory] = useState<
     Record<string, any[]>
   >({});
   const [featuredStations, setFeaturedStations] = useState<any[]>([]);
-  const audioRef = useRef<HTMLAudioElement | null>(null);
 
   // Fetch data on component mount
   useEffect(() => {
@@ -57,27 +49,6 @@ export default function Home() {
 
   const featuredStation = featuredStations[0] || null;
 
-  const togglePlay = (stationId: string) => {
-    if (currentStation === stationId && isPlaying) {
-      setIsPlaying(false);
-    } else {
-      setCurrentStation(stationId);
-      setIsPlaying(true);
-    }
-  };
-
-  const handleListenNow = () => {
-    if (featuredStation) {
-      togglePlay(featuredStation.stationName);
-    }
-  };
-
-  const getStationById = (id: string) => {
-    // Flatten all stations from all categories
-    const allStations = Object.values(stationsByCategory).flat();
-    return allStations.find((station) => station.stationName === id) || null;
-  };
-
   // Render loading state while data is being fetched
   if (categories.length === 0 || Object.keys(stationsByCategory).length === 0) {
     return (
@@ -90,7 +61,6 @@ export default function Home() {
           isOpen={isMobileMenuOpen}
           onClose={() => setIsMobileMenuOpen(false)}
         />
-        <audio ref={audioRef} />
       </div>
     );
   }
@@ -104,10 +74,7 @@ export default function Home() {
         <ScrollArea className="flex-1 h-full">
           <div className="w-full max-w-6xl mx-auto p-4 md:p-6">
             {/* Hero Featured Station */}
-            <FeaturedStation
-              station={featuredStation}
-              onListenNow={handleListenNow}
-            />
+            <FeaturedStation station={featuredStation} />
 
             {/* Netflix-style Carousels */}
             <section className="w-full">
@@ -118,23 +85,11 @@ export default function Home() {
                     key={category}
                     title={category}
                     stations={stationsByCategory[category] || []}
-                    onPlay={togglePlay}
-                    currentStation={currentStation}
-                    isPlaying={isPlaying}
                   />
                 ))}
             </section>
           </div>
         </ScrollArea>
-
-        {/* Now Playing Dock */}
-        <NowPlayingPanel
-          currentStation={getStationById(currentStation || "")}
-          isPlaying={isPlaying}
-          volume={volume}
-          onTogglePlay={togglePlay}
-          onVolumeChange={setVolume}
-        />
       </div>
 
       {/* Mobile Menu Overlay */}
@@ -142,9 +97,6 @@ export default function Home() {
         isOpen={isMobileMenuOpen}
         onClose={() => setIsMobileMenuOpen(false)}
       />
-
-      {/* Audio element (hidden) */}
-      <audio ref={audioRef} />
     </div>
   );
 }

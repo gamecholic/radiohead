@@ -28,7 +28,7 @@ export const getStationsByCategory = async (category: string) => {
 
 export const getStationsByGroup = async (groupName: string) => {
   return radioStations.filter(station => 
-    station.radioGroups.some(group => 
+    station.radioGroups.some((group: string | { groupName: string }) => 
       typeof group === 'string' ? group === groupName : group.groupName === groupName
     )
   );

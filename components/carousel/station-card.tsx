@@ -12,7 +12,7 @@ interface Station {
 
 interface StationCardProps {
   station: Station;
-  onPlay: (stationId: string) => void;
+  onPlay: (station: Station) => void;
   isPlaying: boolean;
   isActive: boolean;
 }
@@ -23,7 +23,7 @@ export function StationCard({ station, onPlay, isPlaying, isActive }: StationCar
       className={`group relative flex w-48 flex-row items-center rounded-xl bg-white/5 p-3 backdrop-blur-md transition-all hover:bg-white/10 hover:cursor-pointer md:w-56 ${
         isActive ? 'ring-hero-gradient bg-white/10' : ''
       }`}
-      onClick={() => onPlay(station.stationName)}
+      onClick={() => onPlay(station)}
     >
       {/* Station image container with fixed aspect ratio */}
       <div className="mr-3">
