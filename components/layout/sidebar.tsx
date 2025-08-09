@@ -13,9 +13,9 @@ export async function Sidebar() {
       <nav className="px-4 py-2">
         {[
           { name: "Home", href: "/" },
-          { name: "Browse", href: "/browse" },
-          { name: "Library", href: "/library" },
-          { name: "Favorites", href: "/favorites" },
+          { name: "Browse", href: "/" },
+          { name: "Library", href: "/" },
+          { name: "Favorites", href: "/" },
         ].map((item) => (
           <Link
             key={item.name}

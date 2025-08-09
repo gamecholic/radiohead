@@ -1,12 +1,20 @@
-'use client';
+"use client";
 
-import { Play, Pause, Volume2, SkipBack, SkipForward } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { StationIcon } from '@/components/station-icon';
-import { useAudio } from '@/contexts/AudioContext';
+import { Play, Pause, Volume2, SkipBack, SkipForward } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Slider } from "@/components/ui/slider";
+import { StationIcon } from "@/components/station-icon";
+import { useAudio } from "@/contexts/AudioContext";
 
 export function NowPlayingPanel() {
-  const { currentStation, isPlaying, volume, togglePlay, setVolume } = useAudio();
+  const {
+    currentStation,
+    isPlaying,
+    volume,
+    togglePlay,
+    setVolume,
+    updateVolume,
+  } = useAudio();
 
   if (!currentStation) return null;
 
@@ -15,7 +23,7 @@ export function NowPlayingPanel() {
       <div className="w-full max-w-6xl mx-auto">
         <div className="flex items-center justify-between p-4">
           <div className="flex items-center space-x-4">
-            <StationIcon 
+            <StationIcon
               stationIconUrl={currentStation.stationIconUrl}
               stationName={currentStation.stationName}
               size="sm"
@@ -23,7 +31,7 @@ export function NowPlayingPanel() {
             <div>
               <h3 className="font-semibold">{currentStation.stationName}</h3>
               <p className="text-sm text-white/70">
-                {currentStation.radioGroups[0] || 'Radio Station'}
+                {currentStation.radioGroups[0] || "Radio Station"}
               </p>
             </div>
           </div>
@@ -48,12 +56,12 @@ export function NowPlayingPanel() {
           </div>
           <div className="hidden items-center space-x-2 md:flex">
             <Volume2 className="h-5 w-5" />
-            <input
-              type="range"
-              min="0"
-              max="100"
-              value={volume}
-              onChange={(e) => setVolume(Number(e.target.value))}
+            <Slider
+              value={[volume]}
+              onValueChange={([newVolume]) => updateVolume(newVolume)}
+              onValueCommit={([newVolume]) => setVolume(newVolume)}
+              max={100}
+              step={1}
               className="w-24"
             />
           </div>
