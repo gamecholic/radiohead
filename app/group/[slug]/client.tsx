@@ -20,21 +20,23 @@ export function GroupPageClient({ group, stations }: { group: RadioGroup, statio
         </div>
         
         {/* Stations grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-[repeat(auto-fill,minmax(280px,1fr))] gap-4 sm:gap-6">
           {stations.map((station: RadioStation) => (
             <div 
               key={station.stationName} 
-              className="group relative flex flex-col rounded-xl bg-white/5 p-4 backdrop-blur-md transition-all hover:bg-white/10 hover:cursor-pointer border border-white/10"
+              className={`group relative flex flex-col rounded-xl bg-white/5 p-3 sm:p-4 backdrop-blur-md transition-all hover:bg-white/10 hover:cursor-pointer border border-white/10 ${
+                currentStation?.stationName === station.stationName && isPlaying ? 'ring-hero-gradient bg-white/10' : ''
+              }`}
             >
               <div className="flex items-center">
                 <StationIcon 
                   stationIconUrl={station.stationIconUrl}
                   stationName={station.stationName}
-                  size="md"
+                  size="sm"
                 />
-                <div className="ml-4 overflow-hidden flex-1">
-                  <h2 className="truncate text-lg font-semibold text-white">{station.stationName}</h2>
-                  <p className="truncate text-sm text-white/80">{station.stationCity}</p>
+                <div className="ml-3 sm:ml-4 overflow-hidden flex-1 min-w-0">
+                  <h2 className="truncate text-base sm:text-lg font-semibold text-white">{station.stationName}</h2>
+                  <p className="truncate text-xs sm:text-sm text-white/80">{station.stationCity}</p>
                   <div className="mt-1">
                     <span className="rounded bg-white/10 px-1.5 py-0.5 text-xs">
                       {station.stationCategories[0] || 'Music'}
@@ -42,9 +44,12 @@ export function GroupPageClient({ group, stations }: { group: RadioGroup, statio
                   </div>
                 </div>
                 <Button
-                  className="h-8 w-8 rounded-full bg-hero-gradient hover:opacity-90 ml-2"
+                  className="h-8 w-8 rounded-full bg-hero-gradient hover:opacity-90 ml-2 flex-shrink-0"
                   size="icon"
-                  onClick={() => togglePlay(station)}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    togglePlay(station);
+                  }}
                 >
                   {currentStation?.stationName === station.stationName && isPlaying ? (
                     <Pause className="h-4 w-4" />
