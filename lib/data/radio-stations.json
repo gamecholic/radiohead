@@ -1,0 +1,212 @@
+[
+  {
+    "stationName": "Power Türk",
+    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/power-turk-dinle.png",
+    "stationCategories": ["Pop"],
+    "stationPlaybackUrl": "https://live.powerapp.com.tr/powerturk/mpeg/icecast.audio?/;stream.mp3",
+    "radioGroups": ["Power App"]
+  },
+  {
+    "stationName": "Süper FM",
+    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/super-fm-dinle.jpg",
+    "stationCategories": ["Pop"],
+    "stationPlaybackUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/SUPER_FM128AAC.aac?",
+    "radioGroups": ["Show & Viva"]
+  },
+  {
+    "stationName": "Joy Türk",
+    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/joy-turk-dinle.jpg",
+    "stationCategories": ["Pop"],
+    "stationPlaybackUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/JOY_TURK128AAC.aac?",
+    "radioGroups": ["Pal Group"]
+  },
+  {
+    "stationName": "Slow Türk",
+    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/slow-turk-dinle.jpg",
+    "stationCategories": ["Slow"],
+    "stationPlaybackUrl": "https://radyo.duhnet.tv/ak_dtvh_slowturk?",
+    "radioGroups": ["Pal Group"]
+  },
+  {
+    "stationName": "Radyo Fenomen",
+    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-fenomen.jpg",
+    "stationCategories": ["Pop"],
+    "stationPlaybackUrl": "https://live.radyofenomen.com/fenomen/128/icecast.audio?",
+    "radioGroups": ["Karnaval"]
+  },
+  {
+    "stationName": "Kral FM",
+    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/kral-fm-dinle.jpg",
+    "stationCategories": ["Pop"],
+    "stationPlaybackUrl": "https://kralicekralradyo.akamaized.net/;?/;stream.mp3",
+    "radioGroups": ["Number One"]
+  },
+  {
+    "stationName": "Kral Pop",
+    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/kral-pop-dinle.png",
+    "stationCategories": ["Pop"],
+    "stationPlaybackUrl": "https://kralpophls.radyotvonline.net/;",
+    "radioGroups": ["Number One"]
+  },
+  {
+    "stationName": "Number One FM",
+    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/number-one-fm.jpg",
+    "stationCategories": ["Pop"],
+    "stationPlaybackUrl": "https://n101.radyotvonline.com/;",
+    "radioGroups": ["Number One"]
+  },
+  {
+    "stationName": "Alem FM",
+    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/alem-fm.jpg",
+    "stationCategories": ["Pop"],
+    "stationPlaybackUrl": "https://turkmedya.radyotvonline.net/alemfmaac?",
+    "radioGroups": ["Pal Group"]
+  },
+  {
+    "stationName": "Show Radyo",
+    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/show-radyo.jpg",
+    "stationCategories": ["Pop"],
+    "stationPlaybackUrl": "https://showradyo.radyotvonline.net/showradyo?/;stream.mp3",
+    "radioGroups": ["Show & Viva"]
+  },
+  {
+    "stationName": "Metro FM",
+    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/metro-fm.jpg",
+    "stationCategories": ["Yabancı Müzik"],
+    "stationPlaybackUrl": "https://radiometro.radyotvonline.net/metro?/;stream.mp3",
+    "radioGroups": ["Karnaval"]
+  },
+  {
+    "stationName": "Virgin Radio",
+    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/virgin-radio.jpg",
+    "stationCategories": ["Yabancı Müzik"],
+    "stationPlaybackUrl": "https://101.radyotvonline.com/;",
+    "radioGroups": ["Karnaval"]
+  },
+  {
+    "stationName": "Kiss FM",
+    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/kiss-fm.jpg",
+    "stationCategories": ["Yabancı Müzik"],
+    "stationPlaybackUrl": "https://kissfm.radyotvonline.net/;",
+    "radioGroups": ["Number One"]
+  },
+  {
+    "stationName": "Radyo D",
+    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-d-dinle.png",
+    "stationCategories": ["Haber ve Spor"],
+    "stationPlaybackUrl": "https://radyod.radyotvonline.net/;",
+    "radioGroups": ["Radyo Home"]
+  },
+  {
+    "stationName": "CNN Türk Radyo",
+    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/cnn-turk-dinle.jpg",
+    "stationCategories": ["Haber ve Spor"],
+    "stationPlaybackUrl": "https://radyocnn.radyotvonline.net/;",
+    "radioGroups": ["Karnaval"]
+  },
+  {
+    "stationName": "Radyo Spor",
+    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-spor.jpg",
+    "stationCategories": ["Haber ve Spor"],
+    "stationPlaybackUrl": "https://radyospor.radyotvonline.net/;",
+    "radioGroups": ["Radyo Home"]
+  },
+  {
+    "stationName": "Power FM",
+    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/Power-Fm.png",
+    "stationCategories": ["Rap ve Rock"],
+    "stationPlaybackUrl": "https://live.powerapp.com.tr/powerfm/mpeg/icecast.audio?/;stream.mp3",
+    "radioGroups": ["Power App"]
+  },
+  {
+    "stationName": "Power Love",
+    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/power-love.jpg",
+    "stationCategories": ["Slow"],
+    "stationPlaybackUrl": "https://live.powerapp.com.tr/powerlove/mpeg/icecast.audio?/;stream.mp3",
+    "radioGroups": ["Power App"]
+  },
+  {
+    "stationName": "Best FM",
+    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/best-fm-dinle-100x100.png",
+    "stationCategories": ["Arabesk"],
+    "stationPlaybackUrl": "https://radyo.duhnet.tv/ak_dtvh_bestfm?",
+    "radioGroups": ["Pal Group"]
+  },
+  {
+    "stationName": "Efkar FM",
+    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/efkar-fm.jpg",
+    "stationCategories": ["Arabesk"],
+    "stationPlaybackUrl": "https://radyo.duhnet.tv/ak_dtvh_efkarfm?",
+    "radioGroups": ["Radyo Home"]
+  },
+  {
+    "stationName": "Aşk FM",
+    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/ask-fm.jpg",
+    "stationCategories": ["Slow"],
+    "stationPlaybackUrl": "https://radyo.duhnet.tv/ak_dtvh_askfm?",
+    "radioGroups": ["Radyo Home"]
+  },
+  {
+    "stationName": "Slow 7",
+    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/slow-7.jpg",
+    "stationCategories": ["Slow"],
+    "stationPlaybackUrl": "https://radyo.duhnet.tv/ak_dtvh_slow7?",
+    "radioGroups": ["Number One"]
+  },
+  {
+    "stationName": "Kafa Radyo",
+    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/kafa-radyo.jpg",
+    "stationCategories": ["Rap ve Rock"],
+    "stationPlaybackUrl": "https://radyo.duhnet.tv/ak_dtvh_kafaradyo?",
+    "radioGroups": ["Radyo Home"]
+  },
+  {
+    "stationName": "Radyo 7",
+    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-7.jpg",
+    "stationCategories": ["Pop"],
+    "stationPlaybackUrl": "https://radyo7icecast.radyotvonline.net/radyo7?",
+    "radioGroups": ["Number One"]
+  },
+  {
+    "stationName": "Diyanet Radyo",
+    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/Diyanet-Radyo-100x100.jpg",
+    "stationCategories": ["İslami"],
+    "stationPlaybackUrl": "https://radyo.duhnet.tv/ak_dtvh_diyanetradyo?",
+    "radioGroups": ["Radyo Home"]
+  },
+  {
+    "stationName": "Pal FM",
+    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-pal-fm.jpg",
+    "stationCategories": ["Pop"],
+    "stationPlaybackUrl": "https://radyopal.radyotvonline.net/;",
+    "radioGroups": ["Pal Group"]
+  },
+  {
+    "stationName": "Pal Nostalji",
+    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/pal-nostalji-radyo.jpg",
+    "stationCategories": ["Diğer"],
+    "stationPlaybackUrl": "https://radyopalnostalji.radyotvonline.net/;",
+    "radioGroups": ["Pal Group"]
+  },
+  {
+    "stationName": "Pal Doğa",
+    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/pal-doga-radyo.jpg",
+    "stationCategories": ["Klasik Müzik"],
+    "stationPlaybackUrl": "https://radyopaldoga.radyotvonline.net/;",
+    "radioGroups": ["Pal Group"]
+  },
+  {
+    "stationName": "Number One Türk",
+    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/number-one-turk-fm.jpg",
+    "stationCategories": ["Pop"],
+    "stationPlaybackUrl": "https://n101.radyotvonline.com/;",
+    "radioGroups": ["Number One"]
+  },
+  {
+    "stationName": "Baba Radyo",
+    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/babaradyo-100x100.jpg",
+    "stationCategories": ["Pop"],
+    "stationPlaybackUrl": "https://babaradyo.radyotvonline.net/;",
+    "radioGroups": ["Radyo Home"]
+  }
+]
