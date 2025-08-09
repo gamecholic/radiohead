@@ -10,6 +10,7 @@ import {
   ListMusic,
   Radio,
   Star,
+  MoreVertical,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
@@ -67,7 +68,8 @@ export function NowPlayingPanel() {
   return (
     <div className="border-t border-gray-800 bg-black/20 backdrop-blur-md absolute bottom-0 left-0 right-0 z-50">
       <div className="w-full max-w-6xl mx-auto">
-        <div className="flex items-center justify-between p-4">
+        {/* Desktop view */}
+        <div className="hidden md:flex items-center justify-between p-4">
           <div className="flex items-center space-x-4 w-1/3">
             <StationIcon
               stationIconUrl={currentStation.stationIconUrl}
@@ -178,7 +180,7 @@ export function NowPlayingPanel() {
               </DropdownMenuContent>
             </DropdownMenu>
           </div>
-          <div className="hidden items-center space-x-2 md:flex w-1/3 justify-end">
+          <div className="flex items-center space-x-2 w-1/3 justify-end">
             <Button
               variant="ghost"
               size="icon"
@@ -199,6 +201,149 @@ export function NowPlayingPanel() {
               step={1}
               className="w-24"
             />
+          </div>
+        </div>
+
+        {/* Mobile view */}
+        <div className="flex md:hidden items-center justify-between p-3">
+          <div className="flex items-center space-x-3 w-1/2">
+            <StationIcon
+              stationIconUrl={currentStation.stationIconUrl}
+              stationName={currentStation.stationName}
+              size="xxs"
+            />
+            <div className="min-w-0">
+              <h3 className="font-semibold text-sm truncate">
+                {currentStation.stationName}
+              </h3>
+              <p className="text-xs text-white/70 truncate">
+                {currentStation.radioGroups[0] || "Radio Station"}
+              </p>
+            </div>
+          </div>
+          <div className="flex items-center space-x-2">
+            <Button
+              variant="ghost"
+              size="icon"
+              className="button-hero-hover h-8 w-8"
+              onClick={playPrevious}
+            >
+              <SkipBack className="h-4 w-4" />
+            </Button>
+            <Button
+              className="h-8 w-8 rounded-full bg-hero-gradient hover:opacity-90"
+              size="icon"
+              onClick={() => togglePlay(currentStation)}
+            >
+              {isPlaying ? (
+                <Pause className="h-4 w-4" />
+              ) : (
+                <Play className="h-4 w-4" />
+              )}
+            </Button>
+            <Button
+              variant="ghost"
+              size="icon"
+              className="button-hero-hover h-8 w-8"
+              onClick={playNext}
+            >
+              <SkipForward className="h-4 w-4" />
+            </Button>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="button-hero-hover h-8 w-8"
+                >
+                  <MoreVertical className="h-4 w-4" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent
+                side="top"
+                align="end"
+                className="w-56 p-0 bg-black/90 backdrop-blur-md border-gray-800"
+              >
+                <DropdownMenuItem
+                  className="flex items-center space-x-2 px-3 py-2 cursor-pointer focus:bg-white/10"
+                  onClick={toggleFavorite}
+                >
+                  <Star
+                    className={`h-4 w-4 ${
+                      isFavorite
+                        ? "fill-yellow-400 text-yellow-400"
+                        : "text-white"
+                    }`}
+                  />
+                  <span>
+                    {isFavorite ? "Remove from Favorites" : "Add to Favorites"}
+                  </span>
+                </DropdownMenuItem>
+                <DropdownMenuSeparator className="bg-gray-800" />
+                <DropdownMenuItem
+                  className="flex items-center space-x-2 px-3 py-2 cursor-pointer focus:bg-white/10"
+                  onClick={toggleMute}
+                >
+                  {volume > 0 ? (
+                    <Volume2 className="h-4 w-4" />
+                  ) : (
+                    <VolumeX className="h-4 w-4" />
+                  )}
+                  <span>{volume > 0 ? "Mute" : "Unmute"}</span>
+                </DropdownMenuItem>
+                <DropdownMenuSeparator className="bg-gray-800" />
+                <DropdownMenuLabel className="px-3 py-2 text-white/80 font-semibold">
+                  Volume
+                </DropdownMenuLabel>
+                <div className="px-3 py-2">
+                  <Slider
+                    value={[volume]}
+                    onValueChange={([newVolume]) => updateVolume(newVolume)}
+                    onValueCommit={([newVolume]) => setVolume(newVolume)}
+                    max={100}
+                    step={1}
+                    className="w-full"
+                  />
+                </div>
+                <DropdownMenuSeparator className="bg-gray-800" />
+                <DropdownMenuLabel className="px-3 py-2 text-white/80 font-semibold">
+                  Playlist Queue
+                </DropdownMenuLabel>
+                <ScrollArea className="h-40 rounded-md">
+                  {stationList.map((station) => (
+                    <DropdownMenuItem
+                      key={station.stationName}
+                      className={`flex items-center justify-between px-3 py-2 cursor-pointer focus:bg-white/10 ${
+                        station.stationName === currentStation.stationName
+                          ? "bg-white/10"
+                          : "hover:bg-white/10"
+                      }`}
+                      onClick={() => handleStationSelect(station)}
+                    >
+                      <div className="flex items-center space-x-2">
+                        <StationIcon
+                          stationIconUrl={station.stationIconUrl}
+                          stationName={station.stationName}
+                          size="xxs"
+                        />
+                        <span
+                          className={`text-sm ${
+                            station.stationName === currentStation.stationName
+                              ? "font-semibold text-white"
+                              : "text-white/80"
+                          }`}
+                        >
+                          {station.stationName}
+                        </span>
+                      </div>
+                      {station.stationName === currentStation.stationName && (
+                        <Radio className="h-3 w-3 text-white animate-pulse" />
+                      )}
+                    </DropdownMenuItem>
+                  ))}
+                </ScrollArea>
+              </DropdownMenuContent>
+            </DropdownMenu>
           </div>
         </div>
       </div>
