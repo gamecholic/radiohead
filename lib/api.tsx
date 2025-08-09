@@ -7,6 +7,11 @@ export const getCategories = async () => {
 };
 
 export const getRadioGroups = async () => {
+  // Return just the group names for backward compatibility
+  return radioGroups.map((group: any) => group.groupName);
+};
+
+export const getRadioGroupsWithSlugs = async () => {
   return radioGroups;
 };
 
@@ -21,8 +26,10 @@ export const getStationsByCategory = async (category: string) => {
   );
 };
 
-export const getStationsByGroup = async (group: string) => {
+export const getStationsByGroup = async (groupName: string) => {
   return radioStations.filter(station => 
-    station.radioGroups.includes(group)
+    station.radioGroups.some(group => 
+      typeof group === 'string' ? group === groupName : group.groupName === groupName
+    )
   );
 };

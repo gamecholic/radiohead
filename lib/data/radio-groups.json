@@ -1,14 +1,50 @@
 [
-    "Karnaval",
-    "Number One",
-    "Pal Group",
-    "Power App",
-    "Radyo Home",
-    "Kampüs Radyoları",
-    "Show & Viva",
-    "Future Generation",
-    "Ankara Havaları",
-    "Caz Radyoları",
-    "Karadeniz Radyoları",
-    "Nostalji Radyoları"
+  {
+    "groupName": "Karnaval",
+    "slug": "karnaval"
+  },
+  {
+    "groupName": "Number One",
+    "slug": "number-one"
+  },
+  {
+    "groupName": "Pal Group",
+    "slug": "pal-group"
+  },
+  {
+    "groupName": "Power App",
+    "slug": "power-app"
+  },
+  {
+    "groupName": "Radyo Home",
+    "slug": "radyo-home"
+  },
+  {
+    "groupName": "Kampüs Radyoları",
+    "slug": "kampus-radyolari"
+  },
+  {
+    "groupName": "Show & Viva",
+    "slug": "show-viva"
+  },
+  {
+    "groupName": "Future Generation",
+    "slug": "future-generation"
+  },
+  {
+    "groupName": "Ankara Havaları",
+    "slug": "ankara-havalari"
+  },
+  {
+    "groupName": "Caz Radyoları",
+    "slug": "caz-radyolari"
+  },
+  {
+    "groupName": "Karadeniz Radyoları",
+    "slug": "karadeniz-radyolari"
+  },
+  {
+    "groupName": "Nostalji Radyoları",
+    "slug": "nostalji-radyolari"
+  }
 ]
