@@ -2,6 +2,5 @@
 - tests
 - pages (browse / library)
 - save to favorites
-- next & previous buttons changing station in the current list (category or favorites)
 - remember the last station played, and offer as featured
 - search functionality
