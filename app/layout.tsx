@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Sidebar } from "@/components/layout";
 import { AudioProvider } from "@/contexts/AudioContext";
+import { FavoritesProvider } from "@/contexts/FavoritesContext";
 import { NowPlayingPanel } from "@/components/layout/now-playing-panel";
 
 const geistSans = Geist({
@@ -31,17 +32,19 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-[100dvh] text-foreground bg-background-gradient`}
       >
         <AudioProvider>
-          <div className="flex min-h-[100dvh] max-h-[100dvh] flex-col">
-            <div className="flex flex-1 overflow-hidden">
-              <Sidebar />
+          <FavoritesProvider>
+            <div className="flex min-h-[100dvh] max-h-[100dvh] flex-col">
+              <div className="flex flex-1 overflow-hidden">
+                <Sidebar />
 
-              {/* Main Content */}
-              <main className="flex-1 flex flex-col overflow-hidden relative">
-                {children}
-                <NowPlayingPanel />
-              </main>
+                {/* Main Content */}
+                <main className="flex-1 flex flex-col overflow-hidden relative">
+                  {children}
+                  <NowPlayingPanel />
+                </main>
+              </div>
             </div>
-          </div>
+          </FavoritesProvider>
         </AudioProvider>
       </body>
     </html>

@@ -30,7 +30,7 @@ export default function Home() {
         setCategories(categoriesData);
 
         // Fetch featured stations
-        const featured = await getFeaturedStations();
+        const featured = await getFeaturedStations("temp-user");
         setFeaturedStations(featured);
 
         // Fetch stations for each category
@@ -48,7 +48,9 @@ export default function Home() {
     fetchData();
   }, []);
 
-  const featuredStation = featuredStations[0] || null;
+  const featuredStation = featuredStations.length
+    ? featuredStations[Math.floor(Math.random() * featuredStations.length)]
+    : null;
 
   // Render loading state while data is being fetched
   if (categories.length === 0 || Object.keys(stationsByCategory).length === 0) {

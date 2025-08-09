@@ -25,7 +25,8 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { StationIcon } from "@/components/station-icon";
 import { useAudio, Station } from "@/contexts/AudioContext";
-import { useState } from "react";
+import { useFavorites } from "@/contexts/FavoritesContext";
+import { useState, useEffect } from "react";
 
 export function NowPlayingPanel() {
   const {
@@ -40,8 +41,19 @@ export function NowPlayingPanel() {
     playPrevious,
   } = useAudio();
 
+  const { favorites, addFavorite, removeFavorite } = useFavorites();
   const [isFavorite, setIsFavorite] = useState(false);
   const [previousVolume, setPreviousVolume] = useState(80);
+
+  // Check if the current station is a favorite when it changes or when favorites update
+  useEffect(() => {
+    if (currentStation) {
+      const favoriteStatus = favorites.some(
+        (fav) => fav.stationName === currentStation.stationName
+      );
+      setIsFavorite(favoriteStatus);
+    }
+  }, [currentStation, favorites]);
 
   if (!currentStation) return null;
 
@@ -49,11 +61,14 @@ export function NowPlayingPanel() {
     togglePlay(station, stationList);
   };
 
-  const toggleFavorite = () => {
-    // TODO: Implement actual favorites functionality
-    setIsFavorite(!isFavorite);
-    // This is a placeholder for the actual favorites implementation
-    console.log(`Toggled favorite status for ${currentStation.stationName}`);
+  const toggleFavorite = async () => {
+    if (!currentStation) return;
+
+    if (isFavorite) {
+      await removeFavorite(currentStation.stationName);
+    } else {
+      await addFavorite(currentStation);
+    }
   };
 
   const toggleMute = () => {

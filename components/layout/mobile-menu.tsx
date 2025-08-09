@@ -39,7 +39,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               { name: "Home", href: "/" },
               { name: "Browse", href: "/" },
               { name: "Library", href: "/" },
-              { name: "Favorites", href: "/" },
+              { name: "Favorites", href: "/favorites" },
             ].map((item) => (
               <Link
                 key={item.name}
