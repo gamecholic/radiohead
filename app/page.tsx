@@ -72,10 +72,13 @@ export default function Home() {
 
       {/* Main Content Area - This should take remaining space */}
       <div className="flex-1 overflow-hidden flex flex-col relative">
-        <ScrollArea className="flex-1 h-full">
-          <div className="w-full max-w-6xl mx-auto p-4 md:p-6 absolute inset-0">
+        <ScrollArea className="flex-1 h-full [&>div]:!block">
+          <div className="w-full max-w-6xl mx-auto p-4 md:p-6">
             {/* Hero Featured Station */}
-            <FeaturedStation station={featuredStation} stationList={featuredStations} />
+            <FeaturedStation
+              station={featuredStation}
+              stationList={featuredStations}
+            />
 
             {/* Netflix-style Carousels */}
             <section className="w-full">
