@@ -13,7 +13,7 @@ import {
   DropdownMenuTrigger 
 } from "@/components/ui/dropdown-menu";
 import { StationIcon } from "@/components/station-icon";
-import { useAudio } from "@/contexts/AudioContext";
+import { useAudio, Station } from "@/contexts/AudioContext";
 import { useState } from "react";
 
 export function NowPlayingPanel() {
@@ -34,7 +34,7 @@ export function NowPlayingPanel() {
 
   if (!currentStation) return null;
 
-  const handleStationSelect = (station: any) => {
+  const handleStationSelect = (station: Station) => {
     togglePlay(station, stationList);
   };
 
