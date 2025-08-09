@@ -14,6 +14,8 @@ export function NowPlayingPanel() {
     togglePlay,
     setVolume,
     updateVolume,
+    playNext,
+    playPrevious,
   } = useAudio();
 
   if (!currentStation) return null;
@@ -36,7 +38,12 @@ export function NowPlayingPanel() {
             </div>
           </div>
           <div className="flex items-center space-x-4">
-            <Button variant="ghost" size="icon" className="button-hero-hover">
+            <Button 
+              variant="ghost" 
+              size="icon" 
+              className="button-hero-hover"
+              onClick={playPrevious}
+            >
               <SkipBack className="h-5 w-5" />
             </Button>
             <Button
@@ -50,7 +57,12 @@ export function NowPlayingPanel() {
                 <Play className="h-5 w-5" />
               )}
             </Button>
-            <Button variant="ghost" size="icon" className="button-hero-hover">
+            <Button 
+              variant="ghost" 
+              size="icon" 
+              className="button-hero-hover"
+              onClick={playNext}
+            >
               <SkipForward className="h-5 w-5" />
             </Button>
           </div>

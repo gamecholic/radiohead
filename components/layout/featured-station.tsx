@@ -3,20 +3,14 @@
 import { Button } from '@/components/ui/button';
 import { StationIcon } from '@/components/station-icon';
 import { useAudio } from '@/contexts/AudioContext';
-
-interface Station {
-  stationName: string;
-  stationIconUrl: string;
-  stationCategories: string[];
-  stationPlaybackUrl: string;
-  radioGroups: string[];
-}
+import { RadioStation } from '@/lib/types';
 
 interface FeaturedStationProps {
-  station: Station;
+  station: RadioStation;
+  stationList?: RadioStation[];
 }
 
-export function FeaturedStation({ station }: FeaturedStationProps) {
+export function FeaturedStation({ station, stationList = [] }: FeaturedStationProps) {
   const { togglePlay } = useAudio();
 
   if (!station) return null;
@@ -39,7 +33,7 @@ export function FeaturedStation({ station }: FeaturedStationProps) {
           <Button 
             className="mt-2 bg-primary-gradient text-white hover:opacity-90" 
             size="sm" 
-            onClick={() => togglePlay(station)}
+            onClick={() => togglePlay(station, stationList)}
           >
             Listen Now
           </Button>

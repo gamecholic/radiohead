@@ -75,7 +75,7 @@ export default function Home() {
         <ScrollArea className="flex-1 h-full">
           <div className="w-full max-w-6xl mx-auto p-4 md:p-6 absolute inset-0">
             {/* Hero Featured Station */}
-            <FeaturedStation station={featuredStation} />
+            <FeaturedStation station={featuredStation} stationList={featuredStations} />
 
             {/* Netflix-style Carousels */}
             <section className="w-full">

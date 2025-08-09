@@ -82,6 +82,11 @@ export function Carousel({ title, stations }: CarouselProps) {
     };
   }, [stations]);
 
+  // Create a wrapper function that passes the stations list
+  const handlePlay = (station: Station) => {
+    togglePlay(station, stations);
+  };
+
   return (
     <div className="mb-8 carousel-ring rounded-lg p-4">
       <h2 className="mb-4 px-4 text-xl font-semibold md:px-0">{title}</h2>
@@ -107,7 +112,7 @@ export function Carousel({ title, stations }: CarouselProps) {
             <div key={station.stationName} className="flex-shrink-0">
               <StationCard
                 station={station}
-                onPlay={togglePlay}
+                onPlay={handlePlay}
                 isPlaying={currentStation?.stationName === station.stationName && isPlaying}
                 isActive={currentStation?.stationName === station.stationName}
               />
