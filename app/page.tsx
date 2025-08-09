@@ -10,15 +10,16 @@ import {
   getFeaturedStations,
 } from "@/lib/api";
 import { useAudio } from "@/contexts/AudioContext";
+import { RadioStation } from "@/lib/types";
 
 export default function Home() {
   const { isPlaying, currentStation, togglePlay } = useAudio();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [categories, setCategories] = useState<string[]>([]);
   const [stationsByCategory, setStationsByCategory] = useState<
-    Record<string, any[]>
+    Record<string, RadioStation[]>
   >({});
-  const [featuredStations, setFeaturedStations] = useState<any[]>([]);
+  const [featuredStations, setFeaturedStations] = useState<RadioStation[]>([]);
 
   // Fetch data on component mount
   useEffect(() => {
@@ -33,7 +34,7 @@ export default function Home() {
         setFeaturedStations(featured);
 
         // Fetch stations for each category
-        const stations: Record<string, any[]> = {};
+        const stations: Record<string, RadioStation[]> = {};
         for (const category of categoriesData) {
           const categoryStations = await getStationsByCategory(category);
           stations[category] = categoryStations;

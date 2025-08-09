@@ -1,11 +1,12 @@
 import { getRadioGroupsWithSlugs, getStationsByGroup } from "@/lib/api";
 import { notFound } from "next/navigation";
 import { GroupPageClient } from "./client";
+import { RadioGroup, RadioStation } from '@/lib/types';
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const resolvedParams = await params;
   const radioGroups = await getRadioGroupsWithSlugs();
-  const group = radioGroups.find((g: any) => g.slug === resolvedParams.slug);
+  const group = radioGroups.find((g: RadioGroup) => g.slug === resolvedParams.slug);
   
   if (!group) {
     return { title: "Group Not Found" };
@@ -20,7 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 export default async function GroupPage({ params }: { params: Promise<{ slug: string }> }) {
   const resolvedParams = await params;
   const radioGroups = await getRadioGroupsWithSlugs();
-  const group = radioGroups.find((g: any) => g.slug === resolvedParams.slug);
+  const group = radioGroups.find((g: RadioGroup) => g.slug === resolvedParams.slug);
   
   if (!group) {
     notFound();

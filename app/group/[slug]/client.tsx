@@ -5,8 +5,9 @@ import { StationIcon } from "@/components/station-icon";
 import { useAudio } from "@/contexts/AudioContext";
 import { Play, Pause } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { RadioGroup, RadioStation } from '@/lib/types';
 
-export function GroupPageClient({ group, stations }: { group: any, stations: any[] }) {
+export function GroupPageClient({ group, stations }: { group: RadioGroup, stations: RadioStation[] }) {
   const { isPlaying, currentStation, togglePlay } = useAudio();
 
   return (
@@ -20,7 +21,7 @@ export function GroupPageClient({ group, stations }: { group: any, stations: any
         
         {/* Stations grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {stations.map((station: any) => (
+          {stations.map((station: RadioStation) => (
             <div 
               key={station.stationName} 
               className="group relative flex flex-col rounded-xl bg-white/5 p-4 backdrop-blur-md transition-all hover:bg-white/10 hover:cursor-pointer border border-white/10"
