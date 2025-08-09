@@ -2,6 +2,7 @@
 
 import { Play, Pause, Volume2, SkipBack, SkipForward } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { StationIcon } from '@/components/station-icon';
 
 interface Station {
   stationName: string;
@@ -33,19 +34,11 @@ export function NowPlayingPanel({
       <div className="w-full max-w-6xl mx-auto">
         <div className="flex items-center justify-between p-4">
           <div className="flex items-center space-x-4">
-            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/10">
-              {currentStation.stationIconUrl ? (
-                <img 
-                  src={currentStation.stationIconUrl} 
-                  alt={currentStation.stationName} 
-                  className="h-full w-full rounded-xl object-cover"
-                />
-              ) : (
-                <div className="text-lg font-bold">
-                  {currentStation.stationName.charAt(0)}
-                </div>
-              )}
-            </div>
+            <StationIcon 
+              stationIconUrl={currentStation.stationIconUrl}
+              stationName={currentStation.stationName}
+              size="sm"
+            />
             <div>
               <h3 className="font-semibold">{currentStation.stationName}</h3>
               <p className="text-sm text-white/70">

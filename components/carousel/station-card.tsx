@@ -1,5 +1,7 @@
 'use client';
 
+import { StationIcon } from '@/components/station-icon';
+
 interface Station {
   stationName: string;
   stationIconUrl: string;
@@ -24,24 +26,12 @@ export function StationCard({ station, onPlay, isPlaying, isActive }: StationCar
       onClick={() => onPlay(station.stationName)}
     >
       {/* Station image container with fixed aspect ratio */}
-      <div className="relative mr-3 aspect-square h-16 overflow-hidden rounded-xl bg-white/10">
-        {station.stationIconUrl ? (
-          <img
-            src={station.stationIconUrl}
-            alt={station.stationName}
-            className="h-full w-full object-cover"
-          />
-        ) : (
-          <div className="flex h-full w-full items-center justify-center">
-            <div className="text-xl font-bold">{station.stationName.charAt(0)}</div>
-          </div>
-        )}
-        {/* Live tag for featured stations */}
-        {station.stationCategories.includes('Pop') && (
-          <div className="absolute left-1 top-1 rounded bg-red-500 px-1 py-0.5 text-[0.6rem] font-semibold">
-            LIVE
-          </div>
-        )}
+      <div className="mr-3">
+        <StationIcon 
+          stationIconUrl={station.stationIconUrl}
+          stationName={station.stationName}
+          size="sm"
+        />
       </div>
       
       {/* Station info */}

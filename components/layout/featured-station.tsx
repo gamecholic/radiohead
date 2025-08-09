@@ -1,6 +1,7 @@
 'use client';
 
 import { Button } from '@/components/ui/button';
+import { StationIcon } from '@/components/station-icon';
 
 interface Station {
   stationName: string;
@@ -21,16 +22,12 @@ export function FeaturedStation({ station, onListenNow }: FeaturedStationProps) 
   return (
     <section className="mb-8 h-40 overflow-hidden rounded-xl bg-hero-gradient p-6 shadow-lg md:h-40">
       <div className="flex h-full items-center">
-        <div className="mr-4 flex h-16 w-16 items-center justify-center rounded-xl bg-white/10 md:h-24 md:w-24">
-          {station.stationIconUrl ? (
-            <img 
-              src={station.stationIconUrl} 
-              alt={station.stationName} 
-              className="h-full w-full rounded-xl object-cover"
-            />
-          ) : (
-            <div className="text-2xl font-bold">{station.stationName.charAt(0)}</div>
-          )}
+        <div className="mr-4">
+          <StationIcon 
+            stationIconUrl={station.stationIconUrl}
+            stationName={station.stationName}
+            size="md"
+          />
         </div>
         <div className="flex-1">
           <h2 className="text-xl font-bold md:text-2xl">{station.stationName}</h2>
