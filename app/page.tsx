@@ -78,7 +78,7 @@ export default function Home() {
           <div className="w-full max-w-6xl mx-auto p-4 md:p-6 pb-24 md:pb-24">
             {/* Hero Featured Station */}
             <FeaturedStation
-              station={featuredStation}
+              station={featuredStation as RadioStation}
               stationList={featuredStations}
             />
 
