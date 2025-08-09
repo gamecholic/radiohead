@@ -73,7 +73,7 @@ export default function Home() {
       {/* Main Content Area - This should take remaining space */}
       <div className="flex-1 overflow-hidden flex flex-col relative">
         <ScrollArea className="flex-1 h-full">
-          <div className="w-full max-w-6xl mx-auto p-4 md:p-6">
+          <div className="w-full max-w-6xl mx-auto p-4 md:p-6 absolute inset-0">
             {/* Hero Featured Station */}
             <FeaturedStation station={featuredStation} />
 
