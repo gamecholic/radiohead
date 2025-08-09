@@ -1,16 +1,26 @@
 "use client";
 
-import { Play, Pause, Volume2, VolumeX, SkipBack, SkipForward, ListMusic, Radio, Star } from "lucide-react";
+import {
+  Play,
+  Pause,
+  Volume2,
+  VolumeX,
+  SkipBack,
+  SkipForward,
+  ListMusic,
+  Radio,
+  Star,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { 
-  DropdownMenu, 
-  DropdownMenuContent, 
-  DropdownMenuItem, 
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuSeparator,
-  DropdownMenuTrigger 
+  DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { StationIcon } from "@/components/station-icon";
 import { useAudio, Station } from "@/contexts/AudioContext";
@@ -65,24 +75,30 @@ export function NowPlayingPanel() {
               size="sm"
             />
             <div className="min-w-0">
-              <h3 className="font-semibold truncate">{currentStation.stationName}</h3>
+              <h3 className="font-semibold truncate">
+                {currentStation.stationName}
+              </h3>
               <p className="text-sm text-white/70 truncate">
                 {currentStation.radioGroups[0] || "Radio Station"}
               </p>
             </div>
           </div>
           <div className="flex items-center space-x-4">
-            <Button 
-              variant="ghost" 
-              size="icon" 
+            <Button
+              variant="ghost"
+              size="icon"
               className="button-hero-hover"
               onClick={toggleFavorite}
             >
-              <Star className={`h-5 w-5 ${isFavorite ? "fill-yellow-400 text-yellow-400" : "text-white"}`} />
+              <Star
+                className={`h-5 w-5 ${
+                  isFavorite ? "fill-yellow-400 text-yellow-400" : "text-white"
+                }`}
+              />
             </Button>
-            <Button 
-              variant="ghost" 
-              size="icon" 
+            <Button
+              variant="ghost"
+              size="icon"
               className="button-hero-hover"
               onClick={playPrevious}
             >
@@ -99,9 +115,9 @@ export function NowPlayingPanel() {
                 <Play className="h-5 w-5" />
               )}
             </Button>
-            <Button 
-              variant="ghost" 
-              size="icon" 
+            <Button
+              variant="ghost"
+              size="icon"
               className="button-hero-hover"
               onClick={playNext}
             >
@@ -109,21 +125,21 @@ export function NowPlayingPanel() {
             </Button>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button 
-                  variant="ghost" 
-                  size="icon" 
+                <Button
+                  variant="ghost"
+                  size="icon"
                   className="button-hero-hover"
                 >
                   <ListMusic className="h-5 w-5" />
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent 
+              <DropdownMenuContent
                 side="top"
                 align="center"
                 className="w-64 p-0 bg-black/90 backdrop-blur-md border-gray-800"
               >
                 <DropdownMenuLabel className="px-3 py-2 text-white/80 font-semibold">
-                  Station List
+                  Playlist Queue
                 </DropdownMenuLabel>
                 <DropdownMenuSeparator className="bg-gray-800" />
                 <ScrollArea className="h-60 rounded-md">
@@ -131,8 +147,8 @@ export function NowPlayingPanel() {
                     <DropdownMenuItem
                       key={station.stationName}
                       className={`flex items-center justify-between px-3 py-2 cursor-pointer focus:bg-white/10 ${
-                        station.stationName === currentStation.stationName 
-                          ? "bg-white/10" 
+                        station.stationName === currentStation.stationName
+                          ? "bg-white/10"
                           : "hover:bg-white/10"
                       }`}
                       onClick={() => handleStationSelect(station)}
@@ -143,11 +159,13 @@ export function NowPlayingPanel() {
                           stationName={station.stationName}
                           size="xxs"
                         />
-                        <span className={`text-sm ${
-                          station.stationName === currentStation.stationName 
-                            ? "font-semibold text-white" 
-                            : "text-white/80"
-                        }`}>
+                        <span
+                          className={`text-sm ${
+                            station.stationName === currentStation.stationName
+                              ? "font-semibold text-white"
+                              : "text-white/80"
+                          }`}
+                        >
                           {station.stationName}
                         </span>
                       </div>
@@ -161,9 +179,9 @@ export function NowPlayingPanel() {
             </DropdownMenu>
           </div>
           <div className="hidden items-center space-x-2 md:flex w-1/3 justify-end">
-            <Button 
-              variant="ghost" 
-              size="icon" 
+            <Button
+              variant="ghost"
+              size="icon"
               className="button-hero-hover"
               onClick={toggleMute}
             >
