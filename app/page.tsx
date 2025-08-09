@@ -10,217 +10,52 @@ import {
 } from "@/components/layout";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Carousel } from "@/components/carousel";
+import {
+  getCategories,
+  getStationsByCategory,
+  getFeaturedStations,
+} from "@/lib/api";
 
 export default function Home() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentStation, setCurrentStation] = useState<string | null>(null);
   const [volume, setVolume] = useState(80);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [categories, setCategories] = useState<string[]>([]);
+  const [stationsByCategory, setStationsByCategory] = useState<
+    Record<string, any[]>
+  >({});
+  const [featuredStations, setFeaturedStations] = useState<any[]>([]);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
-  // Mock data for radio stations organized by categories
-  const jazzStations = [
-    { id: "1", name: "Jazz FM", frequency: "88.5 FM", genre: "Jazz" },
-    { id: "7", name: "Smooth Jazz", frequency: "89.3 FM", genre: "Jazz" },
-    { id: "8", name: "Classic Jazz", frequency: "90.1 FM", genre: "Jazz" },
-    { id: "9", name: "Bebop Radio", frequency: "91.7 FM", genre: "Jazz" },
-    { id: "10", name: "Latin Jazz", frequency: "93.5 FM", genre: "Jazz" },
-    { id: "11", name: "Jazz Classics", frequency: "94.9 FM", genre: "Jazz" },
-    {
-      id: "12",
-      name: "Contemporary Jazz",
-      frequency: "96.3 FM",
-      genre: "Jazz",
-    },
-    { id: "13", name: "Jazz Fusion", frequency: "97.7 FM", genre: "Jazz" },
-  ];
+  // Fetch data on component mount
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        // Fetch categories
+        const categoriesData = await getCategories();
+        setCategories(categoriesData);
 
-  const rockStations = [
-    { id: "2", name: "Rock Radio", frequency: "92.3 FM", genre: "Rock" },
-    { id: "14", name: "Classic Rock", frequency: "93.1 FM", genre: "Rock" },
-    { id: "15", name: "Alternative Rock", frequency: "94.5 FM", genre: "Rock" },
-    { id: "16", name: "Hard Rock", frequency: "95.9 FM", genre: "Rock" },
-    { id: "17", name: "Indie Rock", frequency: "97.3 FM", genre: "Rock" },
-    { id: "18", name: "Punk Rock", frequency: "98.7 FM", genre: "Rock" },
-    { id: "19", name: "Metallica Radio", frequency: "99.5 FM", genre: "Rock" },
-    { id: "20", name: "Grunge Revival", frequency: "100.3 FM", genre: "Rock" },
-  ];
+        // Fetch featured stations
+        const featured = await getFeaturedStations();
+        setFeaturedStations(featured);
 
-  const electronicStations = [
-    {
-      id: "4",
-      name: "Electronic Waves",
-      frequency: "98.1 FM",
-      genre: "Electronic",
-    },
-    {
-      id: "21",
-      name: "House Music",
-      frequency: "99.9 FM",
-      genre: "Electronic",
-    },
-    {
-      id: "22",
-      name: "Techno Beats",
-      frequency: "100.7 FM",
-      genre: "Electronic",
-    },
-    {
-      id: "23",
-      name: "Trance Vibes",
-      frequency: "101.1 FM",
-      genre: "Electronic",
-    },
-    {
-      id: "24",
-      name: "Dubstep Nation",
-      frequency: "102.5 FM",
-      genre: "Electronic",
-    },
-    {
-      id: "25",
-      name: "Ambient Sounds",
-      frequency: "103.3 FM",
-      genre: "Electronic",
-    },
-    {
-      id: "26",
-      name: "Drum & Bass",
-      frequency: "104.7 FM",
-      genre: "Electronic",
-    },
-    { id: "27", name: "Synthwave", frequency: "105.5 FM", genre: "Electronic" },
-  ];
+        // Fetch stations for each category
+        const stations: Record<string, any[]> = {};
+        for (const category of categoriesData) {
+          const categoryStations = await getStationsByCategory(category);
+          stations[category] = categoryStations;
+        }
+        setStationsByCategory(stations);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
 
-  const hipHopStations = [
-    {
-      id: "5",
-      name: "Hip Hop Nation",
-      frequency: "101.5 FM",
-      genre: "Hip Hop",
-    },
-    {
-      id: "28",
-      name: "Old School Hip Hop",
-      frequency: "102.9 FM",
-      genre: "Hip Hop",
-    },
-    { id: "29", name: "Trap Music", frequency: "103.7 FM", genre: "Hip Hop" },
-    { id: "30", name: "Rap Classics", frequency: "104.3 FM", genre: "Hip Hop" },
-    {
-      id: "31",
-      name: "Underground Hip Hop",
-      frequency: "105.1 FM",
-      genre: "Hip Hop",
-    },
-    {
-      id: "32",
-      name: "Boom Bap Radio",
-      frequency: "106.5 FM",
-      genre: "Hip Hop",
-    },
-    {
-      id: "33",
-      name: "West Coast Hip Hop",
-      frequency: "107.3 FM",
-      genre: "Hip Hop",
-    },
-    {
-      id: "34",
-      name: "East Coast Hip Hop",
-      frequency: "108.7 FM",
-      genre: "Hip Hop",
-    },
-  ];
+    fetchData();
+  }, []);
 
-  const classicalStations = [
-    {
-      id: "3",
-      name: "Classical Music",
-      frequency: "95.7 FM",
-      genre: "Classical",
-    },
-    { id: "35", name: "Opera House", frequency: "96.5 FM", genre: "Classical" },
-    {
-      id: "36",
-      name: "Baroque Collection",
-      frequency: "97.9 FM",
-      genre: "Classical",
-    },
-    {
-      id: "37",
-      name: "Symphony Radio",
-      frequency: "98.9 FM",
-      genre: "Classical",
-    },
-    {
-      id: "38",
-      name: "Chamber Music",
-      frequency: "99.3 FM",
-      genre: "Classical",
-    },
-    {
-      id: "39",
-      name: "Classical Piano",
-      frequency: "100.1 FM",
-      genre: "Classical",
-    },
-    {
-      id: "40",
-      name: "Modern Classical",
-      frequency: "101.9 FM",
-      genre: "Classical",
-    },
-    {
-      id: "41",
-      name: "Classical Guitar",
-      frequency: "102.7 FM",
-      genre: "Classical",
-    },
-  ];
-
-  const countryStations = [
-    { id: "6", name: "Country Roads", frequency: "103.9 FM", genre: "Country" },
-    {
-      id: "42",
-      name: "Bluegrass Junction",
-      frequency: "104.5 FM",
-      genre: "Country",
-    },
-    {
-      id: "43",
-      name: "Country Classics",
-      frequency: "105.3 FM",
-      genre: "Country",
-    },
-    {
-      id: "44",
-      name: "Modern Country",
-      frequency: "106.1 FM",
-      genre: "Country",
-    },
-    {
-      id: "45",
-      name: "Outlaw Country",
-      frequency: "106.9 FM",
-      genre: "Country",
-    },
-    { id: "46", name: "Country Rock", frequency: "107.7 FM", genre: "Country" },
-    {
-      id: "47",
-      name: "Texas Country",
-      frequency: "108.3 FM",
-      genre: "Country",
-    },
-    {
-      id: "48",
-      name: "Nashville Sound",
-      frequency: "109.1 FM",
-      genre: "Country",
-    },
-  ];
-
-  const featuredStation = jazzStations[0]; // Jazz FM as featured station
+  const featuredStation = featuredStations[0] || null;
 
   const togglePlay = (stationId: string) => {
     if (currentStation === stationId && isPlaying) {
@@ -233,21 +68,32 @@ export default function Home() {
 
   const handleListenNow = () => {
     if (featuredStation) {
-      togglePlay(featuredStation.id);
+      togglePlay(featuredStation.stationName);
     }
   };
 
   const getStationById = (id: string) => {
-    const allStations = [
-      ...jazzStations,
-      ...rockStations,
-      ...electronicStations,
-      ...hipHopStations,
-      ...classicalStations,
-      ...countryStations,
-    ];
-    return allStations.find((station) => station.id === id) || null;
+    // Flatten all stations from all categories
+    const allStations = Object.values(stationsByCategory).flat();
+    return allStations.find((station) => station.stationName === id) || null;
   };
+
+  // Render loading state while data is being fetched
+  if (categories.length === 0 || Object.keys(stationsByCategory).length === 0) {
+    return (
+      <div className="flex flex-col h-screen">
+        <Header onMobileMenuOpen={() => setIsMobileMenuOpen(true)} />
+        <div className="flex-1 flex items-center justify-center">
+          <p>Loading...</p>
+        </div>
+        <MobileMenu
+          isOpen={isMobileMenuOpen}
+          onClose={() => setIsMobileMenuOpen(false)}
+        />
+        <audio ref={audioRef} />
+      </div>
+    );
+  }
 
   return (
     <div className="flex flex-col h-screen">
@@ -265,53 +111,18 @@ export default function Home() {
 
             {/* Netflix-style Carousels */}
             <section className="w-full">
-              <Carousel
-                title="Jazz Stations"
-                stations={jazzStations}
-                onPlay={togglePlay}
-                currentStation={currentStation}
-                isPlaying={isPlaying}
-              />
-
-              <Carousel
-                title="Rock Stations"
-                stations={rockStations}
-                onPlay={togglePlay}
-                currentStation={currentStation}
-                isPlaying={isPlaying}
-              />
-
-              <Carousel
-                title="Electronic Music"
-                stations={electronicStations}
-                onPlay={togglePlay}
-                currentStation={currentStation}
-                isPlaying={isPlaying}
-              />
-
-              <Carousel
-                title="Hip Hop Stations"
-                stations={hipHopStations}
-                onPlay={togglePlay}
-                currentStation={currentStation}
-                isPlaying={isPlaying}
-              />
-
-              <Carousel
-                title="Classical Music"
-                stations={classicalStations}
-                onPlay={togglePlay}
-                currentStation={currentStation}
-                isPlaying={isPlaying}
-              />
-
-              <Carousel
-                title="Country Roads"
-                stations={countryStations}
-                onPlay={togglePlay}
-                currentStation={currentStation}
-                isPlaying={isPlaying}
-              />
+              {categories
+                .filter((c) => stationsByCategory[c]?.length)
+                .map((category) => (
+                  <Carousel
+                    key={category}
+                    title={category}
+                    stations={stationsByCategory[category] || []}
+                    onPlay={togglePlay}
+                    currentStation={currentStation}
+                    isPlaying={isPlaying}
+                  />
+                ))}
             </section>
           </div>
         </ScrollArea>

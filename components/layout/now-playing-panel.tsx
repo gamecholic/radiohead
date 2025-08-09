@@ -4,10 +4,11 @@ import { Play, Pause, Volume2, SkipBack, SkipForward } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 interface Station {
-  id: string;
-  name: string;
-  frequency: string;
-  genre: string;
+  stationName: string;
+  stationIconUrl: string;
+  stationCategories: string[];
+  stationPlaybackUrl: string;
+  radioGroups: string[];
 }
 
 interface NowPlayingPanelProps {
@@ -33,13 +34,23 @@ export function NowPlayingPanel({
         <div className="flex items-center justify-between p-4">
           <div className="flex items-center space-x-4">
             <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/10">
-              <div className="text-lg font-bold">
-                {currentStation.name.charAt(0)}
-              </div>
+              {currentStation.stationIconUrl ? (
+                <img 
+                  src={currentStation.stationIconUrl} 
+                  alt={currentStation.stationName} 
+                  className="h-full w-full rounded-xl object-cover"
+                />
+              ) : (
+                <div className="text-lg font-bold">
+                  {currentStation.stationName.charAt(0)}
+                </div>
+              )}
             </div>
             <div>
-              <h3 className="font-semibold">{currentStation.name}</h3>
-              <p className="text-sm text-white/70">{currentStation.frequency}</p>
+              <h3 className="font-semibold">{currentStation.stationName}</h3>
+              <p className="text-sm text-white/70">
+                {currentStation.radioGroups[0] || 'Radio Station'}
+              </p>
             </div>
           </div>
           <div className="flex items-center space-x-4">
@@ -49,7 +60,7 @@ export function NowPlayingPanel({
             <Button
               className="h-10 w-10 rounded-full bg-hero-gradient hover:opacity-90"
               size="icon"
-              onClick={() => onTogglePlay(currentStation.id)}
+              onClick={() => onTogglePlay(currentStation.stationName)}
             >
               {isPlaying ? (
                 <Pause className="h-5 w-5" />

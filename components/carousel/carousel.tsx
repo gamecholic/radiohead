@@ -6,11 +6,11 @@ import { Button } from '@/components/ui/button';
 import { StationCard } from './station-card';
 
 interface Station {
-  id: string;
-  name: string;
-  frequency: string;
-  genre: string;
-  imageUrl?: string;
+  stationName: string;
+  stationIconUrl: string;
+  stationCategories: string[];
+  stationPlaybackUrl: string;
+  radioGroups: string[];
 }
 
 interface CarouselProps {
@@ -105,12 +105,12 @@ export function Carousel({ title, stations, onPlay, currentStation, isPlaying }:
           onScroll={handleScroll}
         >
           {stations.map((station) => (
-            <div key={station.id} className="flex-shrink-0">
+            <div key={station.stationName} className="flex-shrink-0">
               <StationCard
                 station={station}
                 onPlay={onPlay}
-                isPlaying={currentStation === station.id && isPlaying}
-                isActive={currentStation === station.id}
+                isPlaying={currentStation === station.stationName && isPlaying}
+                isActive={currentStation === station.stationName}
               />
             </div>
           ))}
