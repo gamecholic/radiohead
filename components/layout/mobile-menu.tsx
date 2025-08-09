@@ -25,7 +25,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-52 bg-black/80 backdrop-blur-sm md:hidden">
+    <div className="fixed inset-0 z-52 bg-black/20 glassmorphism md:hidden">
       <div className="absolute left-0 top-0 h-full w-64 bg-black/30 backdrop-blur-md border-r border-gray-700 flex flex-col">
         <div className="p-6">
           <div className="mb-8 flex items-center justify-between">
