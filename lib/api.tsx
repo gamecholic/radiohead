@@ -3,6 +3,11 @@ import radioGroups from "@/lib/data/radio-groups.json";
 import radioStations from "@/lib/data/radio-stations.json";
 import { RadioGroup, RadioStation } from "@/lib/types";
 
+// Filter out stations without playback URLs
+const validStations = radioStations.filter(
+  (station: RadioStation) => station.stationPlaybackUrl && station.stationPlaybackUrl !== ""
+);
+
 export const getCategories = async (): Promise<string[]> => {
   return categories;
 };
@@ -28,7 +33,7 @@ export const getFeaturedStations = async (
 export const getStationsByCategory = async (
   category: string
 ): Promise<RadioStation[]> => {
-  return radioStations.filter((station: RadioStation) =>
+  return validStations.filter((station: RadioStation) =>
     station.stationCategories.includes(category)
   );
 };
@@ -36,7 +41,7 @@ export const getStationsByCategory = async (
 export const getStationsByGroup = async (
   groupName: string
 ): Promise<RadioStation[]> => {
-  return radioStations.filter((station: RadioStation) =>
+  return validStations.filter((station: RadioStation) =>
     station.radioGroups.some((group: string) => group === groupName)
   );
 };
@@ -134,7 +139,7 @@ export const searchStations = async (
   
   const normalizedQuery = query.toLowerCase().trim();
   
-  return radioStations.filter((station: RadioStation) => 
+  return validStations.filter((station: RadioStation) => 
     station.stationName.toLowerCase().includes(normalizedQuery) ||
     station.stationCity?.toLowerCase().includes(normalizedQuery) ||
     station.radioGroups.some((group: string) => 
