@@ -1,6 +1,7 @@
 'use client';
 
 import React, { createContext, useContext, useState, useRef, useEffect } from 'react';
+import Hls from 'hls.js';
 
 export interface Station {
   stationName: string;
@@ -34,12 +35,20 @@ const isIOSSafari = () => {
   return isIOS && isSafari;
 };
 
+// Check if the browser supports HLS natively
+const isHLSNative = () => {
+  if (typeof window === 'undefined') return false;
+  const video = document.createElement('video');
+  return video.canPlayType('application/vnd.apple.mpegurl') !== '';
+};
+
 export function AudioProvider({ children }: { children: React.ReactNode }) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentStation, setCurrentStation] = useState<Station | null>(null);
   const [stationList, setStationList] = useState<Station[]>([]);
   const [volume, setVolume] = useState(80);
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const hlsRef = useRef<Hls | null>(null);
   const volumeRef = useRef<number>(80);
   const volumeUpdateTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const hasUserInteractedRef = useRef(false);
@@ -119,30 +128,92 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
     }, 50); // More aggressive debouncing for 50ms
   };
 
-  // Handle audio playback
+  // Handle audio playback with HLS support
   useEffect(() => {
-    if (!audioRef.current) return;
+    if (!audioRef.current || !currentStation) return;
+
+    const videoUrl = currentStation.stationPlaybackUrl;
+    const isHLS = videoUrl.includes('.m3u8');
+
+    // Clean up any existing HLS instance
+    if (hlsRef.current) {
+      hlsRef.current.destroy();
+      hlsRef.current = null;
+    }
 
     if (isPlaying && currentStation) {
-      // Only set the source when the station changes, not when volume changes
-      if (audioRef.current.src !== currentStation.stationPlaybackUrl) {
-        audioRef.current.src = currentStation.stationPlaybackUrl;
-      }
-      
-      // Set volume only if not on iOS Safari
-      if (!isIOSSafariRef.current) {
-        audioRef.current.volume = volumeRef.current / 100;
-      }
-      
-      // For iOS Safari, we need to handle the play promise properly
-      const playPromise = audioRef.current.play();
-      if (playPromise !== undefined) {
-        playPromise.catch(error => {
-          console.error('Error playing audio:', error);
-          // On iOS Safari, autoplay is restricted and requires user interaction
-          // We'll set isPlaying to false to reflect the actual state
+      // Handle HLS streams
+      if (isHLS && !isHLSNative()) {
+        // Use hls.js for browsers that don't support HLS natively
+        if (Hls.isSupported()) {
+          hlsRef.current = new Hls({
+            enableWorker: true,
+            lowLatencyMode: true,
+            backBufferLength: 90
+          });
+          
+          hlsRef.current.loadSource(videoUrl);
+          hlsRef.current.attachMedia(audioRef.current);
+          
+          hlsRef.current.on(Hls.Events.MANIFEST_PARSED, () => {
+            if (audioRef.current) {
+              audioRef.current.volume = volumeRef.current / 100;
+              const playPromise = audioRef.current.play();
+              if (playPromise !== undefined) {
+                playPromise.catch(error => {
+                  console.error('Error playing HLS audio:', error);
+                  setIsPlaying(false);
+                });
+              }
+            }
+          });
+          
+          hlsRef.current.on(Hls.Events.ERROR, (event, data) => {
+            console.error('HLS error:', event, data);
+            if (data.fatal) {
+              switch (data.type) {
+                case Hls.ErrorTypes.NETWORK_ERROR:
+                  // Try to recover network error
+                  console.log('Trying to recover network error...');
+                  hlsRef.current?.startLoad();
+                  break;
+                case Hls.ErrorTypes.MEDIA_ERROR:
+                  console.log('Trying to recover media error...');
+                  hlsRef.current?.recoverMediaError();
+                  break;
+                default:
+                  // Cannot recover
+                  console.error('Unrecoverable HLS error');
+                  setIsPlaying(false);
+                  break;
+              }
+            }
+          });
+        } else {
+          console.error('HLS is not supported in this browser');
           setIsPlaying(false);
-        });
+        }
+      } else {
+        // Handle regular audio sources or native HLS support
+        if (audioRef.current.src !== videoUrl) {
+          audioRef.current.src = videoUrl;
+        }
+        
+        // Set volume only if not on iOS Safari
+        if (!isIOSSafariRef.current) {
+          audioRef.current.volume = volumeRef.current / 100;
+        }
+        
+        // For iOS Safari, we need to handle the play promise properly
+        const playPromise = audioRef.current.play();
+        if (playPromise !== undefined) {
+          playPromise.catch(error => {
+            console.error('Error playing audio:', error);
+            // On iOS Safari, autoplay is restricted and requires user interaction
+            // We'll set isPlaying to false to reflect the actual state
+            setIsPlaying(false);
+          });
+        }
       }
     } else {
       // Special handling for iOS Safari to properly pause
@@ -162,6 +233,14 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
         console.warn('Error updating media session playback state:', error);
       }
     }
+    
+    // Cleanup function
+    return () => {
+      if (hlsRef.current) {
+        hlsRef.current.destroy();
+        hlsRef.current = null;
+      }
+    };
   }, [isPlaying, currentStation]);
 
   // Handle volume state updates (for UI synchronization)
@@ -178,6 +257,11 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
     return () => {
       if (volumeUpdateTimeoutRef.current) {
         clearTimeout(volumeUpdateTimeoutRef.current);
+      }
+      // Clean up HLS instance on unmount
+      if (hlsRef.current) {
+        hlsRef.current.destroy();
+        hlsRef.current = null;
       }
     };
   }, []);
