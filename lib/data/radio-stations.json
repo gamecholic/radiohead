@@ -119,7 +119,7 @@
     "stationCategories": [
       "Pop"
     ],
-    "stationPlaybackUrl": "https://live.powerapp.com.tr/powerfm/mpeg/icecast.audio?/;stream.mp3",
+    "stationPlaybackUrl": "https://live.powerapp.com.tr/powerfmadver/abr/powerfmadver/256/chunks.m3u8",
     "radioGroups": [
       "Power App"
     ]
