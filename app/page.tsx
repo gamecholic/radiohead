@@ -20,6 +20,7 @@ export default function Home() {
     Record<string, RadioStation[]>
   >({});
   const [featuredStations, setFeaturedStations] = useState<RadioStation[]>([]);
+  const [featuredStation, setFeaturedStation] = useState<RadioStation | null>(null);
 
   // Fetch data on component mount
   useEffect(() => {
@@ -32,6 +33,12 @@ export default function Home() {
         // Fetch featured stations
         const featured = await getFeaturedStations("temp-user");
         setFeaturedStations(featured);
+
+        // Set a random featured station once
+        if (featured.length > 0 && !featuredStation) {
+          const randomStation = featured[Math.floor(Math.random() * featured.length)];
+          setFeaturedStation(randomStation);
+        }
 
         // Fetch stations for each category
         const stations: Record<string, RadioStation[]> = {};
@@ -47,10 +54,6 @@ export default function Home() {
 
     fetchData();
   }, []);
-
-  const featuredStation = featuredStations.length
-    ? featuredStations[Math.floor(Math.random() * featuredStations.length)]
-    : null;
 
   // Render loading state while data is being fetched
   if (categories.length === 0 || Object.keys(stationsByCategory).length === 0) {
