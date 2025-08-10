@@ -351,7 +351,7 @@ export function NowPlayingPanel() {
                   />
                   {isIOSSafari && (
                     <p className="text-xs text-yellow-500 mt-1">
-                      Use your device's volume buttons to control audio
+                      Use your device&apos;s volume buttons to control audio
                     </p>
                   )}
                 </div>
