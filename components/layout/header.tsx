@@ -84,6 +84,7 @@ export function Header({ onMobileMenuOpen }: HeaderProps) {
         <Button variant="ghost" size="icon" onClick={onMobileMenuOpen}>
           <Menu className="h-6 w-6" />
         </Button>
+        <div className="text-lg font-bold">RadioHead</div>
         <Button 
           variant="ghost" 
           size="icon"
