@@ -59,8 +59,8 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
           <nav className="px-4 py-2 space-y-1">
             {[
               { name: "Ana Sayfa", href: "/" },
-              { name: "Keşfet", href: "/" },
-              { name: "Kütüphane", href: "/" },
+              { name: "Keşfet", href: "/browse" },
+              { name: "Kütüphane", href: "/library" },
               { name: "Favoriler", href: "/favorites" },
             ].map((item) => (
               <Link
