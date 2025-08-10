@@ -154,7 +154,7 @@ export function Header({ onMobileMenuOpen }: HeaderProps) {
             {/* Search Results */}
             {searchQuery && (
               <div className="mt-8 max-h-[70vh]">
-                <ScrollArea className="h-full w-full rounded-md">
+                <ScrollArea className="h-[70vh] w-full rounded-md">
                   {isLoading ? (
                     <div className="p-4 text-center text-gray-400">Aranıyor...</div>
                   ) : searchResults.length > 0 ? (
@@ -194,8 +194,8 @@ export function Header({ onMobileMenuOpen }: HeaderProps) {
       {/* Desktop Search Results Dropdown */}
       {isSearchOpen && searchQuery && (
         <div className="hidden md:block absolute top-full left-1/2 transform -translate-x-1/2 w-1/3 z-50 mt-1">
-          <div className="bg-black/90 border border-gray-800 rounded-lg shadow-lg max-h-96 overflow-hidden">
-            <ScrollArea className="h-full w-full">
+          <div className="bg-black/90 border border-gray-800 rounded-lg shadow-lg max-h-96">
+            <ScrollArea className="h-96 w-full">
               {isLoading ? (
                 <div className="p-4 text-center text-gray-400">Aranıyor...</div>
               ) : searchResults.length > 0 ? (
