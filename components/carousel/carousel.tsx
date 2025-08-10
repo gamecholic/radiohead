@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { StationCard } from "./station-card";
+import { StationCard } from "@/components/station-grid/station-card";
 import { useAudio } from "@/contexts/AudioContext";
 
 interface Station {
@@ -84,11 +84,6 @@ export function Carousel({ title, stations }: CarouselProps) {
     };
   }, [stations]);
 
-  // Create a wrapper function that passes the stations list
-  const handlePlay = (station: Station) => {
-    togglePlay(station, stations);
-  };
-
   return (
     <div className="mb-8 carousel-ring rounded-lg p-4">
       <h2 className="px-4 text-xl font-semibold md:px-0">{title}</h2>
@@ -113,19 +108,19 @@ export function Carousel({ title, stations }: CarouselProps) {
         {/* Stations container */}
         <div
           ref={scrollContainerRef}
-          className="flex gap-4 overflow-x-auto px-4 pb-4 pt-4 scrollbar-hide"
+          className="flex gap-3 overflow-x-auto px-4 pb-4 pt-4 scrollbar-hide"
           onScroll={handleScroll}
         >
           {stations.map((station) => (
-            <div key={station.stationName} className="flex-shrink-0">
+            <div
+              key={station.stationName}
+              className="flex-shrink-0"
+              style={{ width: '160px' }}
+            >
               <StationCard
                 station={station}
-                onPlay={handlePlay}
-                isPlaying={
-                  currentStation?.stationName === station.stationName &&
-                  isPlaying
-                }
-                isActive={currentStation?.stationName === station.stationName}
+                stationList={stations}
+                layout="vertical"
               />
             </div>
           ))}
