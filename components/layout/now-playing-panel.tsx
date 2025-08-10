@@ -11,6 +11,7 @@ import {
   Radio,
   Star,
   MoreVertical,
+  AlertTriangle,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
@@ -39,6 +40,7 @@ export function NowPlayingPanel() {
     updateVolume,
     playNext,
     playPrevious,
+    isIOSSafari, // Use iOS detection from context
   } = useAudio();
 
   const { favorites, addFavorite, removeFavorite } = useFavorites();
@@ -196,18 +198,32 @@ export function NowPlayingPanel() {
             </DropdownMenu>
           </div>
           <div className="flex items-center space-x-2 w-1/3 justify-end">
-            <Button
-              variant="ghost"
-              size="icon"
-              className="button-hero-hover"
-              onClick={toggleMute}
-            >
-              {volume > 0 ? (
-                <Volume2 className="h-5 w-5" />
-              ) : (
-                <VolumeX className="h-5 w-5" />
+            {isIOSSafari && (
+              <div className="flex items-center text-yellow-500 mr-2" title="Volume control is not available on iOS Safari">
+                <AlertTriangle className="h-4 w-4 mr-1" />
+                <span className="text-xs">No volume control</span>
+              </div>
+            )}
+            <div className="relative">
+              <Button
+                variant="ghost"
+                size="icon"
+                className="button-hero-hover"
+                onClick={toggleMute}
+                disabled={isIOSSafari} // Disable mute button on iOS
+              >
+                {volume > 0 ? (
+                  <Volume2 className="h-5 w-5" />
+                ) : (
+                  <VolumeX className="h-5 w-5" />
+                )}
+              </Button>
+              {isIOSSafari && (
+                <span className="absolute -top-1 -right-1 text-yellow-500" title="Not available on iOS Safari">
+                  <AlertTriangle className="h-3 w-3" />
+                </span>
               )}
-            </Button>
+            </div>
             <Slider
               value={[volume]}
               onValueChange={([newVolume]) => updateVolume(newVolume)}
@@ -215,6 +231,7 @@ export function NowPlayingPanel() {
               max={100}
               step={1}
               className="w-24"
+              disabled={isIOSSafari} // Disable slider on iOS
             />
           </div>
         </div>
@@ -298,6 +315,7 @@ export function NowPlayingPanel() {
                 <DropdownMenuItem
                   className="flex items-center space-x-2 px-3 py-2 cursor-pointer focus:bg-white/10"
                   onClick={toggleMute}
+                  disabled={isIOSSafari} // Disable mute button on iOS
                 >
                   {volume > 0 ? (
                     <Volume2 className="h-4 w-4" />
@@ -305,10 +323,21 @@ export function NowPlayingPanel() {
                     <VolumeX className="h-4 w-4" />
                   )}
                   <span>{volume > 0 ? "Mute" : "Unmute"}</span>
+                  {isIOSSafari && (
+                    <span className="text-yellow-500" title="Not available on iOS Safari">
+                      <AlertTriangle className="h-3 w-3" />
+                    </span>
+                  )}
                 </DropdownMenuItem>
                 <DropdownMenuSeparator className="bg-gray-800" />
-                <DropdownMenuLabel className="px-3 py-2 text-white/80 font-semibold">
+                <DropdownMenuLabel className="px-3 py-2 text-white/80 font-semibold flex items-center">
                   Volume
+                  {isIOSSafari && (
+                    <span className="flex items-center text-yellow-500 ml-2" title="Volume control is not available on iOS Safari">
+                      <AlertTriangle className="h-3 w-3 mr-1" />
+                      <span className="text-xs">Not available</span>
+                    </span>
+                  )}
                 </DropdownMenuLabel>
                 <div className="px-3 py-2">
                   <Slider
@@ -318,7 +347,13 @@ export function NowPlayingPanel() {
                     max={100}
                     step={1}
                     className="w-full"
+                    disabled={isIOSSafari} // Disable slider on iOS
                   />
+                  {isIOSSafari && (
+                    <p className="text-xs text-yellow-500 mt-1">
+                      Use your device's volume buttons to control audio
+                    </p>
+                  )}
                 </div>
                 <DropdownMenuSeparator className="bg-gray-800" />
                 <DropdownMenuLabel className="px-3 py-2 text-white/80 font-semibold">
