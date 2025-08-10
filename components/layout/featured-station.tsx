@@ -28,14 +28,14 @@ export function FeaturedStation({ station, stationList = [] }: FeaturedStationPr
         <div className="flex-1">
           <h2 className="text-xl font-bold md:text-2xl">{station.stationName}</h2>
           <p className="text-sm text-white/70 md:text-base">
-            {station.radioGroups[0] || 'Radio Station'} • {station.stationCategories[0] || 'Music'}
+            {station.radioGroups[0] || 'Radyo İstasyonu'} • {station.stationCategories[0] || 'Müzik'}
           </p>
           <Button 
             className="mt-2 bg-primary-gradient text-white hover:opacity-90" 
             size="sm" 
             onClick={() => togglePlay(station, stationList)}
           >
-            Listen Now
+            Şimdi Dinle
           </Button>
         </div>
       </div>

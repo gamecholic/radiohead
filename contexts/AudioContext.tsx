@@ -213,8 +213,8 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
         // Set metadata for the current station
         navigator.mediaSession.metadata = new MediaMetadata({
           title: currentStation.stationName,
-          artist: currentStation.radioGroups[0] || 'Radio Station',
-          album: currentStation.stationCategories[0] || 'Radio',
+          artist: currentStation.radioGroups[0] || 'Radyo İstasyonu',
+          album: currentStation.stationCategories[0] || 'Radyo',
           artwork: currentStation.stationIconUrl 
             ? [{ src: currentStation.stationIconUrl, sizes: '96x96', type: 'image/png' }]
             : []

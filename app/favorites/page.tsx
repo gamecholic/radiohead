@@ -27,7 +27,7 @@ export default function FavoritesPage() {
   if (loading) {
     return (
       <div className="flex-1 flex items-center justify-center">
-        <div className="text-white">Loading favorites...</div>
+        <div className="text-white">Favoriler yükleniyor...</div>
       </div>
     );
   }

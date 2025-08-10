@@ -50,7 +50,7 @@ export function GroupPageClient({ group, stations }: { group: RadioGroup, statio
                   <p className="truncate text-xs sm:text-sm text-white/80">{station.stationCity}</p>
                   <div className="mt-1">
                     <span className="rounded bg-white/10 px-1.5 py-0.5 text-xs">
-                      {station.stationCategories[0] || 'Music'}
+                      {station.stationCategories[0] || 'Müzik'}
                     </span>
                   </div>
                 </div>

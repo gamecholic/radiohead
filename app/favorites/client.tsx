@@ -31,30 +31,30 @@ export function FavoritesPageClient({ initialStations }: { initialStations: Radi
         <Button variant="ghost" size="icon" onClick={() => setIsMobileMenuOpen(true)}>
           <Menu className="h-6 w-6" />
         </Button>
-        <h1 className="text-lg font-bold text-white truncate">Favorites</h1>
+        <h1 className="text-lg font-bold text-white truncate">Favoriler</h1>
         <div className="w-10"></div> {/* Spacer for alignment */}
       </header>
 
       <div className="w-full max-w-6xl mx-auto p-4 md:p-6">
         {/* Header with favorites title (desktop) */}
         <div className="mb-8 hidden md:block">
-          <h1 className="text-3xl font-bold text-white mb-2">Favorites</h1>
+          <h1 className="text-3xl font-bold text-white mb-2">Favoriler</h1>
           <div className="h-1 w-24 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full"></div>
         </div>
         
         {stations.length === 0 ? (
           <div className="flex flex-col items-center justify-center py-20 text-center">
             <Star className="h-16 w-16 text-yellow-400 mb-4" />
-            <h2 className="text-2xl font-bold text-white mb-2">No Favorites Yet</h2>
+            <h2 className="text-2xl font-bold text-white mb-2">Henüz Favoriniz Yok</h2>
             <p className="text-white/70 max-w-md">
-              Start adding stations to your favorites by clicking the star icon on any station.
+              Yıldız simgesine tıklayarak favori istasyonlarınıza istasyon ekleyin.
             </p>
           </div>
         ) : (
           <>
             <div className="mb-4 flex justify-between items-center">
               <p className="text-white/70 text-sm">
-                {stations.length} {stations.length === 1 ? 'station' : 'stations'}
+                {stations.length} {stations.length === 1 ? 'istasyon' : 'istasyon'}
               </p>
             </div>
             
@@ -78,7 +78,7 @@ export function FavoritesPageClient({ initialStations }: { initialStations: Radi
                       <p className="truncate text-xs sm:text-sm text-white/80">{station.stationCity}</p>
                       <div className="mt-1">
                         <span className="rounded bg-white/10 px-1.5 py-0.5 text-xs">
-                          {station.stationCategories[0] || 'Music'}
+                          {station.stationCategories[0] || 'Müzik'}
                         </span>
                       </div>
                     </div>

@@ -98,7 +98,7 @@ export function NowPlayingPanel() {
                 {currentStation.stationName}
               </h3>
               <p className="text-sm text-white/70 truncate">
-                {currentStation.radioGroups[0] || "Radio Station"}
+                {currentStation.radioGroups[0] || "Radyo İstasyonu"}
               </p>
             </div>
           </div>
@@ -158,7 +158,7 @@ export function NowPlayingPanel() {
                 className="w-64 p-0 bg-black/90 backdrop-blur-md border-gray-800"
               >
                 <DropdownMenuLabel className="px-3 py-2 text-white/80 font-semibold">
-                  Playlist Queue
+                  Oynatma Listesi
                 </DropdownMenuLabel>
                 <DropdownMenuSeparator className="bg-gray-800" />
                 <ScrollArea className="h-60 rounded-md">
@@ -199,9 +199,9 @@ export function NowPlayingPanel() {
           </div>
           <div className="flex items-center space-x-2 w-1/3 justify-end">
             {isIOSSafari && (
-              <div className="flex items-center text-yellow-500 mr-2" title="Volume control is not available on iOS Safari">
+              <div className="flex items-center text-yellow-500 mr-2" title="iOS Safari'de ses kontrolü kullanılamaz">
                 <AlertTriangle className="h-4 w-4 mr-1" />
-                <span className="text-xs">No volume control</span>
+                <span className="text-xs">Ses kontrolü yok</span>
               </div>
             )}
             <div className="relative">
@@ -249,7 +249,7 @@ export function NowPlayingPanel() {
                 {currentStation.stationName}
               </h3>
               <p className="text-xs text-white/70 truncate">
-                {currentStation.radioGroups[0] || "Radio Station"}
+                {currentStation.radioGroups[0] || "Radyo İstasyonu"}
               </p>
             </div>
           </div>
@@ -308,7 +308,7 @@ export function NowPlayingPanel() {
                     }`}
                   />
                   <span>
-                    {isFavorite ? "Remove from Favorites" : "Add to Favorites"}
+                    {isFavorite ? "Favorilerden Kaldır" : "Favorilere Ekle"}
                   </span>
                 </DropdownMenuItem>
                 <DropdownMenuSeparator className="bg-gray-800" />
@@ -322,7 +322,7 @@ export function NowPlayingPanel() {
                   ) : (
                     <VolumeX className="h-4 w-4" />
                   )}
-                  <span>{volume > 0 ? "Mute" : "Unmute"}</span>
+                  <span>{volume > 0 ? "Sessize Al" : "Sesi Aç"}</span>
                   {isIOSSafari && (
                     <span className="text-yellow-500" title="Not available on iOS Safari">
                       <AlertTriangle className="h-3 w-3" />
@@ -331,11 +331,11 @@ export function NowPlayingPanel() {
                 </DropdownMenuItem>
                 <DropdownMenuSeparator className="bg-gray-800" />
                 <DropdownMenuLabel className="px-3 py-2 text-white/80 font-semibold flex items-center">
-                  Volume
+                  Ses
                   {isIOSSafari && (
-                    <span className="flex items-center text-yellow-500 ml-2" title="Volume control is not available on iOS Safari">
+                    <span className="flex items-center text-yellow-500 ml-2" title="iOS Safari'de ses kontrolü kullanılamaz">
                       <AlertTriangle className="h-3 w-3 mr-1" />
-                      <span className="text-xs">Not available</span>
+                      <span className="text-xs">Kullanılamaz</span>
                     </span>
                   )}
                 </DropdownMenuLabel>
@@ -351,13 +351,13 @@ export function NowPlayingPanel() {
                   />
                   {isIOSSafari && (
                     <p className="text-xs text-yellow-500 mt-1">
-                      Use your device&apos;s volume buttons to control audio
+                      Ses seviyesini kontrol etmek için cihazınızın ses düğmelerini kullanın
                     </p>
                   )}
                 </div>
                 <DropdownMenuSeparator className="bg-gray-800" />
                 <DropdownMenuLabel className="px-3 py-2 text-white/80 font-semibold">
-                  Playlist Queue
+                  Oynatma Listesi
                 </DropdownMenuLabel>
                 <ScrollArea className="h-40 rounded-md">
                   {stationList.map((station) => (

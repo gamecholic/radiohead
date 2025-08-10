@@ -103,7 +103,7 @@ export function Header({ onMobileMenuOpen }: HeaderProps) {
             <Input
               ref={searchInputRef}
               type="text"
-              placeholder="Search stations..."
+              placeholder="İstasyon ara..."
               className="w-full rounded-full bg-white/10 py-2 pl-10 pr-4 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-ring/30 border-transparent focus:border-accent"
               value={searchQuery}
               onChange={(e) => {
@@ -142,7 +142,7 @@ export function Header({ onMobileMenuOpen }: HeaderProps) {
                 <input
                   ref={searchInputRef}
                   type="text"
-                  placeholder="Search stations..."
+                  placeholder="İstasyon ara..."
                   className="w-full rounded-full bg-white/10 py-2 pl-10 pr-4 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-pink-500/50 focus:ring-offset-0 border-transparent focus:border-pink-500"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
@@ -156,7 +156,7 @@ export function Header({ onMobileMenuOpen }: HeaderProps) {
               <div className="mt-8 max-h-[70vh]">
                 <ScrollArea className="h-full w-full rounded-md">
                   {isLoading ? (
-                    <div className="p-4 text-center text-gray-400">Searching...</div>
+                    <div className="p-4 text-center text-gray-400">Aranıyor...</div>
                   ) : searchResults.length > 0 ? (
                     <div className="space-y-1">
                       {searchResults.map((station) => (
@@ -182,7 +182,7 @@ export function Header({ onMobileMenuOpen }: HeaderProps) {
                       ))}
                     </div>
                   ) : (
-                    <div className="p-4 text-center text-gray-400">No stations found</div>
+                    <div className="p-4 text-center text-gray-400">İstasyon bulunamadı</div>
                   )}
                 </ScrollArea>
               </div>
@@ -197,7 +197,7 @@ export function Header({ onMobileMenuOpen }: HeaderProps) {
           <div className="bg-black/90 border border-gray-800 rounded-lg shadow-lg max-h-96 overflow-hidden">
             <ScrollArea className="h-full w-full">
               {isLoading ? (
-                <div className="p-4 text-center text-gray-400">Searching...</div>
+                <div className="p-4 text-center text-gray-400">Aranıyor...</div>
               ) : searchResults.length > 0 ? (
                 <div className="py-2">
                   {searchResults.map((station) => (
@@ -223,7 +223,7 @@ export function Header({ onMobileMenuOpen }: HeaderProps) {
                   ))}
                 </div>
               ) : (
-                <div className="p-4 text-center text-gray-400">No stations found</div>
+                <div className="p-4 text-center text-gray-400">İstasyon bulunamadı</div>
               )}
             </ScrollArea>
           </div>

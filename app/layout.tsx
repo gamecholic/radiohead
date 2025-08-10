@@ -17,9 +17,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "RadioHead - Online Radio App",
-  description: "Listen to your favorite radio stations",
-};
+  title: "RadioHead - Çevrimiçi Radyo Uygulaması",
+  description: "Favori radyo istasyonlarınızı modern arayüzle dinleyin",
+};;
 
 export default function RootLayout({
   children,
@@ -27,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="tr">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-[100dvh] text-foreground bg-background-gradient`}
       >

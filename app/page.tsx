@@ -61,7 +61,7 @@ export default function Home() {
       <div className="flex flex-col h-[100dvh]">
         <Header onMobileMenuOpen={() => setIsMobileMenuOpen(true)} />
         <div className="flex-1 flex items-center justify-center">
-          <p>Loading...</p>
+          <p>Yükleniyor...</p>
         </div>
         <MobileMenu
           isOpen={isMobileMenuOpen}

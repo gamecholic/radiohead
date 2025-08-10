@@ -37,12 +37,12 @@ export function StationCard({ station, onPlay, isPlaying, isActive }: StationCar
       {/* Station info */}
       <div className="flex-1 overflow-hidden">
         <h3 className="truncate text-base font-semibold text-white">{station.stationName}</h3>
-        <p className="truncate text-sm text-white/80">{station.radioGroups[0] || 'Radio Station'}</p>
+        <p className="truncate text-sm text-white/80">{station.radioGroups[0] || 'Radyo İstasyonu'}</p>
         
         {/* Genre tag */}
         <div className="mt-2">
           <span className="rounded bg-white/10 px-2 py-1 text-xs">
-            {station.stationCategories[0] || 'Music'}
+            {station.stationCategories[0] || 'Müzik'}
           </span>
         </div>
       </div>

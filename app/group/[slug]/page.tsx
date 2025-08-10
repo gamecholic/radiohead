@@ -9,12 +9,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const group = radioGroups.find((g: RadioGroup) => g.slug === resolvedParams.slug);
   
   if (!group) {
-    return { title: "Group Not Found" };
+    return { title: "Grup Bulunamadı" };
   }
   
   return {
-    title: `${group.groupName} Radio Stations - RadioHead`,
-    description: `Listen to all ${group.groupName} radio stations on RadioHead`,
+    title: `${group.groupName} Radyo İstasyonları - RadioHead`,
+    description: `RadioHead'de tüm ${group.groupName} radyo istasyonlarını dinleyin`,
   };
 }
 
