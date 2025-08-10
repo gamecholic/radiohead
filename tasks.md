@@ -1,6 +1,4 @@
 - translations (i18n)
 - tests
 - pages (browse / library)
-- save to favorites
 - remember the last station played, and offer as featured
-- search functionality

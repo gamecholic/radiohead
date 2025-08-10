@@ -124,3 +124,24 @@ export const isStationFavorite = async (
   }
   return false;
 };
+
+export const searchStations = async (
+  query: string
+): Promise<RadioStation[]> => {
+  if (!query.trim()) {
+    return [];
+  }
+  
+  const normalizedQuery = query.toLowerCase().trim();
+  
+  return radioStations.filter((station: RadioStation) => 
+    station.stationName.toLowerCase().includes(normalizedQuery) ||
+    station.stationCity?.toLowerCase().includes(normalizedQuery) ||
+    station.radioGroups.some((group: string) => 
+      group.toLowerCase().includes(normalizedQuery)
+    ) ||
+    station.stationCategories.some((category: string) => 
+      category.toLowerCase().includes(normalizedQuery)
+    )
+  );
+};

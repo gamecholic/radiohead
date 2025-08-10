@@ -67,7 +67,7 @@
   --destructive-foreground: #ffffff;
   --border: #1e293b;
   --input: #1e293b;
-  --ring: #3b82f6;
+  --ring: #ec4899;
   --chart-1: #3b82f6;
   --chart-2: #8b5cf6;
   --chart-3: #ec4899;
@@ -80,7 +80,7 @@
   --sidebar-accent: #ec4899;
   --sidebar-accent-foreground: #ffffff;
   --sidebar-border: #1e293b;
-  --sidebar-ring: #3b82f6;
+  --sidebar-ring: #ec4899;
 }
 
 .dark {
@@ -102,7 +102,7 @@
   --destructive-foreground: #ffffff;
   --border: #1e293b;
   --input: #1e293b;
-  --ring: #3b82f6;
+  --ring: #ec4899;
   --chart-1: #3b82f6;
   --chart-2: #8b5cf6;
   --chart-3: #ec4899;
@@ -115,12 +115,12 @@
   --sidebar-accent: #ec4899;
   --sidebar-accent-foreground: #ffffff;
   --sidebar-border: #1e293b;
-  --sidebar-ring: #3b82f6;
+  --sidebar-ring: #ec4899;
 }
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border outline-ring/30;
   }
   body {
     @apply bg-background text-foreground;
