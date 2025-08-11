@@ -33,7 +33,7 @@ export function FeaturedStation({ station, stationList = [] }: FeaturedStationPr
           <Button 
             className="mt-2 bg-primary-gradient text-white hover:opacity-90" 
             size="sm" 
-            onClick={() => togglePlay(station, stationList)}
+            onClick={() => togglePlay(station, stationList, "Öne Çıkanlar")}
           >
             Şimdi Dinle
           </Button>

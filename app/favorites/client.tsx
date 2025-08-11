@@ -90,7 +90,7 @@ export function FavoritesPageClient({ initialStations }: { initialStations: Radi
                           size="icon"
                           onClick={(e) => {
                             e.stopPropagation();
-                            togglePlay(station, stations);
+                            togglePlay(station, stations, "Favoriler");
                           }}
                         >
                           {currentStation?.stationName === station.stationName && isPlaying ? (

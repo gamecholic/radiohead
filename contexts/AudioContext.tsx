@@ -15,8 +15,9 @@ interface AudioContextType {
   isPlaying: boolean;
   currentStation: Station | null;
   stationList: Station[];
+  stationListSource: string | null;
   volume: number;
-  togglePlay: (station: Station, stationList?: Station[]) => void;
+  togglePlay: (station: Station, stationList?: Station[], source?: string) => void;
   setVolume: (volume: number) => void;
   updateVolume: (volume: number) => void;
   playNext: () => void;
@@ -46,6 +47,7 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentStation, setCurrentStation] = useState<Station | null>(null);
   const [stationList, setStationList] = useState<Station[]>([]);
+  const [stationListSource, setStationListSource] = useState<string | null>(null);
   const [volume, setVolume] = useState(80);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const hlsRef = useRef<Hls | null>(null);
@@ -54,7 +56,7 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
   const hasUserInteractedRef = useRef(false);
   const isIOSSafariRef = useRef(isIOSSafari());
 
-  const togglePlay = (station: Station, stationList?: Station[]) => {
+  const togglePlay = (station: Station, stationList?: Station[], source?: string) => {
     // Mark that user has interacted (needed for iOS Safari)
     hasUserInteractedRef.current = true;
     
@@ -64,6 +66,7 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
       setCurrentStation(station);
       if (stationList && stationList.length > 0) {
         setStationList(stationList);
+        setStationListSource(source || null);
       }
       setIsPlaying(true);
     }
@@ -351,6 +354,7 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
         isPlaying,
         currentStation,
         stationList,
+        stationListSource,
         volume,
         togglePlay,
         setVolume,

@@ -11,12 +11,14 @@ interface StationCardProps {
   station: RadioStation;
   stationList?: RadioStation[];
   layout?: "vertical" | "horizontal";
+  source?: string;
 }
 
 export function StationCard({
   station,
   stationList = [],
   layout = "vertical",
+  source = "İstasyonlar",
 }: StationCardProps) {
   const { isPlaying, currentStation, togglePlay } = useAudio();
   const [isHovered, setIsHovered] = useState(false);
@@ -24,7 +26,7 @@ export function StationCard({
   const isActive = currentStation?.stationName === station.stationName;
 
   const handlePlay = () => {
-    togglePlay(station, stationList);
+    togglePlay(station, stationList, source);
   };
 
   if (layout === "horizontal") {
