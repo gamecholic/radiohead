@@ -150,13 +150,13 @@
   position: absolute;
   inset: -1px;
   border-radius: inherit;
-  background: linear-gradient(90deg, rgba(236,72,153,0.3) 0%, rgba(245,158,11,0.3) 100%);
+  background: linear-gradient(90deg, rgba(236,72,153,0.3) 0%, rgba(245, 158, 11, 0.302) 100%);
   z-index: -1;
 }
 
 /* Custom hover effect for buttons */
 .button-hero-hover:hover {
-  background: linear-gradient(90deg, rgba(236,72,153,0.2) 0%, rgba(245,158,11,0.2) 100%);
+  background: linear-gradient(90deg, rgba(236,72,153,0.2) 0%, rgba(245, 158, 11, 0.2) 100%);
 }
 
 /* Custom range input styling */
