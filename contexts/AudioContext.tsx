@@ -70,13 +70,18 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
     hasUserInteractedRef.current = true;
     
     if (currentStation?.stationName === station.stationName && isPlaying) {
+      // Pause playback but keep the current station
       setIsPlaying(false);
     } else {
-      setCurrentStation(station);
-      if (stationList && stationList.length > 0) {
-        setStationList(stationList);
-        setStationListSource(source || null);
+      // If we're switching stations or starting from stopped state
+      if (currentStation?.stationName !== station.stationName) {
+        setCurrentStation(station);
+        if (stationList && stationList.length > 0) {
+          setStationList(stationList);
+          setStationListSource(source || null);
+        }
       }
+      // Start/restart playback
       setIsPlaying(true);
     }
   };
@@ -186,16 +191,23 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
 
   // Handle audio playback with HLS support
   useEffect(() => {
-    if (!audioRef.current || !currentStation) return;
-
-    const videoUrl = currentStation.stationPlaybackUrl;
-    const isHLS = videoUrl.includes('.m3u8');
+    if (!audioRef.current) return;
 
     // Clean up any existing HLS instance
     if (hlsRef.current) {
       hlsRef.current.destroy();
       hlsRef.current = null;
     }
+
+    // If there's no current station, stop playback completely
+    if (!currentStation) {
+      audioRef.current.src = '';
+      audioRef.current.load(); // Reset the media element
+      return;
+    }
+
+    const videoUrl = currentStation.stationPlaybackUrl;
+    const isHLS = videoUrl.includes('.m3u8');
 
     if (isPlaying && currentStation) {
       // Handle HLS streams
@@ -251,9 +263,8 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
         }
       } else {
         // Handle regular audio sources or native HLS support
-        if (audioRef.current.src !== videoUrl) {
-          audioRef.current.src = videoUrl;
-        }
+        // Always reset the source to force restart from scratch
+        audioRef.current.src = videoUrl;
         
         // Set volume only if not on iOS Safari
         if (!isIOSSafariRef.current) {
