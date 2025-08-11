@@ -2,6 +2,7 @@
 
 import React, { createContext, useContext, useState, useRef, useEffect } from 'react';
 import Hls from 'hls.js';
+import { getFeaturedStations } from '@/lib/api';
 
 export interface Station {
   stationName: string;
@@ -83,6 +84,28 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
   const playNext = () => {
     if (!currentStation || stationList.length === 0) return;
     
+    // If there's only one station in the current list, switch to featured stations
+    if (stationList.length === 1) {
+      // Use the same temp user ID as in FavoritesContext
+      const USER_ID = "temp-user";
+      
+      // Fetch featured stations and play the first one
+      getFeaturedStations(USER_ID).then(featuredStations => {
+        if (featuredStations.length > 0) {
+          // Set the featured stations as the new station list
+          setStationList(featuredStations);
+          setStationListSource('Öne Çıkanlar');
+
+          // Play the first featured station
+          setCurrentStation(featuredStations[0]);
+          setIsPlaying(true);
+        }
+      }).catch(error => {
+        console.error('Failed to fetch featured stations:', error);
+      });
+      return;
+    }
+    
     const currentIndex = stationList.findIndex(
       station => station.stationName === currentStation.stationName
     );
@@ -98,6 +121,28 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
 
   const playPrevious = () => {
     if (!currentStation || stationList.length === 0) return;
+    
+    // If there's only one station in the current list, switch to featured stations
+    if (stationList.length === 1) {
+      // Use the same temp user ID as in FavoritesContext
+      const USER_ID = "temp-user";
+      
+      // Fetch featured stations and play the last one
+      getFeaturedStations(USER_ID).then(featuredStations => {
+        if (featuredStations.length > 0) {
+          // Set the featured stations as the new station list
+          setStationList(featuredStations);
+          setStationListSource('Öne Çıkanlar');
+
+          // Play the last featured station
+          setCurrentStation(featuredStations[featuredStations.length - 1]);
+          setIsPlaying(true);
+        }
+      }).catch(error => {
+        console.error('Failed to fetch featured stations:', error);
+      });
+      return;
+    }
     
     const currentIndex = stationList.findIndex(
       station => station.stationName === currentStation.stationName
