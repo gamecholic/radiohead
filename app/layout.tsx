@@ -5,7 +5,6 @@ import { Sidebar } from "@/components/layout";
 import { AudioProvider } from "@/contexts/AudioContext";
 import { FavoritesProvider } from "@/contexts/FavoritesContext";
 import { NowPlayingPanel } from "@/components/layout/now-playing-panel";
-import { PWAPrompt } from "@/components/pwa-prompt";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -67,7 +66,6 @@ export default function RootLayout({
                 </main>
               </div>
             </div>
-            <PWAPrompt />
           </FavoritesProvider>
         </AudioProvider>
       </body>
