@@ -48,7 +48,15 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
   const [currentStation, setCurrentStation] = useState<Station | null>(null);
   const [stationList, setStationList] = useState<Station[]>([]);
   const [stationListSource, setStationListSource] = useState<string | null>(null);
-  const [volume, setVolume] = useState(80);
+  
+  // Load volume from localStorage or default to 80
+  const [volume, setVolume] = useState(() => {
+    if (typeof window !== 'undefined') {
+      const savedVolume = localStorage.getItem('radiohead-volume');
+      return savedVolume ? parseInt(savedVolume, 10) : 80;
+    }
+    return 80;
+  });
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const hlsRef = useRef<Hls | null>(null);
   const volumeRef = useRef<number>(80);
@@ -248,6 +256,11 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
 
   // Handle volume state updates (for UI synchronization)
   useEffect(() => {
+    // Save volume to localStorage whenever it changes
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('radiohead-volume', volume.toString());
+    }
+    
     volumeRef.current = volume;
     // Only update audio element volume if not on iOS Safari
     if (audioRef.current && !isIOSSafariRef.current) {
