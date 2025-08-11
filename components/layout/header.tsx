@@ -75,7 +75,7 @@ export function Header({ onMobileMenuOpen }: HeaderProps) {
 
   const handleStationSelect = (station: RadioStation) => {
     // Start playing the selected station immediately
-    togglePlay(station);
+    togglePlay(station, [station], "Arama sonucu");
     setIsSearchOpen(false);
     setSearchQuery("");
   };
