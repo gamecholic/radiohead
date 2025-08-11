@@ -61,7 +61,7 @@ export function NowPlayingPanel() {
   if (!currentStation) return null;
 
   const handleStationSelect = (station: Station) => {
-    togglePlay(station, stationList);
+    togglePlay(station, stationList, stationListSource ?? undefined);
   };
 
   const toggleFavorite = async () => {
@@ -154,57 +154,57 @@ export function NowPlayingPanel() {
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent
-              side="top"
-              align="center"
-              className="w-64 p-0 bg-black/90 backdrop-blur-md border-gray-800"
-            >
-              <DropdownMenuLabel className="px-3 py-2 text-white/80 font-semibold">
-                Oynatma Listesi
-              </DropdownMenuLabel>
-              {stationListSource ? (
-                <DropdownMenuLabel className="px-3 py-1 text-xs text-white/60 font-normal flex items-center">
-                  Kaynak: {stationListSource}
+                side="top"
+                align="center"
+                className="w-64 p-0 bg-black/90 backdrop-blur-md border-gray-800"
+              >
+                <DropdownMenuLabel className="px-3 py-2 text-white/80 font-semibold">
+                  Oynatma Listesi
                 </DropdownMenuLabel>
-              ) : (
-                <DropdownMenuLabel className="px-3 py-1 text-xs text-white/60 font-normal flex items-center">
+                {stationListSource ? (
+                  <DropdownMenuLabel className="px-3 py-1 text-xs text-white/60 font-normal flex items-center">
+                    Kaynak: {stationListSource}
+                  </DropdownMenuLabel>
+                ) : (
+                  <DropdownMenuLabel className="px-3 py-1 text-xs text-white/60 font-normal flex items-center">
                   Kaynak: {currentStation?.radioGroups[0] || "Radyo İstasyonu"}
-                </DropdownMenuLabel>
-              )}
-              <DropdownMenuSeparator className="bg-gray-800" />
-              <ScrollArea className="h-60 rounded-md">
-                {stationList.map((station) => (
-                  <DropdownMenuItem
-                    key={station.stationName}
-                    className={`flex items-center justify-between px-3 py-2 cursor-pointer focus:bg-white/10 ${
-                      station.stationName === currentStation.stationName
-                        ? "bg-white/10"
-                        : "hover:bg-white/10"
-                    }`}
-                    onClick={() => handleStationSelect(station)}
-                  >
-                    <div className="flex items-center space-x-2">
-                      <StationIcon
-                        stationIconUrl={station.stationIconUrl}
-                        stationName={station.stationName}
-                        size="xxs"
-                      />
-                      <span
-                        className={`text-sm ${
-                          station.stationName === currentStation.stationName
-                            ? "font-semibold text-white"
-                            : "text-white/80"
-                        }`}
-                      >
-                        {station.stationName}
-                      </span>
-                    </div>
-                    {station.stationName === currentStation.stationName && (
-                      <Radio className="h-4 w-4 text-white animate-pulse" />
-                    )}
-                  </DropdownMenuItem>
-                ))}
-              </ScrollArea>
-            </DropdownMenuContent>
+                  </DropdownMenuLabel>
+                )}
+                <DropdownMenuSeparator className="bg-gray-800" />
+                <ScrollArea className="h-60 rounded-md">
+                  {stationList.map((station) => (
+                    <DropdownMenuItem
+                      key={station.stationName}
+                      className={`flex items-center justify-between px-3 py-2 cursor-pointer focus:bg-white/10 ${
+                        station.stationName === currentStation.stationName
+                          ? "bg-white/10"
+                          : "hover:bg-white/10"
+                      }`}
+                      onClick={() => handleStationSelect(station)}
+                    >
+                      <div className="flex items-center space-x-2">
+                        <StationIcon
+                          stationIconUrl={station.stationIconUrl}
+                          stationName={station.stationName}
+                          size="xxs"
+                        />
+                        <span
+                          className={`text-sm ${
+                            station.stationName === currentStation.stationName
+                              ? "font-semibold text-white"
+                              : "text-white/80"
+                          }`}
+                        >
+                          {station.stationName}
+                        </span>
+                      </div>
+                      {station.stationName === currentStation.stationName && (
+                        <Radio className="h-4 w-4 text-white animate-pulse" />
+                      )}
+                    </DropdownMenuItem>
+                  ))}
+                </ScrollArea>
+              </DropdownMenuContent>
             </DropdownMenu>
           </div>
           <div className="flex items-center space-x-2 w-1/3 justify-end">
@@ -334,7 +334,10 @@ export function NowPlayingPanel() {
                   )}
                   <span>{volume > 0 ? "Sessize Al" : "Sesi Aç"}</span>
                   {isIOSSafari && (
-                    <span className="text-yellow-500" title="Not available on iOS Safari">
+                    <span
+                      className="text-yellow-500"
+                      title="Not available on iOS Safari"
+                    >
                       <AlertTriangle className="h-3 w-3" />
                     </span>
                   )}
@@ -343,7 +346,10 @@ export function NowPlayingPanel() {
                 <DropdownMenuLabel className="px-3 py-2 text-white/80 font-semibold flex items-center">
                   Ses
                   {isIOSSafari && (
-                    <span className="flex items-center text-yellow-500 ml-2" title="iOS Safari'de ses kontrolü kullanılamaz">
+                    <span
+                      className="flex items-center text-yellow-500 ml-2"
+                      title="iOS Safari'de ses kontrolü kullanılamaz"
+                    >
                       <AlertTriangle className="h-3 w-3 mr-1" />
                       <span className="text-xs">Kullanılamaz</span>
                     </span>
@@ -361,7 +367,8 @@ export function NowPlayingPanel() {
                   />
                   {isIOSSafari && (
                     <p className="text-xs text-yellow-500 mt-1">
-                      Ses seviyesini kontrol etmek için cihazınızın ses düğmelerini kullanın
+                      Ses seviyesini kontrol etmek için cihazınızın ses
+                      düğmelerini kullanın
                     </p>
                   )}
                 </div>

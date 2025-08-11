@@ -61,7 +61,7 @@ export function GroupPageClient({ group, stations }: { group: RadioGroup, statio
                     size="icon"
                     onClick={(e) => {
                       e.stopPropagation();
-                      togglePlay(station, stations);
+                      togglePlay(station, stations, group.groupName);
                     }}
                   >
                     {currentStation?.stationName === station.stationName && isPlaying ? (
