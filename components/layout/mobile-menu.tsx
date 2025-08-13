@@ -62,6 +62,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               { name: "Keşfet", href: "/browse" },
               { name: "Kütüphane", href: "/library" },
               { name: "Favoriler", href: "/favorites" },
+              { name: "Hakkında", href: "/about" },
             ].map((item) => (
               <Link
                 key={item.name}
