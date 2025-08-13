@@ -93,8 +93,9 @@ export const addUserFavorite = <T>(userId: string, station: T): void => {
   const favorites = getUserFavorites<T>(userId);
   
   // Check if station is already in favorites
-  const isAlreadyFavorite = favorites.some((fav: any) => 
-    fav.stationName === (station as any).stationName
+  // We need to cast to unknown first to satisfy TypeScript
+  const isAlreadyFavorite = favorites.some((fav) => 
+    (fav as unknown as { stationName: string }).stationName === (station as unknown as { stationName: string }).stationName
   );
   
   // Only add if not already in favorites
@@ -106,13 +107,17 @@ export const addUserFavorite = <T>(userId: string, station: T): void => {
 
 export const removeUserFavorite = <T>(userId: string, stationName: string): void => {
   const favorites = getUserFavorites<T>(userId);
-  const updatedFavorites = favorites.filter((station: any) => 
-    station.stationName !== stationName
+  // We need to cast to unknown first to satisfy TypeScript
+  const updatedFavorites = favorites.filter((station) => 
+    (station as unknown as { stationName: string }).stationName !== stationName
   );
   setToLocalStorage<T[]>(STORAGE_KEYS.USER_FAVORITES(userId), updatedFavorites);
 };
 
 export const isStationFavorite = <T>(userId: string, stationName: string): boolean => {
   const favorites = getUserFavorites<T>(userId);
-  return favorites.some((station: any) => station.stationName === stationName);
+  // We need to cast to unknown first to satisfy TypeScript
+  return favorites.some((station) => 
+    (station as unknown as { stationName: string }).stationName === stationName
+  );
 };
