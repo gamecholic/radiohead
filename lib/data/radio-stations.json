@@ -29,7 +29,6 @@
     ],
     "stationPlaybackUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/EFKAR128AAC.aac",
     "radioGroups": [
-      "Radyo Home",
       "Karnaval"
     ]
   },
@@ -41,7 +40,6 @@
     ],
     "stationPlaybackUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/JOY_TURK128AAC.aac?",
     "radioGroups": [
-      "Pal Group",
       "Karnaval"
     ]
   },
@@ -64,7 +62,6 @@
     ],
     "stationPlaybackUrl": "https://kiss.radyotvonline.net/kissfm",
     "radioGroups": [
-      "Number One",
       "Karnaval"
     ]
   },
@@ -535,17 +532,6 @@
       "Pop"
     ],
     "stationPlaybackUrl": "https://listen.powerapp.com.tr/powerpop/abr/playlist.m3u8",
-    "radioGroups": [
-      "Power App"
-    ]
-  },
-  {
-    "stationName": "Power Türk Fm",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/power-turk-dinle.png",
-    "stationCategories": [
-      "Pop"
-    ],
-    "stationPlaybackUrl": "https://live.powerapp.com.tr/powerturk/abr/playlist.m3u8",
     "radioGroups": [
       "Power App"
     ]
