@@ -434,7 +434,7 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
       }}
     >
       {children}
-      <audio ref={audioRef} />
+      <audio ref={audioRef} crossOrigin="anonymous" />
     </AudioContext.Provider>
   );
 }
