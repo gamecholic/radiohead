@@ -3,6 +3,16 @@
 import React, { createContext, useContext, useState, useRef, useEffect } from 'react';
 import Hls from 'hls.js';
 import { getFeaturedStations } from '@/lib/api';
+import {
+  getSavedVolume,
+  getSavedCurrentStation,
+  getSavedStationList,
+  getSavedStationListSource,
+  saveVolume,
+  saveCurrentStation,
+  saveStationList,
+  saveStationListSource
+} from '@/lib/localStorageHandler';
 
 export interface Station {
   stationName: string;
@@ -52,12 +62,29 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
   
   // Load volume from localStorage or default to 80
   const [volume, setVolume] = useState(() => {
-    if (typeof window !== 'undefined') {
-      const savedVolume = localStorage.getItem('radiohead-volume');
-      return savedVolume ? parseInt(savedVolume, 10) : 80;
-    }
-    return 80;
+    return getSavedVolume();
   });
+  
+  // Initialize state with saved data from localStorage
+  useEffect(() => {
+    // Load saved station data
+    const savedStation = getSavedCurrentStation<Station>();
+    const savedStationList = getSavedStationList<Station>();
+    const savedStationListSource = getSavedStationListSource();
+    
+    if (savedStation) {
+      setCurrentStation(savedStation);
+    }
+    
+    if (savedStationList) {
+      setStationList(Array.isArray(savedStationList) ? savedStationList : []);
+    }
+    
+    if (savedStationListSource) {
+      setStationListSource(savedStationListSource);
+    }
+  }, []);
+  
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const hlsRef = useRef<Hls | null>(null);
   const volumeRef = useRef<number>(80);
@@ -313,9 +340,7 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
   // Handle volume state updates (for UI synchronization)
   useEffect(() => {
     // Save volume to localStorage whenever it changes
-    if (typeof window !== 'undefined') {
-      localStorage.setItem('radiohead-volume', volume.toString());
-    }
+    saveVolume(volume);
     
     volumeRef.current = volume;
     // Only update audio element volume if not on iOS Safari
@@ -323,6 +348,19 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
       audioRef.current.volume = volume / 100;
     }
   }, [volume]);
+
+  // Save station data to localStorage whenever it changes
+  useEffect(() => {
+    saveCurrentStation<Station>(currentStation);
+  }, [currentStation]);
+
+  useEffect(() => {
+    saveStationList<Station>(stationList);
+  }, [stationList]);
+
+  useEffect(() => {
+    saveStationListSource(stationListSource);
+  }, [stationListSource]);
 
   // Cleanup timeout on unmount
   useEffect(() => {

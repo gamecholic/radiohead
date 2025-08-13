@@ -2,6 +2,12 @@ import categories from "@/lib/data/categories.json";
 import radioGroups from "@/lib/data/radio-groups.json";
 import radioStations from "@/lib/data/radio-stations.json";
 import { RadioGroup, RadioStation } from "@/lib/types";
+import {
+  getUserFavorites as getFavorites,
+  addUserFavorite,
+  removeUserFavorite,
+  isStationFavorite as checkStationFavorite
+} from '@/lib/localStorageHandler';
 
 // Filter out stations without playback URLs
 const validStations = radioStations.filter(
@@ -51,14 +57,7 @@ export const getUserFavorites = async (
 ): Promise<RadioStation[]> => {
   "use client";
 
-  // currently, use the local storage
-  if (typeof window !== "undefined") {
-    const favorites = localStorage.getItem(
-      `favorites_${userId ?? "temp-user"}`
-    );
-    return favorites ? JSON.parse(favorites) : [];
-  }
-  return [];
+  return getFavorites<RadioStation>(userId);
 };
 
 export const addStationToFavorites = async (
@@ -67,26 +66,7 @@ export const addStationToFavorites = async (
 ): Promise<void> => {
   "use client";
 
-  if (typeof window !== "undefined") {
-    const favorites = localStorage.getItem(
-      `favorites_${userId ?? "temp-user"}`
-    );
-    const updatedFavorites = favorites ? JSON.parse(favorites) : [];
-    
-    // Check if station is already in favorites
-    const isAlreadyFavorite = updatedFavorites.some(
-      (fav: RadioStation) => fav.stationName === station.stationName
-    );
-    
-    // Only add if not already in favorites
-    if (!isAlreadyFavorite) {
-      updatedFavorites.push(station);
-      localStorage.setItem(
-        `favorites_${userId ?? "temp-user"}`,
-        JSON.stringify(updatedFavorites)
-      );
-    }
-  }
+  addUserFavorite<RadioStation>(userId, station);
 };
 
 export const removeStationFromFavorites = async (
@@ -95,20 +75,7 @@ export const removeStationFromFavorites = async (
 ): Promise<void> => {
   "use client";
 
-  if (typeof window !== "undefined") {
-    const favorites = localStorage.getItem(
-      `favorites_${userId ?? "temp-user"}`
-    );
-    if (favorites) {
-      const updatedFavorites = JSON.parse(favorites).filter(
-        (station: RadioStation) => station.stationName !== stationName
-      );
-      localStorage.setItem(
-        `favorites_${userId ?? "temp-user"}`,
-        JSON.stringify(updatedFavorites)
-      );
-    }
-  }
+  removeUserFavorite<RadioStation>(userId, stationName);
 };
 
 export const isStationFavorite = async (
@@ -117,17 +84,7 @@ export const isStationFavorite = async (
 ): Promise<boolean> => {
   "use client";
 
-  if (typeof window !== "undefined") {
-    const favorites = localStorage.getItem(
-      `favorites_${userId ?? "temp-user"}`
-    );
-    if (favorites) {
-      return JSON.parse(favorites).some(
-        (station: RadioStation) => station.stationName === stationName
-      );
-    }
-  }
-  return false;
+  return checkStationFavorite<RadioStation>(userId, stationName);
 };
 
 export const searchStations = async (

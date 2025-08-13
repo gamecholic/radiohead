@@ -9,6 +9,7 @@ A modern, sleek online radio application built with Next.js 15 and shadcn/ui. Li
 - Responsive design for all devices
 - Volume control
 - Station favorites
+- Resume playback - Remembers your last played station and continues from where you left off
 
 ## Tech Stack
 
