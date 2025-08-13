@@ -39,7 +39,7 @@ export default function AboutPage() {
               </h2>
               <p className="text-gray-300 mb-4">
                 Bu uygulama eğitim amaçlı geliştirilmiştir ve ticari bir amaç
-                gütmemektedir. Uygulama Google'da indekslenmemiştir ve genel
+                gütmemektedir. Uygulama Google&apos;da indekslenmemiştir ve genel
                 kitleye açık şekilde paylaşılmamıştır.
               </p>
               <p className="text-gray-300 mb-4">
