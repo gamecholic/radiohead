@@ -71,7 +71,7 @@
     "stationCategories": [
       "Pop"
     ],
-    "stationPlaybackUrl": "https://n10101m.mediatriple.net/numberoneturk",
+    "stationPlaybackUrl": "https://n10101m.mediatriple.net/hls/chunks_yAHJ4zrP.m3u8",
     "radioGroups": [
       "Number One"
     ]
@@ -462,7 +462,7 @@
     "stationCategories": [
       "Yabancı Müzik"
     ],
-    "stationPlaybackUrl": "https://n10101m.mediatriple.net/hls/media_FjRjP8PU_3.aac",
+    "stationPlaybackUrl": "https://n10101m.mediatriple.net/hls/chunks_x63zzAcd.m3u8",
     "radioGroups": [
       "Other",
       "Number One"
@@ -474,7 +474,7 @@
     "stationCategories": [
       "Pop"
     ],
-    "stationPlaybackUrl": "https://n10101m.mediatriple.net/hls/chunks_PJcWintK.m3u8",
+    "stationPlaybackUrl": "https://n10101m.mediatriple.net/hls/chunks_sgHT6wJV.m3u8",
     "radioGroups": [
       "Number One",
       "Nostalji Radyoları"
