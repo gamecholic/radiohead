@@ -21,24 +21,15 @@ export default function Home() {
   >({});
   const [featuredStations, setFeaturedStations] = useState<RadioStation[]>([]);
   const [featuredStation, setFeaturedStation] = useState<RadioStation | null>(null);
+  const [loadingCategories, setLoadingCategories] = useState(true);
 
-  // Fetch data on component mount
+  // Fetch categories and stations for carousels
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchCategoriesAndStations = async () => {
       try {
         // Fetch categories
         const categoriesData = await getCategories();
         setCategories(categoriesData);
-
-        // Fetch featured stations
-        const featured = await getFeaturedStations("temp-user");
-        setFeaturedStations(featured);
-
-        // Set a random featured station once
-        if (featured.length > 0 && !featuredStation) {
-          const randomStation = featured[Math.floor(Math.random() * featured.length)];
-          setFeaturedStation(randomStation);
-        }
 
         // Fetch stations for each category
         const stations: Record<string, RadioStation[]> = {};
@@ -47,16 +38,38 @@ export default function Home() {
           stations[category] = categoryStations;
         }
         setStationsByCategory(stations);
+        setLoadingCategories(false);
       } catch (error) {
-        console.error("Error fetching data:", error);
+        console.error("Error fetching categories and stations:", error);
+        setLoadingCategories(false);
       }
     };
 
-    fetchData();
+    fetchCategoriesAndStations();
   }, []);
 
-  // Render loading state while data is being fetched
-  if (categories.length === 0 || Object.keys(stationsByCategory).length === 0) {
+  // Fetch featured stations separately
+  useEffect(() => {
+    const fetchFeaturedStations = async () => {
+      try {
+        const featured = await getFeaturedStations("temp-user");
+        setFeaturedStations(featured);
+
+        // Set a random featured station once
+        if (featured.length > 0 && !featuredStation) {
+          const randomStation = featured[Math.floor(Math.random() * featured.length)];
+          setFeaturedStation(randomStation);
+        }
+      } catch (error) {
+        console.error("Error fetching featured stations:", error);
+      }
+    };
+
+    fetchFeaturedStations();
+  }, []);
+
+  // Render loading state only for categories (not blocking carousels)
+  if (loadingCategories) {
     return (
       <div className="flex flex-col h-[100dvh]">
         <Header onMobileMenuOpen={() => setIsMobileMenuOpen(true)} />
@@ -80,10 +93,12 @@ export default function Home() {
         <ScrollArea className="flex-1 h-full [&>div]:!block">
           <div className="w-full max-w-6xl mx-auto p-4 md:p-6 pb-24 md:pb-24">
             {/* Hero Featured Station */}
-            <FeaturedStation
-              station={featuredStation as RadioStation}
-              stationList={featuredStations}
-            />
+            {featuredStation && (
+              <FeaturedStation
+                station={featuredStation}
+                stationList={featuredStations}
+              />
+            )}
 
             {/* Netflix-style Carousels */}
             <section className="w-full">
