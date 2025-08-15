@@ -40,6 +40,7 @@ export function GroupPageClient({ group, stations }: { group: RadioGroup, statio
                 className={`group relative flex flex-col rounded-xl bg-white/5 p-3 sm:p-4 backdrop-blur-md transition-all hover:bg-white/10 hover:cursor-pointer border border-white/10 ${
                   currentStation?.stationName === station.stationName && isPlaying ? 'ring-hero-gradient bg-white/10' : ''
                 }`}
+                onClick={() => togglePlay(station, stations, group.groupName)}
               >
                 <div className="flex items-center">
                   <StationIcon 
