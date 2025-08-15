@@ -6,7 +6,8 @@ const STORAGE_KEYS = {
   CURRENT_STATION: 'radiohead-current-station',
   STATION_LIST: 'radiohead-station-list',
   STATION_LIST_SOURCE: 'radiohead-station-list-source',
-  USER_FAVORITES: (userId: string) => `favorites_${userId ?? "temp-user"}`
+  USER_FAVORITES: (userId: string) => `favorites_${userId ?? "temp-user"}`,
+  USER_PLAYLISTS: (userId: string) => `playlists_${userId ?? "temp-user"}`
 } as const;
 
 // Generic functions for localStorage operations
@@ -118,6 +119,94 @@ export const isStationFavorite = <T>(userId: string, stationName: string): boole
   const favorites = getUserFavorites<T>(userId);
   // We need to cast to unknown first to satisfy TypeScript
   return favorites.some((station) => 
+    (station as unknown as { stationName: string }).stationName === stationName
+  );
+};
+
+// Playlist operations
+export interface Playlist<T> {
+  id: string;
+  name: string;
+  stations: T[];
+  createdAt: number;
+  updatedAt: number;
+}
+
+export const getUserPlaylists = <T>(userId: string): Playlist<T>[] => {
+  return getFromLocalStorage<Playlist<T>[]>(STORAGE_KEYS.USER_PLAYLISTS(userId), []);
+};
+
+export const addUserPlaylist = <T>(userId: string, playlistName: string): Playlist<T> => {
+  const playlists = getUserPlaylists<T>(userId);
+  const newPlaylist: Playlist<T> = {
+    id: Date.now().toString(),
+    name: playlistName,
+    stations: [],
+    createdAt: Date.now(),
+    updatedAt: Date.now()
+  };
+  
+  const updatedPlaylists = [...playlists, newPlaylist];
+  setToLocalStorage<Playlist<T>[]>(STORAGE_KEYS.USER_PLAYLISTS(userId), updatedPlaylists);
+  
+  return newPlaylist;
+};
+
+export const removeUserPlaylist = <T>(userId: string, playlistId: string): void => {
+  const playlists = getUserPlaylists<T>(userId);
+  const updatedPlaylists = playlists.filter(playlist => playlist.id !== playlistId);
+  setToLocalStorage<Playlist<T>[]>(STORAGE_KEYS.USER_PLAYLISTS(userId), updatedPlaylists);
+};
+
+export const addStationToPlaylist = <T>(userId: string, playlistId: string, station: T): Playlist<T> | null => {
+  const playlists = getUserPlaylists<T>(userId);
+  const playlistIndex = playlists.findIndex(playlist => playlist.id === playlistId);
+  
+  if (playlistIndex !== -1) {
+    const updatedPlaylists = [...playlists];
+    const playlist = updatedPlaylists[playlistIndex];
+    
+    // Check if station is already in playlist
+    const isAlreadyInPlaylist = playlist.stations.some((s) => 
+      (s as unknown as { stationName: string }).stationName === (station as unknown as { stationName: string }).stationName
+    );
+    
+    // Only add if not already in playlist
+    if (!isAlreadyInPlaylist) {
+      playlist.stations = [...playlist.stations, station];
+      playlist.updatedAt = Date.now();
+      setToLocalStorage<Playlist<T>[]>(STORAGE_KEYS.USER_PLAYLISTS(userId), updatedPlaylists);
+      return playlist;
+    }
+  }
+  
+  return null;
+};
+
+export const removeStationFromPlaylist = <T>(userId: string, playlistId: string, stationName: string): void => {
+  const playlists = getUserPlaylists<T>(userId);
+  const playlistIndex = playlists.findIndex(playlist => playlist.id === playlistId);
+  
+  if (playlistIndex !== -1) {
+    const updatedPlaylists = [...playlists];
+    const playlist = updatedPlaylists[playlistIndex];
+    
+    playlist.stations = playlist.stations.filter((station) => 
+      (station as unknown as { stationName: string }).stationName !== stationName
+    );
+    
+    playlist.updatedAt = Date.now();
+    setToLocalStorage<Playlist<T>[]>(STORAGE_KEYS.USER_PLAYLISTS(userId), updatedPlaylists);
+  }
+};
+
+export const isStationInPlaylist = <T>(userId: string, playlistId: string, stationName: string): boolean => {
+  const playlists = getUserPlaylists<T>(userId);
+  const playlist = playlists.find(p => p.id === playlistId);
+  
+  if (!playlist) return false;
+  
+  return playlist.stations.some((station) => 
     (station as unknown as { stationName: string }).stationName === stationName
   );
 };

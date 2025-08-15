@@ -12,6 +12,8 @@ import {
   Star,
   MoreVertical,
   AlertTriangle,
+  Plus,
+  PlusCircle,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
@@ -27,7 +29,17 @@ import {
 import { StationIcon } from "@/components/station-icon";
 import { useAudio, Station } from "@/contexts/AudioContext";
 import { useFavorites } from "@/contexts/FavoritesContext";
+import { usePlaylists } from "@/contexts/PlaylistContext";
 import { useState, useEffect, useRef } from "react";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
 
 export function NowPlayingPanel() {
   const {
@@ -45,9 +57,14 @@ export function NowPlayingPanel() {
   } = useAudio();
 
   const { favorites, addFavorite, removeFavorite } = useFavorites();
+  const { playlists, loadPlaylists, createPlaylist, addStationToPlaylist } =
+    usePlaylists();
   const [isFavorite, setIsFavorite] = useState(false);
   const [previousVolume, setPreviousVolume] = useState(80);
   const [isVolumeHovered, setIsVolumeHovered] = useState(false);
+  const [isAddToPlaylistOpen, setIsAddToPlaylistOpen] = useState(false);
+  const [newPlaylistName, setNewPlaylistName] = useState("");
+  const [isCreatingPlaylist, setIsCreatingPlaylist] = useState(false);
   const volumeAreaRef = useRef<HTMLDivElement>(null);
 
   // Check if the current station is a favorite when it changes or when favorites update
@@ -60,11 +77,23 @@ export function NowPlayingPanel() {
     }
   }, [currentStation, favorites]);
 
+  // Load user playlists
+  useEffect(() => {
+    loadPlaylists("temp-user");
+  }, []);
+
+  // Reload playlists when dialog opens
+  useEffect(() => {
+    if (isAddToPlaylistOpen) {
+      loadPlaylists("temp-user");
+    }
+  }, [isAddToPlaylistOpen]);
+
   // Handle mouse wheel volume control
   useEffect(() => {
     const handleWheel = (e: WheelEvent) => {
       if (!isVolumeHovered || isIOSSafari) return;
-      
+
       e.preventDefault();
       const delta = e.deltaY > 0 ? -5 : 5;
       const newVolume = Math.min(100, Math.max(0, volume + delta));
@@ -74,8 +103,8 @@ export function NowPlayingPanel() {
 
     const volumeArea = volumeAreaRef.current;
     if (volumeArea) {
-      volumeArea.addEventListener('wheel', handleWheel, { passive: false });
-      return () => volumeArea.removeEventListener('wheel', handleWheel);
+      volumeArea.addEventListener("wheel", handleWheel, { passive: false });
+      return () => volumeArea.removeEventListener("wheel", handleWheel);
     }
   }, [isVolumeHovered, volume, isIOSSafari, updateVolume, setVolume]);
 
@@ -101,6 +130,32 @@ export function NowPlayingPanel() {
       setVolume(0);
     } else {
       setVolume(previousVolume);
+    }
+  };
+
+  const handleAddToPlaylist = async (playlistId: string) => {
+    if (!currentStation) return;
+
+    try {
+      await addStationToPlaylist("temp-user", playlistId, currentStation);
+      setIsAddToPlaylistOpen(false);
+    } catch (error) {
+      console.error("Error adding station to playlist:", error);
+    }
+  };
+
+  const handleCreatePlaylist = async () => {
+    if (!newPlaylistName.trim()) return;
+
+    try {
+      setIsCreatingPlaylist(true);
+      // Create new playlist
+      await createPlaylist("temp-user", newPlaylistName);
+      setNewPlaylistName("");
+      setIsCreatingPlaylist(false);
+    } catch (error) {
+      console.error("Error creating playlist:", error);
+      setIsCreatingPlaylist(false);
     }
   };
 
@@ -137,6 +192,71 @@ export function NowPlayingPanel() {
                 }`}
               />
             </Button>
+            <Dialog
+              open={isAddToPlaylistOpen}
+              onOpenChange={setIsAddToPlaylistOpen}
+            >
+              <DialogTrigger asChild>
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="button-hero-hover"
+                  disabled={!currentStation}
+                >
+                  <PlusCircle className="h-5 w-5" />
+                </Button>
+              </DialogTrigger>
+              <DialogContent className="bg-black/90 backdrop-blur-md border-gray-800 text-white max-w-md">
+                <DialogHeader>
+                  <DialogTitle>Çalma Listesine Ekle</DialogTitle>
+                  <DialogDescription className="text-gray-400">
+                    {currentStation?.stationName} istasyonunu eklemek
+                    istediğiniz çalma listesini seçin.
+                  </DialogDescription>
+                </DialogHeader>
+                <div className="space-y-4">
+                  <div className="flex space-x-2">
+                    <Input
+                      placeholder="Yeni çalma listesi adı"
+                      value={newPlaylistName}
+                      onChange={(e) => setNewPlaylistName(e.target.value)}
+                      className="flex-1 bg-gray-800 border-gray-700 text-white"
+                    />
+                    <Button
+                      onClick={handleCreatePlaylist}
+                      disabled={!newPlaylistName.trim() || isCreatingPlaylist}
+                      className="bg-hero-gradient hover:opacity-90"
+                    >
+                      {isCreatingPlaylist ? "Oluşturuluyor..." : "Oluştur"}
+                    </Button>
+                  </div>
+                  <ScrollArea className="h-60 rounded-md border border-gray-800">
+                    {playlists.length > 0 ? (
+                      playlists.map((playlist) => (
+                        <div
+                          key={playlist.id}
+                          className="flex items-center justify-between p-3 hover:bg-white/10 cursor-pointer border-b border-gray-800 last:border-b-0"
+                          onClick={() => handleAddToPlaylist(playlist.id)}
+                        >
+                          <div>
+                            <h4 className="font-medium">{playlist.name}</h4>
+                            <p className="text-sm text-gray-400">
+                              {playlist.stations.length} istasyon
+                            </p>
+                          </div>
+                          <Plus className="h-4 w-4 text-gray-400" />
+                        </div>
+                      ))
+                    ) : (
+                      <div className="p-4 text-center text-gray-400">
+                        Henüz çalma listeniz yok. Yukarıdan yeni bir tane
+                        oluşturabilirsiniz.
+                      </div>
+                    )}
+                  </ScrollArea>
+                </div>
+              </DialogContent>
+            </Dialog>
             <Button
               variant="ghost"
               size="icon"
@@ -188,7 +308,8 @@ export function NowPlayingPanel() {
                   </DropdownMenuLabel>
                 ) : (
                   <DropdownMenuLabel className="px-3 py-1 text-xs text-white/60 font-normal flex items-center">
-                  Kaynak: {currentStation?.radioGroups[0] || "Radyo İstasyonu"}
+                    Kaynak:{" "}
+                    {currentStation?.radioGroups[0] || "Radyo İstasyonu"}
                   </DropdownMenuLabel>
                 )}
                 <DropdownMenuSeparator className="bg-gray-800" />
@@ -228,14 +349,17 @@ export function NowPlayingPanel() {
               </DropdownMenuContent>
             </DropdownMenu>
           </div>
-          <div 
+          <div
             className="flex items-center space-x-2 w-1/3 justify-end"
             ref={volumeAreaRef}
             onMouseEnter={() => setIsVolumeHovered(true)}
             onMouseLeave={() => setIsVolumeHovered(false)}
           >
             {isIOSSafari && (
-              <div className="flex items-center text-yellow-500 mr-2" title="iOS Safari'de ses kontrolü kullanılamaz">
+              <div
+                className="flex items-center text-yellow-500 mr-2"
+                title="iOS Safari'de ses kontrolü kullanılamaz"
+              >
                 <AlertTriangle className="h-4 w-4 mr-1" />
                 <span className="text-xs">Ses kontrolü yok</span>
               </div>
@@ -255,7 +379,10 @@ export function NowPlayingPanel() {
                 )}
               </Button>
               {isIOSSafari && (
-                <span className="absolute -top-1 -right-1 text-yellow-500" title="Not available on iOS Safari">
+                <span
+                  className="absolute -top-1 -right-1 text-yellow-500"
+                  title="Not available on iOS Safari"
+                >
                   <AlertTriangle className="h-3 w-3" />
                 </span>
               )}
@@ -347,6 +474,14 @@ export function NowPlayingPanel() {
                     {isFavorite ? "Favorilerden Kaldır" : "Favorilere Ekle"}
                   </span>
                 </DropdownMenuItem>
+                <DropdownMenuItem
+                  className="flex items-center space-x-2 px-3 py-2 cursor-pointer focus:bg-white/10"
+                  onClick={() => setIsAddToPlaylistOpen(true)}
+                  disabled={!currentStation}
+                >
+                  <PlusCircle className="h-4 w-4 text-white" />
+                  <span>Çalma Listesine Ekle</span>
+                </DropdownMenuItem>
                 <DropdownMenuSeparator className="bg-gray-800" />
                 <DropdownMenuItem
                   className="flex items-center space-x-2 px-3 py-2 cursor-pointer focus:bg-white/10"
@@ -381,7 +516,7 @@ export function NowPlayingPanel() {
                     </span>
                   )}
                 </DropdownMenuLabel>
-                <div 
+                <div
                   className="px-3 py-2"
                   ref={volumeAreaRef}
                   onMouseEnter={() => setIsVolumeHovered(true)}
@@ -413,7 +548,8 @@ export function NowPlayingPanel() {
                   </DropdownMenuLabel>
                 ) : (
                   <DropdownMenuLabel className="px-3 py-1 text-xs text-white/60 font-normal flex items-center">
-                    Kaynak: {currentStation?.radioGroups[0] || "Radyo İstasyonu"}
+                    Kaynak:{" "}
+                    {currentStation?.radioGroups[0] || "Radyo İstasyonu"}
                   </DropdownMenuLabel>
                 )}
                 <ScrollArea className="h-40 rounded-md">

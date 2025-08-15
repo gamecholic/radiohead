@@ -6,8 +6,16 @@ import {
   getUserFavorites as getFavorites,
   addUserFavorite,
   removeUserFavorite,
-  isStationFavorite as checkStationFavorite
+  isStationFavorite as checkStationFavorite,
+  getUserPlaylists as getPlaylists,
+  addUserPlaylist as createPlaylist,
+  removeUserPlaylist as deletePlaylist,
+  addStationToPlaylist as addStationToUserPlaylist,
+  removeStationFromPlaylist as removeStationFromUserPlaylist,
+  isStationInPlaylist as checkStationInPlaylist,
+  Playlist
 } from '@/lib/localStorageHandler';
+import { RadioStation } from "@/lib/types";
 
 // Filter out stations without playback URLs
 const validStations = radioStations.filter(
@@ -106,4 +114,61 @@ export const searchStations = async (
       category.toLowerCase().includes(normalizedQuery)
     )
   );
+};
+
+// Playlist functions
+export const getUserPlaylists = async (
+  userId: string
+): Promise<Playlist<RadioStation>[]> => {
+  "use client";
+
+  return getPlaylists<RadioStation>(userId);
+};
+
+export const addUserPlaylist = async (
+  userId: string,
+  playlistName: string
+): Promise<Playlist<RadioStation>> => {
+  "use client";
+
+  return createPlaylist<RadioStation>(userId, playlistName);
+};
+
+export const removeUserPlaylist = async (
+  userId: string,
+  playlistId: string
+): Promise<void> => {
+  "use client";
+
+  deletePlaylist<RadioStation>(userId, playlistId);
+};
+
+export const addStationToPlaylist = async (
+  userId: string,
+  playlistId: string,
+  station: RadioStation
+): Promise<Playlist<RadioStation> | null> => {
+  "use client";
+
+  return addStationToUserPlaylist<RadioStation>(userId, playlistId, station);
+};
+
+export const removeStationFromPlaylist = async (
+  userId: string,
+  playlistId: string,
+  stationName: string
+): Promise<void> => {
+  "use client";
+
+  removeStationFromUserPlaylist<RadioStation>(userId, playlistId, stationName);
+};
+
+export const isStationInPlaylist = async (
+  userId: string,
+  playlistId: string,
+  stationName: string
+): Promise<boolean> => {
+  "use client";
+
+  return checkStationInPlaylist<RadioStation>(userId, playlistId, stationName);
 };
