@@ -27,7 +27,7 @@ import {
 import { StationIcon } from "@/components/station-icon";
 import { useAudio, Station } from "@/contexts/AudioContext";
 import { useFavorites } from "@/contexts/FavoritesContext";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export function NowPlayingPanel() {
   const {
@@ -47,6 +47,8 @@ export function NowPlayingPanel() {
   const { favorites, addFavorite, removeFavorite } = useFavorites();
   const [isFavorite, setIsFavorite] = useState(false);
   const [previousVolume, setPreviousVolume] = useState(80);
+  const [isVolumeHovered, setIsVolumeHovered] = useState(false);
+  const volumeAreaRef = useRef<HTMLDivElement>(null);
 
   // Check if the current station is a favorite when it changes or when favorites update
   useEffect(() => {
@@ -57,6 +59,25 @@ export function NowPlayingPanel() {
       setIsFavorite(favoriteStatus);
     }
   }, [currentStation, favorites]);
+
+  // Handle mouse wheel volume control
+  useEffect(() => {
+    const handleWheel = (e: WheelEvent) => {
+      if (!isVolumeHovered || isIOSSafari) return;
+      
+      e.preventDefault();
+      const delta = e.deltaY > 0 ? -5 : 5;
+      const newVolume = Math.min(100, Math.max(0, volume + delta));
+      updateVolume(newVolume);
+      setVolume(newVolume);
+    };
+
+    const volumeArea = volumeAreaRef.current;
+    if (volumeArea) {
+      volumeArea.addEventListener('wheel', handleWheel, { passive: false });
+      return () => volumeArea.removeEventListener('wheel', handleWheel);
+    }
+  }, [isVolumeHovered, volume, isIOSSafari, updateVolume, setVolume]);
 
   if (!currentStation) return null;
 
@@ -207,7 +228,12 @@ export function NowPlayingPanel() {
               </DropdownMenuContent>
             </DropdownMenu>
           </div>
-          <div className="flex items-center space-x-2 w-1/3 justify-end">
+          <div 
+            className="flex items-center space-x-2 w-1/3 justify-end"
+            ref={volumeAreaRef}
+            onMouseEnter={() => setIsVolumeHovered(true)}
+            onMouseLeave={() => setIsVolumeHovered(false)}
+          >
             {isIOSSafari && (
               <div className="flex items-center text-yellow-500 mr-2" title="iOS Safari'de ses kontrolü kullanılamaz">
                 <AlertTriangle className="h-4 w-4 mr-1" />
@@ -355,7 +381,12 @@ export function NowPlayingPanel() {
                     </span>
                   )}
                 </DropdownMenuLabel>
-                <div className="px-3 py-2">
+                <div 
+                  className="px-3 py-2"
+                  ref={volumeAreaRef}
+                  onMouseEnter={() => setIsVolumeHovered(true)}
+                  onMouseLeave={() => setIsVolumeHovered(false)}
+                >
                   <Slider
                     value={[volume]}
                     onValueChange={([newVolume]) => updateVolume(newVolume)}
