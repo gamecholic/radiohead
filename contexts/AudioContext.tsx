@@ -1,7 +1,6 @@
 'use client';
 
 import React, { createContext, useContext, useState, useRef, useEffect } from 'react';
-import Hls from 'hls.js';
 import { getFeaturedStations } from '@/lib/api';
 import {
   getSavedVolume,
@@ -13,14 +12,10 @@ import {
   saveStationList,
   saveStationListSource
 } from '@/lib/localStorageHandler';
-
-export interface Station {
-  stationName: string;
-  stationIconUrl: string;
-  stationCategories: string[];
-  stationPlaybackUrl: string;
-  radioGroups: string[];
-}
+import { Station } from '@/lib/types';
+import { isIOSSafari } from '@/lib/utils/browser';
+import { AudioPlayer } from '@/lib/utils/audioPlayer';
+import { MediaSessionManager } from '@/lib/utils/mediaSession';
 
 interface AudioContextType {
   isPlaying: boolean;
@@ -33,26 +28,10 @@ interface AudioContextType {
   updateVolume: (volume: number) => void;
   playNext: () => void;
   playPrevious: () => void;
-  isIOSSafari: boolean; // Expose iOS Safari detection
+  isIOSSafari: boolean;
 }
 
 const AudioContext = createContext<AudioContextType | undefined>(undefined);
-
-// Check if we're on iOS Safari
-const isIOSSafari = () => {
-  if (typeof window === 'undefined') return false;
-  const ua = window.navigator.userAgent;
-  const isIOS = /iPad|iPhone|iPod/.test(ua);
-  const isSafari = /Safari/.test(ua) && !/Chrome/.test(ua);
-  return isIOS && isSafari;
-};
-
-// Check if the browser supports HLS natively
-const isHLSNative = () => {
-  if (typeof window === 'undefined') return false;
-  const video = document.createElement('video');
-  return video.canPlayType('application/vnd.apple.mpegurl') !== '';
-};
 
 export function AudioProvider({ children }: { children: React.ReactNode }) {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -86,11 +65,21 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
   }, []);
   
   const audioRef = useRef<HTMLAudioElement | null>(null);
-  const hlsRef = useRef<Hls | null>(null);
   const volumeRef = useRef<number>(80);
   const volumeUpdateTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const hasUserInteractedRef = useRef(false);
   const isIOSSafariRef = useRef(isIOSSafari());
+  
+  // Initialize utility classes
+  const audioPlayerRef = useRef<AudioPlayer>(new AudioPlayer(isIOSSafariRef.current));
+  const mediaSessionRef = useRef<MediaSessionManager>(new MediaSessionManager());
+
+  // Set up audio element reference
+  useEffect(() => {
+    if (audioRef.current) {
+      audioPlayerRef.current.setAudioElement(audioRef.current);
+    }
+  }, []);
 
   const togglePlay = (station: Station, stationList?: Station[], source?: string) => {
     // Mark that user has interacted (needed for iOS Safari)
@@ -220,12 +209,6 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     if (!audioRef.current) return;
 
-    // Clean up any existing HLS instance
-    if (hlsRef.current) {
-      hlsRef.current.destroy();
-      hlsRef.current = null;
-    }
-
     // If there's no current station, stop playback completely
     if (!currentStation) {
       audioRef.current.src = '';
@@ -233,108 +216,21 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
       return;
     }
 
-    const videoUrl = currentStation.stationPlaybackUrl;
-    const isHLS = videoUrl.includes('.m3u8');
-
-    if (isPlaying && currentStation) {
-      // Handle HLS streams
-      if (isHLS && !isHLSNative()) {
-        // Use hls.js for browsers that don't support HLS natively
-        if (Hls.isSupported()) {
-          hlsRef.current = new Hls({
-            enableWorker: true,
-            lowLatencyMode: true,
-            backBufferLength: 90
-          });
-          
-          hlsRef.current.loadSource(videoUrl);
-          hlsRef.current.attachMedia(audioRef.current);
-          
-          hlsRef.current.on(Hls.Events.MANIFEST_PARSED, () => {
-            if (audioRef.current) {
-              audioRef.current.volume = volumeRef.current / 100;
-              const playPromise = audioRef.current.play();
-              if (playPromise !== undefined) {
-                playPromise.catch(error => {
-                  console.error('Error playing HLS audio:', error);
-                  setIsPlaying(false);
-                });
-              }
-            }
-          });
-          
-          hlsRef.current.on(Hls.Events.ERROR, (event, data) => {
-            console.error('HLS error:', event, data);
-            if (data.fatal) {
-              switch (data.type) {
-                case Hls.ErrorTypes.NETWORK_ERROR:
-                  // Try to recover network error
-                  console.log('Trying to recover network error...');
-                  hlsRef.current?.startLoad();
-                  break;
-                case Hls.ErrorTypes.MEDIA_ERROR:
-                  console.log('Trying to recover media error...');
-                  hlsRef.current?.recoverMediaError();
-                  break;
-                default:
-                  // Cannot recover
-                  console.error('Unrecoverable HLS error');
-                  setIsPlaying(false);
-                  break;
-              }
-            }
-          });
-        } else {
-          console.error('HLS is not supported in this browser');
+    const playStation = async () => {
+      if (isPlaying && currentStation) {
+        const success = await audioPlayerRef.current.playStation(currentStation, volumeRef.current);
+        if (!success) {
           setIsPlaying(false);
         }
       } else {
-        // Handle regular audio sources or native HLS support
-        // Always reset the source to force restart from scratch
-        audioRef.current.src = videoUrl;
-        
-        // Set volume only if not on iOS Safari
-        if (!isIOSSafariRef.current) {
-          audioRef.current.volume = volumeRef.current / 100;
-        }
-        
-        // For iOS Safari, we need to handle the play promise properly
-        const playPromise = audioRef.current.play();
-        if (playPromise !== undefined) {
-          playPromise.catch(error => {
-            console.error('Error playing audio:', error);
-            // On iOS Safari, autoplay is restricted and requires user interaction
-            // We'll set isPlaying to false to reflect the actual state
-            setIsPlaying(false);
-          });
-        }
+        audioPlayerRef.current.pause();
       }
-    } else {
-      // Special handling for iOS Safari to properly pause
-      if (isIOSSafariRef.current) {
-        // On iOS Safari, we might need to set the src to empty to properly stop
-        audioRef.current.pause();
-      } else {
-        audioRef.current.pause();
-      }
-    }
-    
-    // Update media session playback state
-    if ('mediaSession' in navigator) {
-      try {
-        navigator.mediaSession.playbackState = isPlaying ? 'playing' : 'paused';
-      } catch (error) {
-        console.warn('Error updating media session playback state:', error);
-      }
-    }
-    
-    // Cleanup function
-    return () => {
-      if (hlsRef.current) {
-        hlsRef.current.destroy();
-        hlsRef.current = null;
-      }
+      
+      // Update media session playback state
+      mediaSessionRef.current.updatePlaybackState(isPlaying);
     };
+
+    playStation();
   }, [isPlaying, currentStation]);
 
   // Handle volume state updates (for UI synchronization)
@@ -368,11 +264,8 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
       if (volumeUpdateTimeoutRef.current) {
         clearTimeout(volumeUpdateTimeoutRef.current);
       }
-      // Clean up HLS instance on unmount
-      if (hlsRef.current) {
-        hlsRef.current.destroy();
-        hlsRef.current = null;
-      }
+      // Clean up audio player on unmount
+      audioPlayerRef.current.destroy();
     };
   }, []);
 
@@ -402,56 +295,28 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
 
   // Setup Media Session API for system-wide media controls
   useEffect(() => {
-    if ('mediaSession' in navigator && currentStation) {
-      try {
-        // Set metadata for the current station
-        navigator.mediaSession.metadata = new MediaMetadata({
-          title: currentStation.stationName,
-          artist: currentStation.radioGroups[0] || 'Radyo İstasyonu',
-          album: currentStation.stationCategories[0] || 'Radyo',
-          artwork: currentStation.stationIconUrl 
-            ? [{ src: currentStation.stationIconUrl, sizes: '96x96', type: 'image/png' }]
-            : []
-        });
-
-        // Set action handlers for system media controls
-        navigator.mediaSession.setActionHandler('play', () => {
-          if (currentStation) {
-            // Mark user interaction for iOS Safari
-            hasUserInteractedRef.current = true;
-            setIsPlaying(true);
-          }
-        });
-
-        navigator.mediaSession.setActionHandler('pause', () => {
-          setIsPlaying(false);
-        });
-
-        navigator.mediaSession.setActionHandler('nexttrack', () => {
-          playNext();
-        });
-
-        navigator.mediaSession.setActionHandler('previoustrack', () => {
-          playPrevious();
-        });
-      } catch (error) {
-        console.warn('Media Session API not fully supported:', error);
-      }
-    }
+    mediaSessionRef.current.setStation(currentStation);
+    
+    // Update playback state
+    mediaSessionRef.current.updatePlaybackState(isPlaying);
+    
+    // Set action handlers
+    mediaSessionRef.current.setCallbacks(
+      () => {
+        if (currentStation) {
+          // Mark user interaction for iOS Safari
+          hasUserInteractedRef.current = true;
+          setIsPlaying(true);
+        }
+      },
+      () => setIsPlaying(false),
+      () => playNext(),
+      () => playPrevious()
+    );
 
     // Clean up media session when component unmounts or station changes
     return () => {
-      if ('mediaSession' in navigator) {
-        try {
-          navigator.mediaSession.metadata = null;
-          navigator.mediaSession.setActionHandler('play', null);
-          navigator.mediaSession.setActionHandler('pause', null);
-          navigator.mediaSession.setActionHandler('nexttrack', null);
-          navigator.mediaSession.setActionHandler('previoustrack', null);
-        } catch (error) {
-          console.warn('Error cleaning up Media Session API:', error);
-        }
-      }
+      mediaSessionRef.current.cleanup();
     };
   }, [currentStation, stationList]);
 

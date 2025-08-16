@@ -4,15 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { StationCard } from "@/components/station-grid/station-card";
-import { useAudio } from "@/contexts/AudioContext";
-
-interface Station {
-  stationName: string;
-  stationIconUrl: string;
-  stationCategories: string[];
-  stationPlaybackUrl: string;
-  radioGroups: string[];
-}
+import { Station } from "@/lib/types";
 
 interface CarouselProps {
   title: string;
@@ -20,7 +12,6 @@ interface CarouselProps {
 }
 
 export function Carousel({ title, stations }: CarouselProps) {
-  const { isPlaying, currentStation, togglePlay } = useAudio();
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
@@ -83,6 +74,11 @@ export function Carousel({ title, stations }: CarouselProps) {
       window.removeEventListener("resize", handleResize);
     };
   }, [stations]);
+
+  // Don't render if no stations
+  if (stations.length === 0) {
+    return null;
+  }
 
   return (
     <div className="mb-8 carousel-ring rounded-lg p-4">

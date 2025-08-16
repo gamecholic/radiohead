@@ -3,15 +3,15 @@ export interface RadioGroup {
   slug: string;
 }
 
-export interface RadioStation {
+export interface Category {
+  name: string;
+}
+
+export interface Station {
   stationName: string;
   stationIconUrl: string;
   stationCategories: string[];
   stationPlaybackUrl: string;
   radioGroups: string[];
-  stationCity?: string; // Optional field that seems to be used in the client component
-}
-
-export interface Category {
-  name: string;
+  stationCity?: string;
 }

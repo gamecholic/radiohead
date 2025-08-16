@@ -3,13 +3,13 @@
 import { useState } from "react";
 import { StationIcon } from "@/components/station-icon";
 import { useAudio } from "@/contexts/AudioContext";
-import { RadioStation } from "@/lib/types";
+import { Station } from "@/lib/types";
 import { Button } from "@/components/ui/button";
 import { Play, Pause } from "lucide-react";
 
 interface StationCardProps {
-  station: RadioStation;
-  stationList?: RadioStation[];
+  station: Station;
+  stationList?: Station[];
   layout?: "vertical" | "horizontal";
   source?: string;
 }

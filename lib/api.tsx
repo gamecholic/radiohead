@@ -1,7 +1,7 @@
 import categories from "@/lib/data/categories.json";
 import radioGroups from "@/lib/data/radio-groups.json";
 import radioStations from "@/lib/data/radio-stations.json";
-import { RadioGroup, RadioStation } from "@/lib/types";
+import { RadioGroup, Category, Station } from "@/lib/types";
 import {
   getUserFavorites as getFavorites,
   addUserFavorite,
@@ -11,11 +11,11 @@ import {
 
 // Filter out stations without playback URLs
 const validStations = radioStations.filter(
-  (station: RadioStation) => station.stationPlaybackUrl && station.stationPlaybackUrl !== ""
+  (station: Station) => station.stationPlaybackUrl && station.stationPlaybackUrl !== ""
 );
 
-export const getCategories = async (): Promise<string[]> => {
-  return categories;
+export const getCategories = async (): Promise<Category[]> => {
+  return categories.map((name: string) => ({ name }));
 };
 
 export const getRadioGroups = async (): Promise<string[]> => {
@@ -29,7 +29,7 @@ export const getRadioGroupsWithSlugs = async (): Promise<RadioGroup[]> => {
 
 export const getFeaturedStations = async (
   userId: string
-): Promise<RadioStation[]> => {
+): Promise<Station[]> => {
   // Return the first 10 stations as featured
   return (await getUserFavorites(userId)).length
     ? (await getUserFavorites(userId)).slice(0, 10)
@@ -38,35 +38,35 @@ export const getFeaturedStations = async (
 
 export const getStationsByCategory = async (
   category: string
-): Promise<RadioStation[]> => {
-  return validStations.filter((station: RadioStation) =>
+): Promise<Station[]> => {
+  return validStations.filter((station: Station) =>
     station.stationCategories.includes(category)
   );
 };
 
 export const getStationsByGroup = async (
   groupName: string
-): Promise<RadioStation[]> => {
-  return validStations.filter((station: RadioStation) =>
+): Promise<Station[]> => {
+  return validStations.filter((station: Station) =>
     station.radioGroups.some((group: string) => group === groupName)
   );
 };
 
 export const getUserFavorites = async (
   userId: string
-): Promise<RadioStation[]> => {
+): Promise<Station[]> => {
   "use client";
 
-  return getFavorites<RadioStation>(userId);
+  return getFavorites<Station>(userId);
 };
 
 export const addStationToFavorites = async (
   userId: string,
-  station: RadioStation
+  station: Station
 ): Promise<void> => {
   "use client";
 
-  addUserFavorite<RadioStation>(userId, station);
+  addUserFavorite<Station>(userId, station);
 };
 
 export const removeStationFromFavorites = async (
@@ -75,7 +75,7 @@ export const removeStationFromFavorites = async (
 ): Promise<void> => {
   "use client";
 
-  removeUserFavorite<RadioStation>(userId, stationName);
+  removeUserFavorite<Station>(userId, stationName);
 };
 
 export const isStationFavorite = async (
@@ -84,19 +84,19 @@ export const isStationFavorite = async (
 ): Promise<boolean> => {
   "use client";
 
-  return checkStationFavorite<RadioStation>(userId, stationName);
+  return checkStationFavorite<Station>(userId, stationName);
 };
 
 export const searchStations = async (
   query: string
-): Promise<RadioStation[]> => {
+): Promise<Station[]> => {
   if (!query.trim()) {
     return [];
   }
   
   const normalizedQuery = query.toLowerCase().trim();
   
-  return validStations.filter((station: RadioStation) => 
+  return validStations.filter((station: Station) => 
     station.stationName.toLowerCase().includes(normalizedQuery) ||
     station.stationCity?.toLowerCase().includes(normalizedQuery) ||
     station.radioGroups.some((group: string) => 

@@ -10,17 +10,17 @@ import {
   getFeaturedStations,
 } from "@/lib/api";
 import { useAudio } from "@/contexts/AudioContext";
-import { RadioStation } from "@/lib/types";
+import { Station, Category } from "@/lib/types";
 
 export default function Home() {
   const { isPlaying, currentStation, togglePlay } = useAudio();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [categories, setCategories] = useState<string[]>([]);
+  const [categories, setCategories] = useState<Category[]>([]);
   const [stationsByCategory, setStationsByCategory] = useState<
-    Record<string, RadioStation[]>
+    Record<string, Station[]>
   >({});
-  const [featuredStations, setFeaturedStations] = useState<RadioStation[]>([]);
-  const [featuredStation, setFeaturedStation] = useState<RadioStation | null>(null);
+  const [featuredStations, setFeaturedStations] = useState<Station[]>([]);
+  const [featuredStation, setFeaturedStation] = useState<Station | null>(null);
   const [loadingCategories, setLoadingCategories] = useState(true);
 
   // Fetch categories and stations for carousels
@@ -32,10 +32,10 @@ export default function Home() {
         setCategories(categoriesData);
 
         // Fetch stations for each category
-        const stations: Record<string, RadioStation[]> = {};
+        const stations: Record<string, Station[]> = {};
         for (const category of categoriesData) {
-          const categoryStations = await getStationsByCategory(category);
-          stations[category] = categoryStations;
+          const categoryStations = await getStationsByCategory(category.name);
+          stations[category.name] = categoryStations;
         }
         setStationsByCategory(stations);
         setLoadingCategories(false);
@@ -103,12 +103,12 @@ export default function Home() {
             {/* Netflix-style Carousels */}
             <section className="w-full">
               {categories
-                .filter((c) => stationsByCategory[c]?.length)
+                .filter((c) => stationsByCategory[c.name]?.length)
                 .map((category) => (
                   <Carousel
-                    key={category}
-                    title={category}
-                    stations={stationsByCategory[category] || []}
+                    key={category.name}
+                    title={category.name}
+                    stations={stationsByCategory[category.name] || []}
                   />
                 ))}
             </section>

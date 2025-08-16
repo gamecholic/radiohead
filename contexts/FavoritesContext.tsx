@@ -1,7 +1,7 @@
 "use client";
 
 import React, { createContext, useContext, useState, useEffect } from "react";
-import { RadioStation } from "@/lib/types";
+import { Station } from "@/lib/types";
 import {
   getUserFavorites,
   addStationToFavorites,
@@ -10,9 +10,9 @@ import {
 } from "@/lib/api";
 
 interface FavoritesContextType {
-  favorites: RadioStation[];
+  favorites: Station[];
   isFavorite: (stationName: string) => Promise<boolean>;
-  addFavorite: (station: RadioStation) => Promise<void>;
+  addFavorite: (station: Station) => Promise<void>;
   removeFavorite: (stationName: string) => Promise<void>;
   refreshFavorites: () => Promise<void>;
 }
@@ -24,7 +24,7 @@ const FavoritesContext = createContext<FavoritesContextType | undefined>(
 const USER_ID = "temp-user"; // In a real app, this would come from auth
 
 export function FavoritesProvider({ children }: { children: React.ReactNode }) {
-  const [favorites, setFavorites] = useState<RadioStation[]>([]);
+  const [favorites, setFavorites] = useState<Station[]>([]);
 
   const refreshFavorites = async () => {
     try {
@@ -39,7 +39,7 @@ export function FavoritesProvider({ children }: { children: React.ReactNode }) {
     return isStationFavorite(USER_ID, stationName);
   };
 
-  const addFavorite = async (station: RadioStation) => {
+  const addFavorite = async (station: Station) => {
     try {
       await addStationToFavorites(USER_ID, station);
       await refreshFavorites();
