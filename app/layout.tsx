@@ -5,6 +5,7 @@ import { Sidebar } from "@/components/layout";
 import { AudioProvider } from "@/contexts/AudioContext";
 import { FavoritesProvider } from "@/contexts/FavoritesContext";
 import { NowPlayingPanel } from "@/components/layout/now-playing-panel";
+import { DynamicTitleHandler } from "@/components/DynamicTitleHandler";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -61,6 +62,7 @@ export default function RootLayout({
 
                 {/* Main Content */}
                 <main className="flex-1 flex flex-col overflow-hidden relative">
+                  <DynamicTitleHandler />
                   {children}
                   <NowPlayingPanel />
                 </main>
