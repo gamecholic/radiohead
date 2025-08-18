@@ -48,6 +48,15 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the app.
 
+## Git Hooks
+
+This project uses [Husky](https://typicode.github.io/husky/) to manage Git hooks. Before each commit, the following checks are automatically run:
+
+1. **Linting**: Runs `npm run lint` to check for code style issues
+2. **TypeScript Compilation**: Runs `npx tsc --noEmit` to check for TypeScript errors
+
+If either of these checks fail, the commit will be aborted. Please fix any issues before committing your changes.
+
 ## Project Structure
 
 ```
