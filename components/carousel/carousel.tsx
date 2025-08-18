@@ -111,7 +111,7 @@ export function Carousel({ title, stations }: CarouselProps) {
             <div
               key={station.stationName}
               className="flex-shrink-0"
-              style={{ width: '160px' }}
+              style={{ width: "160px" }}
             >
               <StationCard
                 station={station}

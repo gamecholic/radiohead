@@ -57,7 +57,8 @@ export default function Home() {
 
         // Set a random featured station once
         if (featured.length > 0 && !featuredStation) {
-          const randomStation = featured[Math.floor(Math.random() * featured.length)];
+          const randomStation =
+            featured[Math.floor(Math.random() * featured.length)];
           setFeaturedStation(randomStation);
         }
       } catch (error) {

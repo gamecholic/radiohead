@@ -1,12 +1,12 @@
-'use client';
+"use client";
 
 import { useState, useEffect } from "react";
 import { FavoritesPageClient } from "./client";
 import { getUserFavorites } from "@/lib/api";
-import { RadioStation } from '@/lib/types';
+import { Station } from "@/lib/types";
 
 export default function FavoritesPage() {
-  const [stations, setStations] = useState<RadioStation[]>([]);
+  const [stations, setStations] = useState<Station[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {

@@ -93,11 +93,7 @@ export function PlayerControls({
       </Button>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button
-            variant="ghost"
-            size="icon"
-            className="button-hero-hover"
-          >
+          <Button variant="ghost" size="icon" className="button-hero-hover">
             <ListMusic className="h-5 w-5" />
           </Button>
         </DropdownMenuTrigger>
@@ -115,7 +111,7 @@ export function PlayerControls({
             </DropdownMenuLabel>
           ) : (
             <DropdownMenuLabel className="px-3 py-1 text-xs text-white/60 font-normal flex items-center">
-            Kaynak: {currentStation?.radioGroups[0] || "Radyo İstasyonu"}
+              Kaynak: {currentStation?.radioGroups[0] || "Radyo İstasyonu"}
             </DropdownMenuLabel>
           )}
           <DropdownMenuSeparator className="bg-gray-800" />
@@ -177,7 +173,7 @@ export function VolumeControl({
   useEffect(() => {
     const handleWheel = (e: WheelEvent) => {
       if (!isVolumeHovered || isIOSSafari) return;
-      
+
       e.preventDefault();
       const delta = e.deltaY > 0 ? -5 : 5;
       const newVolume = Math.min(100, Math.max(0, volume + delta));
@@ -187,20 +183,23 @@ export function VolumeControl({
 
     const volumeArea = volumeAreaRef.current;
     if (volumeArea) {
-      volumeArea.addEventListener('wheel', handleWheel, { passive: false });
-      return () => volumeArea.removeEventListener('wheel', handleWheel);
+      volumeArea.addEventListener("wheel", handleWheel, { passive: false });
+      return () => volumeArea.removeEventListener("wheel", handleWheel);
     }
   }, [isVolumeHovered, volume, isIOSSafari, onUpdateVolume, onSetVolume]);
 
   return (
-    <div 
+    <div
       className="flex items-center space-x-2 w-1/3 justify-end"
       ref={volumeAreaRef}
       onMouseEnter={() => setIsVolumeHovered(true)}
       onMouseLeave={() => setIsVolumeHovered(false)}
     >
       {isIOSSafari && (
-        <div className="flex items-center text-yellow-500 mr-2" title="iOS Safari'de ses kontrolü kullanılamaz">
+        <div
+          className="flex items-center text-yellow-500 mr-2"
+          title="iOS Safari'de ses kontrolü kullanılamaz"
+        >
           <AlertTriangle className="h-4 w-4 mr-1" />
           <span className="text-xs">Ses kontrolü yok</span>
         </div>
@@ -220,7 +219,10 @@ export function VolumeControl({
           )}
         </Button>
         {isIOSSafari && (
-          <span className="absolute -top-1 -right-1 text-yellow-500" title="Not available on iOS Safari">
+          <span
+            className="absolute -top-1 -right-1 text-yellow-500"
+            title="Not available on iOS Safari"
+          >
             <AlertTriangle className="h-3 w-3" />
           </span>
         )}

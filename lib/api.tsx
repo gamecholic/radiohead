@@ -6,12 +6,13 @@ import {
   getUserFavorites as getFavorites,
   addUserFavorite,
   removeUserFavorite,
-  isStationFavorite as checkStationFavorite
-} from '@/lib/localStorageHandler';
+  isStationFavorite as checkStationFavorite,
+} from "@/lib/localStorageHandler";
 
 // Filter out stations without playback URLs
 const validStations = radioStations.filter(
-  (station: Station) => station.stationPlaybackUrl && station.stationPlaybackUrl !== ""
+  (station: Station) =>
+    station.stationPlaybackUrl && station.stationPlaybackUrl !== ""
 );
 
 export const getCategories = async (): Promise<Category[]> => {
@@ -52,9 +53,7 @@ export const getStationsByGroup = async (
   );
 };
 
-export const getUserFavorites = async (
-  userId: string
-): Promise<Station[]> => {
+export const getUserFavorites = async (userId: string): Promise<Station[]> => {
   "use client";
 
   return getFavorites<Station>(userId);
@@ -87,23 +86,22 @@ export const isStationFavorite = async (
   return checkStationFavorite<Station>(userId, stationName);
 };
 
-export const searchStations = async (
-  query: string
-): Promise<Station[]> => {
+export const searchStations = async (query: string): Promise<Station[]> => {
   if (!query.trim()) {
     return [];
   }
-  
+
   const normalizedQuery = query.toLowerCase().trim();
-  
-  return validStations.filter((station: Station) => 
-    station.stationName.toLowerCase().includes(normalizedQuery) ||
-    station.stationCity?.toLowerCase().includes(normalizedQuery) ||
-    station.radioGroups.some((group: string) => 
-      group.toLowerCase().includes(normalizedQuery)
-    ) ||
-    station.stationCategories.some((category: string) => 
-      category.toLowerCase().includes(normalizedQuery)
-    )
+
+  return validStations.filter(
+    (station: Station) =>
+      station.stationName.toLowerCase().includes(normalizedQuery) ||
+      station.stationCity?.toLowerCase().includes(normalizedQuery) ||
+      station.radioGroups.some((group: string) =>
+        group.toLowerCase().includes(normalizedQuery)
+      ) ||
+      station.stationCategories.some((category: string) =>
+        category.toLowerCase().includes(normalizedQuery)
+      )
   );
 };

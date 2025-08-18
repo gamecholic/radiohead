@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { searchStations } from "@/lib/api";
-import { RadioStation } from "@/lib/types";
+import { Station } from "@/lib/types";
 import { useAudio } from "@/contexts/AudioContext";
 import { StationIcon } from "@/components/station-icon";
 
@@ -17,7 +17,7 @@ interface HeaderProps {
 export function Header({ onMobileMenuOpen }: HeaderProps) {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
-  const [searchResults, setSearchResults] = useState<RadioStation[]>([]);
+  const [searchResults, setSearchResults] = useState<Station[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const searchInputRef = useRef<HTMLInputElement>(null);
   const { togglePlay } = useAudio();
@@ -73,7 +73,7 @@ export function Header({ onMobileMenuOpen }: HeaderProps) {
     return () => clearTimeout(delayDebounceFn);
   }, [searchQuery]);
 
-  const handleStationSelect = (station: RadioStation) => {
+  const handleStationSelect = (station: Station) => {
     // Start playing the selected station immediately
     togglePlay(station, [station], "Arama sonucu");
     setIsSearchOpen(false);

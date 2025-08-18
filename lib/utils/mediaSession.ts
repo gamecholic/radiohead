@@ -1,5 +1,5 @@
 // Media Session API integration
-import { Station } from '@/lib/types/station';
+import { Station } from '@/lib/types';
 
 export class MediaSessionManager {
   private currentStation: Station | null = null;

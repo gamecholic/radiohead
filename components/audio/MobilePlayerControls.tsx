@@ -106,9 +106,7 @@ export function MobilePlayerControls({
           >
             <Star
               className={`h-4 w-4 ${
-                isFavorite
-                  ? "fill-yellow-400 text-yellow-400"
-                  : "text-white"
+                isFavorite ? "fill-yellow-400 text-yellow-400" : "text-white"
               }`}
             />
             <span>
@@ -161,8 +159,8 @@ export function MobilePlayerControls({
             />
             {isIOSSafari && (
               <p className="text-xs text-yellow-500 mt-1">
-                Ses seviyesini kontrol etmek için cihazınızın ses
-                düğmelerini kullanın
+                Ses seviyesini kontrol etmek için cihazınızın ses düğmelerini
+                kullanın
               </p>
             )}
           </div>

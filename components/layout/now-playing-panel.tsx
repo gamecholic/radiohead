@@ -12,16 +12,16 @@ import { MobilePlayerControls } from "@/components/audio/MobilePlayerControls";
 import { Station } from "@/lib/types";
 
 export function NowPlayingPanel() {
-  const { 
-    currentStation, 
-    volume, 
-    setVolume, 
+  const {
+    currentStation,
+    volume,
+    setVolume,
     updateVolume,
     togglePlay,
     stationList,
-    stationListSource
+    stationListSource,
   } = useAudio();
-  
+
   const { favorites, addFavorite, removeFavorite } = useFavorites();
   const [isFavorite, setIsFavorite] = useState(false);
   const [previousVolume, setPreviousVolume] = useState(80);
