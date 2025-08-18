@@ -71,7 +71,7 @@
     "stationCategories": [
       "Pop"
     ],
-    "stationPlaybackUrl": "https://n10101m.mediatriple.net/hls/chunks_yAHJ4zrP.m3u8",
+    "stationPlaybackUrl": "https://n10101m.mediatriple.net/numberoneturk",
     "radioGroups": [
       "Number One"
     ]
@@ -462,7 +462,7 @@
     "stationCategories": [
       "Yabancı Müzik"
     ],
-    "stationPlaybackUrl": "https://n10101m.mediatriple.net/hls/chunks_x63zzAcd.m3u8",
+    "stationPlaybackUrl": "https://n10101m.mediatriple.net/numberone",
     "radioGroups": [
       "Other",
       "Number One"
@@ -474,7 +474,7 @@
     "stationCategories": [
       "Pop"
     ],
-    "stationPlaybackUrl": "https://n10101m.mediatriple.net/hls/chunks_sgHT6wJV.m3u8",
+    "stationPlaybackUrl": "",
     "radioGroups": [
       "Number One",
       "Nostalji Radyoları"
@@ -893,7 +893,7 @@
     "stationCategories": [
       "Slow"
     ],
-    "stationPlaybackUrl": "https://n10101m.mediatriple.net/hls/chunks_7wTUvjGn.m3u8",
+    "stationPlaybackUrl": "https://n10101m.mediatriple.net/numberoneturkslow",
     "radioGroups": [
       "Number One"
     ]
@@ -2175,7 +2175,7 @@
     "stationCategories": [
       "Rap ve Rock"
     ],
-    "stationPlaybackUrl": "https://n10101m.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e3aecf0941_1/playlist.m3u8",
+    "stationPlaybackUrl": "",
     "radioGroups": [
       "Other",
       "Number One"
@@ -2187,7 +2187,7 @@
     "stationCategories": [
       "Rap ve Rock"
     ],
-    "stationPlaybackUrl": "https://n10101m.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e39cae8c9c_1/playlist.m3u8",
+    "stationPlaybackUrl": "https://n10101m.mediatriple.net/rock",
     "radioGroups": [
       "Other",
       "Number One"
@@ -2199,7 +2199,7 @@
     "stationCategories": [
       "Rap ve Rock"
     ],
-    "stationPlaybackUrl": "https://n10101m.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e42fe816a0_1/playlist.m3u8",
+    "stationPlaybackUrl": "",
     "radioGroups": [
       "Number One"
     ]
@@ -2925,7 +2925,7 @@
     "stationCategories": [
       "Yabancı Müzik"
     ],
-    "stationPlaybackUrl": "https://n10101m.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e3e06878b9_1/playlist.m3u8",
+    "stationPlaybackUrl": "https://n10101m.mediatriple.net/jazz",
     "radioGroups": [
       "Caz Radyoları"
     ]
