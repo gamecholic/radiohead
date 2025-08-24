@@ -346,7 +346,7 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
     return () => {
       mediaSessionRef.current.cleanup();
     };
-  }, [currentStation, stationList]);
+  }, [isPlaying, currentStation, stationList]);
 
   return (
     <AudioContext.Provider
