@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Header } from "@/components/layout";
+import { Header, MobileMenu } from "@/components/layout";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
@@ -84,6 +84,12 @@ export default function AboutPage() {
           </div>
         </div>
       </div>
+
+      {/* Mobile Menu */}
+      <MobileMenu 
+        isOpen={isMobileMenuOpen} 
+        onClose={() => setIsMobileMenuOpen(false)} 
+      />
     </div>
   );
 }
