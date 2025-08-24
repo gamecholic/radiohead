@@ -38,6 +38,14 @@ export class MediaSessionManager {
             ? [{ src: this.currentStation.stationIconUrl, sizes: '96x96', type: 'image/png' }]
             : []
         });
+        
+        // For live streams, explicitly set position state with Infinity duration
+        // This prevents the media session from showing a progress bar
+        navigator.mediaSession.setPositionState({
+          duration: Infinity,
+          playbackRate: 1.0,
+          position: 0
+        });
       } catch (error) {
         console.warn('Error updating media session metadata:', error);
       }
@@ -76,6 +84,9 @@ export class MediaSessionManager {
         navigator.mediaSession.setActionHandler('pause', null);
         navigator.mediaSession.setActionHandler('nexttrack', null);
         navigator.mediaSession.setActionHandler('previoustrack', null);
+        
+        // Clear position state when cleaning up
+        navigator.mediaSession.setPositionState({});
       } catch (error) {
         console.warn('Error cleaning up Media Session API:', error);
       }
@@ -92,6 +103,9 @@ export class MediaSessionManager {
         navigator.mediaSession.setActionHandler('pause', null);
         navigator.mediaSession.setActionHandler('nexttrack', null);
         navigator.mediaSession.setActionHandler('previoustrack', null);
+        
+        // Clear position state to ensure clean reset
+        navigator.mediaSession.setPositionState({});
       } catch (error) {
         console.warn('Error resetting Media Session API:', error);
       }
