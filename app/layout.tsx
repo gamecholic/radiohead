@@ -25,6 +25,28 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
     apple: "/icons/icon-192x192.png",
   },
+  openGraph: {
+    title: "RadioHead - Çevrimiçi Radyo Uygulaması",
+    description: "Favori radyo istasyonlarınızı modern arayüzle dinleyin",
+    url: "https://radiohead-one.vercel.app",
+    siteName: "RadioHead",
+    images: [
+      {
+        url: "/icons/icon-512x512.png",
+        width: 512,
+        height: 512,
+        alt: "RadioHead Logo",
+      },
+    ],
+    locale: "tr_TR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "RadioHead - Çevrimiçi Radyo Uygulaması",
+    description: "Favori radyo istasyonlarınızı modern arayüzle dinleyin",
+    images: ["/icons/icon-512x512.png"],
+  },
 };
 
 export const viewport: Viewport = {
