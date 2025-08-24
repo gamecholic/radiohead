@@ -81,4 +81,20 @@ export class MediaSessionManager {
       }
     }
   }
+
+  public reset() {
+    if ('mediaSession' in navigator) {
+      try {
+        // Reset all media session properties
+        navigator.mediaSession.metadata = null;
+        navigator.mediaSession.playbackState = 'paused';
+        navigator.mediaSession.setActionHandler('play', null);
+        navigator.mediaSession.setActionHandler('pause', null);
+        navigator.mediaSession.setActionHandler('nexttrack', null);
+        navigator.mediaSession.setActionHandler('previoustrack', null);
+      } catch (error) {
+        console.warn('Error resetting Media Session API:', error);
+      }
+    }
+  }
 }

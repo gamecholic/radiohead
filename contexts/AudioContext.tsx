@@ -348,6 +348,37 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
     };
   }, [isPlaying, currentStation, stationList]);
 
+  // Handle app termination to clean up media session
+  useEffect(() => {
+    // Handle page unload (app closed)
+    const handleBeforeUnload = () => {
+      // Clean up media session when app is closed
+      mediaSessionRef.current.reset();
+    };
+
+    // Handle page freeze (app closed or backgrounded for a long time)
+    const handleFreeze = () => {
+      // Clean up media session when app is frozen
+      mediaSessionRef.current.reset();
+    };
+
+    // Add event listeners
+    window.addEventListener('beforeunload', handleBeforeUnload);
+    
+    // Add freeze event listener if supported
+    if ('freeze' in document) {
+      document.addEventListener('freeze', handleFreeze);
+    }
+
+    // Clean up event listeners
+    return () => {
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+      if ('freeze' in document) {
+        document.removeEventListener('freeze', handleFreeze);
+      }
+    };
+  }, []);
+
   return (
     <AudioContext.Provider
       value={{
