@@ -140,6 +140,10 @@
   background: linear-gradient(180deg, #0d1117 0%, #0b0f14 100%);
 }
 
+.bg-featured-grid-gradient {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(139, 92, 246, 0.1) 50%, rgba(236, 72, 153, 0.1) 100%);
+}
+
 /* Custom ring gradient for selected station */
 .ring-hero-gradient {
   position: relative;

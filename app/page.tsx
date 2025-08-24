@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Header, MobileMenu, FeaturedStation } from "@/components/layout";
+import { FeaturedStationsGrid } from "@/components/featured-stations-grid";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Carousel } from "@/components/carousel";
 import {
@@ -11,6 +12,7 @@ import {
 } from "@/lib/api";
 import { useAudio } from "@/contexts/AudioContext";
 import { Station, Category } from "@/lib/types";
+import { motion } from "framer-motion";
 
 export default function Home() {
   const { isPlaying, currentStation, togglePlay } = useAudio();
@@ -53,14 +55,21 @@ export default function Home() {
     const fetchFeaturedStations = async () => {
       try {
         const featured = await getFeaturedStations("temp-user");
-        setFeaturedStations(featured);
-
-        // Set a random featured station once
+        // Pick a random featured station
+        let randomStation: Station | null = null;
         if (featured.length > 0 && !featuredStation) {
-          const randomStation =
-            featured[Math.floor(Math.random() * featured.length)];
+          randomStation = featured[Math.floor(Math.random() * featured.length)];
           setFeaturedStation(randomStation);
         }
+
+        // Remove the featured station from the rest of the list
+        setFeaturedStations(
+          randomStation
+            ? featured.filter(
+                (station) => station.stationName !== randomStation.stationName
+              )
+            : featured
+        );
       } catch (error) {
         console.error("Error fetching featured stations:", error);
       }
@@ -101,16 +110,27 @@ export default function Home() {
               />
             )}
 
+            {/* Featured Stations Grid */}
+            {featuredStations.length > 0 && (
+              <FeaturedStationsGrid stations={featuredStations} />
+            )}
+
             {/* Netflix-style Carousels */}
             <section className="w-full">
               {categories
                 .filter((c) => stationsByCategory[c.name]?.length)
-                .map((category) => (
-                  <Carousel
+                .map((category, index) => (
+                  <motion.div
                     key={category.name}
-                    title={category.name}
-                    stations={stationsByCategory[category.name] || []}
-                  />
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.1 * index }}
+                  >
+                    <Carousel
+                      title={category.name}
+                      stations={stationsByCategory[category.name] || []}
+                    />
+                  </motion.div>
                 ))}
             </section>
           </div>

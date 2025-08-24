@@ -32,9 +32,29 @@ export const getFeaturedStations = async (
   userId: string
 ): Promise<Station[]> => {
   // Return the first 10 stations as featured
-  return (await getUserFavorites(userId)).length
-    ? (await getUserFavorites(userId)).slice(0, 10)
-    : getStationsByCategory(categories[0]);
+  const favorites = await getUserFavorites(userId);
+
+  if (favorites.length >= 6) {
+    return favorites.slice(0, 10);
+  }
+  // Get stations from the first category
+  const firstCategoryStations = await getStationsByCategory(categories[0]);
+  // Filter out stations already in favorites
+  let additionalStations = firstCategoryStations.filter(
+    (station: Station) =>
+      !favorites.some((fav) => fav.stationName === station.stationName)
+  );
+
+  // Shuffle additionalStations
+  additionalStations = additionalStations
+    .map((station) => ({ station, sort: Math.random() }))
+    .sort((a, b) => a.sort - b.sort)
+    .map(({ station }) => station);
+
+  // Combine favorites and additional stations to ensure at least 6
+  const combined = [...favorites, ...additionalStations].slice(0, 6);
+
+  return combined;
 };
 
 export const getStationsByCategory = async (

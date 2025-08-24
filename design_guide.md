@@ -56,8 +56,21 @@ This design guide describes the visual and structural specifications for buildin
   - Title, description
   - Gradient overlay for vibrancy
   - "Listen Now" button (gradient background)
+  - Animated glow effect on hover
+  - Favorite star indicator
 
-### 4. Station Grid
+### 4. Featured Stations Grid
+
+- **Layout:** Responsive grid (2 cols on mobile, 3 on tablet, 5 on desktop)
+- **Background:** Subtle gradient background to distinguish from carousels
+- **Content:**
+  - Station icons with gradient backgrounds
+  - Station name and category
+  - Play/Pause overlay on hover
+  - Favorite star indicator for favorited stations
+  - Subtle animation on load and hover
+
+### 5. Station Grid
 
 - **Desktop:** `grid-cols-4`
 - **Tablet:** `grid-cols-3`
@@ -97,6 +110,7 @@ This design guide describes the visual and structural specifications for buildin
 - **Input** → Search bar.
 - **ScrollArea** → Sidebar "Your Stations" list.
 - **Avatar** → Profile image.
+- **motion** → Animation components from Framer Motion.
 
 ## 🛠 Implementation Notes for AI Agent
 
@@ -111,6 +125,7 @@ This design guide describes the visual and structural specifications for buildin
 4. **Animation Suggestions**:
    - Fade-in for hero and grid on page load.
    - Scale-up hover effect for station cards.
+   - We use Framer Motion for animations (`framer-motion` library).
 5. **Accessibility**:
    - Use `aria-label` for icons.
    - Ensure color contrast meets WCAG AA.
