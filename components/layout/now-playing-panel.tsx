@@ -96,15 +96,15 @@ export function NowPlayingPanel() {
         </div>
 
         {/* Mobile view */}
-        <div className="flex md:hidden items-center justify-between p-3">
-          <div className="flex items-center space-x-3 w-1/2">
+        <div className="flex md:hidden items-center justify-between p-4">
+          <div className="flex items-center space-x-3 flex-1 min-w-0">
             <StationIcon
               stationIconUrl={currentStation.stationIconUrl}
               stationName={currentStation.stationName}
-              size="xxs"
+              size="xs"
             />
-            <div className="min-w-0">
-              <h3 className="font-semibold text-sm truncate">
+            <div className="min-w-0 flex-1">
+              <h3 className="font-semibold text-base truncate">
                 {currentStation.stationName}
               </h3>
               <p className="text-xs text-white/70 truncate">
@@ -113,14 +113,16 @@ export function NowPlayingPanel() {
             </div>
           </div>
 
-          <MobilePlayerControls
-            onStationSelect={handleStationSelect}
-            isFavorite={isFavorite}
-            onToggleFavorite={toggleFavorite}
-            onToggleMute={toggleMute}
-            onUpdateVolume={updateVolume}
-            onSetVolume={setVolume}
-          />
+          <div className="ml-3">
+            <MobilePlayerControls
+              onStationSelect={handleStationSelect}
+              isFavorite={isFavorite}
+              onToggleFavorite={toggleFavorite}
+              onToggleMute={toggleMute}
+              onUpdateVolume={updateVolume}
+              onSetVolume={setVolume}
+            />
+          </div>
         </div>
       </div>
     </div>

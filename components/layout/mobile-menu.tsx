@@ -44,8 +44,15 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-52 bg-black/20 glassmorphism md:hidden">
-      <div 
+    <div
+      className="fixed inset-0 z-52 bg-black/20 glassmorphism md:hidden"
+      style={{
+        height: "var(--app-height)",
+        top: "env(safe-area-inset-top)",
+        bottom: "env(safe-area-inset-bottom)",
+      }}
+    >
+      <div
         ref={menuRef}
         className="absolute left-0 top-0 h-full w-64 bg-black/30 backdrop-blur-md border-r border-gray-700 flex flex-col"
       >

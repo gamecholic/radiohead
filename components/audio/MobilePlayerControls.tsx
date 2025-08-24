@@ -57,42 +57,42 @@ export function MobilePlayerControls({
   if (!currentStation) return null;
 
   return (
-    <div className="flex items-center space-x-2">
+    <div className="flex items-center">
       <Button
         variant="ghost"
         size="icon"
-        className="button-hero-hover h-8 w-8"
+        className="button-hero-hover h-10 w-10 mx-1"
         onClick={playPrevious}
       >
-        <SkipBack className="h-4 w-4" />
+        <SkipBack className="h-5 w-5" />
       </Button>
       <Button
-        className="h-8 w-8 rounded-full bg-hero-gradient hover:opacity-90"
+        className="h-10 w-10 rounded-full bg-hero-gradient hover:opacity-90 mx-1"
         size="icon"
         onClick={() => togglePlay(currentStation)}
       >
         {isPlaying ? (
-          <Pause className="h-4 w-4" />
+          <Pause className="h-5 w-5" />
         ) : (
-          <Play className="h-4 w-4" />
+          <Play className="h-5 w-5" />
         )}
       </Button>
       <Button
         variant="ghost"
         size="icon"
-        className="button-hero-hover h-8 w-8"
+        className="button-hero-hover h-10 w-10 mx-1"
         onClick={playNext}
       >
-        <SkipForward className="h-4 w-4" />
+        <SkipForward className="h-5 w-5" />
       </Button>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button
             variant="ghost"
             size="icon"
-            className="button-hero-hover h-8 w-8"
+            className="button-hero-hover h-10 w-10 mx-1"
           >
-            <MoreVertical className="h-4 w-4" />
+            <MoreVertical className="h-5 w-5" />
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent

@@ -54,6 +54,7 @@ export const viewport: Viewport = {
   initialScale: 1,
   maximumScale: 1,
   themeColor: "#000000",
+  viewportFit: "cover", // Enable edge-to-edge display for iOS
 };
 
 export default function RootLayout({
@@ -69,16 +70,23 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-title" content="RadioHead" />
         <meta name="theme-color" content="#000000" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta
+          name="apple-mobile-web-app-status-bar-style"
+          content="black-translucent"
+        />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, viewport-fit=cover"
+        />
         <link rel="manifest" href="/manifest.json" />
         <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-[100dvh] text-foreground bg-background-gradient`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased h-full relative text-foreground bg-background-gradient`}
       >
         <AudioProvider>
           <FavoritesProvider>
-            <div className="flex min-h-[100dvh] max-h-[100dvh] flex-col">
+            <div className="flex h-full flex-col">
               <div className="flex flex-1 overflow-hidden">
                 <Sidebar />
 

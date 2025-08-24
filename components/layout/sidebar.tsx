@@ -9,21 +9,21 @@ const CACHE_DURATION = 7 * 24 * 60 * 60 * 1000; // 1 week in milliseconds
 
 async function getCachedRadioGroups() {
   const now = Date.now();
-  
+
   // Check if we have valid cached data
-  if (cache && cache.data && (now - cache.timestamp) < CACHE_DURATION) {
+  if (cache && cache.data && now - cache.timestamp < CACHE_DURATION) {
     return cache.data;
   }
-  
+
   // Fetch fresh data
   const radioGroups = await getRadioGroupsWithSlugs();
-  
+
   // Update cache
   cache = {
     data: radioGroups,
-    timestamp: now
+    timestamp: now,
   };
-  
+
   return radioGroups;
 }
 
@@ -31,7 +31,7 @@ export async function Sidebar() {
   const radioGroups = await getCachedRadioGroups();
 
   return (
-    <aside className="hidden w-64 max-h-[100dvh] flex-col border-r border-gray-800 bg-black/30 backdrop-blur-md md:flex">
+    <aside className="hidden w-64 max-h-full flex-col border-r border-gray-800 bg-black/30 backdrop-blur-md md:flex">
       <div className="p-6">
         <h1 className="text-2xl font-bold text-white">RadioHead</h1>
       </div>
@@ -53,7 +53,9 @@ export async function Sidebar() {
         ))}
       </nav>
       <div className="min-h-0 flex-1 px-4 py-6 border-t border-gray-700">
-        <h2 className="text-lg font-semibold text-white mb-4">Radyo Grupları</h2>
+        <h2 className="text-lg font-semibold text-white mb-4">
+          Radyo Grupları
+        </h2>
         <ScrollArea className="h-full w-full rounded-md">
           <div className="space-y-1 pr-2">
             {radioGroups.map((group) => (

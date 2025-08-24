@@ -127,6 +127,11 @@ export function Header({ onMobileMenuOpen }: HeaderProps) {
         <div
           className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm md:hidden"
           onClick={() => setIsSearchOpen(false)}
+          style={{
+            height: "var(--app-height)",
+            top: "env(safe-area-inset-top)",
+            bottom: "env(safe-area-inset-bottom)",
+          }}
         >
           <div
             className="absolute top-0 left-0 right-0 bg-black/90 border-b border-gray-800 p-4"
