@@ -47,9 +47,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
     <div
       className="fixed inset-0 z-52 bg-black/20 glassmorphism md:hidden"
       style={{
-        height: "var(--app-height)",
         top: "env(safe-area-inset-top)",
-        bottom: "env(safe-area-inset-bottom)",
       }}
     >
       <div
