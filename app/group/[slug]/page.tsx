@@ -3,6 +3,13 @@ import { notFound } from "next/navigation";
 import { GroupPageClient } from "./client";
 import { RadioGroup } from "@/lib/types";
 
+export async function generateStaticParams() {
+  const radioGroups = await getRadioGroupsWithSlugs();
+  return radioGroups.map((group: RadioGroup) => ({
+    slug: group.slug,
+  }));
+}
+
 export async function generateMetadata({
   params,
 }: {
