@@ -28,7 +28,7 @@ export function GroupPageClient({
           size="icon"
           onClick={() => setIsMobileMenuOpen(true)}
         >
-          <Menu className="h-6 w-6" />
+          <Menu className="!h-6 !w-6" />
         </Button>
         <h1 className="text-lg font-bold text-white truncate">
           {group.groupName}
