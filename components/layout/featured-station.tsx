@@ -30,7 +30,7 @@ export function FeaturedStation({
   if (!station) return null;
 
   const handlePlay = () => {
-    togglePlay(station, stationList, "Öne Çıkanlar");
+    togglePlay(station, [station, ...stationList], "Öne Çıkanlar");
   };
 
   const toggleFavorite = (e: React.MouseEvent) => {
