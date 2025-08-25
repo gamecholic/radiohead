@@ -83,7 +83,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               ✕
             </Button>
           </div>
-          <nav className="px-4 py-2 space-y-1">
+          <nav className="space-y-1">
             {mainNavItems.map((item) => (
               <Link
                 key={item.name}
@@ -100,12 +100,12 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             ))}
           </nav>
         </div>
-        <div className="min-h-0 flex-1 px-4 py-6 border-t border-gray-700 flex flex-col">
-          <h2 className="text-lg font-semibold text-white mb-4">
+        <div className="min-h-0 flex-1 border-t border-gray-700 flex flex-col">
+          <h2 className="text-lg font-semibold text-white px-6 py-4">
             Radyo Grupları
           </h2>
-          <ScrollArea className="h-full w-full rounded-md flex-1 min-h-0">
-            <div className="space-y-1 pr-2">
+          <ScrollArea className="flex-1 min-h-0">
+            <div className="space-y-1 px-6 pb-4">
               {radioGroups.map((group) => (
                 <Link
                   key={group.slug}
