@@ -19,10 +19,13 @@ export class MediaSessionManager {
     next: () => void,
     previous: () => void
   ) {
+    // Store callbacks
     this.playCallback = play;
     this.pauseCallback = pause;
     this.nextCallback = next;
     this.previousCallback = previous;
+    
+    // Update action handlers
     this.updateActionHandlers();
   }
 
@@ -79,35 +82,22 @@ export class MediaSessionManager {
   public cleanup() {
     if ('mediaSession' in navigator) {
       try {
-        navigator.mediaSession.metadata = null;
-        navigator.mediaSession.setActionHandler('play', null);
-        navigator.mediaSession.setActionHandler('pause', null);
-        navigator.mediaSession.setActionHandler('nexttrack', null);
-        navigator.mediaSession.setActionHandler('previoustrack', null);
-        
-        // Clear position state when cleaning up
-        navigator.mediaSession.setPositionState({});
-      } catch (error) {
-        console.warn('Error cleaning up Media Session API:', error);
-      }
-    }
-  }
-
-  public reset() {
-    if ('mediaSession' in navigator) {
-      try {
         // Reset all media session properties
         navigator.mediaSession.metadata = null;
         navigator.mediaSession.playbackState = 'paused';
+        
+        // Clear action handlers
         navigator.mediaSession.setActionHandler('play', null);
         navigator.mediaSession.setActionHandler('pause', null);
         navigator.mediaSession.setActionHandler('nexttrack', null);
         navigator.mediaSession.setActionHandler('previoustrack', null);
         
         // Clear position state to ensure clean reset
-        navigator.mediaSession.setPositionState({});
+        if ('setPositionState' in navigator.mediaSession) {
+          navigator.mediaSession.setPositionState({} as MediaPositionState);
+        }
       } catch (error) {
-        console.warn('Error resetting Media Session API:', error);
+        console.warn('Error cleaning up Media Session API:', error);
       }
     }
   }

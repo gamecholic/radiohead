@@ -6,6 +6,7 @@ import React, {
   useState,
   useRef,
   useEffect,
+  useCallback,
 } from "react";
 import { getFeaturedStations } from "@/lib/api";
 import {
@@ -56,6 +57,19 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
     return getSavedVolume();
   });
 
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const volumeRef = useRef<number>(volume);
+  const hasUserInteractedRef = useRef(false);
+  const isIOSSafariRef = useRef(isIOSSafari());
+
+  // Initialize utility classes
+  const audioPlayerRef = useRef<AudioPlayer>(
+    new AudioPlayer(isIOSSafariRef.current)
+  );
+  const mediaSessionRef = useRef<MediaSessionManager>(
+    new MediaSessionManager()
+  );
+
   // Initialize state with saved data from localStorage
   useEffect(() => {
     // Load saved station data
@@ -76,20 +90,6 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
     }
   }, []);
 
-  const audioRef = useRef<HTMLAudioElement | null>(null);
-  const volumeRef = useRef<number>(80);
-  const volumeUpdateTimeoutRef = useRef<NodeJS.Timeout | null>(null);
-  const hasUserInteractedRef = useRef(false);
-  const isIOSSafariRef = useRef(isIOSSafari());
-
-  // Initialize utility classes
-  const audioPlayerRef = useRef<AudioPlayer>(
-    new AudioPlayer(isIOSSafariRef.current)
-  );
-  const mediaSessionRef = useRef<MediaSessionManager>(
-    new MediaSessionManager()
-  );
-
   // Set up audio element reference
   useEffect(() => {
     if (audioRef.current) {
@@ -97,7 +97,56 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
     }
   }, []);
 
-  const togglePlay = (
+  // Save station data to localStorage whenever it changes
+  useEffect(() => {
+    if (currentStation) {
+      saveCurrentStation<Station>(currentStation);
+    }
+  }, [currentStation]);
+
+  useEffect(() => {
+    if (stationList.length > 0) {
+      saveStationList<Station>(stationList);
+    }
+  }, [stationList]);
+
+  useEffect(() => {
+    if (stationListSource) {
+      saveStationListSource(stationListSource);
+    }
+  }, [stationListSource]);
+
+  // Handle volume state updates (for persistence)
+  useEffect(() => {
+    // Save volume to localStorage whenever it changes
+    saveVolume(volume);
+    
+    // Update volume ref to keep it in sync
+    volumeRef.current = volume;
+  }, [volume]);
+
+  // Custom volume setter that updates audio element and state immediately
+  // This provides the most responsive UX for volume control
+  const updateVolume = (newVolume: number) => {
+    // Skip if volume hasn't changed
+    if (volumeRef.current === newVolume) return;
+
+    // Update the volume reference
+    volumeRef.current = newVolume;
+
+    // Update the audio element volume if supported
+    if (audioRef.current) {
+      // iOS Safari doesn't allow programmatic volume control
+      if (!isIOSSafariRef.current) {
+        audioRef.current.volume = newVolume / 100;
+      }
+    }
+
+    // Update state immediately for the most responsive UX
+    setVolume(newVolume);
+  };
+
+  const togglePlay = useCallback((
     station: Station,
     stationList?: Station[],
     source?: string
@@ -120,9 +169,9 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
       // Start/restart playback
       setIsPlaying(true);
     }
-  };
+  }, [currentStation, isPlaying]);
 
-  const playNext = () => {
+  const playNext = useCallback(() => {
     if (!currentStation || stationList.length === 0) return;
 
     // If there's only one station in the current list, switch to featured stations
@@ -160,9 +209,9 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
 
     setCurrentStation(nextStation);
     setIsPlaying(true);
-  };
+  }, [currentStation, stationList]);
 
-  const playPrevious = () => {
+  const playPrevious = useCallback(() => {
     if (!currentStation || stationList.length === 0) return;
 
     // If there's only one station in the current list, switch to featured stations
@@ -201,34 +250,7 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
 
     setCurrentStation(prevStation);
     setIsPlaying(true);
-  };
-
-  // Custom volume setter that updates audio element immediately with debouncing
-  const updateVolume = (newVolume: number) => {
-    // Skip if volume hasn't changed
-    if (volumeRef.current === newVolume) return;
-
-    // Update the volume reference
-    volumeRef.current = newVolume;
-
-    // Update the audio element volume if supported
-    if (audioRef.current) {
-      // iOS Safari doesn't allow programmatic volume control
-      if (!isIOSSafariRef.current) {
-        audioRef.current.volume = newVolume / 100;
-      }
-    }
-
-    // Clear any existing timeout
-    if (volumeUpdateTimeoutRef.current) {
-      clearTimeout(volumeUpdateTimeoutRef.current);
-    }
-
-    // Set a new timeout to update state after a short delay
-    volumeUpdateTimeoutRef.current = setTimeout(() => {
-      setVolume(newVolume);
-    }, 50); // More aggressive debouncing for 50ms
-  };
+  }, [currentStation, stationList]);
 
   // Handle audio playback with HLS support
   useEffect(() => {
@@ -261,37 +283,9 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
     playStation();
   }, [isPlaying, currentStation]);
 
-  // Handle volume state updates (for UI synchronization)
-  useEffect(() => {
-    // Save volume to localStorage whenever it changes
-    saveVolume(volume);
-
-    volumeRef.current = volume;
-    // Only update audio element volume if not on iOS Safari
-    if (audioRef.current && !isIOSSafariRef.current) {
-      audioRef.current.volume = volume / 100;
-    }
-  }, [volume]);
-
-  // Save station data to localStorage whenever it changes
-  useEffect(() => {
-    saveCurrentStation<Station>(currentStation);
-  }, [currentStation]);
-
-  useEffect(() => {
-    saveStationList<Station>(stationList);
-  }, [stationList]);
-
-  useEffect(() => {
-    saveStationListSource(stationListSource);
-  }, [stationListSource]);
-
-  // Cleanup timeout on unmount
+  // Cleanup on unmount
   useEffect(() => {
     return () => {
-      if (volumeUpdateTimeoutRef.current) {
-        clearTimeout(volumeUpdateTimeoutRef.current);
-      }
       // Clean up audio player on unmount
       audioPlayerRef.current.destroy();
     };
@@ -338,28 +332,28 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
         }
       },
       () => setIsPlaying(false),
-      () => playNext(),
-      () => playPrevious()
+      playNext,
+      playPrevious
     );
 
     // Clean up media session when component unmounts or station changes
     return () => {
       mediaSessionRef.current.cleanup();
     };
-  }, [isPlaying, currentStation, stationList]);
+  }, [isPlaying, currentStation, playNext, playPrevious]);
 
   // Handle app termination to clean up media session
   useEffect(() => {
     // Handle page unload (app closed)
     const handleBeforeUnload = () => {
       // Clean up media session when app is closed
-      mediaSessionRef.current.reset();
+      mediaSessionRef.current.cleanup();
     };
 
     // Handle page freeze (app closed or backgrounded for a long time)
     const handleFreeze = () => {
       // Clean up media session when app is frozen
-      mediaSessionRef.current.reset();
+      mediaSessionRef.current.cleanup();
     };
 
     // Add event listeners
