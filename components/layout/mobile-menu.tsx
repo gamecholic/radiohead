@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -66,7 +67,18 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
       >
         <div className="p-6">
           <div className="mb-8 flex items-center justify-between">
-            <h1 className="text-2xl font-bold text-white">RadioHead</h1>
+            <Link href="/" className="flex items-center space-x-2" onClick={onClose}>
+              <div className="relative h-8 w-8">
+                <Image
+                  src="/icons/icon-192x192.png"
+                  alt="RadioHead Logo"
+                  width={32}
+                  height={32}
+                  className="object-contain"
+                />
+              </div>
+              <h1 className="text-2xl font-bold text-white">RadioHead</h1>
+            </Link>
             <Button variant="ghost" size="icon" onClick={onClose}>
               ✕
             </Button>

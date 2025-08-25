@@ -2,6 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { RadioGroup } from "@/lib/types";
 
@@ -23,7 +24,18 @@ export function SidebarClient({ radioGroups }: SidebarClientProps) {
   return (
     <aside className="hidden w-64 max-h-full flex-col border-r border-gray-800 bg-black/30 backdrop-blur-md md:flex">
       <div className="p-6">
-        <h1 className="text-2xl font-bold text-white">RadioHead</h1>
+        <Link href="/" className="flex items-center space-x-2">
+          <div className="relative h-8 w-8">
+            <Image
+              src="/icons/icon-192x192.png"
+              alt="RadioHead Logo"
+              width={32}
+              height={32}
+              className="object-contain"
+            />
+          </div>
+          <h1 className="text-2xl font-bold text-white">RadioHead</h1>
+        </Link>
       </div>
       <nav className="px-4 py-2">
         {mainNavItems.map((item) => (
