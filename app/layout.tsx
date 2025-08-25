@@ -6,6 +6,7 @@ import { AudioProvider } from "@/contexts/AudioContext";
 import { FavoritesProvider } from "@/contexts/FavoritesContext";
 import { NowPlayingPanel } from "@/components/layout/now-playing-panel";
 import { DynamicTitleHandler } from "@/components/DynamicTitleHandler";
+import { getCachedRadioGroups } from "@/lib/cachedRadioGroups";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -57,11 +58,13 @@ export const viewport: Viewport = {
   viewportFit: "cover", // Enable edge-to-edge display for iOS
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const radioGroups = await getCachedRadioGroups();
+
   return (
     <html lang="tr">
       <head>
@@ -88,7 +91,7 @@ export default function RootLayout({
           <FavoritesProvider>
             <div className="flex h-full flex-col">
               <div className="flex flex-1 overflow-hidden">
-                <Sidebar />
+                <Sidebar radioGroups={radioGroups} />
 
                 {/* Main Content */}
                 <main className="flex-1 flex flex-col overflow-hidden relative">

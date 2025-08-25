@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { getRadioGroupsWithSlugs } from "@/lib/api";
@@ -12,6 +13,7 @@ interface MobileMenuProps {
 }
 
 export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
+  const pathname = usePathname();
   const [radioGroups, setRadioGroups] = useState<
     { slug: string; groupName: string }[]
   >([]);
@@ -43,6 +45,14 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
 
   if (!isOpen) return null;
 
+  const mainNavItems = [
+    { name: "Ana Sayfa", href: "/" },
+    { name: "Keşfet", href: "/browse" },
+    { name: "Kütüphane", href: "/library" },
+    { name: "Favoriler", href: "/favorites" },
+    { name: "Hakkında", href: "/about" },
+  ];
+
   return (
     <div
       className="fixed inset-0 z-52 bg-black/20 glassmorphism md:hidden"
@@ -62,17 +72,15 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             </Button>
           </div>
           <nav className="px-4 py-2 space-y-1">
-            {[
-              { name: "Ana Sayfa", href: "/" },
-              { name: "Keşfet", href: "/browse" },
-              { name: "Kütüphane", href: "/library" },
-              { name: "Favoriler", href: "/favorites" },
-              { name: "Hakkında", href: "/about" },
-            ].map((item) => (
+            {mainNavItems.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="block rounded-lg px-4 py-2 text-white hover:bg-white/10 transition-colors"
+                className={`block rounded-lg px-4 py-2 transition-colors ${
+                  pathname === item.href
+                    ? "bg-white/20 text-white"
+                    : "text-white hover:bg-white/10"
+                }`}
                 onClick={onClose}
               >
                 {item.name}
@@ -90,7 +98,11 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                 <Link
                   key={group.slug}
                   href={`/group/${group.slug}`}
-                  className="block rounded-lg px-4 py-2 text-sm text-gray-200 hover:bg-white/10 hover:text-white transition-colors"
+                  className={`block rounded-lg px-4 py-2 text-sm transition-colors ${
+                    pathname === `/group/${group.slug}`
+                      ? "bg-white/20 text-white"
+                      : "text-gray-200 hover:bg-white/10 hover:text-white"
+                  }`}
                   onClick={onClose}
                 >
                   {group.groupName}
