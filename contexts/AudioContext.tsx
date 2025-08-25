@@ -35,8 +35,8 @@ interface AudioContextType {
     stationList?: Station[],
     source?: string
   ) => void;
-  setVolume: (volume: number) => void;
-  updateVolume: (volume: number) => void;
+  setVolume: (volume: number) => void; // For final volume setting (saves to localStorage)
+  setVolumeAndUpdateAudio: (volume: number) => void; // For immediate updates (no localStorage save)
   playNext: () => void;
   playPrevious: () => void;
   isIOSSafari: boolean;
@@ -56,6 +56,33 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
   const [volume, setVolume] = useState(() => {
     return getSavedVolume();
   });
+
+  // Custom volume setter that updates audio element and state immediately
+  const setVolumeAndUpdateAudio = (newVolume: number) => {
+    // Skip if volume hasn't changed
+    if (volumeRef.current === newVolume) return;
+
+    // Update the volume reference
+    volumeRef.current = newVolume;
+
+    // Update the audio element volume if supported
+    if (audioRef.current) {
+      // iOS Safari doesn't allow programmatic volume control
+      if (!isIOSSafariRef.current) {
+        audioRef.current.volume = newVolume / 100;
+      }
+    }
+
+    // Update state immediately for the most responsive UX
+    setVolume(newVolume);
+  };
+
+  // Volume setter that also saves to localStorage (for final volume setting)
+  const setVolumeAndSave = (newVolume: number) => {
+    setVolumeAndUpdateAudio(newVolume);
+    // Save to localStorage only on final commit
+    saveVolume(newVolume);
+  };
 
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const volumeRef = useRef<number>(volume);
@@ -116,60 +143,31 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
     }
   }, [stationListSource]);
 
-  // Handle volume state updates (for persistence)
-  useEffect(() => {
-    // Save volume to localStorage whenever it changes
-    saveVolume(volume);
-    
-    // Update volume ref to keep it in sync
-    volumeRef.current = volume;
-  }, [volume]);
+  // Handle volume state update;
 
-  // Custom volume setter that updates audio element and state immediately
-  // This provides the most responsive UX for volume control
-  const updateVolume = (newVolume: number) => {
-    // Skip if volume hasn't changed
-    if (volumeRef.current === newVolume) return;
+  const togglePlay = useCallback(
+    (station: Station, stationList?: Station[], source?: string) => {
+      // Mark that user has interacted (needed for iOS Safari)
+      hasUserInteractedRef.current = true;
 
-    // Update the volume reference
-    volumeRef.current = newVolume;
-
-    // Update the audio element volume if supported
-    if (audioRef.current) {
-      // iOS Safari doesn't allow programmatic volume control
-      if (!isIOSSafariRef.current) {
-        audioRef.current.volume = newVolume / 100;
-      }
-    }
-
-    // Update state immediately for the most responsive UX
-    setVolume(newVolume);
-  };
-
-  const togglePlay = useCallback((
-    station: Station,
-    stationList?: Station[],
-    source?: string
-  ) => {
-    // Mark that user has interacted (needed for iOS Safari)
-    hasUserInteractedRef.current = true;
-
-    if (currentStation?.stationName === station.stationName && isPlaying) {
-      // Pause playback but keep the current station
-      setIsPlaying(false);
-    } else {
-      // If we're switching stations or starting from stopped state
-      if (currentStation?.stationName !== station.stationName) {
-        setCurrentStation(station);
-        if (stationList && stationList.length > 0) {
-          setStationList(stationList);
-          setStationListSource(source || null);
+      if (currentStation?.stationName === station.stationName && isPlaying) {
+        // Pause playback but keep the current station
+        setIsPlaying(false);
+      } else {
+        // If we're switching stations or starting from stopped state
+        if (currentStation?.stationName !== station.stationName) {
+          setCurrentStation(station);
+          if (stationList && stationList.length > 0) {
+            setStationList(stationList);
+            setStationListSource(source || null);
+          }
         }
+        // Start/restart playback
+        setIsPlaying(true);
       }
-      // Start/restart playback
-      setIsPlaying(true);
-    }
-  }, [currentStation, isPlaying]);
+    },
+    [currentStation, isPlaying]
+  );
 
   const playNext = useCallback(() => {
     if (!currentStation || stationList.length === 0) return;
@@ -357,18 +355,18 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
     };
 
     // Add event listeners
-    window.addEventListener('beforeunload', handleBeforeUnload);
-    
+    window.addEventListener("beforeunload", handleBeforeUnload);
+
     // Add freeze event listener if supported
-    if ('freeze' in document) {
-      document.addEventListener('freeze', handleFreeze);
+    if ("freeze" in document) {
+      document.addEventListener("freeze", handleFreeze);
     }
 
     // Clean up event listeners
     return () => {
-      window.removeEventListener('beforeunload', handleBeforeUnload);
-      if ('freeze' in document) {
-        document.removeEventListener('freeze', handleFreeze);
+      window.removeEventListener("beforeunload", handleBeforeUnload);
+      if ("freeze" in document) {
+        document.removeEventListener("freeze", handleFreeze);
       }
     };
   }, []);
@@ -382,8 +380,8 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
         stationListSource,
         volume,
         togglePlay,
-        setVolume,
-        updateVolume,
+        setVolume: setVolumeAndSave,
+        setVolumeAndUpdateAudio,
         playNext,
         playPrevious,
         isIOSSafari: isIOSSafariRef.current,

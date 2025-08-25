@@ -177,9 +177,9 @@ export function VolumeControl({
       e.preventDefault();
       const delta = e.deltaY > 0 ? -5 : 5;
       const newVolume = Math.min(100, Math.max(0, volume + delta));
-      
+
       // For wheel control, update both immediately for responsive UX
-      onUpdateVolume(newVolume);
+
       onSetVolume(newVolume);
     };
 
@@ -188,7 +188,7 @@ export function VolumeControl({
       volumeArea.addEventListener("wheel", handleWheel, { passive: false });
       return () => volumeArea.removeEventListener("wheel", handleWheel);
     }
-  }, [isVolumeHovered, volume, isIOSSafari, onUpdateVolume, onSetVolume]);
+  }, [isVolumeHovered, volume, isIOSSafari, onSetVolume]);
 
   return (
     <div

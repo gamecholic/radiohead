@@ -16,7 +16,7 @@ export function NowPlayingPanel() {
     currentStation,
     volume,
     setVolume,
-    updateVolume,
+    setVolumeAndUpdateAudio,
     togglePlay,
     stationList,
     stationListSource,
@@ -90,7 +90,7 @@ export function NowPlayingPanel() {
 
           <VolumeControl
             onToggleMute={toggleMute}
-            onUpdateVolume={updateVolume}
+            onUpdateVolume={setVolumeAndUpdateAudio}
             onSetVolume={setVolume}
           />
         </div>
@@ -119,7 +119,7 @@ export function NowPlayingPanel() {
               isFavorite={isFavorite}
               onToggleFavorite={toggleFavorite}
               onToggleMute={toggleMute}
-              onUpdateVolume={updateVolume}
+              onUpdateVolume={setVolumeAndUpdateAudio}
               onSetVolume={setVolume}
             />
           </div>
