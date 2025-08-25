@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import Link from "next/link";
+import Image from "next/image";
 import { Search, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -87,7 +89,20 @@ export function Header({ onMobileMenuOpen }: HeaderProps) {
         <Button variant="ghost" size="icon" onClick={onMobileMenuOpen}>
           <Menu className="h-6 w-6" />
         </Button>
-        <div className="text-lg font-bold">RadioHead</div>
+        <Link href="/" className="flex items-center space-x-2">
+          <div className="relative h-8 w-8">
+            <Image
+              src="/icons/icon-192x192.png"
+              alt="RadioHead Logo"
+              width={32}
+              height={32}
+              className="object-contain"
+            />
+          </div>
+          <span className="text-xl font-bold text-white">
+            RadioHead
+          </span>
+        </Link>
         <Button
           variant="ghost"
           size="icon"
