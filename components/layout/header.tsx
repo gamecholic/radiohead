@@ -87,7 +87,7 @@ export function Header({ onMobileMenuOpen }: HeaderProps) {
       {/* Top Bar for Mobile */}
       <header className="flex items-center justify-between border-b border-gray-800 bg-black/20 p-4 backdrop-blur-md md:hidden">
         <Button variant="ghost" size="icon" onClick={onMobileMenuOpen}>
-          <Menu className="h-6 w-6" />
+          <Menu className="!h-6 !w-6" />
         </Button>
         <Link href="/" className="flex items-center space-x-2">
           <div className="relative h-8 w-8">
@@ -99,16 +99,14 @@ export function Header({ onMobileMenuOpen }: HeaderProps) {
               className="object-contain"
             />
           </div>
-          <span className="text-xl font-bold text-white">
-            RadioHead
-          </span>
+          <span className="text-xl font-bold text-white">RadioHead</span>
         </Link>
         <Button
           variant="ghost"
           size="icon"
           onClick={() => setIsSearchOpen(true)}
         >
-          <Search className="h-6 w-6" />
+          <Search className="!h-6 !w-6" />
         </Button>
       </header>
 
@@ -154,9 +152,10 @@ export function Header({ onMobileMenuOpen }: HeaderProps) {
               <Button
                 variant="ghost"
                 size="icon"
+                className="h-10 w-10"
                 onClick={() => setIsSearchOpen(false)}
               >
-                <Menu className="h-6 w-6" />
+                <Menu width="28" height="28" />
               </Button>
               <div className="relative flex-1">
                 <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400" />
