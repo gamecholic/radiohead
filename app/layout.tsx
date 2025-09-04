@@ -1,12 +1,10 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Sidebar } from "@/components/layout";
 import { AudioProvider } from "@/contexts/AudioContext";
 import { FavoritesProvider } from "@/contexts/FavoritesContext";
-import { NowPlayingPanel } from "@/components/layout/now-playing-panel";
-import { DynamicTitleHandler } from "@/components/DynamicTitleHandler";
 import { getCachedRadioGroups } from "@/lib/cachedRadioGroups";
+import { LayoutManager } from "@/components/LayoutManager";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -60,8 +58,12 @@ export const viewport: Viewport = {
 
 export default async function RootLayout({
   children,
+  desktop,
+  mobile,
 }: Readonly<{
   children: React.ReactNode;
+  desktop: React.ReactNode;
+  mobile: React.ReactNode;
 }>) {
   const radioGroups = await getCachedRadioGroups();
 
@@ -85,22 +87,17 @@ export default async function RootLayout({
         <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased h-full relative text-foreground bg-background-gradient`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased h-full relative text-foreground bg-gradient-to-b`}
       >
         <AudioProvider>
           <FavoritesProvider>
-            <div className="flex h-full flex-col">
-              <div className="flex flex-1 overflow-hidden">
-                <Sidebar radioGroups={radioGroups} />
-
-                {/* Main Content */}
-                <main className="flex-1 flex flex-col overflow-hidden relative">
-                  <DynamicTitleHandler />
-                  {children}
-                  <NowPlayingPanel />
-                </main>
-              </div>
-            </div>
+            <LayoutManager
+              radioGroups={radioGroups}
+              desktop={desktop}
+              mobile={mobile}
+            >
+              {children}
+            </LayoutManager>
           </FavoritesProvider>
         </AudioProvider>
       </body>
