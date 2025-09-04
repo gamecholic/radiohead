@@ -1,12 +1,25 @@
 import categories from "@/lib/data/categories.json";
 import radioGroups from "@/lib/data/radio-groups.json";
 import radioStations from "@/lib/data/radio-stations.json";
-import { RadioGroup, Category, Station } from "@/lib/types";
+import {
+  RadioGroup,
+  Category,
+  Station,
+  Playlist,
+  HistoryItem,
+} from "@/lib/types";
 import {
   getUserFavorites as getFavorites,
   addUserFavorite,
   removeUserFavorite,
   isStationFavorite as checkStationFavorite,
+  getUserPlaylists as getPlaylists,
+  addUserPlaylist,
+  updateUserPlaylist,
+  removeUserPlaylist,
+  getUserHistory as getHistory,
+  addUserHistoryItem,
+  clearUserHistory as clearHistory,
 } from "@/lib/localStorageHandler";
 
 // Filter out stations without playback URLs
@@ -124,4 +137,190 @@ export const searchStations = async (query: string): Promise<Station[]> => {
         category.toLowerCase().includes(normalizedQuery)
       )
   );
+};
+
+// Playlist functions
+export const getUserPlaylists = async (userId: string): Promise<Playlist[]> => {
+  "use client";
+
+  return getPlaylists<Playlist>(userId);
+};
+
+export const createPlaylist = async (
+  userId: string,
+  name: string,
+  stations: Station[] = []
+): Promise<Playlist> => {
+  "use client";
+
+  const newPlaylist: Playlist = {
+    id: Date.now().toString(), // Simple ID generation
+    name,
+    stations,
+    createdAt: Date.now(),
+    updatedAt: Date.now(),
+  };
+
+  addUserPlaylist<Playlist>(userId, newPlaylist);
+  return newPlaylist;
+};
+
+export const updatePlaylist = async (
+  userId: string,
+  playlistId: string,
+  name?: string,
+  stations?: Station[]
+): Promise<void> => {
+  "use client";
+
+  const playlists = await getUserPlaylists(userId);
+  const playlist = playlists.find((p) => p.id === playlistId);
+
+  if (playlist) {
+    const updatedPlaylist: Playlist = {
+      ...playlist,
+      name: name ?? playlist.name,
+      stations: stations ?? playlist.stations,
+      updatedAt: Date.now(),
+    };
+
+    updateUserPlaylist<Playlist>(userId, playlistId, updatedPlaylist);
+  }
+};
+
+export const deletePlaylist = async (
+  userId: string,
+  playlistId: string
+): Promise<void> => {
+  "use client";
+
+  removeUserPlaylist<Playlist>(userId, playlistId);
+};
+
+export const addStationToPlaylist = async (
+  userId: string,
+  playlistId: string,
+  station: Station
+): Promise<void> => {
+  "use client";
+
+  const playlists = await getUserPlaylists(userId);
+  const playlist = playlists.find((p) => p.id === playlistId);
+
+  if (playlist) {
+    // Check if station is already in playlist
+    const isAlreadyInPlaylist = playlist.stations.some(
+      (s) => s.stationName === station.stationName
+    );
+
+    if (!isAlreadyInPlaylist) {
+      const updatedStations = [...playlist.stations, station];
+      await updatePlaylist(userId, playlistId, undefined, updatedStations);
+    }
+  }
+};
+
+export const removeStationFromPlaylist = async (
+  userId: string,
+  playlistId: string,
+  stationName: string
+): Promise<void> => {
+  "use client";
+
+  const playlists = await getUserPlaylists(userId);
+  const playlist = playlists.find((p) => p.id === playlistId);
+
+  if (playlist) {
+    const updatedStations = playlist.stations.filter(
+      (s) => s.stationName !== stationName
+    );
+    await updatePlaylist(userId, playlistId, undefined, updatedStations);
+  }
+};
+
+// History functions
+export const getUserHistory = async (
+  userId: string
+): Promise<HistoryItem[]> => {
+  "use client";
+
+  return getHistory<HistoryItem>(userId);
+};
+
+export const getRecentStations = async (
+  userId: string,
+  limit: number = 15
+): Promise<Station[]> => {
+  "use client";
+
+  const history = await getUserHistory(userId);
+  // Sort by playedAt descending (newest first) and take only the specified limit
+  const recentHistory = [...history]
+    .sort((a, b) => b.playedAt - a.playedAt)
+    .slice(0, limit);
+  // Extract unique stations (by stationName) to avoid duplicates
+  const uniqueStations: Station[] = [];
+  const stationNames = new Set<string>();
+
+  for (const item of recentHistory) {
+    if (!stationNames.has(item.station.stationName)) {
+      stationNames.add(item.station.stationName);
+      uniqueStations.push(item.station);
+    }
+  }
+
+  return uniqueStations;
+};
+
+export const addStationToHistory = async (
+  userId: string,
+  station: Station
+): Promise<void> => {
+  "use client";
+
+  try {
+    // Get existing history
+    const existingHistory = await getUserHistory(userId);
+    
+    // Check if station already exists in history
+    const existingIndex = existingHistory.findIndex(
+      (item) => item.station.stationName === station.stationName
+    );
+    
+    let updatedHistory: HistoryItem[];
+    
+    if (existingIndex !== -1) {
+      // If station exists, remove it from its current position
+      const historyWithoutStation = existingHistory.filter(
+        (_, index) => index !== existingIndex
+      );
+      // Add it to the beginning (most recent)
+      updatedHistory = [
+        { station, playedAt: Date.now() },
+        ...historyWithoutStation
+      ];
+    } else {
+      // If station doesn't exist, add it to the beginning
+      updatedHistory = [
+        { station, playedAt: Date.now() },
+        ...existingHistory
+      ];
+    }
+    
+    // Keep only the last 30 items
+    updatedHistory = updatedHistory.slice(0, 30);
+    
+    // Save updated history
+    const historyKey = `history_${userId}`;
+    localStorage.setItem(historyKey, JSON.stringify(updatedHistory));
+  } catch (error) {
+    console.error("Failed to add station to history:", error);
+    throw error;
+  }
+};
+
+export const clearUserHistory = async (userId: string): Promise<void> => {
+  "use client";
+
+  clearHistory(userId);
 };

@@ -6,7 +6,9 @@ const STORAGE_KEYS = {
   CURRENT_STATION: 'radiohead-current-station',
   STATION_LIST: 'radiohead-station-list',
   STATION_LIST_SOURCE: 'radiohead-station-list-source',
-  USER_FAVORITES: (userId: string) => `favorites_${userId ?? "temp-user"}`
+  USER_FAVORITES: (userId: string) => `favorites_${userId ?? "temp-user"}`,
+  USER_PLAYLISTS: (userId: string) => `playlists_${userId ?? "temp-user"}`,
+  USER_HISTORY: (userId: string) => `history_${userId ?? "temp-user"}`
 } as const;
 
 // Generic functions for localStorage operations
@@ -120,4 +122,46 @@ export const isStationFavorite = <T>(userId: string, stationName: string): boole
   return favorites.some((station) => 
     (station as unknown as { stationName: string }).stationName === stationName
   );
+};
+
+// Playlists operations
+export const getUserPlaylists = <T>(userId: string): T[] => {
+  return getFromLocalStorage<T[]>(STORAGE_KEYS.USER_PLAYLISTS(userId), []);
+};
+
+export const addUserPlaylist = <T>(userId: string, playlist: T): void => {
+  const playlists = getUserPlaylists<T>(userId);
+  const updatedPlaylists = [...playlists, playlist];
+  setToLocalStorage<T[]>(STORAGE_KEYS.USER_PLAYLISTS(userId), updatedPlaylists);
+};
+
+export const updateUserPlaylist = <T>(userId: string, playlistId: string, updatedPlaylist: T): void => {
+  const playlists = getUserPlaylists<T>(userId);
+  const updatedPlaylists: T[] = playlists.map((playlist: T) => 
+    (playlist as { id: string }).id === playlistId ? updatedPlaylist : playlist
+  );
+  setToLocalStorage<T[]>(STORAGE_KEYS.USER_PLAYLISTS(userId), updatedPlaylists);
+};
+
+export const removeUserPlaylist = <T>(userId: string, playlistId: string): void => {
+  const playlists = getUserPlaylists<T>(userId);
+  const updatedPlaylists: T[] = playlists.filter((playlist: T) => 
+    (playlist as { id: string }).id !== playlistId
+  );
+  setToLocalStorage<T[]>(STORAGE_KEYS.USER_PLAYLISTS(userId), updatedPlaylists);
+};
+
+// History operations
+export const getUserHistory = <T>(userId: string): T[] => {
+  return getFromLocalStorage<T[]>(STORAGE_KEYS.USER_HISTORY(userId), []);
+};
+
+export const addUserHistoryItem = <T>(userId: string, historyItem: T): void => {
+  const history: T[] = getUserHistory<T>(userId);
+  const updatedHistory: T[] = [historyItem, ...history].slice(0, 30); // Keep only the last 30 items
+  setToLocalStorage<T[]>(STORAGE_KEYS.USER_HISTORY(userId), updatedHistory);
+};
+
+export const clearUserHistory = <T>(userId: string): void => {
+  setToLocalStorage<T[]>(STORAGE_KEYS.USER_HISTORY(userId), [] as T[]);
 };

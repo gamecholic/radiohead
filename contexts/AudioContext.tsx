@@ -23,6 +23,7 @@ import { Station } from "@/lib/types";
 import { isIOSSafari } from "@/lib/utils/browser";
 import { AudioPlayer } from "@/lib/utils/audioPlayer";
 import { MediaSessionManager } from "@/lib/utils/mediaSession";
+import { useHistory } from "@/contexts/HistoryContext";
 
 interface AudioContextType {
   isPlaying: boolean;
@@ -45,6 +46,7 @@ interface AudioContextType {
 const AudioContext = createContext<AudioContextType | undefined>(undefined);
 
 export function AudioProvider({ children }: { children: React.ReactNode }) {
+  const { addToHistory } = useHistory();
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentStation, setCurrentStation] = useState<Station | null>(null);
   const [stationList, setStationList] = useState<Station[]>([]);
@@ -146,7 +148,7 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
   // Handle volume state update;
 
   const togglePlay = useCallback(
-    (station: Station, stationList?: Station[], source?: string) => {
+    async (station: Station, stationList?: Station[], source?: string) => {
       // Mark that user has interacted (needed for iOS Safari)
       hasUserInteractedRef.current = true;
 
@@ -161,12 +163,19 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
             setStationList(stationList);
             setStationListSource(source || null);
           }
+          
+          // Add station to history
+          try {
+            await addToHistory(station);
+          } catch (error) {
+            console.error("Failed to add station to history:", error);
+          }
         }
         // Start/restart playback
         setIsPlaying(true);
       }
     },
-    [currentStation, isPlaying]
+    [currentStation, isPlaying, addToHistory]
   );
 
   const playNext = useCallback(() => {

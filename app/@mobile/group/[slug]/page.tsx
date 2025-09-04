@@ -11,6 +11,7 @@ import { getStationsByGroup, getRadioGroupsWithSlugs } from "@/lib/api";
 import { Station, RadioGroup } from "@/lib/types";
 import { motion } from "framer-motion";
 import { useParams } from "next/navigation";
+import { AddToPlaylist } from "@/components/add-to-playlist";
 
 export default function MobileGroup() {
   const params = useParams();
@@ -97,6 +98,9 @@ export default function MobileGroup() {
                     <p className="text-sm text-gray-400 truncate">
                       {station.stationCity}
                     </p>
+                  </div>
+                  <div onClick={(e) => e.stopPropagation()}>
+                    <AddToPlaylist station={station} />
                   </div>
                   <Button
                     variant="ghost"

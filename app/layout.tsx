@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { AudioProvider } from "@/contexts/AudioContext";
 import { FavoritesProvider } from "@/contexts/FavoritesContext";
+import { LibraryProvider } from "@/contexts/LibraryContext";
+import { HistoryProvider } from "@/contexts/HistoryContext";
 import { getCachedRadioGroups } from "@/lib/cachedRadioGroups";
 import { LayoutManager } from "@/components/LayoutManager";
 
@@ -89,17 +91,21 @@ export default async function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased h-full relative text-foreground bg-gradient-to-b`}
       >
-        <AudioProvider>
-          <FavoritesProvider>
-            <LayoutManager
-              radioGroups={radioGroups}
-              desktop={desktop}
-              mobile={mobile}
-            >
-              {children}
-            </LayoutManager>
-          </FavoritesProvider>
-        </AudioProvider>
+        <HistoryProvider>
+          <AudioProvider>
+            <FavoritesProvider>
+              <LibraryProvider>
+                <LayoutManager
+                  radioGroups={radioGroups}
+                  desktop={desktop}
+                  mobile={mobile}
+                >
+                  {children}
+                </LayoutManager>
+              </LibraryProvider>
+            </FavoritesProvider>
+          </AudioProvider>
+        </HistoryProvider>
       </body>
     </html>
   );

@@ -2,12 +2,14 @@
 
 import { useState, useEffect } from "react";
 import { StationIcon } from "@/components/station-icon";
+import { AddToPlaylist } from "@/components/add-to-playlist";
 import { Play, Pause, Heart, Search, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Input } from "@/components/ui/input";
 import { useAudio } from "@/contexts/AudioContext";
 import { useFavorites } from "@/contexts/FavoritesContext";
+import { useHistory } from "@/contexts/HistoryContext";
 import {
   getFeaturedStations,
   getCategories,
@@ -21,6 +23,7 @@ import Link from "next/link";
 export default function MobileHome() {
   const { isPlaying, currentStation, togglePlay } = useAudio();
   const { favorites, addFavorite, removeFavorite } = useFavorites();
+  const { history } = useHistory();
   const [featuredStations, setFeaturedStations] = useState<Station[]>([]);
   const [categories, setCategories] = useState<Category[]>([]);
   const [stationsByCategory, setStationsByCategory] = useState<
@@ -50,22 +53,22 @@ export default function MobileHome() {
         setCategories(categoriesData);
 
         // Fetch stations for each category
-        const stations: Record<string, Station[]> = {};
+        const stationsData: Record<string, Station[]> = {};
         for (const category of categoriesData) {
-          const categoryStations = await getStationsByCategory(category.name);
-          stations[category.name] = categoryStations;
+          const stations = await getStationsByCategory(category.name);
+          stationsData[category.name] = stations;
         }
-        setStationsByCategory(stations);
+        setStationsByCategory(stationsData);
 
-        // Simulate recently played stations
-        setRecentlyPlayed(featured.slice(0, 5));
+        // Get recently played stations
+        setRecentlyPlayed(history.slice(0, 10));
       } catch (error) {
         console.error("Error fetching data:", error);
       }
     };
 
     fetchData();
-  }, []);
+  }, [history]);
 
   const handleSearch = async (query: string) => {
     setSearchQuery(query);
@@ -164,7 +167,7 @@ export default function MobileHome() {
                     <h2 className="text-lg font-bold">Arama Sonuçları</h2>
                     {searchResults.map((station) => (
                       <motion.div
-                        key={station.stationName}
+                        key={`search-${station.stationName}`}
                         className="flex items-center p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10"
                         whileTap={{ scale: 0.98 }}
                         onClick={() => {
@@ -186,6 +189,9 @@ export default function MobileHome() {
                           <p className="text-sm text-gray-400 truncate">
                             {station.stationCity}
                           </p>
+                        </div>
+                        <div onClick={(e) => e.stopPropagation()}>
+                          <AddToPlaylist station={station} />
                         </div>
                         <Button
                           variant="ghost"
@@ -276,7 +282,7 @@ export default function MobileHome() {
                   <div className="space-y-3">
                     {showAllData.map((station) => (
                       <motion.div
-                        key={station.stationName}
+                        key={`showall-${showAllTitle}-${station.stationName}`}
                         className="flex items-center p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10"
                         whileTap={{ scale: 0.98 }}
                         onClick={() => {
@@ -334,7 +340,7 @@ export default function MobileHome() {
           <div className="mt-4 mb-6 flex items-center justify-between">
             <div>
               <h1 className="text-2xl font-bold">Merhaba 👋</h1>
-              <p className="text-gray-400">Radyo keyfini çıkar</p>
+              <p className="text-gray-400">Radyonun keyfini çıkar</p>
             </div>
             <Button
               variant="ghost"
@@ -347,57 +353,59 @@ export default function MobileHome() {
           </div>
 
           {/* Recently Played */}
-          <section className="mb-8">
-            <div className="flex justify-between items-center mb-4">
-              <h2 className="text-lg font-bold">Son Çalınanlar</h2>
-              <Link href="/library">
-                <Button variant="ghost" className="text-sm text-blue-400">
-                  Tümünü Gör
-                </Button>
-              </Link>
-            </div>
+          {recentlyPlayed.length > 0 && (
+            <section className="mb-8">
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-lg font-bold">Son Çalınanlar</h2>
+                <Link href="/library">
+                  <Button variant="ghost" className="text-sm text-blue-400">
+                    Tümünü Gör
+                  </Button>
+                </Link>
+              </div>
 
-            <div className="flex space-x-4 overflow-x-auto pb-2">
-              {recentlyPlayed.map((station) => (
-                <motion.div
-                  key={station.stationName}
-                  className="flex-shrink-0 w-24 flex flex-col items-center"
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <div
-                    className="relative mb-2"
-                    onClick={() =>
-                      togglePlay(station, recentlyPlayed, "Son Çalınanlar")
-                    }
+              <div className="flex space-x-4 overflow-x-auto pb-2">
+                {recentlyPlayed.map((station, index) => (
+                  <motion.div
+                    key={`recent-${index}-${station.stationName}`}
+                    className="flex-shrink-0 w-24 flex flex-col items-center"
+                    whileTap={{ scale: 0.95 }}
                   >
-                    <StationIcon
-                      stationIconUrl={station.stationIconUrl}
-                      stationName={station.stationName}
-                      size="md"
-                    />
-                    <Button
-                      size="icon"
-                      className="absolute bottom-0 right-0 h-6 w-6 rounded-full bg-white text-black shadow-lg"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        togglePlay(station, recentlyPlayed, "Son Çalınanlar");
-                      }}
+                    <div
+                      className="relative mb-2"
+                      onClick={() =>
+                        togglePlay(station, recentlyPlayed, "Son Çalınanlar")
+                      }
                     >
-                      {currentStation?.stationName === station.stationName &&
-                      isPlaying ? (
-                        <Pause className="h-3 w-3" />
-                      ) : (
-                        <Play className="h-3 w-3" />
-                      )}
-                    </Button>
-                  </div>
-                  <h3 className="text-xs font-medium text-center truncate w-full">
-                    {station.stationName}
-                  </h3>
-                </motion.div>
-              ))}
-            </div>
-          </section>
+                      <StationIcon
+                        stationIconUrl={station.stationIconUrl}
+                        stationName={station.stationName}
+                        size="md"
+                      />
+                      <Button
+                        size="icon"
+                        className="absolute bottom-0 right-0 h-6 w-6 rounded-full bg-white text-black shadow-lg"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          togglePlay(station, recentlyPlayed, "Son Çalınanlar");
+                        }}
+                      >
+                        {currentStation?.stationName === station.stationName &&
+                        isPlaying ? (
+                          <Pause className="h-3 w-3" />
+                        ) : (
+                          <Play className="h-3 w-3" />
+                        )}
+                      </Button>
+                    </div>
+                    <h3 className="text-xs font-medium text-center truncate w-full">
+                      {station.stationName}
+                    </h3>
+                  </motion.div>
+                ))}
+              </div>
+            </section>
+          )}
 
           {/* Featured Stations */}
           <section className="mb-8">
@@ -414,7 +422,7 @@ export default function MobileHome() {
             <div className="space-y-4">
               {featuredStations.slice(0, 3).map((station) => (
                 <motion.div
-                  key={station.stationName}
+                  key={`featured-${station.stationName}`}
                   className="flex items-center p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10"
                   whileTap={{ scale: 0.98 }}
                   onClick={() =>
@@ -435,6 +443,9 @@ export default function MobileHome() {
                     <p className="text-sm text-gray-400 truncate">
                       {station.stationCity}
                     </p>
+                  </div>
+                  <div onClick={(e) => e.stopPropagation()}>
+                    <AddToPlaylist station={station} />
                   </div>
                   <Button
                     variant="ghost"
@@ -526,7 +537,7 @@ export default function MobileHome() {
                 <div className="space-y-3">
                   {stations.slice(0, 3).map((station) => (
                     <motion.div
-                      key={station.stationName}
+                      key={`category-${categoryName}-${station.stationName}`}
                       className="flex items-center p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10"
                       whileTap={{ scale: 0.98 }}
                       onClick={() =>
@@ -547,6 +558,9 @@ export default function MobileHome() {
                         <p className="text-sm text-gray-400 truncate">
                           {station.stationCity}
                         </p>
+                      </div>
+                      <div onClick={(e) => e.stopPropagation()}>
+                        <AddToPlaylist station={station} />
                       </div>
                       <Button
                         variant="ghost"
