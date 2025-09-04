@@ -37,7 +37,6 @@ export default function MobileFavorites() {
 
           {stations.length === 0 ? (
             <div className="flex flex-col items-center justify-center py-20 text-center">
-              <Heart className="h-16 w-16 text-gray-600 mb-4" />
               <h2 className="text-xl font-bold text-white mb-2">
                 Henüz Favoriniz Yok
               </h2>
@@ -78,15 +77,17 @@ export default function MobileFavorites() {
                   </div>
 
                   {/* Remove button - positioned at top-right corner */}
-                  <button
-                    className="absolute top-2 right-2 w-7 h-7 rounded-full bg-red-500 flex items-center justify-center z-20 shadow-lg"
+                  <Button
+                    className="absolute top-2 right-2 w-7 h-7 hover:opacity-90 flex items-center justify-center z-20 shadow-lg"
+                    size="icon"
+                    variant="ghost"
                     onClick={(e) => {
                       e.stopPropagation();
                       handleRemoveFavorite(station.stationName);
                     }}
                   >
-                    <Heart className="h-4 w-4 text-white" />
-                  </button>
+                    <Heart className="h-4 w-4 fill-red-500 text-red-500" />
+                  </Button>
 
                   <div
                     className="relative z-0"
@@ -110,11 +111,6 @@ export default function MobileFavorites() {
                           {station.stationName.charAt(0)}
                         </div>
                       )}
-                    </div>
-
-                    {/* Favorite indicator */}
-                    <div className="absolute -top-1 -right-1 w-6 h-6 bg-hero-gradient rounded-full flex items-center justify-center border border-white/20 z-10">
-                      <Heart className="h-3 w-3 text-white fill-current" />
                     </div>
 
                     <div className="text-center">
