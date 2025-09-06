@@ -7,6 +7,7 @@ import { LibraryProvider } from "@/contexts/LibraryContext";
 import { HistoryProvider } from "@/contexts/HistoryContext";
 import { getCachedRadioGroups } from "@/lib/cachedRadioGroups";
 import { LayoutManager } from "@/components/LayoutManager";
+import { Analytics } from "@vercel/analytics/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -106,6 +107,7 @@ export default async function RootLayout({
             </FavoritesProvider>
           </AudioProvider>
         </HistoryProvider>
+        <Analytics />
       </body>
     </html>
   );
