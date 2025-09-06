@@ -22,7 +22,7 @@ export function FeaturedStationsGrid({ stations }: FeaturedStationsGridProps) {
         </h2>
       </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+      <div className="grid grid-cols-[repeat(auto-fit,minmax(100px,1fr))] gap-4 md:gap-6">
         {stations.slice(0, 5).map((station, index) => {
           const isCurrentlyPlaying =
             currentStation?.stationName === station.stationName;
@@ -34,7 +34,7 @@ export function FeaturedStationsGrid({ stations }: FeaturedStationsGridProps) {
                 isCurrentlyPlaying
                   ? "ring-2 ring-hero-gradient border-white/20"
                   : "border-white/5"
-              }`}
+              } flex flex-col items-center min-h-[180px]`}
               onClick={() => togglePlay(station, stations, "Öne Çıkanlar")}
             >
               {/* Play/Pause overlay - covers entire card */}
@@ -48,8 +48,8 @@ export function FeaturedStationsGrid({ stations }: FeaturedStationsGridProps) {
                 </div>
               </div>
 
-              <div className="relative z-0">
-                <div className="w-16 h-16 md:w-20 md:h-20 rounded-xl overflow-hidden mx-auto bg-hero-gradient flex items-center justify-center mb-3">
+              <div className="relative z-0 flex flex-col items-center">
+                <div className="w-16 h-16 md:w-20 md:h-20 rounded-xl overflow-hidden bg-hero-gradient flex items-center justify-center mb-3">
                   {station.stationIconUrl ? (
                     <img
                       src={station.stationIconUrl}
