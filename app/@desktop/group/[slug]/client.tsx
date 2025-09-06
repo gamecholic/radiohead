@@ -3,9 +3,8 @@
 import { useState } from "react";
 import { StationIcon } from "@/components/station-icon";
 import { useAudio } from "@/contexts/AudioContext";
-import { Play, Pause, Menu } from "lucide-react";
+import { Play, Pause } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { MobileMenu } from "@/components/layout/mobile-menu";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { RadioGroup, Station } from "@/lib/types";
 
@@ -17,29 +16,13 @@ export function GroupPageClient({
   stations: Station[];
 }) {
   const { isPlaying, currentStation, togglePlay } = useAudio();
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
     <div className="flex-1 overflow-hidden">
-      {/* Mobile Header */}
-      <header className="flex items-center justify-between border-b border-gray-800 bg-black/20 p-4 backdrop-blur-md md:hidden">
-        <Button
-          variant="ghost"
-          size="icon"
-          onClick={() => setIsMobileMenuOpen(true)}
-        >
-          <Menu className="!h-6 !w-6" />
-        </Button>
-        <h1 className="text-lg font-bold text-white truncate">
-          {group.groupName}
-        </h1>
-        <div className="w-10"></div> {/* Spacer for alignment */}
-      </header>
-
       <ScrollArea className="h-full w-full">
         <div className="w-full max-w-6xl mx-auto p-4 md:p-6">
           {/* Header with group name (desktop) */}
-          <div className="mb-8 hidden md:block">
+          <div className="mb-8">
             <h1 className="text-3xl font-bold text-white mb-2">
               {group.groupName}
             </h1>
@@ -99,12 +82,6 @@ export function GroupPageClient({
           </div>
         </div>
       </ScrollArea>
-
-      {/* Mobile Menu Overlay */}
-      <MobileMenu
-        isOpen={isMobileMenuOpen}
-        onClose={() => setIsMobileMenuOpen(false)}
-      />
     </div>
   );
 }

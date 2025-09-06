@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Header, MobileMenu, FeaturedStation } from "@/components/layout";
+import { Header, FeaturedStation } from "@/components/layout";
 import { FeaturedStationsGrid } from "@/components/featured-stations-grid";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Carousel } from "@/components/carousel";
@@ -16,7 +16,6 @@ import { motion } from "framer-motion";
 
 export default function Home() {
   const { isPlaying, currentStation, togglePlay } = useAudio();
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [categories, setCategories] = useState<Category[]>([]);
   const [stationsByCategory, setStationsByCategory] = useState<
     Record<string, Station[]>
@@ -82,21 +81,17 @@ export default function Home() {
   if (loadingCategories) {
     return (
       <div className="flex flex-col h-[100dvh]">
-        <Header onMobileMenuOpen={() => setIsMobileMenuOpen(true)} />
+        <Header />
         <div className="flex-1 flex items-center justify-center">
           <p>Yükleniyor...</p>
         </div>
-        <MobileMenu
-          isOpen={isMobileMenuOpen}
-          onClose={() => setIsMobileMenuOpen(false)}
-        />
       </div>
     );
   }
 
   return (
     <div className="flex flex-col h-[100dvh]">
-      <Header onMobileMenuOpen={() => setIsMobileMenuOpen(true)} />
+      <Header />
 
       {/* Main Content Area - This should take remaining space */}
       <div className="flex-1 overflow-hidden flex flex-col relative">
@@ -136,12 +131,6 @@ export default function Home() {
           </div>
         </ScrollArea>
       </div>
-
-      {/* Mobile Menu Overlay */}
-      <MobileMenu
-        isOpen={isMobileMenuOpen}
-        onClose={() => setIsMobileMenuOpen(false)}
-      />
     </div>
   );
 }

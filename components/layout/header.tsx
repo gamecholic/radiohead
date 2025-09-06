@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Search, Menu } from "lucide-react";
+import { Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -12,11 +12,7 @@ import { Station } from "@/lib/types";
 import { useAudio } from "@/contexts/AudioContext";
 import { StationIcon } from "@/components/station-icon";
 
-interface HeaderProps {
-  onMobileMenuOpen: () => void;
-}
-
-export function Header({ onMobileMenuOpen }: HeaderProps) {
+export function Header() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState<Station[]>([]);
@@ -86,9 +82,7 @@ export function Header({ onMobileMenuOpen }: HeaderProps) {
     <div ref={searchContainerRef} className="relative">
       {/* Top Bar for Mobile */}
       <header className="flex items-center justify-between border-b border-gray-800 bg-black/20 p-4 backdrop-blur-md md:hidden">
-        <Button variant="ghost" size="icon" onClick={onMobileMenuOpen}>
-          <Menu className="!h-6 !w-6" />
-        </Button>
+        <div className="w-10"></div> {/* Spacer for alignment */}
         <Link href="/" className="flex items-center space-x-2">
           <div className="relative h-8 w-8">
             <Image
@@ -149,14 +143,7 @@ export function Header({ onMobileMenuOpen }: HeaderProps) {
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex items-center space-x-2">
-              <Button
-                variant="ghost"
-                size="icon"
-                className="h-10 w-10"
-                onClick={() => setIsSearchOpen(false)}
-              >
-                <Menu width="28" height="28" />
-              </Button>
+              <div className="w-10"></div> {/* Spacer for alignment */}
               <div className="relative flex-1">
                 <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400" />
                 <input

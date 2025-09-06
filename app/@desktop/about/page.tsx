@@ -1,16 +1,13 @@
 "use client";
 
-import { useState } from "react";
-import { Header, MobileMenu } from "@/components/layout";
+import { Header } from "@/components/layout";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 export default function AboutPage() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
   return (
     <div className="flex flex-col h-[100dvh]">
-      <Header onMobileMenuOpen={() => setIsMobileMenuOpen(true)} />
+      <Header />
 
       {/* Main Content */}
       <div className="flex-1 overflow-y-auto p-4 md:p-8">
@@ -84,12 +81,6 @@ export default function AboutPage() {
           </div>
         </div>
       </div>
-
-      {/* Mobile Menu */}
-      <MobileMenu 
-        isOpen={isMobileMenuOpen} 
-        onClose={() => setIsMobileMenuOpen(false)} 
-      />
     </div>
   );
 }
