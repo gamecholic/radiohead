@@ -62,7 +62,7 @@ export function NowPlayingPanel() {
   };
 
   return (
-    <div className="border-t border-gray-800 bg-black/20 backdrop-blur-md absolute bottom-0 left-0 right-0 z-50">
+    <div className="border-t border-gray-800 bg-black/20 backdrop-blur-md absolute bottom-0 left-0 right-0 z-50 animate-in fade-in slide-in-from-bottom-4 duration-500">
       <div className="w-full max-w-6xl mx-auto">
         {/* Desktop view */}
         <div className="hidden md:flex items-center justify-between p-4">

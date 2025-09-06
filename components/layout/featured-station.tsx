@@ -43,12 +43,7 @@ export function FeaturedStation({
   };
 
   return (
-    <motion.section
-      className="mb-8 overflow-hidden rounded-2xl bg-hero-gradient p-6 shadow-lg border border-white/5"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-    >
+    <div className="mb-8 overflow-hidden rounded-2xl bg-hero-gradient p-6 shadow-lg border border-white/5 animate-in fade-in slide-in-from-bottom-4 duration-500">
       <div className="flex flex-col md:flex-row items-center md:items-end gap-6">
         {/* Station Icon with glow effect */}
         <div
@@ -155,6 +150,6 @@ export function FeaturedStation({
           </Button>
         </div>
       </div>
-    </motion.section>
+    </div>
   );
 }
