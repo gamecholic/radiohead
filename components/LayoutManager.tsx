@@ -1,13 +1,11 @@
-"use client";
-
-import { useDeviceDetection } from "@/hooks/useDeviceDetection";
+import { getDeviceDetection } from "@/lib/deviceDetection";
 import { Sidebar } from "@/components/layout/sidebar";
 import { NowPlayingPanel } from "@/components/layout/now-playing-panel";
 import { DynamicTitleHandler } from "@/components/DynamicTitleHandler";
 import { MobileLayout } from "@/components/mobile/MobileLayout";
 import { RadioGroup } from "@/lib/types";
 
-export function LayoutManager({
+export async function LayoutManager({
   children,
   radioGroups,
   desktop,
@@ -18,9 +16,9 @@ export function LayoutManager({
   desktop: React.ReactNode;
   mobile: React.ReactNode;
 }) {
-  const { isMobile } = useDeviceDetection();
+  const { isMobile, isTablet } = await getDeviceDetection();
 
-  if (isMobile) {
+  if (isMobile || isTablet) {
     return <MobileLayout>{mobile || children}</MobileLayout>;
   }
 
