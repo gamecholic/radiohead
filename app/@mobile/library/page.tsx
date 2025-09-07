@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -23,7 +23,15 @@ import { useAudio } from "@/contexts/AudioContext";
 import { Playlist } from "@/lib/types";
 
 export default function MobileLibrary() {
-  const [activeTab, setActiveTab] = useState("history");
+  const searchParams = useSearchParams();
+  const [activeTab, setActiveTab] = useState("playlists");
+
+  useEffect(() => {
+    const tab = searchParams.get("tab");
+    if (tab === "history") {
+      setActiveTab("history");
+    }
+  }, [searchParams]);
   const [showNewPlaylistForm, setShowNewPlaylistForm] = useState(false);
   const [newPlaylistName, setNewPlaylistName] = useState("");
   const [editingPlaylistId, setEditingPlaylistId] = useState<string | null>(
@@ -84,18 +92,6 @@ export default function MobileLibrary() {
             <Button
               variant="ghost"
               className={`flex-1 rounded-none py-4 ${
-                activeTab === "history"
-                  ? "text-white border-b-2 border-white"
-                  : "text-gray-400"
-              }`}
-              onClick={() => setActiveTab("history")}
-            >
-              <History className="h-4 w-4 mr-2" />
-              Geçmiş
-            </Button>
-            <Button
-              variant="ghost"
-              className={`flex-1 rounded-none py-4 ${
                 activeTab === "playlists"
                   ? "text-white border-b-2 border-white"
                   : "text-gray-400"
@@ -104,6 +100,18 @@ export default function MobileLibrary() {
             >
               <PlayCircle className="h-4 w-4 mr-2" />
               Çalma Listeleri
+            </Button>
+            <Button
+              variant="ghost"
+              className={`flex-1 rounded-none py-4 ${
+                activeTab === "history"
+                  ? "text-white border-b-2 border-white"
+                  : "text-gray-400"
+              }`}
+              onClick={() => setActiveTab("history")}
+            >
+              <History className="h-4 w-4 mr-2" />
+              Geçmiş
             </Button>
           </div>
 

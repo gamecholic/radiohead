@@ -357,7 +357,7 @@ export default function MobileHome() {
             <section className="mb-8">
               <div className="flex justify-between items-center mb-4">
                 <h2 className="text-lg font-bold">Son Çalınanlar</h2>
-                <Link href="/library">
+                <Link href="/library?tab=history">
                   <Button variant="ghost" className="text-sm text-blue-400">
                     Tümünü Gör
                   </Button>
