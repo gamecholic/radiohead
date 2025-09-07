@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { StationIcon } from "@/components/station-icon";
 import { useAudio } from "@/contexts/AudioContext";
 import { Play, Pause } from "lucide-react";
