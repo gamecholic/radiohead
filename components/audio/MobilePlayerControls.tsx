@@ -8,7 +8,7 @@ import {
   MoreVertical,
   AlertTriangle,
   Radio,
-  Star,
+  Heart,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
@@ -104,67 +104,50 @@ export function MobilePlayerControls({
             className="flex items-center space-x-2 px-3 py-2 cursor-pointer focus:bg-white/10"
             onClick={onToggleFavorite}
           >
-            <Star
+            <Heart
               className={`h-4 w-4 ${
-                isFavorite ? "fill-yellow-400 text-yellow-400" : "text-white"
+                isFavorite ? "fill-red-500 text-red-500" : "text-white"
               }`}
             />
             <span>
               {isFavorite ? "Favorilerden Kaldır" : "Favorilere Ekle"}
             </span>
           </DropdownMenuItem>
-          <DropdownMenuSeparator className="bg-gray-800" />
-          <DropdownMenuItem
-            className="flex items-center space-x-2 px-3 py-2 cursor-pointer focus:bg-white/10"
-            onClick={onToggleMute}
-            disabled={isIOSSafari} // Disable mute button on iOS
-          >
-            {volume > 0 ? (
-              <Volume2 className="h-4 w-4" />
-            ) : (
-              <VolumeX className="h-4 w-4" />
-            )}
-            <span>{volume > 0 ? "Sessize Al" : "Sesi Aç"}</span>
-            {isIOSSafari && (
-              <span
-                className="text-yellow-500"
-                title="Not available on iOS Safari"
+          {isIOSSafari ? (
+            // On iOS, skip the volume controls entirely and just show a separator
+            <DropdownMenuSeparator className="bg-gray-800" />
+          ) : (
+            // On non-iOS devices, show the full volume controls
+            <>
+              <DropdownMenuSeparator className="bg-gray-800" />
+              <DropdownMenuItem
+                className="flex items-center space-x-2 px-3 py-2 cursor-pointer focus:bg-white/10"
+                onClick={onToggleMute}
               >
-                <AlertTriangle className="h-3 w-3" />
-              </span>
-            )}
-          </DropdownMenuItem>
-          <DropdownMenuSeparator className="bg-gray-800" />
-          <DropdownMenuLabel className="px-3 py-2 text-white/80 font-semibold flex items-center">
-            Ses
-            {isIOSSafari && (
-              <span
-                className="flex items-center text-yellow-500 ml-2"
-                title="iOS Safari'de ses kontrolü kullanılamaz"
-              >
-                <AlertTriangle className="h-3 w-3 mr-1" />
-                <span className="text-xs">Kullanılamaz</span>
-              </span>
-            )}
-          </DropdownMenuLabel>
-          <div className="px-3 py-2">
-            <Slider
-              value={[volume]}
-              onValueChange={([newVolume]) => onUpdateVolume(newVolume)}
-              onValueCommit={([newVolume]) => onSetVolume(newVolume)}
-              max={100}
-              step={1}
-              className="w-full"
-              disabled={isIOSSafari} // Disable slider on iOS
-            />
-            {isIOSSafari && (
-              <p className="text-xs text-yellow-500 mt-1">
-                Ses seviyesini kontrol etmek için cihazınızın ses düğmelerini
-                kullanın
-              </p>
-            )}
-          </div>
-          <DropdownMenuSeparator className="bg-gray-800" />
+                {volume > 0 ? (
+                  <Volume2 className="h-4 w-4" />
+                ) : (
+                  <VolumeX className="h-4 w-4" />
+                )}
+                <span>{volume > 0 ? "Sessize Al" : "Sesi Aç"}</span>
+              </DropdownMenuItem>
+              <DropdownMenuSeparator className="bg-gray-800" />
+              <DropdownMenuLabel className="px-3 py-2 text-white/80 font-semibold">
+                Ses
+              </DropdownMenuLabel>
+              <div className="px-3 py-2">
+                <Slider
+                  value={[volume]}
+                  onValueChange={([newVolume]) => onUpdateVolume(newVolume)}
+                  onValueCommit={([newVolume]) => onSetVolume(newVolume)}
+                  max={100}
+                  step={1}
+                  className="w-full"
+                />
+              </div>
+              <DropdownMenuSeparator className="bg-gray-800" />
+            </>
+          )}
           <DropdownMenuLabel className="px-3 py-2 text-white/80 font-semibold">
             Oynatma Listesi
           </DropdownMenuLabel>

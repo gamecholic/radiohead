@@ -1,20 +1,28 @@
 "use client";
 
+import { StationIcon } from "@/components/station-icon";
 import { useAudio } from "@/contexts/AudioContext";
 import { useFavorites } from "@/contexts/FavoritesContext";
-import { StationIcon } from "@/components/station-icon";
-import { Play, Pause, Heart, SkipForward, SkipBack } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
+import { MobilePlayerControls } from "@/components/audio/MobilePlayerControls";
+import { Station } from "@/lib/types";
 
 export function CurrentStation() {
-  const { currentStation, isPlaying, togglePlay, playNext, playPrevious } =
-    useAudio();
+  const {
+    currentStation,
+    volume,
+    setVolume,
+    setVolumeAndUpdateAudio,
+    togglePlay,
+    stationList,
+    stationListSource,
+  } = useAudio();
 
   const { favorites, addFavorite, removeFavorite } = useFavorites();
   const [isFavorite, setIsFavorite] = useState(false);
+  const [previousVolume, setPreviousVolume] = useState(80);
 
-  // Check if the current station is a favorite
+  // Check if the current station is a favorite when it changes or when favorites update
   useEffect(() => {
     if (currentStation) {
       const favoriteStatus = favorites.some(
@@ -24,7 +32,13 @@ export function CurrentStation() {
     }
   }, [currentStation, favorites]);
 
-  const handleFavoriteToggle = async () => {
+  if (!currentStation) return null;
+
+  const handleStationSelect = (station: Station) => {
+    togglePlay(station, stationList, stationListSource ?? undefined);
+  };
+
+  const toggleFavorite = async () => {
     if (!currentStation) return;
 
     if (isFavorite) {
@@ -34,9 +48,14 @@ export function CurrentStation() {
     }
   };
 
-  if (!currentStation) {
-    return null;
-  }
+  const toggleMute = () => {
+    if (volume > 0) {
+      setPreviousVolume(volume);
+      setVolume(0);
+    } else {
+      setVolume(previousVolume);
+    }
+  };
 
   return (
     <div className="border-t border-gray-800 bg-black/40 backdrop-blur-md px-4 py-2">
@@ -57,49 +76,15 @@ export function CurrentStation() {
           </div>
         </div>
 
-        <div className="flex items-center space-x-1">
-          <Button
-            size="icon"
-            variant="ghost"
-            className="h-8 w-8 rounded-full"
-            onClick={playPrevious}
-          >
-            <SkipBack className="h-4 w-4" />
-          </Button>
-
-          <Button
-            size="icon"
-            className="h-8 w-8 rounded-full bg-white text-black hover:bg-gray-200"
-            onClick={() => togglePlay(currentStation)}
-          >
-            {isPlaying ? (
-              <Pause className="h-4 w-4" />
-            ) : (
-              <Play className="h-4 w-4" />
-            )}
-          </Button>
-
-          <Button
-            size="icon"
-            variant="ghost"
-            className="h-8 w-8 rounded-full"
-            onClick={playNext}
-          >
-            <SkipForward className="h-4 w-4" />
-          </Button>
-
-          <Button
-            size="icon"
-            variant="ghost"
-            className="h-8 w-8 rounded-full"
-            onClick={handleFavoriteToggle}
-          >
-            <Heart
-              className={`h-4 w-4 ${
-                isFavorite ? "fill-red-500 text-red-500" : "text-gray-400"
-              }`}
-            />
-          </Button>
+        <div className="ml-3">
+          <MobilePlayerControls
+            onStationSelect={handleStationSelect}
+            isFavorite={isFavorite}
+            onToggleFavorite={toggleFavorite}
+            onToggleMute={toggleMute}
+            onUpdateVolume={setVolumeAndUpdateAudio}
+            onSetVolume={setVolume}
+          />
         </div>
       </div>
     </div>
