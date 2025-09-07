@@ -103,7 +103,7 @@ export function FeaturedSection() {
   );
 
   return (
-    <div className="transition-all duration-300 ease-in-out min-h-[500px] flex flex-col justify-center">
+    <div className="transition-all duration-300 ease-in-out min-h-[520px] flex flex-col justify-center">
       {/* Hero Featured Station */}
       <div className="transition-all duration-300 ease-in-out">
         {loading ? (
