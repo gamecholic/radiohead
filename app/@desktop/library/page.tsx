@@ -110,7 +110,7 @@ export default function LibraryPage() {
           <nav className="flex md:flex-col space-x-2 md:space-x-0 md:space-y-1">
             <Button
               variant="ghost"
-              className={`justify-start w-full ${activeTab === "playlists" ? "bg-white/10 text-white" : "text-gray-400 hover:text-white"}`}
+              className={`justify-start w-full ${activeTab === "playlists" ? "bg-white/10 text-white" : "text-gray-400 hover:text-white button-hero-hover"}`}
               onClick={() => setActiveTab("playlists")}
             >
               <Play className="h-4 w-4 mr-2" />
@@ -118,7 +118,7 @@ export default function LibraryPage() {
             </Button>
             <Button
               variant="ghost"
-              className={`justify-start w-full ${activeTab === "history" ? "bg-white/10 text-white" : "text-gray-400 hover:text-white"}`}
+              className={`justify-start w-full ${activeTab === "history" ? "bg-white/10 text-white" : "text-gray-400 hover:text-white button-hero-hover"}`}
               onClick={() => setActiveTab("history")}
             >
               <History className="h-4 w-4 mr-2" />
@@ -138,7 +138,7 @@ export default function LibraryPage() {
                     <Button
                       variant="outline"
                       size="sm"
-                      className="text-blue-400 border-blue-400/30 hover:bg-blue-400/10"
+                      className="text-blue-400 border-blue-400/30 hover:bg-blue-400/10 button-hero-hover"
                       onClick={clearHistory}
                     >
                       Temizle
@@ -383,7 +383,7 @@ export default function LibraryPage() {
                                   <Button
                                     size="icon"
                                     variant="ghost"
-                                    className="rounded-full mr-1"
+                                    className="rounded-full mr-1 button-hero-hover"
                                     onClick={(e) => {
                                       e.preventDefault();
                                       e.stopPropagation();
@@ -396,7 +396,7 @@ export default function LibraryPage() {
                                   <Button
                                     size="icon"
                                     variant="ghost"
-                                    className="rounded-full"
+                                    className="rounded-full button-hero-hover"
                                     onClick={(e) => {
                                       e.preventDefault();
                                       e.stopPropagation();

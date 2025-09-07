@@ -114,7 +114,7 @@ export default function PlaylistDetail() {
       <div className="p-6 border-b border-gray-800">
         <div className="flex items-center mb-4">
           <Link href="/library">
-            <Button variant="ghost" size="icon" className="mr-2">
+            <Button variant="ghost" size="icon" className="mr-2 button-hero-hover">
               <ArrowLeft className="h-5 w-5" />
             </Button>
           </Link>
@@ -122,7 +122,7 @@ export default function PlaylistDetail() {
           <Button 
             variant="ghost" 
             size="icon"
-            className="ml-auto mr-2"
+            className="ml-auto mr-2 button-hero-hover"
             onClick={() => {
               setShowEditDialog(true);
               setEditName(playlist.name);
@@ -133,6 +133,7 @@ export default function PlaylistDetail() {
           <Button 
             variant="ghost" 
             size="icon"
+            className="button-hero-hover"
             onClick={() => setShowDeleteConfirm(true)}
           >
             <Trash2 className="h-5 w-5" />
@@ -277,7 +278,7 @@ export default function PlaylistDetail() {
                     <Button 
                       size="icon" 
                       variant="ghost" 
-                      className="rounded-full"
+                      className="rounded-full button-hero-hover"
                       onClick={() => handleRemoveStation(station.stationName)}
                     >
                       <Trash2 className="h-4 w-4" />
