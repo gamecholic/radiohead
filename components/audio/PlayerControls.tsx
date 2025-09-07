@@ -9,6 +9,7 @@ import {
   Radio,
   Star,
   AlertTriangle,
+  PlusCircle,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
@@ -26,6 +27,7 @@ import { Station } from "@/lib/types";
 import { useState, useEffect, useRef } from "react";
 import { useAudio } from "@/contexts/AudioContext";
 import { useFavorites } from "@/contexts/FavoritesContext";
+import { AddToPlaylist } from "@/components/add-to-playlist";
 
 interface PlayerControlsProps {
   onStationSelect: (station: Station) => void;
@@ -64,6 +66,14 @@ export function PlayerControls({
           }`}
         />
       </Button>
+      <AddToPlaylist 
+        station={currentStation} 
+        trigger={
+          <Button variant="ghost" size="icon" className="button-hero-hover">
+            <PlusCircle className="h-5 w-5" />
+          </Button>
+        }
+      />
       <Button
         variant="ghost"
         size="icon"
