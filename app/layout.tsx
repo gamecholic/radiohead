@@ -21,7 +21,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "RadioHead - Çevrimiçi Radyo Uygulaması",
-  description: "Favori radyo istasyonlarınızı modern arayüzle dinleyin",
+  description: "RadioHead ile favori radyolarını kendi listeni oluşturarak dinleyebilirsin. İstediğin anda bir radyodan diğerine geç, durdur, tekrar başlat. Radyon, senin frekansında. Modern ve kullanımı kolay arayüzü ile favori radyo istasyonlarınızı dinleyin.",
   manifest: "/manifest.json",
   icons: {
     icon: "/favicon.ico",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "RadioHead - Çevrimiçi Radyo Uygulaması",
-    description: "Favori radyo istasyonlarınızı modern arayüzle dinleyin",
+    description: "RadioHead ile favori radyolarını kendi listeni oluşturarak dinleyebilirsin. İstediğin anda bir radyodan diğerine geç, durdur, tekrar başlat. Radyon, senin frekansında. Modern ve kullanımı kolay arayüzü ile favori radyo istasyonlarınızı dinleyin.",
     url: "https://radiohead-one.vercel.app",
     siteName: "RadioHead",
     images: [
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "RadioHead - Çevrimiçi Radyo Uygulaması",
-    description: "Favori radyo istasyonlarınızı modern arayüzle dinleyin",
+    description: "RadioHead ile favori radyolarını kendi listeni oluşturarak dinleyebilirsin. İstediğin anda bir radyodan diğerine geç, durdur, tekrar başlat. Radyon, senin frekansında. Modern ve kullanımı kolay arayüzü ile favori radyo istasyonlarınızı dinleyin.",
     images: ["/icons/icon-512x512.png"],
   },
 };
