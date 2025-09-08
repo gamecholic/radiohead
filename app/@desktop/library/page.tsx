@@ -114,7 +114,7 @@ export default function LibraryPage() {
               variant="ghost"
               className={`justify-start w-full ${
                 activeTab === "playlists"
-                  ? "bg-white/10 text-white"
+                  ? "bg-white/10 text-white hover:bg-white/20"
                   : "text-gray-400 hover:text-white button-hero-hover"
               }`}
               onClick={() => setActiveTab("playlists")}
@@ -126,7 +126,7 @@ export default function LibraryPage() {
               variant="ghost"
               className={`justify-start w-full ${
                 activeTab === "history"
-                  ? "bg-white/10 text-white"
+                  ? "bg-white/10 text-white hover:bg-white/20"
                   : "text-gray-400 hover:text-white button-hero-hover"
               }`}
               onClick={() => setActiveTab("history")}
@@ -357,8 +357,8 @@ export default function LibraryPage() {
                     </div>
                     <p className="text-center">Henüz çalma listeniz yok</p>
                     <p className="text-center text-sm mt-1">
-                      İlk çalma listenizi oluşturmak için &quot;Yeni Liste&quot; butonuna
-                      tıklayın
+                      İlk çalma listenizi oluşturmak için &quot;Yeni Liste&quot;
+                      butonuna tıklayın
                     </p>
                   </div>
                 ) : (
