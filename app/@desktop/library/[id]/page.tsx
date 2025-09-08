@@ -311,15 +311,18 @@ export default function PlaylistDetail() {
       </Dialog>
 
       {/* Add Station Dialog */}
-      <Dialog open={showAddStationDialog} onOpenChange={(open) => {
-        setShowAddStationDialog(open);
-        if (!open) {
-          // Reset search when closing
-          setSearchQuery("");
-          setSearchResults([]);
-          setSelectedStations(new Set());
-        }
-      }}>
+      <Dialog
+        open={showAddStationDialog}
+        onOpenChange={(open) => {
+          setShowAddStationDialog(open);
+          if (!open) {
+            // Reset search when closing
+            setSearchQuery("");
+            setSearchResults([]);
+            setSelectedStations(new Set());
+          }
+        }}
+      >
         <DialogContent className="sm:max-w-[500px] bg-gray-900 border-gray-800 h-[70vh] flex flex-col">
           <DialogHeader>
             <DialogTitle>İstasyon Ekle</DialogTitle>
@@ -330,7 +333,7 @@ export default function PlaylistDetail() {
 
           <div className="flex-1 overflow-hidden flex flex-col">
             {/* Search Input */}
-            <div className="relative mb-4">
+            <div className="relative mb-4 p-4">
               <Input
                 placeholder="İstasyon adı, şehir veya kategori ara..."
                 value={searchQuery}
@@ -445,8 +448,8 @@ export default function PlaylistDetail() {
                 Bu çalma listesinde henüz istasyon yok
               </p>
               <p className="text-center text-sm mt-1">
-                İstasyon eklemek için aşağıdaki &quot;İstasyon Ekle&quot; butonunu
-                kullanın
+                İstasyon eklemek için aşağıdaki &quot;İstasyon Ekle&quot;
+                butonunu kullanın
               </p>
               <Button
                 className="mt-4 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700"
