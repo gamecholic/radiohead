@@ -38,7 +38,9 @@ export default function LibraryPage() {
   const [newPlaylistName, setNewPlaylistName] = useState("");
   const [editingPlaylist, setEditingPlaylist] = useState<Playlist | null>(null);
   const [editingPlaylistName, setEditingPlaylistName] = useState("");
-  const [deletingPlaylist, setDeletingPlaylist] = useState<Playlist | null>(null);
+  const [deletingPlaylist, setDeletingPlaylist] = useState<Playlist | null>(
+    null
+  );
 
   useEffect(() => {
     const tab = searchParams.get("tab");
@@ -110,7 +112,11 @@ export default function LibraryPage() {
           <nav className="flex md:flex-col space-x-2 md:space-x-0 md:space-y-1">
             <Button
               variant="ghost"
-              className={`justify-start w-full ${activeTab === "playlists" ? "bg-white/10 text-white" : "text-gray-400 hover:text-white button-hero-hover"}`}
+              className={`justify-start w-full ${
+                activeTab === "playlists"
+                  ? "bg-white/10 text-white"
+                  : "text-gray-400 hover:text-white button-hero-hover"
+              }`}
               onClick={() => setActiveTab("playlists")}
             >
               <Play className="h-4 w-4 mr-2" />
@@ -118,7 +124,11 @@ export default function LibraryPage() {
             </Button>
             <Button
               variant="ghost"
-              className={`justify-start w-full ${activeTab === "history" ? "bg-white/10 text-white" : "text-gray-400 hover:text-white button-hero-hover"}`}
+              className={`justify-start w-full ${
+                activeTab === "history"
+                  ? "bg-white/10 text-white"
+                  : "text-gray-400 hover:text-white button-hero-hover"
+              }`}
               onClick={() => setActiveTab("history")}
             >
               <History className="h-4 w-4 mr-2" />
@@ -186,8 +196,8 @@ export default function LibraryPage() {
                           className="h-8 w-8 rounded-full bg-hero-gradient hover:opacity-90 flex-shrink-0"
                           onClick={() => togglePlay(station)}
                         >
-                          {currentStation?.stationName === station.stationName &&
-                          isPlaying ? (
+                          {currentStation?.stationName ===
+                            station.stationName && isPlaying ? (
                             <Pause className="h-4 w-4" />
                           ) : (
                             <Play className="h-4 w-4" />
@@ -212,7 +222,10 @@ export default function LibraryPage() {
                 </div>
 
                 {/* Create Playlist Dialog */}
-                <Dialog open={showNewPlaylistForm} onOpenChange={setShowNewPlaylistForm}>
+                <Dialog
+                  open={showNewPlaylistForm}
+                  onOpenChange={setShowNewPlaylistForm}
+                >
                   <DialogContent className="sm:max-w-[425px] bg-gray-900 border-gray-800">
                     <DialogHeader>
                       <DialogTitle>Yeni Çalma Listesi</DialogTitle>
@@ -258,7 +271,10 @@ export default function LibraryPage() {
                 </Dialog>
 
                 {/* Edit Playlist Dialog */}
-                <Dialog open={!!editingPlaylist} onOpenChange={(open) => !open && setEditingPlaylist(null)}>
+                <Dialog
+                  open={!!editingPlaylist}
+                  onOpenChange={(open) => !open && setEditingPlaylist(null)}
+                >
                   <DialogContent className="sm:max-w-[425px] bg-gray-900 border-gray-800">
                     <DialogHeader>
                       <DialogTitle>Çalma Listesini Düzenle</DialogTitle>
@@ -273,7 +289,9 @@ export default function LibraryPage() {
                           placeholder="Çalma listesi adı"
                           className="col-span-4"
                           value={editingPlaylistName}
-                          onChange={(e) => setEditingPlaylistName(e.target.value)}
+                          onChange={(e) =>
+                            setEditingPlaylistName(e.target.value)
+                          }
                           onKeyDown={(e) => {
                             if (e.key === "Enter") {
                               handleUpdatePlaylist();
@@ -301,12 +319,17 @@ export default function LibraryPage() {
                 </Dialog>
 
                 {/* Delete Playlist Dialog */}
-                <Dialog open={!!deletingPlaylist} onOpenChange={(open) => !open && setDeletingPlaylist(null)}>
+                <Dialog
+                  open={!!deletingPlaylist}
+                  onOpenChange={(open) => !open && setDeletingPlaylist(null)}
+                >
                   <DialogContent className="sm:max-w-[425px] bg-gray-900 border-gray-800">
                     <DialogHeader>
                       <DialogTitle>Çalma Listesini Sil</DialogTitle>
                       <DialogDescription>
-                        Bu işlem geri alınamaz. &quot;{deletingPlaylist?.name}&quot; çalma listesini silmek istediğinizden emin misiniz?
+                        Bu işlem geri alınamaz. &quot;{deletingPlaylist?.name}
+                        &quot; çalma listesini silmek istediğinizden emin
+                        misiniz?
                       </DialogDescription>
                     </DialogHeader>
                     <DialogFooter>
@@ -334,31 +357,31 @@ export default function LibraryPage() {
                     </div>
                     <p className="text-center">Henüz çalma listeniz yok</p>
                     <p className="text-center text-sm mt-1">
-                      İlk çalma listenizi oluşturmak için &quot;Yeni Liste&quot;
-                      butonuna tıklayın
+                      İlk çalma listenizi oluşturmak için &quot;Yeni Liste&quot; butonuna
+                      tıklayın
                     </p>
                   </div>
                 ) : (
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+                  <div className="space-y-3">
                     {playlists.map((playlist: Playlist) => (
                       <Link
                         key={playlist.id}
                         href={`/library/${playlist.id}`}
                         className="block"
                       >
-                        <div className="group relative flex flex-col h-full rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 cursor-pointer hover:bg-white/10 transition-colors overflow-hidden">
-                          {/* Dark overlay on hover */}
-                          <div className="absolute inset-0 bg-black/30 rounded-lg z-10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                          
-                          <div className="bg-hero-gradient h-32 flex items-center justify-center relative">
-                            <ListMusic className="h-12 w-12 text-white" />
-                            
+                        <div className="group flex items-center rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 cursor-pointer hover:bg-white/10 transition-colors p-3">
+                          {/* Playlist icon */}
+                          <div className="relative flex-shrink-0 mr-4">
+                            <div className="bg-hero-gradient w-16 h-16 rounded-lg flex items-center justify-center">
+                              <ListMusic className="h-8 w-8 text-white" />
+                            </div>
+
                             {/* Play button overlay */}
                             {playlist.stations.length > 0 && (
-                              <div className="absolute inset-0 flex items-center justify-center z-20 opacity-0 group-hover:opacity-100 transition-opacity">
+                              <div className="absolute inset-0 flex items-center justify-center rounded-lg bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity">
                                 <Button
                                   size="icon"
-                                  className="h-12 w-12 rounded-full bg-white/70 hover:bg-white/90 hover:cursor-pointer"
+                                  className="h-8 w-8 rounded-full bg-white/70 hover:bg-white/90 hover:cursor-pointer"
                                   onClick={(e) => {
                                     e.preventDefault();
                                     e.stopPropagation();
@@ -369,68 +392,92 @@ export default function LibraryPage() {
                                     );
                                   }}
                                 >
-                                  {currentStation?.stationName === playlist.stations[0].stationName &&
+                                  {currentStation?.stationName ===
+                                    playlist.stations[0].stationName &&
                                   isPlaying ? (
-                                    <Pause className="h-6 w-6 text-black" />
+                                    <Pause className="h-4 w-4 text-black" />
                                   ) : (
-                                    <Play className="h-6 w-6 text-black" />
+                                    <Play className="h-4 w-4 text-black" />
                                   )}
                                 </Button>
                               </div>
                             )}
                           </div>
-                          
-                          <div className="p-4 flex-1 flex flex-col relative z-10">
-                            <div className="flex-1">
-                              <h3 className="font-bold truncate text-lg">
-                                {playlist.name}
-                              </h3>
-                              <p className="text-sm text-gray-400 mt-1">
-                                {playlist.stations.length} istasyon
-                              </p>
-                            </div>
-                            <div className="flex items-center justify-between mt-4">
-                              <div className="flex">
-                                <Button
-                                  size="icon"
-                                  variant="ghost"
-                                  className="rounded-full mr-1 button-hero-hover"
-                                  onClick={(e) => {
-                                    e.preventDefault();
-                                    e.stopPropagation();
-                                    setEditingPlaylist(playlist);
-                                    setEditingPlaylistName(playlist.name);
-                                  }}
-                                >
-                                  <Pencil className="h-4 w-4" />
-                                </Button>
-                                <Button
-                                  size="icon"
-                                  variant="ghost"
-                                  className="rounded-full button-hero-hover"
-                                  onClick={(e) => {
-                                    e.preventDefault();
-                                    e.stopPropagation();
-                                    setDeletingPlaylist(playlist);
-                                  }}
-                                >
-                                  <Trash2 className="h-4 w-4" />
-                                </Button>
-                              </div>
+
+                          {/* Playlist info */}
+                          <div className="flex-1 min-w-0">
+                            <h3 className="font-bold truncate text-lg">
+                              {playlist.name}
+                            </h3>
+                            <p className="text-sm text-gray-400">
+                              {playlist.stations.length} istasyon
+                            </p>
+                          </div>
+
+                          {/* Action buttons */}
+                          <div className="flex items-center space-x-2 ml-2">
+                            {playlist.stations.length > 0 && (
+                              <Button
+                                className="h-8 px-3 bg-hero-gradient hover:opacity-90"
+                                onClick={(e) => {
+                                  e.preventDefault();
+                                  e.stopPropagation();
+                                  togglePlay(
+                                    playlist.stations[0],
+                                    playlist.stations,
+                                    playlist.name
+                                  );
+                                }}
+                              >
+                                {currentStation?.stationName ===
+                                  playlist.stations[0].stationName &&
+                                isPlaying ? (
+                                  <>
+                                    <Pause className="h-4 w-4 mr-1" />
+                                    <span className="text-xs">Durdur</span>
+                                  </>
+                                ) : (
+                                  <>
+                                    <Play className="h-4 w-4 mr-1" />
+                                    <span className="text-xs">Çal</span>
+                                  </>
+                                )}
+                              </Button>
+                            )}
+                            <Button
+                              size="icon"
+                              variant="ghost"
+                              className="rounded-full button-hero-hover"
+                              onClick={(e) => {
+                                e.preventDefault();
+                                e.stopPropagation();
+                                setEditingPlaylist(playlist);
+                                setEditingPlaylistName(playlist.name);
+                              }}
+                            >
+                              <Pencil className="h-4 w-4" />
+                            </Button>
+                            <Button
+                              size="icon"
+                              variant="ghost"
+                              className="rounded-full button-hero-hover"
+                              onClick={(e) => {
+                                e.preventDefault();
+                                e.stopPropagation();
+                                setDeletingPlaylist(playlist);
+                              }}
+                            >
+                              <Trash2 className="h-4 w-4" />
+                            </Button>
+                            <Link href={`/library/${playlist.id}`} passHref>
                               <Button
                                 size="icon"
                                 variant="ghost"
                                 className="rounded-full button-hero-hover"
-                                onClick={(e) => {
-                                  e.preventDefault();
-                                  e.stopPropagation();
-                                  // This will navigate to the playlist detail page
-                                  window.location.href = `/library/${playlist.id}`;
-                                }}
                               >
                                 <MoreHorizontal className="h-5 w-5 text-gray-400" />
                               </Button>
-                            </div>
+                            </Link>
                           </div>
                         </div>
                       </Link>
