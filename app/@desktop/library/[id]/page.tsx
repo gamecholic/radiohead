@@ -438,7 +438,7 @@ export default function PlaylistDetail() {
       </Dialog>
 
       <div className="flex-1 overflow-hidden">
-        <ScrollArea className="h-full w-full p-6">
+        <ScrollArea className="h-full w-full p-6 pb-24">
           {playlist.stations.length === 0 ? (
             <div className="flex flex-col items-center justify-center py-16 text-gray-500">
               <div className="bg-gray-800/50 border-2 border-dashed rounded-xl w-16 h-16 mb-4 flex items-center justify-center">
@@ -460,55 +460,38 @@ export default function PlaylistDetail() {
               </Button>
             </div>
           ) : (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+            <div className="space-y-2">
               {playlist.stations.map((station: Station) => (
                 <motion.div
                   key={station.stationName}
-                  className="flex flex-col h-full rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-colors overflow-hidden"
+                  className="flex items-center p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-colors"
                   whileTap={{ scale: 0.98 }}
                 >
-                  <div className="p-4">
-                    <div className="flex justify-center mb-3">
-                      <StationIcon
-                        stationIconUrl={station.stationIconUrl}
-                        stationName={station.stationName}
-                        size="lg"
-                      />
-                    </div>
-                    <h3 className="font-bold truncate text-center">
+                  <div className="mr-4">
+                    <StationIcon
+                      stationIconUrl={station.stationIconUrl}
+                      stationName={station.stationName}
+                      size="md"
+                    />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="font-bold truncate">
                       {station.stationName}
                     </h3>
                     {station.stationCity && (
-                      <p className="text-sm text-gray-400 truncate text-center mt-1">
+                      <p className="text-sm text-gray-400 truncate">
                         {station.stationCity}
                       </p>
                     )}
                   </div>
-                  <div className="flex items-center justify-between p-3 border-t border-white/10 mt-auto">
-                    <Button
-                      size="icon"
-                      className="h-8 w-8 rounded-full bg-hero-gradient hover:opacity-90 flex-shrink-0"
-                      onClick={() =>
-                        togglePlay(station, playlist.stations, playlist.name)
-                      }
-                    >
-                      {currentStation?.stationName === station.stationName &&
-                      isPlaying ? (
-                        <Pause className="h-4 w-4" />
-                      ) : (
-                        <Play className="h-4 w-4" />
-                      )}
-                    </Button>
-                    <Button
-                      size="icon"
-                      variant="ghost"
-                      className="rounded-full button-hero-hover"
-                      onClick={() => handleRemoveStation(station.stationName)}
-                    >
-                      <Trash2 className="h-4 w-4" />
-                    </Button>
-                    <MoreHorizontal className="h-5 w-5 text-gray-400" />
-                  </div>
+                  <Button
+                    size="icon"
+                    variant="ghost"
+                    className="rounded-full button-hero-hover ml-2"
+                    onClick={() => handleRemoveStation(station.stationName)}
+                  >
+                    <Trash2 className="h-4 w-4" />
+                  </Button>
                 </motion.div>
               ))}
             </div>
