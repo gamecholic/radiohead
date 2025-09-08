@@ -5,12 +5,7 @@ import { useParams, useRouter } from "next/navigation";
 import Link from "next/link";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Button } from "@/components/ui/button";
-import { 
-  PlayCircle, 
-  ArrowLeft, 
-  MoreHorizontal,
-  Trash2
-} from "lucide-react";
+import { PlayCircle, ArrowLeft, MoreHorizontal, Trash2 } from "lucide-react";
 import { motion } from "framer-motion";
 import { useLibrary } from "@/contexts/LibraryContext";
 import { useAudio } from "@/contexts/AudioContext";
@@ -20,20 +15,20 @@ export default function PlaylistDetail() {
   const params = useParams();
   const router = useRouter();
   const playlistId = params.id as string;
-  
-  const { 
-    playlists, 
+
+  const {
+    playlists,
     removeStationFromExistingPlaylist,
-    deleteExistingPlaylist
+    deleteExistingPlaylist,
   } = useLibrary();
-  
+
   const { togglePlay } = useAudio();
   const [playlist, setPlaylist] = useState<Playlist | null>(null);
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
 
   useEffect(() => {
     if (playlists.length > 0 && playlistId) {
-      const foundPlaylist = playlists.find(p => p.id === playlistId);
+      const foundPlaylist = playlists.find((p) => p.id === playlistId);
       setPlaylist(foundPlaylist || null);
     }
   }, [playlists, playlistId]);
@@ -82,7 +77,7 @@ export default function PlaylistDetail() {
 
   return (
     <div className="flex flex-col bg-gradient-to-b from-gray-900 to-black text-white h-full">
-      <ScrollArea className="flex-1">
+      <ScrollArea className="flex-1 pb-16">
         <div className="px-4 py-4">
           <div className="flex items-center mb-4">
             <Link href="/library">
@@ -91,8 +86,8 @@ export default function PlaylistDetail() {
               </Button>
             </Link>
             <h1 className="text-xl font-bold truncate mr-2">{playlist.name}</h1>
-            <Button 
-              variant="ghost" 
+            <Button
+              variant="ghost"
               size="icon"
               className="ml-auto"
               onClick={() => setShowDeleteConfirm(true)}
@@ -103,18 +98,20 @@ export default function PlaylistDetail() {
 
           {showDeleteConfirm && (
             <div className="mb-4 p-4 rounded-xl bg-red-900/50 backdrop-blur-sm border border-red-800">
-              <p className="mb-3">Bu çalma listesini silmek istediğinizden emin misiniz?</p>
+              <p className="mb-3">
+                Bu çalma listesini silmek istediğinizden emin misiniz?
+              </p>
               <div className="flex space-x-2">
-                <Button 
-                  variant="outline" 
+                <Button
+                  variant="outline"
                   className="flex-1 border-red-500 text-red-500 hover:bg-red-500/20"
                   onClick={handleDeletePlaylist}
                 >
                   <Trash2 className="h-4 w-4 mr-1" />
                   Sil
                 </Button>
-                <Button 
-                  variant="outline" 
+                <Button
+                  variant="outline"
                   className="flex-1"
                   onClick={() => setShowDeleteConfirm(false)}
                 >
@@ -125,14 +122,18 @@ export default function PlaylistDetail() {
           )}
 
           <div className="flex items-center justify-between mb-6">
-            <p className="text-gray-400">
-              {playlist.stations.length} istasyon
-            </p>
+            <p className="text-gray-400">{playlist.stations.length} istasyon</p>
             {playlist.stations.length > 0 && (
-              <Button 
-                size="sm" 
+              <Button
+                size="sm"
                 className="bg-gradient-to-r from-blue-500 to-purple-600"
-                onClick={() => togglePlay(playlist.stations[0], playlist.stations, playlist.name)}
+                onClick={() =>
+                  togglePlay(
+                    playlist.stations[0],
+                    playlist.stations,
+                    playlist.name
+                  )
+                }
               >
                 <PlayCircle className="h-4 w-4 mr-1" />
                 Çal
@@ -145,8 +146,12 @@ export default function PlaylistDetail() {
               <div className="bg-gray-800 border-2 border-dashed rounded-xl w-16 h-16 mb-4 flex items-center justify-center">
                 <PlayCircle className="h-8 w-8" />
               </div>
-              <p className="text-center">Bu çalma listesinde henüz istasyon yok</p>
-              <p className="text-center text-sm mt-1">İstasyon eklemek için diğer sayfalardaki menüleri kullanın</p>
+              <p className="text-center">
+                Bu çalma listesinde henüz istasyon yok
+              </p>
+              <p className="text-center text-sm mt-1">
+                İstasyon eklemek için diğer sayfalardaki menüleri kullanın
+              </p>
             </div>
           ) : (
             <div className="space-y-2">
@@ -166,7 +171,9 @@ export default function PlaylistDetail() {
                           const target = e.target as HTMLImageElement;
                           target.parentElement!.innerHTML = `
                             <div class="w-12 h-12 rounded-xl bg-gray-800 border-2 border-dashed flex items-center justify-center">
-                              <span class="text-xs font-bold text-gray-400">${station.stationName.charAt(0)}</span>
+                              <span class="text-xs font-bold text-gray-400">${station.stationName.charAt(
+                                0
+                              )}</span>
                             </div>
                           `;
                         }}
@@ -180,23 +187,29 @@ export default function PlaylistDetail() {
                     )}
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h3 className="font-medium truncate">{station.stationName}</h3>
+                    <h3 className="font-medium truncate">
+                      {station.stationName}
+                    </h3>
                     {station.stationCity && (
-                      <p className="text-sm text-gray-400 truncate">{station.stationCity}</p>
+                      <p className="text-sm text-gray-400 truncate">
+                        {station.stationCity}
+                      </p>
                     )}
                   </div>
                   <div className="flex items-center">
-                    <Button 
-                      size="icon" 
-                      variant="ghost" 
+                    <Button
+                      size="icon"
+                      variant="ghost"
                       className="rounded-full mr-1"
-                      onClick={() => togglePlay(station, playlist.stations, playlist.name)}
+                      onClick={() =>
+                        togglePlay(station, playlist.stations, playlist.name)
+                      }
                     >
                       <PlayCircle className="h-5 w-5" />
                     </Button>
-                    <Button 
-                      size="icon" 
-                      variant="ghost" 
+                    <Button
+                      size="icon"
+                      variant="ghost"
                       className="rounded-full"
                       onClick={() => handleRemoveStation(station.stationName)}
                     >
