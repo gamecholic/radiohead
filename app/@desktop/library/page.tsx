@@ -343,11 +343,41 @@ export default function LibraryPage() {
                         href={`/library/${playlist.id}`}
                         className="block"
                       >
-                        <div className="flex flex-col h-full rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 cursor-pointer hover:bg-white/10 transition-colors overflow-hidden">
-                          <div className="bg-hero-gradient h-32 flex items-center justify-center">
+                        <div className="group relative flex flex-col h-full rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 cursor-pointer hover:bg-white/10 transition-colors overflow-hidden">
+                          {/* Dark overlay on hover */}
+                          <div className="absolute inset-0 bg-black/30 rounded-lg z-10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                          
+                          <div className="bg-hero-gradient h-32 flex items-center justify-center relative">
                             <ListMusic className="h-12 w-12 text-white" />
+                            
+                            {/* Play button overlay */}
+                            {playlist.stations.length > 0 && (
+                              <div className="absolute inset-0 flex items-center justify-center z-20 opacity-0 group-hover:opacity-100 transition-opacity">
+                                <Button
+                                  size="icon"
+                                  className="h-12 w-12 rounded-full bg-white/70 hover:bg-white/90 hover:cursor-pointer"
+                                  onClick={(e) => {
+                                    e.preventDefault();
+                                    e.stopPropagation();
+                                    togglePlay(
+                                      playlist.stations[0],
+                                      playlist.stations,
+                                      playlist.name
+                                    );
+                                  }}
+                                >
+                                  {currentStation?.stationName === playlist.stations[0].stationName &&
+                                  isPlaying ? (
+                                    <Pause className="h-6 w-6 text-black" />
+                                  ) : (
+                                    <Play className="h-6 w-6 text-black" />
+                                  )}
+                                </Button>
+                              </div>
+                            )}
                           </div>
-                          <div className="p-4 flex-1 flex flex-col">
+                          
+                          <div className="p-4 flex-1 flex flex-col relative z-10">
                             <div className="flex-1">
                               <h3 className="font-bold truncate text-lg">
                                 {playlist.name}
@@ -357,57 +387,47 @@ export default function LibraryPage() {
                               </p>
                             </div>
                             <div className="flex items-center justify-between mt-4">
-                                <div className="flex">
-                                  {playlist.stations.length > 0 && (
-                                    <Button
-                                      size="icon"
-                                      className="h-8 w-8 rounded-full bg-hero-gradient hover:opacity-90 mr-1 flex-shrink-0"
-                                      onClick={(e) => {
-                                        e.preventDefault();
-                                        e.stopPropagation();
-                                        togglePlay(
-                                          playlist.stations[0],
-                                          playlist.stations,
-                                          playlist.name
-                                        );
-                                      }}
-                                    >
-                                      {currentStation?.stationName === playlist.stations[0].stationName &&
-                                      isPlaying ? (
-                                        <Pause className="h-4 w-4" />
-                                      ) : (
-                                        <Play className="h-4 w-4" />
-                                      )}
-                                    </Button>
-                                  )}
-                                  <Button
-                                    size="icon"
-                                    variant="ghost"
-                                    className="rounded-full mr-1 button-hero-hover"
-                                    onClick={(e) => {
-                                      e.preventDefault();
-                                      e.stopPropagation();
-                                      setEditingPlaylist(playlist);
-                                      setEditingPlaylistName(playlist.name);
-                                    }}
-                                  >
-                                    <Pencil className="h-4 w-4" />
-                                  </Button>
-                                  <Button
-                                    size="icon"
-                                    variant="ghost"
-                                    className="rounded-full button-hero-hover"
-                                    onClick={(e) => {
-                                      e.preventDefault();
-                                      e.stopPropagation();
-                                      setDeletingPlaylist(playlist);
-                                    }}
-                                  >
-                                    <Trash2 className="h-4 w-4" />
-                                  </Button>
-                                </div>
-                                <MoreHorizontal className="h-5 w-5 text-gray-400" />
+                              <div className="flex">
+                                <Button
+                                  size="icon"
+                                  variant="ghost"
+                                  className="rounded-full mr-1 button-hero-hover"
+                                  onClick={(e) => {
+                                    e.preventDefault();
+                                    e.stopPropagation();
+                                    setEditingPlaylist(playlist);
+                                    setEditingPlaylistName(playlist.name);
+                                  }}
+                                >
+                                  <Pencil className="h-4 w-4" />
+                                </Button>
+                                <Button
+                                  size="icon"
+                                  variant="ghost"
+                                  className="rounded-full button-hero-hover"
+                                  onClick={(e) => {
+                                    e.preventDefault();
+                                    e.stopPropagation();
+                                    setDeletingPlaylist(playlist);
+                                  }}
+                                >
+                                  <Trash2 className="h-4 w-4" />
+                                </Button>
                               </div>
+                              <Button
+                                size="icon"
+                                variant="ghost"
+                                className="rounded-full button-hero-hover"
+                                onClick={(e) => {
+                                  e.preventDefault();
+                                  e.stopPropagation();
+                                  // This will navigate to the playlist detail page
+                                  window.location.href = `/library/${playlist.id}`;
+                                }}
+                              >
+                                <MoreHorizontal className="h-5 w-5 text-gray-400" />
+                              </Button>
+                            </div>
                           </div>
                         </div>
                       </Link>

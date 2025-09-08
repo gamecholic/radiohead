@@ -216,17 +216,9 @@ export default function PlaylistDetail() {
         <div className="flex items-center justify-between">
           <p className="text-gray-400">{playlist.stations.length} istasyon</p>
           <div className="flex space-x-2">
-            <Button
-              className="h-8 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700"
-              onClick={() => setShowAddStationDialog(true)}
-            >
-              <Plus className="h-4 w-4 mr-2" />
-              İstasyon Ekle
-            </Button>
             {playlist.stations.length > 0 && (
               <Button
-                className="h-8 w-8 rounded-full bg-hero-gradient hover:opacity-90 flex-shrink-0"
-                size="icon"
+                className="h-8 bg-hero-gradient hover:opacity-90 flex items-center"
                 onClick={() =>
                   togglePlay(
                     playlist.stations[0],
@@ -235,14 +227,26 @@ export default function PlaylistDetail() {
                   )
                 }
               >
-                {currentStation?.stationName ===
-                  playlist.stations[0].stationName && isPlaying ? (
-                  <Pause className="h-4 w-4" />
+                {playlist.stations.some(s => s.stationName === currentStation?.stationName) && isPlaying ? (
+                  <>
+                    <Pause className="h-4 w-4 mr-2" />
+                    <span>Durdur</span>
+                  </>
                 ) : (
-                  <Play className="h-4 w-4" />
+                  <>
+                    <Play className="h-4 w-4 mr-2" />
+                    <span>Çal</span>
+                  </>
                 )}
               </Button>
             )}
+            <Button
+              className="h-8 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 flex items-center"
+              onClick={() => setShowAddStationDialog(true)}
+            >
+              <Plus className="h-4 w-4 mr-2" />
+              İstasyon Ekle
+            </Button>
           </div>
         </div>
       </div>
@@ -464,8 +468,15 @@ export default function PlaylistDetail() {
               {playlist.stations.map((station: Station) => (
                 <motion.div
                   key={station.stationName}
-                  className="flex items-center p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-colors"
+                  className="flex items-center p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-colors cursor-pointer"
                   whileTap={{ scale: 0.98 }}
+                  onClick={() =>
+                    togglePlay(
+                      station,
+                      playlist.stations,
+                      playlist.name
+                    )
+                  }
                 >
                   <div className="mr-4">
                     <StationIcon
@@ -488,7 +499,10 @@ export default function PlaylistDetail() {
                     size="icon"
                     variant="ghost"
                     className="rounded-full button-hero-hover ml-2"
-                    onClick={() => handleRemoveStation(station.stationName)}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleRemoveStation(station.stationName);
+                    }}
                   >
                     <Trash2 className="h-4 w-4" />
                   </Button>
