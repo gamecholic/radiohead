@@ -243,6 +243,7 @@ export default function LibraryPage() {
                           setShowNewPlaylistForm(false);
                           setNewPlaylistName("");
                         }}
+                        className="button-hero-hover"
                       >
                         İptal
                       </Button>
@@ -285,6 +286,7 @@ export default function LibraryPage() {
                       <Button
                         variant="outline"
                         onClick={() => setEditingPlaylist(null)}
+                        className="button-hero-hover"
                       >
                         İptal
                       </Button>
@@ -311,6 +313,7 @@ export default function LibraryPage() {
                       <Button
                         variant="outline"
                         onClick={() => setDeletingPlaylist(null)}
+                        className="button-hero-hover"
                       >
                         İptal
                       </Button>

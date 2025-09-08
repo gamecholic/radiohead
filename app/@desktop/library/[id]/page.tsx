@@ -277,7 +277,7 @@ export default function PlaylistDetail() {
             </div>
           </div>
           <DialogFooter>
-            <Button variant="outline" onClick={() => setShowEditDialog(false)}>
+            <Button variant="outline" onClick={() => setShowEditDialog(false)} className="button-hero-hover">
               İptal
             </Button>
             <Button
@@ -304,6 +304,7 @@ export default function PlaylistDetail() {
             <Button
               variant="outline"
               onClick={() => setShowDeleteConfirm(false)}
+              className="button-hero-hover"
             >
               İptal
             </Button>
@@ -426,6 +427,7 @@ export default function PlaylistDetail() {
             <Button
               variant="outline"
               onClick={() => setShowAddStationDialog(false)}
+              className="button-hero-hover"
             >
               İptal
             </Button>

@@ -87,9 +87,7 @@ export function AddToPlaylist({ station, trigger }: AddToPlaylistProps) {
       </DialogTrigger>
       <DialogContent className="bg-gray-900 text-white border-gray-800 max-h-[80vh] overflow-y-auto">
         <DialogHeader>
-          <DialogTitle>
-            Çalma listesine ekle
-          </DialogTitle>
+          <DialogTitle>Çalma listesine ekle</DialogTitle>
         </DialogHeader>
 
         {newPlaylistOpen ? (
@@ -127,7 +125,7 @@ export function AddToPlaylist({ station, trigger }: AddToPlaylistProps) {
           <div className="space-y-4">
             <Button
               variant="outline"
-              className="w-full"
+              className="w-full button-hero-hover"
               onClick={() => setNewPlaylistOpen(true)}
             >
               <Plus className="h-4 w-4 mr-2" />
@@ -142,7 +140,7 @@ export function AddToPlaylist({ station, trigger }: AddToPlaylistProps) {
                 </p>
               </div>
             ) : (
-              <div className="space-y-2 max-h-60 overflow-y-auto">
+              <div className="space-y-2 max-h-60 overflow-y-auto p-4">
                 {playlists.map((playlist: Playlist) => {
                   const isAlreadyInPlaylist = playlist.stations.some(
                     (s) => s.stationName === station.stationName
@@ -152,7 +150,7 @@ export function AddToPlaylist({ station, trigger }: AddToPlaylistProps) {
                     <Button
                       key={playlist.id}
                       variant="ghost"
-                      className="w-full justify-between"
+                      className="w-full justify-between button-hero-hover"
                       onClick={() =>
                         !isAlreadyInPlaylist && handleAddToPlaylist(playlist.id)
                       }
