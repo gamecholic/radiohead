@@ -32,5 +32,9 @@ export default function FavoritesLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  return (
+    <div className="flex flex-col h-full text-white">
+      {children}
+    </div>
+  );
 }

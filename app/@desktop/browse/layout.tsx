@@ -34,7 +34,7 @@ export default function BrowseLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex flex-col h-screen bg-gradient-to-b from-gray-900 to-black text-white">
+    <div className="flex flex-col h-screen text-white">
       <Header />
       {children}
     </div>

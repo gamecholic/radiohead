@@ -32,5 +32,9 @@ export default function AboutLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  return (
+    <div className="flex flex-col h-full text-white">
+      {children}
+    </div>
+  );
 }
