@@ -1,11 +1,12 @@
 import { Metadata } from "next";
+import { Header } from "@/components/layout";
 
 export const metadata: Metadata = {
   title: "Keşfet | RadioHead - Çevrimiçi Radyo Uygulaması",
-  description: "Radyo istasyonlarını kategorilere göre keşfedin",
+  description: "Radyo istasyonlarını keşfedin ve favorilerinizi bulun",
   openGraph: {
     title: "Keşfet | RadioHead - Çevrimiçi Radyo Uygulaması",
-    description: "Radyo istasyonlarını kategorilere göre keşfedin",
+    description: "Radyo istasyonlarını keşfedin ve favorilerinizi bulun",
     url: "https://radiohead-one.vercel.app/browse",
     siteName: "RadioHead",
     images: [
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Keşfet | RadioHead - Çevrimiçi Radyo Uygulaması",
-    description: "Radyo istasyonlarını kategorilere göre keşfedin",
+    description: "Radyo istasyonlarını keşfedin ve favorilerinizi bulun",
     images: ["/icons/icon-512x512.png"],
   },
 };
@@ -32,5 +33,10 @@ export default function BrowseLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  return (
+    <div className="flex flex-col h-screen bg-gradient-to-b from-gray-900 to-black text-white">
+      <Header />
+      {children}
+    </div>
+  );
 }

@@ -1,25 +1,34 @@
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { BrowseSection } from "../components/BrowseSection";
+
 export default function BrowsePage() {
+  // For now, we'll use a temporary user ID
+  // In the future, this should come from the actual user context
+  const userId = "temp-user";
+
   return (
-    <div className="flex flex-col min-h-screen bg-gradient-to-b from-gray-900 to-black text-white">
-      <main className="flex-1 container mx-auto px-4 py-8">
-        <div className="max-w-2xl mx-auto text-center py-16">
-          <h1 className="text-3xl font-bold mb-4">Keşfet</h1>
-          <p className="text-gray-300 mb-6">
-            Bu özellik yakın gelecekte eklenecek. Kullanıcı hesap sistemi
-            tamamlandığında radyo istasyonlarını kategorilere göre
-            keşfedebileceksiniz.
-          </p>
-          <div className="bg-gray-800/50 border border-gray-700 rounded-lg p-6">
-            <h2 className="text-xl font-semibold mb-2">Yakında Geliyor</h2>
-            <p className="text-gray-400">
-              - Kategorilere göre radyo istasyonları
-              <br />
-              - Kişiselleştirilmiş öneriler
-              <br />- Detaylı istasyon bilgileri
-            </p>
+    <div className="flex flex-col h-[calc(100vh-64px)]">
+      {/* Main Content Area */}
+      <div className="flex-1 overflow-hidden flex flex-col relative">
+        <ScrollArea className="flex-1 h-full [&>div]:!block">
+          <div className="w-full max-w-6xl mx-auto p-4 md:p-6 pb-24 md:pb-24">
+            {/* Personalized Recommendations */}
+            <BrowseSection sectionType="recommended" userId={userId} />
+
+            {/* Top Charts */}
+            <BrowseSection sectionType="top" userId={userId} />
+
+            {/* Mood/Activity Sections */}
+            <BrowseSection sectionType="mood" mood="Focus" userId={userId} />
+            <BrowseSection sectionType="mood" mood="Energy" userId={userId} />
+            <BrowseSection sectionType="mood" mood="Relax" userId={userId} />
+            <BrowseSection sectionType="mood" mood="Workout" userId={userId} />
+
+            {/* New Discoveries */}
+            <BrowseSection sectionType="random" userId={userId} />
           </div>
-        </div>
-      </main>
+        </ScrollArea>
+      </div>
     </div>
   );
 }

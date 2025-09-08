@@ -70,6 +70,99 @@ export const getFeaturedStations = async (
   return combined;
 };
 
+export const getRecommendedStations = async (
+  userId: string
+): Promise<Station[]> => {
+  try {
+    // Get user's favorites and history
+    const favorites = await getUserFavorites(userId);
+    const history = await getUserHistory(userId);
+    
+    // If no favorites or history, return featured stations
+    if (favorites.length === 0 && history.length === 0) {
+      return await getFeaturedStations(userId);
+    }
+    
+    // Collect category and group preferences
+    const categoryPreferences: Record<string, number> = {};
+    const groupPreferences: Record<string, number> = {};
+    
+    // Process favorites (weight: 3)
+    favorites.forEach((station: Station) => {
+      station.stationCategories.forEach(category => {
+        categoryPreferences[category] = (categoryPreferences[category] || 0) + 3;
+      });
+      station.radioGroups.forEach(group => {
+        groupPreferences[group] = (groupPreferences[group] || 0) + 3;
+      });
+    });
+    
+    // Process history (weight: 1 per occurrence)
+    history.forEach((item: HistoryItem) => {
+      item.station.stationCategories.forEach(category => {
+        categoryPreferences[category] = (categoryPreferences[category] || 0) + 1;
+      });
+      item.station.radioGroups.forEach(group => {
+        groupPreferences[group] = (groupPreferences[group] || 0) + 1;
+      });
+    });
+    
+    // Get all stations
+    const allStations = validStations;
+    
+    // Score each station based on user preferences
+    const scoredStations = allStations.map(station => {
+      let score = 0;
+      
+      // Add scores for categories
+      station.stationCategories.forEach(category => {
+        score += categoryPreferences[category] || 0;
+      });
+      
+      // Add scores for groups
+      station.radioGroups.forEach(group => {
+        score += groupPreferences[group] || 0;
+      });
+      
+      return {
+        station,
+        score
+      };
+    });
+    
+    // Sort by score (descending) and take top 20
+    const recommendedStations = scoredStations
+      .sort((a, b) => b.score - a.score)
+      .slice(0, 20)
+      .map(item => item.station);
+    
+    // Shuffle the results to add variety
+    const shuffledStations = recommendedStations
+      .map(station => ({ station, sort: Math.random() }))
+      .sort((a, b) => a.sort - b.sort)
+      .map(({ station }) => station);
+    
+    // Remove stations that are already favorites to encourage discovery
+    const nonFavoriteStations = shuffledStations.filter(
+      station => !favorites.some(fav => fav.stationName === station.stationName)
+    );
+    
+    // If we have enough non-favorite stations, return them
+    // Otherwise, include some favorites to meet the minimum count
+    if (nonFavoriteStations.length >= 10) {
+      return nonFavoriteStations.slice(0, 15);
+    } else {
+      // Combine non-favorites and some favorites
+      const additionalFavorites = favorites.slice(0, 15 - nonFavoriteStations.length);
+      return [...nonFavoriteStations, ...additionalFavorites];
+    }
+  } catch (error) {
+    console.error("Error getting recommended stations:", error);
+    // Fallback to featured stations
+    return await getFeaturedStations(userId);
+  }
+};
+
 export const getStationsByCategory = async (
   category: string
 ): Promise<Station[]> => {
@@ -84,6 +177,132 @@ export const getStationsByGroup = async (
   return validStations.filter((station: Station) =>
     station.radioGroups.some((group: string) => group === groupName)
   );
+};
+
+// Mood/Activity mappings to categories
+const moodMappings: Record<string, string[]> = {
+  "Focus": ["Slow", "Klasik Müzik"],
+  "Energy": ["Pop", "Rap ve Rock"],
+  "Relax": ["Slow", "Arabesk"],
+  "Workout": ["Pop", "Yabancı Müzik", "Rap ve Rock"],
+  "Party": ["Pop", "Yabancı Müzik"],
+  "Drive": ["Pop", "Yabancı Müzik"],
+  "Sleep": ["Slow", "Arabesk"],
+  "Study": ["Slow", "Klasik Müzik"],
+  "Cooking": ["Pop", "Yabancı Müzik"],
+  "Gaming": ["Rap ve Rock", "Yabancı Müzik"]
+};
+
+export const getStationsByMood = async (
+  mood: string
+): Promise<Station[]> => {
+  try {
+    const categories = moodMappings[mood] || [];
+    
+    if (categories.length === 0) {
+      return [];
+    }
+    
+    // Get stations from all mapped categories
+    const stationsByCategory: Station[][] = await Promise.all(
+      categories.map(category => getStationsByCategory(category))
+    );
+    
+    // Flatten and deduplicate stations
+    const allStations: Station[] = [];
+    const stationNames = new Set<string>();
+    
+    stationsByCategory.flat().forEach(station => {
+      if (!stationNames.has(station.stationName)) {
+        stationNames.add(station.stationName);
+        allStations.push(station);
+      }
+    });
+    
+    // Shuffle the results
+    const shuffledStations = allStations
+      .map(station => ({ station, sort: Math.random() }))
+      .sort((a, b) => a.sort - b.sort)
+      .map(({ station }) => station);
+    
+    // Return first 20 stations
+    return shuffledStations.slice(0, 20);
+  } catch (error) {
+    console.error(`Error getting stations for mood ${mood}:`, error);
+    return [];
+  }
+};
+
+// Editorial list of popular stations (well-known Turkish radio stations)
+const popularStationNames = [
+  "Power FM",
+  "Kiss FM",
+  "Number One Türk",
+  "Radyo Fenomen",
+  "Joy Türk",
+  "Power Türk",
+  "Radyo D",
+  "Show Radyo",
+  "Kral FM",
+  "Metro FM",
+  "Virgin Radio Türkiye",
+  "Alem FM",
+  "Pal FM",
+  "Efkar FM",
+  "Slow Türk",
+  "Kafa Radyo",
+  "Radyo 7",
+  "Slow 7"
+];
+
+export const getTopStations = async (): Promise<Station[]> => {
+  try {
+    // Find popular stations by name
+    const popularStations = validStations.filter(station => 
+      popularStationNames.includes(station.stationName)
+    );
+    
+    // If we have fewer than 10 popular stations, add some random ones
+    if (popularStations.length < 10) {
+      // Get random stations to fill up to 15
+      const additionalStations = validStations
+        .filter(station => !popularStationNames.includes(station.stationName))
+        .sort(() => 0.5 - Math.random())
+        .slice(0, 15 - popularStations.length);
+      
+      return [...popularStations, ...additionalStations];
+    }
+    
+    // Shuffle the popular stations
+    return popularStations
+      .map(station => ({ station, sort: Math.random() }))
+      .sort((a, b) => a.sort - b.sort)
+      .map(({ station }) => station);
+  } catch (error) {
+    console.error("Error getting top stations:", error);
+    // Fallback to random stations
+    return validStations
+      .sort(() => 0.5 - Math.random())
+      .slice(0, 15);
+  }
+};
+
+export const getRandomStations = async (
+  count: number = 15
+): Promise<Station[]> => {
+  try {
+    // Shuffle all valid stations
+    const shuffledStations = validStations
+      .map(station => ({ station, sort: Math.random() }))
+      .sort((a, b) => a.sort - b.sort)
+      .map(({ station }) => station);
+    
+    // Return the requested count
+    return shuffledStations.slice(0, count);
+  } catch (error) {
+    console.error("Error getting random stations:", error);
+    return [];
+  }
 };
 
 export const getUserFavorites = async (userId: string): Promise<Station[]> => {
