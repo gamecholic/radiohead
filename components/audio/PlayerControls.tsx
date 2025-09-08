@@ -14,20 +14,19 @@ import {
 import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 import { StationIcon } from "@/components/station-icon";
 import { Station } from "@/lib/types";
 import { useState, useEffect, useRef } from "react";
 import { useAudio } from "@/contexts/AudioContext";
 import { useFavorites } from "@/contexts/FavoritesContext";
 import { AddToPlaylist } from "@/components/add-to-playlist";
+import {
+  Drawer,
+  DrawerContent,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from "@/components/ui/drawer";
 
 interface PlayerControlsProps {
   onStationSelect: (station: Station) => void;
@@ -101,65 +100,63 @@ export function PlayerControls({
       >
         <SkipForward className="h-5 w-5" />
       </Button>
-      <DropdownMenu>
-        <DropdownMenuTrigger asChild>
+      <Drawer direction="right">
+        <DrawerTrigger asChild>
           <Button variant="ghost" size="icon" className="button-hero-hover">
             <ListMusic className="h-5 w-5" />
           </Button>
-        </DropdownMenuTrigger>
-        <DropdownMenuContent
-          side="top"
-          align="center"
-          className="w-64 p-0 bg-black/90 backdrop-blur-md border-gray-800"
-        >
-          <DropdownMenuLabel className="px-3 py-2 text-white/80 font-semibold">
-            Oynatma Listesi
-          </DropdownMenuLabel>
-          {stationListSource ? (
-            <DropdownMenuLabel className="px-3 py-1 text-xs text-white/60 font-normal flex items-center">
-              Kaynak: {stationListSource}
-            </DropdownMenuLabel>
-          ) : (
-            <DropdownMenuLabel className="px-3 py-1 text-xs text-white/60 font-normal flex items-center">
-              Kaynak: {currentStation?.radioGroups[0] || "Radyo İstasyonu"}
-            </DropdownMenuLabel>
-          )}
-          <DropdownMenuSeparator className="bg-gray-800" />
-          <ScrollArea className="h-60 rounded-md">
-            {stationList.map((station) => (
-              <DropdownMenuItem
-                key={station.stationName}
-                className={`flex items-center justify-between px-3 py-2 cursor-pointer focus:bg-white/10 ${
-                  station.stationName === currentStation.stationName
-                    ? "bg-white/10"
-                    : "hover:bg-white/10"
-                }`}
-                onClick={() => onStationSelect(station)}
-              >
-                <div className="flex items-center space-x-2">
-                  <StationIcon
-                    stationIconUrl={station.stationIconUrl}
-                    stationName={station.stationName}
-                    size="xxs"
-                  />
-                  <span
-                    className={`text-sm ${
-                      station.stationName === currentStation.stationName
-                        ? "font-semibold text-white"
-                        : "text-white/80"
+        </DrawerTrigger>
+        <DrawerContent className="bg-black/30 backdrop-blur-md border-gray-800 h-screen flex flex-col">
+          <DrawerHeader className="border-b border-gray-800">
+            <DrawerTitle>Oynatma Listesi</DrawerTitle>
+            {stationListSource ? (
+              <div className="text-xs text-white/60 font-normal flex items-center mt-1">
+                Kaynak: {stationListSource}
+              </div>
+            ) : (
+              <div className="text-xs text-white/60 font-normal flex items-center mt-1">
+                Kaynak: {currentStation?.radioGroups[0] || "Radyo İstasyonu"}
+              </div>
+            )}
+          </DrawerHeader>
+          <div className="flex-1 overflow-hidden">
+            <ScrollArea className="h-full w-full p-4">
+              <div className="space-y-2 pb-4">
+                {stationList.map((station, index) => (
+                  <div
+                    key={`${station.stationName}-${index}`}
+                    className={`flex items-center space-x-3 p-2 rounded-lg cursor-pointer hover:bg-white/10 ${
+                      station.stationName === currentStation.stationName ? 'bg-white/10' : ''
                     }`}
+                    onClick={() => onStationSelect(station)}
                   >
-                    {station.stationName}
-                  </span>
-                </div>
-                {station.stationName === currentStation.stationName && (
-                  <Radio className="h-4 w-4 text-white animate-pulse" />
-                )}
-              </DropdownMenuItem>
-            ))}
-          </ScrollArea>
-        </DropdownMenuContent>
-      </DropdownMenu>
+                    <StationIcon
+                      stationIconUrl={station.stationIconUrl}
+                      stationName={station.stationName}
+                      size="xs"
+                    />
+                    <div className="min-w-0 flex-1">
+                      <h4 className={`font-medium truncate text-sm ${
+                        station.stationName === currentStation.stationName
+                          ? "text-white font-semibold"
+                          : "text-white/80"
+                      }`}>
+                        {station.stationName}
+                      </h4>
+                      <p className="text-xs text-white/70 truncate">
+                        {station.radioGroups[0] || "Radyo İstasyonu"}
+                      </p>
+                    </div>
+                    {station.stationName === currentStation.stationName && (
+                      <Radio className="h-4 w-4 text-white animate-pulse" />
+                    )}
+                  </div>
+                ))}
+              </div>
+            </ScrollArea>
+          </div>
+        </DrawerContent>
+      </Drawer>
     </div>
   );
 }
