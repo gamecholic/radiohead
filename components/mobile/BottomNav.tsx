@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Home, Heart, Compass, Library, User } from "lucide-react";
+import { Home, Heart, Compass, Library, Info } from "lucide-react";
 import { motion } from "framer-motion";
 
 export function BottomNav() {
@@ -13,7 +13,7 @@ export function BottomNav() {
     { name: "Keşfet", href: "/browse", icon: Compass },
     { name: "Kütüphane", href: "/library", icon: Library },
     { name: "Favoriler", href: "/favorites", icon: Heart },
-    { name: "Hesap", href: "/about", icon: User },
+    { name: "Hakkında", href: "/about", icon: Info },
   ];
 
   return (

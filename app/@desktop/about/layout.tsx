@@ -2,10 +2,10 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Hakkında | RadioHead - Çevrimiçi Radyo Uygulaması",
-  description: "RadioHead uygulaması hakkında bilgiler, yasal uyarılar ve sorumluluk reddi beyanı",
+  description: "RadioHead uygulaması hakkında bilgiler, yasal uyarılar, telif hakkı bildirimi ve sorumluluk reddi beyanı",
   openGraph: {
     title: "Hakkında | RadioHead - Çevrimiçi Radyo Uygulaması",
-    description: "RadioHead uygulaması hakkında bilgiler, yasal uyarılar ve sorumluluk reddi beyanı",
+    description: "RadioHead uygulaması hakkında bilgiler, yasal uyarılar, telif hakkı bildirimi ve sorumluluk reddi beyanı",
     url: "https://radiohead-one.vercel.app/about",
     siteName: "RadioHead",
     images: [
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Hakkında | RadioHead - Çevrimiçi Radyo Uygulaması",
-    description: "RadioHead uygulaması hakkında bilgiler, yasal uyarılar ve sorumluluk reddi beyanı",
+    description: "RadioHead uygulaması hakkında bilgiler, yasal uyarılar, telif hakkı bildirimi ve sorumluluk reddi beyanı",
     images: ["/icons/icon-512x512.png"],
   },
 };
