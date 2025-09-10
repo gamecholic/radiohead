@@ -58,7 +58,7 @@ export function CurrentStation() {
   };
 
   return (
-    <div className="border-t border-gray-800 bg-black/40 backdrop-blur-md px-4 py-2">
+    <div className="border-t border-gray-800 bg-black/40 backdrop-blur-md px-4 py-2 max-w-[100vw]">
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-3 flex-1 min-w-0">
           <StationIcon
