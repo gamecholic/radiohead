@@ -1,7 +1,7 @@
 [
   {
     "stationName": "Alem FM",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/alem-fm.jpg",
+    "stationIconUrl": "/images/alem-fm.webp",
     "stationCategories": [
       "Pop"
     ],
@@ -12,7 +12,7 @@
   },
   {
     "stationName": "Diyanet Radyo",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/Diyanet-Radyo-100x100.jpg",
+    "stationIconUrl": "/images/Diyanet-Radyo-100x100.webp",
     "stationCategories": [
       "İslami"
     ],
@@ -23,7 +23,7 @@
   },
   {
     "stationName": "Efkar FM",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/efkar-fm.jpg",
+    "stationIconUrl": "/images/efkar-fm.webp",
     "stationCategories": [
       "Web Radyo"
     ],
@@ -34,7 +34,7 @@
   },
   {
     "stationName": "Joy Türk",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/joy-turk-dinle.jpg",
+    "stationIconUrl": "/images/joy-turk-dinle.webp",
     "stationCategories": [
       "Slow"
     ],
@@ -45,7 +45,7 @@
   },
   {
     "stationName": "Kafa Radyo",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/kafa-radyo.jpg",
+    "stationIconUrl": "/images/kafa-radyo.webp",
     "stationCategories": [
       "Slow"
     ],
@@ -56,7 +56,7 @@
   },
   {
     "stationName": "Kiss FM",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/kiss-fm.jpg",
+    "stationIconUrl": "/images/kiss-fm.webp",
     "stationCategories": [
       "Yabancı Müzik"
     ],
@@ -67,7 +67,7 @@
   },
   {
     "stationName": "Number One Türk",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/number-one-turk-fm.jpg",
+    "stationIconUrl": "/images/number-one-turk-fm.webp",
     "stationCategories": [
       "Pop"
     ],
@@ -78,7 +78,7 @@
   },
   {
     "stationName": "Pal Doğa",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/pal-doga-radyo.jpg",
+    "stationIconUrl": "/images/pal-doga-radyo.webp",
     "stationCategories": [
       "Halk Müziği"
     ],
@@ -89,7 +89,7 @@
   },
   {
     "stationName": "Pal FM",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-pal-fm.jpg",
+    "stationIconUrl": "/images/radyo-pal-fm.webp",
     "stationCategories": [
       "Pop"
     ],
@@ -100,7 +100,7 @@
   },
   {
     "stationName": "Pal Nostalji",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/pal-nostalji-radyo.jpg",
+    "stationIconUrl": "/images/pal-nostalji-radyo.webp",
     "stationCategories": [
       "Pop"
     ],
@@ -112,7 +112,7 @@
   },
   {
     "stationName": "Power FM",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/Power-Fm.png",
+    "stationIconUrl": "/images/Power-Fm.webp",
     "stationCategories": [
       "Pop"
     ],
@@ -123,7 +123,7 @@
   },
   {
     "stationName": "Radyo 7",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-7.jpg",
+    "stationIconUrl": "/images/radyo-7.webp",
     "stationCategories": [
       "Pop"
     ],
@@ -134,7 +134,7 @@
   },
   {
     "stationName": "Radyo D",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-d-dinle.png",
+    "stationIconUrl": "/images/radyo-d-dinle.webp",
     "stationCategories": [
       "Pop"
     ],
@@ -145,7 +145,7 @@
   },
   {
     "stationName": "Radyo Fenomen",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-fenomen.jpg",
+    "stationIconUrl": "/images/radyo-fenomen.webp",
     "stationCategories": [
       "Pop"
     ],
@@ -156,7 +156,7 @@
   },
   {
     "stationName": "Radyo Spor",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-spor.jpg",
+    "stationIconUrl": "/images/radyo-spor.webp",
     "stationCategories": [
       "Haber ve Spor"
     ],
@@ -167,7 +167,7 @@
   },
   {
     "stationName": "Show Radyo",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/show-radyo.jpg",
+    "stationIconUrl": "/images/show-radyo.webp",
     "stationCategories": [
       "Pop"
     ],
@@ -178,7 +178,7 @@
   },
   {
     "stationName": "Slow 7",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/slow-7.jpg",
+    "stationIconUrl": "/images/slow-7.webp",
     "stationCategories": [
       "Slow"
     ],
@@ -189,7 +189,7 @@
   },
   {
     "stationName": "Slow Türk",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/slow-turk-dinle.jpg",
+    "stationIconUrl": "/images/slow-turk-dinle.webp",
     "stationCategories": [
       "Slow"
     ],
@@ -200,7 +200,7 @@
   },
   {
     "stationName": "Power Türk",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/power-turk-dinle.png",
+    "stationIconUrl": "/images/power-turk-dinle.webp",
     "stationCategories": [
       "Pop"
     ],
@@ -211,7 +211,7 @@
   },
   {
     "stationName": "Süper FM",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/super-fm-dinle.jpg",
+    "stationIconUrl": "/images/super-fm-dinle.webp",
     "stationCategories": [
       "Pop"
     ],
@@ -222,7 +222,7 @@
   },
   {
     "stationName": "Kral FM",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/kral-fm-dinle.jpg",
+    "stationIconUrl": "/images/kral-fm-dinle.webp",
     "stationCategories": [
       "Pop"
     ],
@@ -233,7 +233,7 @@
   },
   {
     "stationName": "Metro FM",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/metro-fm.jpg",
+    "stationIconUrl": "/images/metro-fm.webp",
     "stationCategories": [
       "Yabancı Müzik"
     ],
@@ -244,7 +244,7 @@
   },
   {
     "stationName": "Virgin Radio Türkiye",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/virgin-radio.jpg",
+    "stationIconUrl": "/images/virgin-radio.webp",
     "stationCategories": [
       "Yabancı Müzik"
     ],
@@ -255,7 +255,7 @@
   },
   {
     "stationName": "CNN Türk Radyo",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/cnn-turk-dinle.jpg",
+    "stationIconUrl": "/images/cnn-turk-dinle.webp",
     "stationCategories": [
       "Haber ve Spor"
     ],
@@ -266,7 +266,7 @@
   },
   {
     "stationName": "Power Love",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/power-love.jpg",
+    "stationIconUrl": "/images/power-love.webp",
     "stationCategories": [
       "Slow"
     ],
@@ -277,7 +277,7 @@
   },
   {
     "stationName": "Best FM",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/best-fm-dinle-100x100.png",
+    "stationIconUrl": "/images/best-fm-dinle-100x100.webp",
     "stationCategories": [
       "Arabesk"
     ],
@@ -288,7 +288,7 @@
   },
   {
     "stationName": "Aşk FM",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/ask-fm.jpg",
+    "stationIconUrl": "/images/ask-fm.webp",
     "stationCategories": [
       "Slow"
     ],
@@ -299,7 +299,7 @@
   },
   {
     "stationName": "Ankara Radyo Banko",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-banko.jpg",
+    "stationIconUrl": "/images/radyo-banko.webp",
     "stationCategories": [
       "Pop"
     ],
@@ -311,7 +311,7 @@
   },
   {
     "stationName": "Avrasya Türk 107.1 Ankara",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-avrasya-turk.jpg",
+    "stationIconUrl": "/images/radyo-avrasya-turk.webp",
     "stationCategories": [
       "Halk Müziği"
     ],
@@ -322,7 +322,7 @@
   },
   {
     "stationName": "Baba Radyo",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/babaradyo-100x100.jpg",
+    "stationIconUrl": "/images/babaradyo-100x100.webp",
     "stationCategories": [
       "Arabesk"
     ],
@@ -333,7 +333,7 @@
   },
   {
     "stationName": "Bayram FM",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/bayram-fm-100x100.jpg",
+    "stationIconUrl": "/images/bayram-fm-100x100.webp",
     "stationCategories": [
       "İslami"
     ],
@@ -344,7 +344,7 @@
   },
   {
     "stationName": "Damar FM",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/damar-fm.jpg",
+    "stationIconUrl": "/images/damar-fm.webp",
     "stationCategories": [
       "Arabesk"
     ],
@@ -355,7 +355,7 @@
   },
   {
     "stationName": "Habertürk Radyo",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/haber-turk-radyo.jpg",
+    "stationIconUrl": "/images/haber-turk-radyo.webp",
     "stationCategories": [
       "Haber ve Spor"
     ],
@@ -366,7 +366,7 @@
   },
   {
     "stationName": "İstanbul Radyo Seymen",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-seymen.jpg",
+    "stationIconUrl": "/images/radyo-seymen.webp",
     "stationCategories": [
       "Pop"
     ],
@@ -378,7 +378,7 @@
   },
   {
     "stationName": "İzmir İmbat Fm",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/imbat-fm.jpg",
+    "stationIconUrl": "/images/imbat-fm.webp",
     "stationCategories": [
       "Arabesk"
     ],
@@ -389,7 +389,7 @@
   },
   {
     "stationName": "Joy FM",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/joy-fm.jpg",
+    "stationIconUrl": "/images/joy-fm.webp",
     "stationCategories": [
       "Yabancı Müzik"
     ],
@@ -401,7 +401,7 @@
   },
   {
     "stationName": "Joy Türk Akustik",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/joy-turk-akustik.jpg",
+    "stationIconUrl": "/images/joy-turk-akustik.webp",
     "stationCategories": [
       "Slow"
     ],
@@ -413,7 +413,7 @@
   },
   {
     "stationName": "Kalp FM",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/kalp-fm.jpg",
+    "stationIconUrl": "/images/kalp-fm.webp",
     "stationCategories": [
       "Slow"
     ],
@@ -424,7 +424,7 @@
   },
   {
     "stationName": "Karadeniz Fm 98.2",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/karadeniz-fm.jpg",
+    "stationIconUrl": "/images/karadeniz-fm.webp",
     "stationCategories": [
       "Pop"
     ],
@@ -436,7 +436,7 @@
   },
   {
     "stationName": "Kral Pop Radyo",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/kral-pop.jpg",
+    "stationIconUrl": "/images/kral-pop.webp",
     "stationCategories": [
       "Pop"
     ],
@@ -447,7 +447,7 @@
   },
   {
     "stationName": "Ntv Radyo",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/ntv-radyo.jpg",
+    "stationIconUrl": "/images/ntv-radyo.webp",
     "stationCategories": [
       "Haber ve Spor"
     ],
@@ -458,7 +458,7 @@
   },
   {
     "stationName": "Number 1 Fm",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/number-one-fm.jpg",
+    "stationIconUrl": "/images/number-one-fm.webp",
     "stationCategories": [
       "Yabancı Müzik"
     ],
@@ -470,7 +470,7 @@
   },
   {
     "stationName": "Number One Türk Doksanlar",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/number-one-turk-doksanlar.jpg",
+    "stationIconUrl": "/images/number-one-turk-doksanlar.webp",
     "stationCategories": [
       "Pop"
     ],
@@ -482,7 +482,7 @@
   },
   {
     "stationName": "Pal Station",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-pal-station.jpg",
+    "stationIconUrl": "/images/radyo-pal-station.webp",
     "stationCategories": [
       "Pop"
     ],
@@ -493,7 +493,7 @@
   },
   {
     "stationName": "Park FM",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/park-fm.jpg",
+    "stationIconUrl": "/images/park-fm.webp",
     "stationCategories": [
       "Pop"
     ],
@@ -505,7 +505,7 @@
   },
   {
     "stationName": "Polis Radyosu",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/polis-radyosu.jpg",
+    "stationIconUrl": "/images/polis-radyosu.webp",
     "stationCategories": [
       "Pop"
     ],
@@ -516,7 +516,7 @@
   },
   {
     "stationName": "Power Love Fm",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/power-love.jpg",
+    "stationIconUrl": "/images/power-love.webp",
     "stationCategories": [
       "Pop"
     ],
@@ -527,7 +527,7 @@
   },
   {
     "stationName": "Power Pop",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/power-pop.jpg",
+    "stationIconUrl": "/images/power-pop.webp",
     "stationCategories": [
       "Pop"
     ],
@@ -538,7 +538,7 @@
   },
   {
     "stationName": "Radio Mydonose",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radio-mydonose.jpg",
+    "stationIconUrl": "/images/radio-mydonose.webp",
     "stationCategories": [
       "Pop"
     ],
@@ -550,7 +550,7 @@
   },
   {
     "stationName": "Radyo 2000",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-2000.jpg",
+    "stationIconUrl": "/images/radyo-2000.webp",
     "stationCategories": [
       "Arabesk"
     ],
@@ -561,7 +561,7 @@
   },
   {
     "stationName": "Radyo 45lik",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/45lik-radyo-fm.jpg",
+    "stationIconUrl": "/images/45lik-radyo-fm.webp",
     "stationCategories": [
       "Pop"
     ],
@@ -573,7 +573,7 @@
   },
   {
     "stationName": "Radyo 7 Nostalji",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-7-nostalji.jpg",
+    "stationIconUrl": "/images/radyo-7-nostalji.webp",
     "stationCategories": [
       "Pop"
     ],
@@ -585,7 +585,7 @@
   },
   {
     "stationName": "Radyo 7 Türkü",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-7-turku.jpg",
+    "stationIconUrl": "/images/radyo-7-turku.webp",
     "stationCategories": [
       "Halk Müziği"
     ],
@@ -596,7 +596,7 @@
   },
   {
     "stationName": "Radyo Alaturka",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-alaturka-dinle.jpg",
+    "stationIconUrl": "/images/radyo-alaturka-dinle.webp",
     "stationCategories": [
       "Sanat Müziği"
     ],
@@ -607,7 +607,7 @@
   },
   {
     "stationName": "Radyo Arabesk",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-arabesk.jpg",
+    "stationIconUrl": "/images/radyo-arabesk.webp",
     "stationCategories": [
       "Arabesk"
     ],
@@ -618,7 +618,7 @@
   },
   {
     "stationName": "Radyo Ekin",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-ekin-fm.jpg",
+    "stationIconUrl": "/images/radyo-ekin-fm.webp",
     "stationCategories": [
       "Halk Müziği"
     ],
@@ -629,7 +629,7 @@
   },
   {
     "stationName": "Radyo Megasite",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-mega-site.jpg",
+    "stationIconUrl": "/images/radyo-mega-site.webp",
     "stationCategories": [
       "Pop"
     ],
@@ -640,7 +640,7 @@
   },
   {
     "stationName": "Radyo Ostim",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/ostim-radyo.jpg",
+    "stationIconUrl": "/images/ostim-radyo.webp",
     "stationCategories": [
       "Halk Müziği"
     ],
@@ -651,7 +651,7 @@
   },
   {
     "stationName": "Radyo Viva",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-viva.jpg",
+    "stationIconUrl": "/images/radyo-viva.webp",
     "stationCategories": [
       "Pop"
     ],
@@ -662,7 +662,7 @@
   },
   {
     "stationName": "Radyo Voyage",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-voyage-dinle.jpg",
+    "stationIconUrl": "/images/radyo-voyage-dinle.webp",
     "stationCategories": [
       "Klasik Müzik"
     ],
@@ -673,7 +673,7 @@
   },
   {
     "stationName": "TGRT FM",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/tgrtfm.jpg",
+    "stationIconUrl": "/images/tgrtfm.webp",
     "stationCategories": [
       "Haber ve Spor"
     ],
@@ -684,7 +684,7 @@
   },
   {
     "stationName": "Başka Radyo",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/baska-radyo.jpg",
+    "stationIconUrl": "/images/baska-radyo.webp",
     "stationCategories": [
       "Web Radyo"
     ],
@@ -696,7 +696,7 @@
   },
   {
     "stationName": "Dada Radyo",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/dada-radyo.jpg",
+    "stationIconUrl": "/images/dada-radyo.webp",
     "stationCategories": [
       "Pop"
     ],
@@ -707,7 +707,7 @@
   },
   {
     "stationName": "Doksanlar FM",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/doksanlar-fm-dinle.jpg",
+    "stationIconUrl": "/images/doksanlar-fm-dinle.webp",
     "stationCategories": [
       "Web Radyo"
     ],
@@ -719,7 +719,7 @@
   },
   {
     "stationName": "Fenomen Türk",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/fenomen-turk.jpg",
+    "stationIconUrl": "/images/fenomen-turk.webp",
     "stationCategories": [
       "Web Radyo"
     ],
@@ -730,7 +730,7 @@
   },
   {
     "stationName": "FG Türk Radyo",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/fg-turk.jpg",
+    "stationIconUrl": "/images/fg-turk.webp",
     "stationCategories": [
       "Pop"
     ],
@@ -742,7 +742,7 @@
   },
   {
     "stationName": "Gençlik Radyosu",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/genclik-radyosu.jpg",
+    "stationIconUrl": "/images/genclik-radyosu.webp",
     "stationCategories": [
       "Pop"
     ],
@@ -753,7 +753,7 @@
   },
   {
     "stationName": "İstanbul Fm",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/istanbul-fm-dinle-100x100.png",
+    "stationIconUrl": "/images/istanbul-fm-dinle-100x100.webp",
     "stationCategories": [
       "Pop"
     ],
@@ -764,7 +764,7 @@
   },
   {
     "stationName": "İstanbul Küpe FM",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/kupe-fm.jpg",
+    "stationIconUrl": "/images/kupe-fm.webp",
     "stationCategories": [
       "Pop"
     ],
@@ -775,7 +775,7 @@
   },
   {
     "stationName": "Karma Türk",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/karma-turk.jpg",
+    "stationIconUrl": "/images/karma-turk.webp",
     "stationCategories": [
       "Pop"
     ],
@@ -786,7 +786,7 @@
   },
   {
     "stationName": "Kiss Genç",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/kiss-genc.jpg",
+    "stationIconUrl": "/images/kiss-genc.webp",
     "stationCategories": [
       "Pop"
     ],
@@ -797,7 +797,7 @@
   },
   {
     "stationName": "Kiss Gold Türk",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/kiss-gold-turk.jpg",
+    "stationIconUrl": "/images/kiss-gold-turk.webp",
     "stationCategories": [
       "Pop"
     ],
@@ -808,7 +808,7 @@
   },
   {
     "stationName": "Kiss Türk",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/kiss-turk.jpg",
+    "stationIconUrl": "/images/kiss-turk.webp",
     "stationCategories": [
       "Pop"
     ],
@@ -820,7 +820,7 @@
   },
   {
     "stationName": "Mydonose Türk",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/mydonose-turk-dinle.jpg",
+    "stationIconUrl": "/images/mydonose-turk-dinle.webp",
     "stationCategories": [
       "Pop"
     ],
@@ -832,7 +832,7 @@
   },
   {
     "stationName": "Number 1 Eller Havaya",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/number-1-ellerhavaya.jpg",
+    "stationIconUrl": "/images/number-1-ellerhavaya.webp",
     "stationCategories": [
       "Pop"
     ],
@@ -844,7 +844,7 @@
   },
   {
     "stationName": "Ordu FM",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/ordu-fm.jpg",
+    "stationIconUrl": "/images/ordu-fm.webp",
     "stationCategories": [
       "Pop"
     ],
@@ -855,7 +855,7 @@
   },
   {
     "stationName": "Best Slow",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/best-slow.jpg",
+    "stationIconUrl": "/images/best-slow.webp",
     "stationCategories": [
       "Web Radyo"
     ],
@@ -866,7 +866,7 @@
   },
   {
     "stationName": "FG Slow",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/fg-slow.jpg",
+    "stationIconUrl": "/images/fg-slow.webp",
     "stationCategories": [
       "Slow"
     ],
@@ -878,7 +878,7 @@
   },
   {
     "stationName": "Karma Türk Slow",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/karma-turk-slow.jpg",
+    "stationIconUrl": "/images/karma-turk-slow.webp",
     "stationCategories": [
       "Web Radyo"
     ],
@@ -889,7 +889,7 @@
   },
   {
     "stationName": "Number One Türk Slow",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/number-one-turk-slow.jpg",
+    "stationIconUrl": "/images/number-one-turk-slow.webp",
     "stationCategories": [
       "Slow"
     ],
@@ -900,7 +900,7 @@
   },
   {
     "stationName": "Pal Slow",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/pal-slow.jpg",
+    "stationIconUrl": "/images/pal-slow.webp",
     "stationCategories": [
       "Slow"
     ],
@@ -911,7 +911,7 @@
   },
   {
     "stationName": "Power XL Fm",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/power-xl-dinle.png",
+    "stationIconUrl": "/images/power-xl-dinle.webp",
     "stationCategories": [
       "Slow"
     ],
@@ -922,7 +922,7 @@
   },
   {
     "stationName": "PowerTürk Akustik",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/powerturk-akustik.jpg",
+    "stationIconUrl": "/images/powerturk-akustik.webp",
     "stationCategories": [
       "Slow"
     ],
@@ -933,7 +933,7 @@
   },
   {
     "stationName": "PowerTürk Slow",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/powerturk-slow.jpg",
+    "stationIconUrl": "/images/powerturk-slow.webp",
     "stationCategories": [
       "Slow"
     ],
@@ -944,7 +944,7 @@
   },
   {
     "stationName": "Radyo 34 İstanbul",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-34.jpg",
+    "stationIconUrl": "/images/radyo-34.webp",
     "stationCategories": [
       "Slow"
     ],
@@ -955,7 +955,7 @@
   },
   {
     "stationName": "Radyo Romantik Türk",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/romantik-turk.jpg",
+    "stationIconUrl": "/images/romantik-turk.webp",
     "stationCategories": [
       "Slow"
     ],
@@ -966,7 +966,7 @@
   },
   {
     "stationName": "Romantik Ses Isparta",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/romantik-ses-isparta-1.jpg",
+    "stationIconUrl": "/images/romantik-ses-isparta-1.webp",
     "stationCategories": [
       "Slow"
     ],
@@ -977,7 +977,7 @@
   },
   {
     "stationName": "Romantik Ses Sakarya",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/romantik-ses-sakarya.jpg",
+    "stationIconUrl": "/images/romantik-ses-sakarya.webp",
     "stationCategories": [
       "Slow"
     ],
@@ -988,7 +988,7 @@
   },
   {
     "stationName": "Show Slow",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/show-slow.jpg",
+    "stationIconUrl": "/images/show-slow.webp",
     "stationCategories": [
       "Slow"
     ],
@@ -999,7 +999,7 @@
   },
   {
     "stationName": "Slow Hits",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/slow-hits.jpg",
+    "stationIconUrl": "/images/slow-hits.webp",
     "stationCategories": [
       "Slow"
     ],
@@ -1011,7 +1011,7 @@
   },
   {
     "stationName": "Slow Home",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/slow-home.jpg",
+    "stationIconUrl": "/images/slow-home.webp",
     "stationCategories": [
       "Slow"
     ],
@@ -1023,7 +1023,7 @@
   },
   {
     "stationName": "Yeni Slow",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/yeni-slow.jpg",
+    "stationIconUrl": "/images/yeni-slow.webp",
     "stationCategories": [
       "Slow"
     ],
@@ -1034,7 +1034,7 @@
   },
   {
     "stationName": "Arabesk Radyo",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/arabesk-radyo.jpg",
+    "stationIconUrl": "/images/arabesk-radyo.webp",
     "stationCategories": [
       "Web Radyo"
     ],
@@ -1045,7 +1045,7 @@
   },
   {
     "stationName": "Bor FM",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/bor-fm.jpg",
+    "stationIconUrl": "/images/bor-fm.webp",
     "stationCategories": [
       "Arabesk"
     ],
@@ -1056,7 +1056,7 @@
   },
   {
     "stationName": "Can FM",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/can-fm-1.jpg",
+    "stationIconUrl": "/images/can-fm-1.webp",
     "stationCategories": [
       "Arabesk"
     ],
@@ -1067,7 +1067,7 @@
   },
   {
     "stationName": "Denizli Art FM",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/art-fm-denizli.jpg",
+    "stationIconUrl": "/images/art-fm-denizli.webp",
     "stationCategories": [
       "Arabesk"
     ],
@@ -1078,7 +1078,7 @@
   },
   {
     "stationName": "Elbistan Yöre FM",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/yore-fm.jpg",
+    "stationIconUrl": "/images/yore-fm.webp",
     "stationCategories": [
       "Arabesk"
     ],
@@ -1089,7 +1089,7 @@
   },
   {
     "stationName": "Gerçek Radyo",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/gercek-radyo-istanbul.jpg",
+    "stationIconUrl": "/images/gercek-radyo-istanbul.webp",
     "stationCategories": [
       "Arabesk"
     ],
@@ -1100,7 +1100,7 @@
   },
   {
     "stationName": "Hatay Dost FM",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/hatay-dost-fm.jpg",
+    "stationIconUrl": "/images/hatay-dost-fm.webp",
     "stationCategories": [
       "Arabesk"
     ],
@@ -1111,7 +1111,7 @@
   },
   {
     "stationName": "Karesi Radyo",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/karesi-radyo.jpg",
+    "stationIconUrl": "/images/karesi-radyo.webp",
     "stationCategories": [
       "Arabesk"
     ],
@@ -1122,7 +1122,7 @@
   },
   {
     "stationName": "Kralım FM 99.3",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/kralim-fm.jpg",
+    "stationIconUrl": "/images/kralim-fm.webp",
     "stationCategories": [
       "Arabesk"
     ],
@@ -1133,7 +1133,7 @@
   },
   {
     "stationName": "Melankolik Home",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/melankolik-home.jpg",
+    "stationIconUrl": "/images/melankolik-home.webp",
     "stationCategories": [
       "Arabesk"
     ],
@@ -1145,7 +1145,7 @@
   },
   {
     "stationName": "Number One Türk Damar",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/number-one-turk-damar.jpg",
+    "stationIconUrl": "/images/number-one-turk-damar.webp",
     "stationCategories": [
       "Arabesk"
     ],
@@ -1156,7 +1156,7 @@
   },
   {
     "stationName": "Pal Besk",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/pal-besk.jpg",
+    "stationIconUrl": "/images/pal-besk.webp",
     "stationCategories": [
       "Arabesk"
     ],
@@ -1167,7 +1167,7 @@
   },
   {
     "stationName": "Radyo 11",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-11.jpg",
+    "stationIconUrl": "/images/radyo-11.webp",
     "stationCategories": [
       "Arabesk"
     ],
@@ -1178,7 +1178,7 @@
   },
   {
     "stationName": "Radyo 2000 Elazığ",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/elazig-radyo-2000.jpg",
+    "stationIconUrl": "/images/elazig-radyo-2000.webp",
     "stationCategories": [
       "Arabesk"
     ],
@@ -1189,7 +1189,7 @@
   },
   {
     "stationName": "Radyo 2000 Fm",
-    "stationIconUrl": "https://www.canliradyodinle.fm/radio/radyo-2000-fm.jpg",
+    "stationIconUrl": "/images/radyo-2000-fm.webp",
     "stationCategories": [
       "Arabesk"
     ],
@@ -1200,7 +1200,7 @@
   },
   {
     "stationName": "Radyo 7 – Müslüm, Ferdi, Orhan",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-7-ferdi-muslum-orhan.jpg",
+    "stationIconUrl": "/images/radyo-7-ferdi-muslum-orhan.webp",
     "stationCategories": [
       "Arabesk"
     ],
@@ -1211,7 +1211,7 @@
   },
   {
     "stationName": "Radyo 7 Arabesk",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-7-arabesk.jpg",
+    "stationIconUrl": "/images/radyo-7-arabesk.webp",
     "stationCategories": [
       "Arabesk"
     ],
@@ -1222,7 +1222,7 @@
   },
   {
     "stationName": "Radyo Durak",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-durak.jpg",
+    "stationIconUrl": "/images/radyo-durak.webp",
     "stationCategories": [
       "Arabesk"
     ],
@@ -1233,7 +1233,7 @@
   },
   {
     "stationName": "Radyo Efsane 4 lu",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/efsane4lu.jpg",
+    "stationIconUrl": "/images/efsane4lu.webp",
     "stationCategories": [
       "Arabesk"
     ],
@@ -1245,7 +1245,7 @@
   },
   {
     "stationName": "Adana Radyo Güney",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-guney-adana.jpg",
+    "stationIconUrl": "/images/radyo-guney-adana.webp",
     "stationCategories": [
       "Halk Müziği"
     ],
@@ -1256,7 +1256,7 @@
   },
   {
     "stationName": "Batı Radyo",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/bati-radyo.jpg",
+    "stationIconUrl": "/images/bati-radyo.webp",
     "stationCategories": [
       "Halk Müziği"
     ],
@@ -1267,7 +1267,7 @@
   },
   {
     "stationName": "Best Kına",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/best-kina.jpg",
+    "stationIconUrl": "/images/best-kina.webp",
     "stationCategories": [
       "Web Radyo"
     ],
@@ -1279,7 +1279,7 @@
   },
   {
     "stationName": "Cem Radyo",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/cem-radyo.jpg",
+    "stationIconUrl": "/images/cem-radyo.webp",
     "stationCategories": [
       "Halk Müziği"
     ],
@@ -1290,7 +1290,7 @@
   },
   {
     "stationName": "Dadaş FM",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/dadas-fm.jpg",
+    "stationIconUrl": "/images/dadas-fm.webp",
     "stationCategories": [
       "Halk Müziği"
     ],
@@ -1301,7 +1301,7 @@
   },
   {
     "stationName": "Derya FM",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/derya-fm.jpg",
+    "stationIconUrl": "/images/derya-fm.webp",
     "stationCategories": [
       "Halk Müziği"
     ],
@@ -1312,7 +1312,7 @@
   },
   {
     "stationName": "Elazığ Mavi Radyo",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/mavi-radyo-elazig.jpg",
+    "stationIconUrl": "/images/mavi-radyo-elazig.webp",
     "stationCategories": [
       "Halk Müziği"
     ],
@@ -1323,7 +1323,7 @@
   },
   {
     "stationName": "Erzincan Radyo 2000",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-2000-erzincan.jpg",
+    "stationIconUrl": "/images/radyo-2000-erzincan.webp",
     "stationCategories": [
       "Halk Müziği"
     ],
@@ -1334,7 +1334,7 @@
   },
   {
     "stationName": "Erzincan Radyo Cem",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-cem-erzincan.jpg",
+    "stationIconUrl": "/images/radyo-cem-erzincan.webp",
     "stationCategories": [
       "Halk Müziği"
     ],
@@ -1345,7 +1345,7 @@
   },
   {
     "stationName": "Fırat FM",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/firat-fm.jpg",
+    "stationIconUrl": "/images/firat-fm.webp",
     "stationCategories": [
       "Halk Müziği"
     ],
@@ -1356,7 +1356,7 @@
   },
   {
     "stationName": "Hatay Asya Radyo",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/asya-radyo-hatay.jpg",
+    "stationIconUrl": "/images/asya-radyo-hatay.webp",
     "stationCategories": [
       "Halk Müziği"
     ],
@@ -1367,7 +1367,7 @@
   },
   {
     "stationName": "Kent Radyo Mersin",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/kent-radyo-mersin.jpg",
+    "stationIconUrl": "/images/kent-radyo-mersin.webp",
     "stationCategories": [
       "Halk Müziği"
     ],
@@ -1378,7 +1378,7 @@
   },
   {
     "stationName": "Kocaeli Tempo FM",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/tempo-fm-kocaeli.jpg",
+    "stationIconUrl": "/images/tempo-fm-kocaeli.webp",
     "stationCategories": [
       "Halk Müziği"
     ],
@@ -1389,7 +1389,7 @@
   },
   {
     "stationName": "Konya FM",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/konya-fm.jpg",
+    "stationIconUrl": "/images/konya-fm.webp",
     "stationCategories": [
       "Halk Müziği"
     ],
@@ -1400,7 +1400,7 @@
   },
   {
     "stationName": "Muhteşem Dörtlü Radyosu",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/muhtesem-dortlu-radyosu.jpg",
+    "stationIconUrl": "/images/muhtesem-dortlu-radyosu.webp",
     "stationCategories": [
       "Halk Müziği"
     ],
@@ -1412,7 +1412,7 @@
   },
   {
     "stationName": "Radyo 7 Ankara Havaları",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-7-ankara.jpg",
+    "stationIconUrl": "/images/radyo-7-ankara.webp",
     "stationCategories": [
       "Halk Müziği"
     ],
@@ -1424,7 +1424,7 @@
   },
   {
     "stationName": "Radyo Gönül FM",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-gonul-fm.jpg",
+    "stationIconUrl": "/images/radyo-gonul-fm.webp",
     "stationCategories": [
       "Halk Müziği"
     ],
@@ -1436,7 +1436,7 @@
   },
   {
     "stationName": "Radyo Gün",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/gun-radyo-corum.jpg",
+    "stationIconUrl": "/images/gun-radyo-corum.webp",
     "stationCategories": [
       "Halk Müziği"
     ],
@@ -1447,7 +1447,7 @@
   },
   {
     "stationName": "Radyo Harman FM",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-harman-fm.jpg",
+    "stationIconUrl": "/images/radyo-harman-fm.webp",
     "stationCategories": [
       "Halk Müziği"
     ],
@@ -1458,7 +1458,7 @@
   },
   {
     "stationName": "Radyo Manavgat",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-manavgat.jpg",
+    "stationIconUrl": "/images/radyo-manavgat.webp",
     "stationCategories": [
       "Halk Müziği"
     ],
@@ -1469,7 +1469,7 @@
   },
   {
     "stationName": "Radyo Tezene",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-tezene.jpg",
+    "stationIconUrl": "/images/radyo-tezene.webp",
     "stationCategories": [
       "Halk Müziği"
     ],
@@ -1481,7 +1481,7 @@
   },
   {
     "stationName": "Radyo Türkülerle Türkiye",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-turkulerle-turkiye.jpg",
+    "stationIconUrl": "/images/radyo-turkulerle-turkiye.webp",
     "stationCategories": [
       "Halk Müziği"
     ],
@@ -1493,7 +1493,7 @@
   },
   {
     "stationName": "Gaziantep GRT FM",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/gaziantep-grt-fm.jpg",
+    "stationIconUrl": "/images/gaziantep-grt-fm.webp",
     "stationCategories": [
       "Sanat Müziği"
     ],
@@ -1504,7 +1504,7 @@
   },
   {
     "stationName": "Genç Radyo",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/genc-radyo.png",
+    "stationIconUrl": "/images/genc-radyo.webp",
     "stationCategories": [
       "Sanat Müziği"
     ],
@@ -1515,7 +1515,7 @@
   },
   {
     "stationName": "Kiss Musiki",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/kiss-musiki.jpg",
+    "stationIconUrl": "/images/kiss-musiki.webp",
     "stationCategories": [
       "Sanat Müziği"
     ],
@@ -1526,7 +1526,7 @@
   },
   {
     "stationName": "Makam Radyo",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/makam-radyo.jpg",
+    "stationIconUrl": "/images/makam-radyo.webp",
     "stationCategories": [
       "Sanat Müziği"
     ],
@@ -1538,7 +1538,7 @@
   },
   {
     "stationName": "Maziden Bir Demet",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/maziden-bir-demet.jpg",
+    "stationIconUrl": "/images/maziden-bir-demet.webp",
     "stationCategories": [
       "Sanat Müziği"
     ],
@@ -1550,7 +1550,7 @@
   },
   {
     "stationName": "Pal Alaturka",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/pal-alaturka.jpg",
+    "stationIconUrl": "/images/pal-alaturka.webp",
     "stationCategories": [
       "Sanat Müziği"
     ],
@@ -1561,7 +1561,7 @@
   },
   {
     "stationName": "Polis Radyosu TSM",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/polis-radyosu-turk-sanat-muzigi.jpg",
+    "stationIconUrl": "/images/polis-radyosu-turk-sanat-muzigi.webp",
     "stationCategories": [
       "Sanat Müziği"
     ],
@@ -1572,7 +1572,7 @@
   },
   {
     "stationName": "Radyo 7 Tsm",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-7-tsm.jpg",
+    "stationIconUrl": "/images/radyo-7-tsm.webp",
     "stationCategories": [
       "Sanat Müziği"
     ],
@@ -1583,7 +1583,7 @@
   },
   {
     "stationName": "Radyo Ahenk",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-ahenk.jpg",
+    "stationIconUrl": "/images/radyo-ahenk.webp",
     "stationCategories": [
       "Sanat Müziği"
     ],
@@ -1594,7 +1594,7 @@
   },
   {
     "stationName": "Radyo Han Kayseri",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-han.jpg",
+    "stationIconUrl": "/images/radyo-han.webp",
     "stationCategories": [
       "Sanat Müziği"
     ],
@@ -1605,7 +1605,7 @@
   },
   {
     "stationName": "Radyo Kordelya",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-kordelya.jpg",
+    "stationIconUrl": "/images/radyo-kordelya.webp",
     "stationCategories": [
       "Sanat Müziği"
     ],
@@ -1616,7 +1616,7 @@
   },
   {
     "stationName": "Radyo Nihavent – KKTC",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-nihavent.jpg",
+    "stationIconUrl": "/images/radyo-nihavent.webp",
     "stationCategories": [
       "Sanat Müziği"
     ],
@@ -1627,7 +1627,7 @@
   },
   {
     "stationName": "Radyo Viva Turka",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/viva-turka.jpg",
+    "stationIconUrl": "/images/viva-turka.webp",
     "stationCategories": [
       "Sanat Müziği"
     ],
@@ -1638,7 +1638,7 @@
   },
   {
     "stationName": "Uludağ Fm 91.7",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/uludagfm.jpg",
+    "stationIconUrl": "/images/uludagfm.webp",
     "stationCategories": [
       "Sanat Müziği"
     ],
@@ -1649,7 +1649,7 @@
   },
   {
     "stationName": "Ulusal Radyo – Sanat",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/ulusal-radyo-sanat.jpg",
+    "stationIconUrl": "/images/ulusal-radyo-sanat.webp",
     "stationCategories": [
       "Sanat Müziği"
     ],
@@ -1660,7 +1660,7 @@
   },
   {
     "stationName": "Üsküdar Musiki Cemiyeti Radyosu",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/umc-radyo.png",
+    "stationIconUrl": "/images/umc-radyo.webp",
     "stationCategories": [
       "Sanat Müziği"
     ],
@@ -1672,7 +1672,7 @@
   },
   {
     "stationName": "Arkadaş FM",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/isparta-arkadas-fm.jpg",
+    "stationIconUrl": "/images/isparta-arkadas-fm.webp",
     "stationCategories": [
       "İslami"
     ],
@@ -1683,7 +1683,7 @@
   },
   {
     "stationName": "Barış Radyo",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/barisr-adyo.jpg",
+    "stationIconUrl": "/images/barisr-adyo.webp",
     "stationCategories": [
       "İslami"
     ],
@@ -1694,7 +1694,7 @@
   },
   {
     "stationName": "Berat FM",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/berat-fm.jpg",
+    "stationIconUrl": "/images/berat-fm.webp",
     "stationCategories": [
       "İslami"
     ],
@@ -1705,7 +1705,7 @@
   },
   {
     "stationName": "Bizim İller Radyo",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/bizim-iller-radyo.jpg",
+    "stationIconUrl": "/images/bizim-iller-radyo.webp",
     "stationCategories": [
       "İslami"
     ],
@@ -1716,7 +1716,7 @@
   },
   {
     "stationName": "Bizim Radyo",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/bizim-radyo-istanbul.jpg",
+    "stationIconUrl": "/images/bizim-radyo-istanbul.webp",
     "stationCategories": [
       "İslami"
     ],
@@ -1727,7 +1727,7 @@
   },
   {
     "stationName": "Çorum Çağrı FM",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/cagri-fm-corum.jpg",
+    "stationIconUrl": "/images/cagri-fm-corum.webp",
     "stationCategories": [
       "İslami"
     ],
@@ -1738,7 +1738,7 @@
   },
   {
     "stationName": "Davet Radyo",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/davet-radyo.jpg",
+    "stationIconUrl": "/images/davet-radyo.webp",
     "stationCategories": [
       "İslami"
     ],
@@ -1749,7 +1749,7 @@
   },
   {
     "stationName": "Diyanet Kur’an Radyosu",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/kuran-radyo.jpg",
+    "stationIconUrl": "/images/kuran-radyo.webp",
     "stationCategories": [
       "İslami"
     ],
@@ -1760,7 +1760,7 @@
   },
   {
     "stationName": "Dolunay FM",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/dolunay-fm.jpg",
+    "stationIconUrl": "/images/dolunay-fm.webp",
     "stationCategories": [
       "İslami"
     ],
@@ -1771,7 +1771,7 @@
   },
   {
     "stationName": "Dost Fm",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/dost-fm-1.jpg",
+    "stationIconUrl": "/images/dost-fm-1.webp",
     "stationCategories": [
       "İslami"
     ],
@@ -1782,7 +1782,7 @@
   },
   {
     "stationName": "Enderun FM",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/enderun-fm.jpg",
+    "stationIconUrl": "/images/enderun-fm.webp",
     "stationCategories": [
       "İslami"
     ],
@@ -1793,7 +1793,7 @@
   },
   {
     "stationName": "Erkam Radyo",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/erkam-radyo.jpg",
+    "stationIconUrl": "/images/erkam-radyo.webp",
     "stationCategories": [
       "İslami"
     ],
@@ -1804,7 +1804,7 @@
   },
   {
     "stationName": "Furkan Radyo Kayseri",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/furkan-radyo-dinle.jpg",
+    "stationIconUrl": "/images/furkan-radyo-dinle.webp",
     "stationCategories": [
       "İslami"
     ],
@@ -1815,7 +1815,7 @@
   },
   {
     "stationName": "Gonca FM",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/gonca-fm.jpg",
+    "stationIconUrl": "/images/gonca-fm.webp",
     "stationCategories": [
       "İslami"
     ],
@@ -1826,7 +1826,7 @@
   },
   {
     "stationName": "Hak Radyo",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/hak-radyo.jpg",
+    "stationIconUrl": "/images/hak-radyo.webp",
     "stationCategories": [
       "İslami"
     ],
@@ -1838,7 +1838,7 @@
   },
   {
     "stationName": "Kocaeli Radyo Gül",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-gul.jpg",
+    "stationIconUrl": "/images/radyo-gul.webp",
     "stationCategories": [
       "İslami"
     ],
@@ -1849,7 +1849,7 @@
   },
   {
     "stationName": "Konya İsra FM",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/isra-fm.jpg",
+    "stationIconUrl": "/images/isra-fm.webp",
     "stationCategories": [
       "İslami"
     ],
@@ -1860,7 +1860,7 @@
   },
   {
     "stationName": "Konya Radyo En",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-en.jpg",
+    "stationIconUrl": "/images/radyo-en.webp",
     "stationCategories": [
       "İslami"
     ],
@@ -1871,7 +1871,7 @@
   },
   {
     "stationName": "Lalegül FM",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/lalegul-fm.jpg",
+    "stationIconUrl": "/images/lalegul-fm.webp",
     "stationCategories": [
       "İslami"
     ],
@@ -1882,7 +1882,7 @@
   },
   {
     "stationName": "Mesaj Fm",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/mesaj-fm.jpg",
+    "stationIconUrl": "/images/mesaj-fm.webp",
     "stationCategories": [
       "İslami"
     ],
@@ -1893,7 +1893,7 @@
   },
   {
     "stationName": "Moral Fm",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-moral-fm.jpg",
+    "stationIconUrl": "/images/radyo-moral-fm.webp",
     "stationCategories": [
       "İslami"
     ],
@@ -1904,7 +1904,7 @@
   },
   {
     "stationName": "Nur FM",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-nur-fm-malatya.jpg",
+    "stationIconUrl": "/images/radyo-nur-fm-malatya.webp",
     "stationCategories": [
       "İslami"
     ],
@@ -1915,7 +1915,7 @@
   },
   {
     "stationName": "Nur Radyo",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/nur-radyo.jpg",
+    "stationIconUrl": "/images/nur-radyo.webp",
     "stationCategories": [
       "İslami"
     ],
@@ -1926,7 +1926,7 @@
   },
   {
     "stationName": "Özel Fm",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/ozel-fm.jpg",
+    "stationIconUrl": "/images/ozel-fm.webp",
     "stationCategories": [
       "İslami"
     ],
@@ -1937,7 +1937,7 @@
   },
   {
     "stationName": "Pal Mina",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/pal-mina.jpg",
+    "stationIconUrl": "/images/pal-mina.webp",
     "stationCategories": [
       "İslami"
     ],
@@ -1948,7 +1948,7 @@
   },
   {
     "stationName": "24 Radyo",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/24-radyo.jpg",
+    "stationIconUrl": "/images/24-radyo.webp",
     "stationCategories": [
       "Haber ve Spor"
     ],
@@ -1959,7 +1959,7 @@
   },
   {
     "stationName": "Bloomberg HT Radyo",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/Bloomberg-Ht-Radyo-100x100.jpg",
+    "stationIconUrl": "/images/Bloomberg-Ht-Radyo-100x100.webp",
     "stationCategories": [
       "Haber ve Spor"
     ],
@@ -1970,7 +1970,7 @@
   },
   {
     "stationName": "Lig Radyo",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/lig-radyo.jpg",
+    "stationIconUrl": "/images/lig-radyo.webp",
     "stationCategories": [
       "Haber ve Spor"
     ],
@@ -1981,7 +1981,7 @@
   },
   {
     "stationName": "Meteorolojinin Sesi",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/meteorolojinin-sesi-dinle.jpg",
+    "stationIconUrl": "/images/meteorolojinin-sesi-dinle.webp",
     "stationCategories": [
       "Haber ve Spor"
     ],
@@ -1992,7 +1992,7 @@
   },
   {
     "stationName": "NTV Spor Radyo",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/ntv-spor-radyo.jpg",
+    "stationIconUrl": "/images/ntv-spor-radyo.webp",
     "stationCategories": [
       "Haber ve Spor"
     ],
@@ -2003,7 +2003,7 @@
   },
   {
     "stationName": "Radyo Fenerbahçe",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-fenerbahce.jpg",
+    "stationIconUrl": "/images/radyo-fenerbahce.webp",
     "stationCategories": [
       "Haber ve Spor"
     ],
@@ -2014,7 +2014,7 @@
   },
   {
     "stationName": "Radyo Gol",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-gol.jpg",
+    "stationIconUrl": "/images/radyo-gol.webp",
     "stationCategories": [
       "Haber ve Spor"
     ],
@@ -2026,7 +2026,7 @@
   },
   {
     "stationName": "Radyo Trafik",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-trafik-canli.jpg",
+    "stationIconUrl": "/images/radyo-trafik-canli.webp",
     "stationCategories": [
       "Haber ve Spor"
     ],
@@ -2037,7 +2037,7 @@
   },
   {
     "stationName": "Samsun Haber Radyo",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/samsun-haber-radyo.jpg",
+    "stationIconUrl": "/images/samsun-haber-radyo.webp",
     "stationCategories": [
       "Haber ve Spor"
     ],
@@ -2048,7 +2048,7 @@
   },
   {
     "stationName": "ST Endüstri Radyo",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/st-endustri-radyo.jpg",
+    "stationIconUrl": "/images/st-endustri-radyo.webp",
     "stationCategories": [
       "Haber ve Spor"
     ],
@@ -2059,7 +2059,7 @@
   },
   {
     "stationName": "Sun Radyo",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/sun-radyo.jpg",
+    "stationIconUrl": "/images/sun-radyo.webp",
     "stationCategories": [
       "Haber ve Spor"
     ],
@@ -2070,7 +2070,7 @@
   },
   {
     "stationName": "Ülke Radyo",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/ulke-radyo.jpg",
+    "stationIconUrl": "/images/ulke-radyo.webp",
     "stationCategories": [
       "Haber ve Spor"
     ],
@@ -2081,7 +2081,7 @@
   },
   {
     "stationName": "Ulusal Radyo",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/ulusal-radyo.jpg",
+    "stationIconUrl": "/images/ulusal-radyo.webp",
     "stationCategories": [
       "Haber ve Spor"
     ],
@@ -2092,7 +2092,7 @@
   },
   {
     "stationName": "Best Rap",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/best-rap.jpg",
+    "stationIconUrl": "/images/best-rap.webp",
     "stationCategories": [
       "Web Radyo"
     ],
@@ -2103,7 +2103,7 @@
   },
   {
     "stationName": "Fenomen Rap",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/fenomen-rap.jpg",
+    "stationIconUrl": "/images/fenomen-rap.webp",
     "stationCategories": [
       "Rap ve Rock"
     ],
@@ -2114,7 +2114,7 @@
   },
   {
     "stationName": "Fenomen Türkçe Rap",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/fenomen-turkce-rap.jpg",
+    "stationIconUrl": "/images/fenomen-turkce-rap.webp",
     "stationCategories": [
       "Rap ve Rock"
     ],
@@ -2125,7 +2125,7 @@
   },
   {
     "stationName": "İTÜ Radyosu Rock",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/itu-radyosu-rock.jpg",
+    "stationIconUrl": "/images/itu-radyosu-rock.webp",
     "stationCategories": [
       "Rap ve Rock"
     ],
@@ -2137,7 +2137,7 @@
   },
   {
     "stationName": "Joy Türk Rock",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/joy-turk-rock.jpg",
+    "stationIconUrl": "/images/joy-turk-rock.webp",
     "stationCategories": [
       "Rap ve Rock"
     ],
@@ -2149,7 +2149,7 @@
   },
   {
     "stationName": "Kiss Beatbox",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/kiss-beatbox.jpg",
+    "stationIconUrl": "/images/kiss-beatbox.webp",
     "stationCategories": [
       "Web Radyo"
     ],
@@ -2160,7 +2160,7 @@
   },
   {
     "stationName": "Max Fm",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/max-fm.jpg",
+    "stationIconUrl": "/images/max-fm.webp",
     "stationCategories": [
       "Yabancı Müzik"
     ],
@@ -2171,7 +2171,7 @@
   },
   {
     "stationName": "Number 1 R&B",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/number-one-rb.jpg",
+    "stationIconUrl": "/images/number-one-rb.webp",
     "stationCategories": [
       "Rap ve Rock"
     ],
@@ -2183,7 +2183,7 @@
   },
   {
     "stationName": "Number 1 Rock",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/number1-rock.jpg",
+    "stationIconUrl": "/images/number1-rock.webp",
     "stationCategories": [
       "Rap ve Rock"
     ],
@@ -2195,7 +2195,7 @@
   },
   {
     "stationName": "Number One Türk Rap",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/turkrap.jpg",
+    "stationIconUrl": "/images/turkrap.webp",
     "stationCategories": [
       "Rap ve Rock"
     ],
@@ -2206,7 +2206,7 @@
   },
   {
     "stationName": "Pal Rap",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/pal-rap.jpg",
+    "stationIconUrl": "/images/pal-rap.webp",
     "stationCategories": [
       "Rap ve Rock"
     ],
@@ -2217,7 +2217,7 @@
   },
   {
     "stationName": "Power Earth",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/power-earth.jpg",
+    "stationIconUrl": "/images/power-earth.webp",
     "stationCategories": [
       "Rap ve Rock"
     ],
@@ -2228,7 +2228,7 @@
   },
   {
     "stationName": "Power HipHop R&B",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/power-hiphop-radyo.jpg",
+    "stationIconUrl": "/images/power-hiphop-radyo.webp",
     "stationCategories": [
       "Rap ve Rock"
     ],
@@ -2239,7 +2239,7 @@
   },
   {
     "stationName": "Power Plus",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/power-plus.jpg",
+    "stationIconUrl": "/images/power-plus.webp",
     "stationCategories": [
       "Rap ve Rock"
     ],
@@ -2250,7 +2250,7 @@
   },
   {
     "stationName": "PowerTürk Rap",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/powerturk-rap.jpg",
+    "stationIconUrl": "/images/powerturk-rap.webp",
     "stationCategories": [
       "Rap ve Rock"
     ],
@@ -2261,7 +2261,7 @@
   },
   {
     "stationName": "Radyo BoomBox",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-boombox.jpg",
+    "stationIconUrl": "/images/radyo-boombox.webp",
     "stationCategories": [
       "Rap ve Rock"
     ],
@@ -2273,7 +2273,7 @@
   },
   {
     "stationName": "Radyo Duble Rap",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-duble-rap.jpg",
+    "stationIconUrl": "/images/radyo-duble-rap.webp",
     "stationCategories": [
       "Rap ve Rock"
     ],
@@ -2284,7 +2284,7 @@
   },
   {
     "stationName": "Radyo Mars",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-mars.jpg",
+    "stationIconUrl": "/images/radyo-mars.webp",
     "stationCategories": [
       "Rap ve Rock"
     ],
@@ -2295,7 +2295,7 @@
   },
   {
     "stationName": "Rap Home",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/rap-home.jpg",
+    "stationIconUrl": "/images/rap-home.webp",
     "stationCategories": [
       "Rap ve Rock"
     ],
@@ -2307,7 +2307,7 @@
   },
   {
     "stationName": "Rock FM",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/rock-fm.jpg",
+    "stationIconUrl": "/images/rock-fm.webp",
     "stationCategories": [
       "Rap ve Rock"
     ],
@@ -2318,7 +2318,7 @@
   },
   {
     "stationName": "Rock Station",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/rock-station.jpg",
+    "stationIconUrl": "/images/rock-station.webp",
     "stationCategories": [
       "Rap ve Rock"
     ],
@@ -2330,7 +2330,7 @@
   },
   {
     "stationName": "The Rock Radio",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/the-rock-radio.jpg",
+    "stationIconUrl": "/images/the-rock-radio.webp",
     "stationCategories": [
       "Rap ve Rock"
     ],
@@ -2342,7 +2342,7 @@
   },
   {
     "stationName": "X Radio",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/x-radio.jpg",
+    "stationIconUrl": "/images/x-radio.webp",
     "stationCategories": [
       "Rap ve Rock"
     ],
@@ -2353,7 +2353,7 @@
   },
   {
     "stationName": "Yeni Rap",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/yeni-rap.jpg",
+    "stationIconUrl": "/images/yeni-rap.webp",
     "stationCategories": [
       "Rap ve Rock"
     ],
@@ -2364,7 +2364,7 @@
   },
   {
     "stationName": "Best Hit",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/best-hit.jpg",
+    "stationIconUrl": "/images/best-hit.webp",
     "stationCategories": [
       "Web Radyo"
     ],
@@ -2375,7 +2375,7 @@
   },
   {
     "stationName": "Dalkas FM",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/dalkas-fm.jpg",
+    "stationIconUrl": "/images/dalkas-fm.webp",
     "stationCategories": [
       "Yabancı Müzik"
     ],
@@ -2386,7 +2386,7 @@
   },
   {
     "stationName": "Dance FM – KKTC",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/dance-fm-lefkosa.jpg",
+    "stationIconUrl": "/images/dance-fm-lefkosa.webp",
     "stationCategories": [
       "Yabancı Müzik"
     ],
@@ -2397,7 +2397,7 @@
   },
   {
     "stationName": "Fenomen 2010’lar",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-fenomen-2010lar.jpg",
+    "stationIconUrl": "/images/radyo-fenomen-2010lar.webp",
     "stationCategories": [
       "Web Radyo"
     ],
@@ -2408,7 +2408,7 @@
   },
   {
     "stationName": "Fenomen Pop",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/fenomen-pop.jpg",
+    "stationIconUrl": "/images/fenomen-pop.webp",
     "stationCategories": [
       "Yabancı Müzik"
     ],
@@ -2419,7 +2419,7 @@
   },
   {
     "stationName": "Greatest Hits of All Time",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-greatest-hits-of-all-time.jpg",
+    "stationIconUrl": "/images/radyo-greatest-hits-of-all-time.webp",
     "stationCategories": [
       "Web Radyo"
     ],
@@ -2431,7 +2431,7 @@
   },
   {
     "stationName": "Heart FM",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/heart-fm.jpg",
+    "stationIconUrl": "/images/heart-fm.webp",
     "stationCategories": [
       "Web Radyo"
     ],
@@ -2442,7 +2442,7 @@
   },
   {
     "stationName": "İTÜ Radyosu Jazz Blues",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/itu-radyosu-jazz-blues.jpg",
+    "stationIconUrl": "/images/itu-radyosu-jazz-blues.webp",
     "stationCategories": [
       "Yabancı Müzik"
     ],
@@ -2454,7 +2454,7 @@
   },
   {
     "stationName": "Joy Jazz",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/joy-jazz.jpg",
+    "stationIconUrl": "/images/joy-jazz.webp",
     "stationCategories": [
       "Web Radyo"
     ],
@@ -2466,7 +2466,7 @@
   },
   {
     "stationName": "Kiss Dance",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/kiss-dance.jpg",
+    "stationIconUrl": "/images/kiss-dance.webp",
     "stationCategories": [
       "Web Radyo"
     ],
@@ -2477,7 +2477,7 @@
   },
   {
     "stationName": "Kiss Ege’nin Sesi",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/kiss-egenin-sesi.jpg",
+    "stationIconUrl": "/images/kiss-egenin-sesi.webp",
     "stationCategories": [
       "Yabancı Müzik"
     ],
@@ -2488,7 +2488,7 @@
   },
   {
     "stationName": "Kiss FK",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/kiss-fk.jpg",
+    "stationIconUrl": "/images/kiss-fk.webp",
     "stationCategories": [
       "Yabancı Müzik"
     ],
@@ -2499,7 +2499,7 @@
   },
   {
     "stationName": "Kiss Gold",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/kiss-gold-fm.jpg",
+    "stationIconUrl": "/images/kiss-gold-fm.webp",
     "stationCategories": [
       "Yabancı Müzik"
     ],
@@ -2510,7 +2510,7 @@
   },
   {
     "stationName": "Kore Pop",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-kore-dinle.jpg",
+    "stationIconUrl": "/images/radyo-kore-dinle.webp",
     "stationCategories": [
       "Yabancı Müzik"
     ],
@@ -2521,7 +2521,7 @@
   },
   {
     "stationName": "Literal Radio",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/literal-radio.jpg",
+    "stationIconUrl": "/images/literal-radio.webp",
     "stationCategories": [
       "Yabancı Müzik"
     ],
@@ -2533,7 +2533,7 @@
   },
   {
     "stationName": "Lounge FM",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/lounge-fm-96.jpg",
+    "stationIconUrl": "/images/lounge-fm-96.webp",
     "stationCategories": [
       "Yabancı Müzik"
     ],
@@ -2545,7 +2545,7 @@
   },
   {
     "stationName": "Mix Fm Mersin",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/mix-fm-mersin.jpg",
+    "stationIconUrl": "/images/mix-fm-mersin.webp",
     "stationCategories": [
       "Yabancı Müzik"
     ],
@@ -2556,7 +2556,7 @@
   },
   {
     "stationName": "NRK Jazz",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/nrk-jazz.jpg",
+    "stationIconUrl": "/images/nrk-jazz.webp",
     "stationCategories": [
       "Yabancı Müzik"
     ],
@@ -2568,7 +2568,7 @@
   },
   {
     "stationName": "Number 1 Dance",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/number-1-dance.jpg",
+    "stationIconUrl": "/images/number-1-dance.webp",
     "stationCategories": [
       "Yabancı Müzik"
     ],
@@ -2580,7 +2580,7 @@
   },
   {
     "stationName": "Number 1 Deep House",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/number1-deep-house.jpg",
+    "stationIconUrl": "/images/number1-deep-house.webp",
     "stationCategories": [
       "Yabancı Müzik"
     ],
@@ -2592,7 +2592,7 @@
   },
   {
     "stationName": "Number 1 Disco",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/number1-disco.jpg",
+    "stationIconUrl": "/images/number1-disco.webp",
     "stationCategories": [
       "Yabancı Müzik"
     ],
@@ -2604,7 +2604,7 @@
   },
   {
     "stationName": "Number 1 Ertuğrul Özkök",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-ozkok.jpg",
+    "stationIconUrl": "/images/radyo-ozkok.webp",
     "stationCategories": [
       "Yabancı Müzik"
     ],
@@ -2616,7 +2616,7 @@
   },
   {
     "stationName": "Baby Joy",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/baby-joy.jpg",
+    "stationIconUrl": "/images/baby-joy.webp",
     "stationCategories": [
       "Web Radyo"
     ],
@@ -2628,7 +2628,7 @@
   },
   {
     "stationName": "Berlin Metropol Fm",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/metropol-fm.jpg",
+    "stationIconUrl": "/images/metropol-fm.webp",
     "stationCategories": [
       "Web Radyo"
     ],
@@ -2639,7 +2639,7 @@
   },
   {
     "stationName": "Best of Number 1",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/best-of-number1.jpg",
+    "stationIconUrl": "/images/best-of-number1.webp",
     "stationCategories": [
       "Web Radyo"
     ],
@@ -2651,7 +2651,7 @@
   },
   {
     "stationName": "Blue Karadeniz Radyo",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/blue-karadeniz-radyo.jpg",
+    "stationIconUrl": "/images/blue-karadeniz-radyo.webp",
     "stationCategories": [
       "Web Radyo"
     ],
@@ -2663,7 +2663,7 @@
   },
   {
     "stationName": "Dream Türk",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/dream-turk.jpg",
+    "stationIconUrl": "/images/dream-turk.webp",
     "stationCategories": [
       "Web Radyo"
     ],
@@ -2674,7 +2674,7 @@
   },
   {
     "stationName": "Enerji 93.1 – KKTC",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/nrg-enerji.jpg",
+    "stationIconUrl": "/images/nrg-enerji.webp",
     "stationCategories": [
       "Web Radyo"
     ],
@@ -2685,7 +2685,7 @@
   },
   {
     "stationName": "Enerji Slow 106.2 – KKTC",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/nrg-enerji-slow.jpg",
+    "stationIconUrl": "/images/nrg-enerji-slow.webp",
     "stationCategories": [
       "Web Radyo"
     ],
@@ -2696,7 +2696,7 @@
   },
   {
     "stationName": "First FM",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/first-fm.jpg",
+    "stationIconUrl": "/images/first-fm.webp",
     "stationCategories": [
       "Web Radyo"
     ],
@@ -2707,7 +2707,7 @@
   },
   {
     "stationName": "Hit Radyo",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/hit-radio.jpg",
+    "stationIconUrl": "/images/hit-radio.webp",
     "stationCategories": [
       "Web Radyo"
     ],
@@ -2718,7 +2718,7 @@
   },
   {
     "stationName": "Karadeniz Radyo",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/karadeniz-radyo.jpg",
+    "stationIconUrl": "/images/karadeniz-radyo.webp",
     "stationCategories": [
       "Web Radyo"
     ],
@@ -2730,7 +2730,7 @@
   },
   {
     "stationName": "Kent FM",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/kent-fm.jpg",
+    "stationIconUrl": "/images/kent-fm.webp",
     "stationCategories": [
       "Web Radyo"
     ],
@@ -2741,7 +2741,7 @@
   },
   {
     "stationName": "ABC Classic 2 FM",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/abc-classic-2-fm.jpg",
+    "stationIconUrl": "/images/abc-classic-2-fm.webp",
     "stationCategories": [
       "Klasik Müzik"
     ],
@@ -2752,7 +2752,7 @@
   },
   {
     "stationName": "Borusan Klasik",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/borusan-klasik.jpg",
+    "stationIconUrl": "/images/borusan-klasik.webp",
     "stationCategories": [
       "Klasik Müzik"
     ],
@@ -2764,7 +2764,7 @@
   },
   {
     "stationName": "İTÜ Radyosu Klasik",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/itu-radyosu-klasik.jpg",
+    "stationIconUrl": "/images/itu-radyosu-klasik.webp",
     "stationCategories": [
       "Klasik Müzik"
     ],
@@ -2776,7 +2776,7 @@
   },
   {
     "stationName": "Klasik Home",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/klasik-home.jpg",
+    "stationIconUrl": "/images/klasik-home.webp",
     "stationCategories": [
       "Klasik Müzik"
     ],
@@ -2788,7 +2788,7 @@
   },
   {
     "stationName": "NRK Klasik",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/nrk-klassisk.jpg",
+    "stationIconUrl": "/images/nrk-klassisk.webp",
     "stationCategories": [
       "Klasik Müzik"
     ],
@@ -2799,7 +2799,7 @@
   },
   {
     "stationName": "Number 1 Classic",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/number1-classic.jpg",
+    "stationIconUrl": "/images/number1-classic.webp",
     "stationCategories": [
       "Klasik Müzik"
     ],
@@ -2811,7 +2811,7 @@
   },
   {
     "stationName": "Radio Swiss Classic",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radio-swiss-classic.png",
+    "stationIconUrl": "/images/radio-swiss-classic.webp",
     "stationCategories": [
       "Klasik Müzik"
     ],
@@ -2822,7 +2822,7 @@
   },
   {
     "stationName": "Radyo Klasik",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-klasik-muzik.jpg",
+    "stationIconUrl": "/images/radyo-klasik-muzik.webp",
     "stationCategories": [
       "Klasik Müzik"
     ],
@@ -2833,7 +2833,7 @@
   },
   {
     "stationName": "Odea Radyo",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/odea-radyo.jpg",
+    "stationIconUrl": "/images/odea-radyo.webp",
     "stationCategories": [
       "Diğer"
     ],
@@ -2844,7 +2844,7 @@
   },
   {
     "stationName": "Pop Hits",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/pop-hits.jpg",
+    "stationIconUrl": "/images/pop-hits.webp",
     "stationCategories": [
       "Diğer"
     ],
@@ -2855,7 +2855,7 @@
   },
   {
     "stationName": "Popbesk",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/popbesk.jpg",
+    "stationIconUrl": "/images/popbesk.webp",
     "stationCategories": [
       "Diğer"
     ],
@@ -2866,7 +2866,7 @@
   },
   {
     "stationName": "Radyo Pop 90",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/pop-90.jpg",
+    "stationIconUrl": "/images/pop-90.webp",
     "stationCategories": [
       "Diğer"
     ],
@@ -2877,7 +2877,7 @@
   },
   {
     "stationName": "Radyo Sole",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-sole.jpg",
+    "stationIconUrl": "/images/radyo-sole.webp",
     "stationCategories": [
       "Diğer"
     ],
@@ -2888,7 +2888,7 @@
   },
   {
     "stationName": "Retro Türk",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/retro-turk.jpg",
+    "stationIconUrl": "/images/retro-turk.webp",
     "stationCategories": [
       "Diğer"
     ],
@@ -2899,7 +2899,7 @@
   },
   {
     "stationName": "Number 1 Greek",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/number1-greek.jpg",
+    "stationIconUrl": "/images/number1-greek.webp",
     "stationCategories": [
       "Diğer"
     ],
@@ -2910,7 +2910,7 @@
   },
   {
     "stationName": "Number 1 Heart",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/number-1-heart.jpg",
+    "stationIconUrl": "/images/number-1-heart.webp",
     "stationCategories": [
       "Diğer"
     ],
@@ -2921,7 +2921,7 @@
   },
   {
     "stationName": "Number 1 Jazz",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/number-one-jazz.jpg",
+    "stationIconUrl": "/images/number-one-jazz.webp",
     "stationCategories": [
       "Yabancı Müzik"
     ],
@@ -2932,7 +2932,7 @@
   },
   {
     "stationName": "Number 1 Lounge",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/number1-lounge.jpg",
+    "stationIconUrl": "/images/number1-lounge.webp",
     "stationCategories": [
       "Diğer"
     ],
@@ -2943,7 +2943,7 @@
   },
   {
     "stationName": "Petrol Ofisi Radyosu",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/petrol-ofisi-radyosu.jpg",
+    "stationIconUrl": "/images/petrol-ofisi-radyosu.webp",
     "stationCategories": [
       "Diğer"
     ],
@@ -2954,7 +2954,7 @@
   },
   {
     "stationName": "Pal Ala",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/pal-ala.jpg",
+    "stationIconUrl": "/images/pal-ala.webp",
     "stationCategories": [
       "Diğer"
     ],
@@ -2965,7 +2965,7 @@
   },
   {
     "stationName": "Pal Legend",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/pal-legend.jpg",
+    "stationIconUrl": "/images/pal-legend.webp",
     "stationCategories": [
       "Diğer"
     ],
@@ -2976,7 +2976,7 @@
   },
   {
     "stationName": "Pal Orient",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/pal-orient-radyo.jpg",
+    "stationIconUrl": "/images/pal-orient-radyo.webp",
     "stationCategories": [
       "Diğer"
     ],
@@ -2987,7 +2987,7 @@
   },
   {
     "stationName": "Pal Rabia",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/pal-rabia.jpg",
+    "stationIconUrl": "/images/pal-rabia.webp",
     "stationCategories": [
       "Diğer"
     ],
@@ -2998,7 +2998,7 @@
   },
   {
     "stationName": "Pal Remix",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/pal-remix.jpg",
+    "stationIconUrl": "/images/pal-remix.webp",
     "stationCategories": [
       "Diğer"
     ],
@@ -3009,7 +3009,7 @@
   },
   {
     "stationName": "Radyo Furkan",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-furkan.jpg",
+    "stationIconUrl": "/images/radyo-furkan.webp",
     "stationCategories": [
       "Diğer"
     ],
@@ -3020,7 +3020,7 @@
   },
   {
     "stationName": "Power Dance",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/power-dance.jpg",
+    "stationIconUrl": "/images/power-dance.webp",
     "stationCategories": [
       "Diğer"
     ],
@@ -3031,7 +3031,7 @@
   },
   {
     "stationName": "Power Deep",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/power-deep.jpg",
+    "stationIconUrl": "/images/power-deep.webp",
     "stationCategories": [
       "Diğer"
     ],
@@ -3042,7 +3042,7 @@
   },
   {
     "stationName": "Power Gold",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/power-gold.jpg",
+    "stationIconUrl": "/images/power-gold.webp",
     "stationCategories": [
       "Diğer"
     ],
@@ -3053,7 +3053,7 @@
   },
   {
     "stationName": "Power Greece",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/power-greece-yunanistan.jpg",
+    "stationIconUrl": "/images/power-greece-yunanistan.webp",
     "stationCategories": [
       "Diğer"
     ],
@@ -3064,7 +3064,7 @@
   },
   {
     "stationName": "Power Jazz",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/power-jazz.jpg",
+    "stationIconUrl": "/images/power-jazz.webp",
     "stationCategories": [
       "Yabancı Müzik"
     ],
@@ -3075,7 +3075,7 @@
   },
   {
     "stationName": "Power Smooth",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/power-smooth.jpg",
+    "stationIconUrl": "/images/power-smooth.webp",
     "stationCategories": [
       "Diğer"
     ],
@@ -3086,7 +3086,7 @@
   },
   {
     "stationName": "PowerTürk Dans",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/power-turk-dans.jpg",
+    "stationIconUrl": "/images/power-turk-dans.webp",
     "stationCategories": [
       "Diğer"
     ],
@@ -3097,7 +3097,7 @@
   },
   {
     "stationName": "PowerTürk En İyiler",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/power-turk-en-iyiler.jpg",
+    "stationIconUrl": "/images/power-turk-en-iyiler.webp",
     "stationCategories": [
       "Diğer"
     ],
@@ -3108,7 +3108,7 @@
   },
   {
     "stationName": "PowerTürk Taptaze",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/powerturk-taptaze.jpg",
+    "stationIconUrl": "/images/powerturk-taptaze.webp",
     "stationCategories": [
       "Diğer"
     ],
@@ -3119,7 +3119,7 @@
   },
   {
     "stationName": "Pop Home",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/pop-home.jpg",
+    "stationIconUrl": "/images/pop-home.webp",
     "stationCategories": [
       "Diğer"
     ],
@@ -3130,7 +3130,7 @@
   },
   {
     "stationName": "Radyo Altın Şarkılar",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/altin-sarkilar.jpg",
+    "stationIconUrl": "/images/altin-sarkilar.webp",
     "stationCategories": [
       "Diğer"
     ],
@@ -3141,7 +3141,7 @@
   },
   {
     "stationName": "Radyo Ankara Havaları",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-ankara-havalari.jpg",
+    "stationIconUrl": "/images/radyo-ankara-havalari.webp",
     "stationCategories": [
       "Diğer"
     ],
@@ -3152,7 +3152,7 @@
   },
   {
     "stationName": "Radyo Ege Havaları",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-ege-havalari.jpg",
+    "stationIconUrl": "/images/radyo-ege-havalari.webp",
     "stationCategories": [
       "Diğer"
     ],
@@ -3163,7 +3163,7 @@
   },
   {
     "stationName": "Relax Home",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/relax-home.jpg",
+    "stationIconUrl": "/images/relax-home.webp",
     "stationCategories": [
       "Diğer"
     ],
@@ -3174,7 +3174,7 @@
   },
   {
     "stationName": "Sarı Tramvay",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/sari-tramvay.jpg",
+    "stationIconUrl": "/images/sari-tramvay.webp",
     "stationCategories": [
       "Diğer"
     ],
@@ -3185,7 +3185,7 @@
   },
   {
     "stationName": "World Hits",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/world-hits-home.jpg",
+    "stationIconUrl": "/images/world-hits-home.webp",
     "stationCategories": [
       "Diğer"
     ],
@@ -3196,7 +3196,7 @@
   },
   {
     "stationName": "ADYÜ FM – Adıyaman Üniversitesi Radyosu",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/adyu-fm.jpg",
+    "stationIconUrl": "/images/adyu-fm.webp",
     "stationCategories": [
       "Pop"
     ],
@@ -3207,7 +3207,7 @@
   },
   {
     "stationName": "Alev’in Sesi Radyosu",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/alevin-sesi-radyosu.jpg",
+    "stationIconUrl": "/images/alevin-sesi-radyosu.webp",
     "stationCategories": [
       "Pop"
     ],
@@ -3218,7 +3218,7 @@
   },
   {
     "stationName": "CU Radyo – Cumhuriyet Üniversitesi",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/cu-radyo.jpg",
+    "stationIconUrl": "/images/cu-radyo.webp",
     "stationCategories": [
       "Pop"
     ],
@@ -3229,7 +3229,7 @@
   },
   {
     "stationName": "Hitit FM – Hitit Üniversitesi Radyosu",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/hitit-fm.jpg",
+    "stationIconUrl": "/images/hitit-fm.webp",
     "stationCategories": [
       "Pop"
     ],
@@ -3240,7 +3240,7 @@
   },
   {
     "stationName": "Kampüs FM",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/kampus-fm.jpg",
+    "stationIconUrl": "/images/kampus-fm.webp",
     "stationCategories": [
       "Pop"
     ],
@@ -3251,7 +3251,7 @@
   },
   {
     "stationName": "KURadyo",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/kuradyo.jpg",
+    "stationIconUrl": "/images/kuradyo.webp",
     "stationCategories": [
       "Pop"
     ],
@@ -3262,7 +3262,7 @@
   },
   {
     "stationName": "Kütahya Radyo Dumlupınar",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-dumlupinar.jpg",
+    "stationIconUrl": "/images/radyo-dumlupinar.webp",
     "stationCategories": [
       "Pop"
     ],
@@ -3273,7 +3273,7 @@
   },
   {
     "stationName": "Mersin Üniversitesi Radyosu",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/mersin-universitesi-radyosu.jpg",
+    "stationIconUrl": "/images/mersin-universitesi-radyosu.webp",
     "stationCategories": [
       "Pop"
     ],
@@ -3284,7 +3284,7 @@
   },
   {
     "stationName": "OMÜ Radyo",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/omu-radyo.jpg",
+    "stationIconUrl": "/images/omu-radyo.webp",
     "stationCategories": [
       "Pop"
     ],
@@ -3295,7 +3295,7 @@
   },
   {
     "stationName": "Radio Atılım",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radio-atilim.jpg",
+    "stationIconUrl": "/images/radio-atilim.webp",
     "stationCategories": [
       "Pop"
     ],
@@ -3306,7 +3306,7 @@
   },
   {
     "stationName": "Radyo A Anadolu Üniversitesi",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-a.jpg",
+    "stationIconUrl": "/images/radyo-a.webp",
     "stationCategories": [
       "Pop"
     ],
@@ -3317,7 +3317,7 @@
   },
   {
     "stationName": "Radyo Altınbaş",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-altinbas.jpg",
+    "stationIconUrl": "/images/radyo-altinbas.webp",
     "stationCategories": [
       "Pop"
     ],
@@ -3328,7 +3328,7 @@
   },
   {
     "stationName": "Radyo Başkent",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-baskent-1.jpg",
+    "stationIconUrl": "/images/radyo-baskent-1.webp",
     "stationCategories": [
       "Pop"
     ],
@@ -3339,7 +3339,7 @@
   },
   {
     "stationName": "Radyo Bilkent",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-bilkent.jpg",
+    "stationIconUrl": "/images/radyo-bilkent.webp",
     "stationCategories": [
       "Pop"
     ],
@@ -3350,7 +3350,7 @@
   },
   {
     "stationName": "Radyo Boğaziçi",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-bogazici.jpg",
+    "stationIconUrl": "/images/radyo-bogazici.webp",
     "stationCategories": [
       "Pop"
     ],
@@ -3361,7 +3361,7 @@
   },
   {
     "stationName": "Radyo Düet",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-duet.jpg",
+    "stationIconUrl": "/images/radyo-duet.webp",
     "stationCategories": [
       "Pop"
     ],
@@ -3372,7 +3372,7 @@
   },
   {
     "stationName": "Radyo Ege Üniversitesi (Kampüs)",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/ege-universitesi-radyosu.jpg",
+    "stationIconUrl": "/images/ege-universitesi-radyosu.webp",
     "stationCategories": [
       "Pop"
     ],
@@ -3383,7 +3383,7 @@
   },
   {
     "stationName": "Radyo ESOGÜ",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-esogu.jpg",
+    "stationIconUrl": "/images/radyo-esogu.webp",
     "stationCategories": [
       "Pop"
     ],
@@ -3394,7 +3394,7 @@
   },
   {
     "stationName": "Radyo ESTÜ",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-estu.jpg",
+    "stationIconUrl": "/images/radyo-estu.webp",
     "stationCategories": [
       "Pop"
     ],
@@ -3405,7 +3405,7 @@
   },
   {
     "stationName": "Radyo Fırat",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-firat.jpg",
+    "stationIconUrl": "/images/radyo-firat.webp",
     "stationCategories": [
       "Pop"
     ],
@@ -3416,7 +3416,7 @@
   },
   {
     "stationName": "Radyo İlef",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-ilef.jpg",
+    "stationIconUrl": "/images/radyo-ilef.webp",
     "stationCategories": [
       "Pop"
     ],
@@ -3427,7 +3427,7 @@
   },
   {
     "stationName": "Radyo İletişim",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-iletisim.jpg",
+    "stationIconUrl": "/images/radyo-iletisim.webp",
     "stationCategories": [
       "Pop"
     ],
@@ -3438,7 +3438,7 @@
   },
   {
     "stationName": "Radyo Ki",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-ki.jpg",
+    "stationIconUrl": "/images/radyo-ki.webp",
     "stationCategories": [
       "Pop"
     ],
@@ -3449,7 +3449,7 @@
   },
   {
     "stationName": "Radyo KTÜ",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-ktu.jpg",
+    "stationIconUrl": "/images/radyo-ktu.webp",
     "stationCategories": [
       "Pop"
     ],
@@ -3460,7 +3460,7 @@
   },
   {
     "stationName": "Radyo Viva Trend Pop",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/viva-trend-pop.jpg",
+    "stationIconUrl": "/images/viva-trend-pop.webp",
     "stationCategories": [
       "Diğer"
     ],
@@ -3471,7 +3471,7 @@
   },
   {
     "stationName": "Radyo Viva Club",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/viva-club.jpg",
+    "stationIconUrl": "/images/viva-club.webp",
     "stationCategories": [
       "Diğer"
     ],
@@ -3482,7 +3482,7 @@
   },
   {
     "stationName": "Show Trend",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/show-trend.jpg",
+    "stationIconUrl": "/images/show-trend.webp",
     "stationCategories": [
       "Diğer"
     ],
@@ -3493,7 +3493,7 @@
   },
   {
     "stationName": "Show Eller Havaya",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/show-eller-havaya.jpg",
+    "stationIconUrl": "/images/show-eller-havaya.webp",
     "stationCategories": [
       "Diğer"
     ],
@@ -3504,7 +3504,7 @@
   },
   {
     "stationName": "Show Akustik",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/show-akustik.jpg",
+    "stationIconUrl": "/images/show-akustik.webp",
     "stationCategories": [
       "Diğer"
     ],
@@ -3515,7 +3515,7 @@
   },
   {
     "stationName": "Show 90’lar",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/show-90lar.jpg",
+    "stationIconUrl": "/images/show-90lar.webp",
     "stationCategories": [
       "Diğer"
     ],
@@ -3526,7 +3526,7 @@
   },
   {
     "stationName": "Radyo Viva Türkü",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/viva-turku.jpg",
+    "stationIconUrl": "/images/viva-turku.webp",
     "stationCategories": [
       "Diğer"
     ],
@@ -3537,7 +3537,7 @@
   },
   {
     "stationName": "Radyo Viva Efkar",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/viva-efkar.jpg",
+    "stationIconUrl": "/images/viva-efkar.webp",
     "stationCategories": [
       "Diğer"
     ],
@@ -3548,7 +3548,7 @@
   },
   {
     "stationName": "Radyo FG",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-fg.jpg",
+    "stationIconUrl": "/images/radyo-fg.webp",
     "stationCategories": [
       "Diğer"
     ],
@@ -3559,7 +3559,7 @@
   },
   {
     "stationName": "Radyo Ankara",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-ankara.jpg",
+    "stationIconUrl": "/images/radyo-ankara.webp",
     "stationCategories": [
       "Diğer"
     ],
@@ -3570,7 +3570,7 @@
   },
   {
     "stationName": "Radyo Tuzgölü",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-tuzgolu.jpg",
+    "stationIconUrl": "/images/radyo-tuzgolu.webp",
     "stationCategories": [
       "Diğer"
     ],
@@ -3581,7 +3581,7 @@
   },
   {
     "stationName": "Yörük FM",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/yoruk-fm-mersin.jpg",
+    "stationIconUrl": "/images/yoruk-fm-mersin.webp",
     "stationCategories": [
       "Diğer"
     ],
@@ -3592,7 +3592,7 @@
   },
   {
     "stationName": "Radyo 06 Ankara",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo06.jpg",
+    "stationIconUrl": "/images/radyo06.webp",
     "stationCategories": [
       "Diğer"
     ],
@@ -3603,7 +3603,7 @@
   },
   {
     "stationName": "Karadeniz Dalga FM",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/karadeniz-dalga-fm.jpg",
+    "stationIconUrl": "/images/karadeniz-dalga-fm.webp",
     "stationCategories": [
       "Halk Müziği"
     ],
@@ -3614,7 +3614,7 @@
   },
   {
     "stationName": "Raks FM",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/raks-fm.jpg",
+    "stationIconUrl": "/images/raks-fm.webp",
     "stationCategories": [
       "Halk Müziği"
     ],
@@ -3625,7 +3625,7 @@
   },
   {
     "stationName": "Karadeniz Akustik FM",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/karadeniz-akustik.jpg",
+    "stationIconUrl": "/images/karadeniz-akustik.webp",
     "stationCategories": [
       "Halk Müziği"
     ],
@@ -3636,7 +3636,7 @@
   },
   {
     "stationName": "Radyo Bordo Mavi FM",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/bordo-mavi-radyo.jpg",
+    "stationIconUrl": "/images/bordo-mavi-radyo.webp",
     "stationCategories": [
       "Halk Müziği"
     ],
@@ -3647,7 +3647,7 @@
   },
   {
     "stationName": "Vitamin FM",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/vitamin-fm.jpg",
+    "stationIconUrl": "/images/vitamin-fm.webp",
     "stationCategories": [
       "Halk Müziği"
     ],
@@ -3658,7 +3658,7 @@
   },
   {
     "stationName": "Kemençe FM",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/kemence-fm.jpg",
+    "stationIconUrl": "/images/kemence-fm.webp",
     "stationCategories": [
       "Halk Müziği"
     ],
@@ -3669,7 +3669,7 @@
   },
   {
     "stationName": "Karadenizin Sesi Radyosu",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/karadenizin-sesi-dinle-100x100.png",
+    "stationIconUrl": "/images/karadenizin-sesi-dinle-100x100.webp",
     "stationCategories": [
       "Halk Müziği"
     ],
@@ -3680,7 +3680,7 @@
   },
   {
     "stationName": "Trabzon Taka FM",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/taka-fm.jpg",
+    "stationIconUrl": "/images/taka-fm.webp",
     "stationCategories": [
       "Halk Müziği"
     ],
@@ -3691,7 +3691,7 @@
   },
   {
     "stationName": "Karadeniz Fm Bursa",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/bursa-karadeniz-fm-100x100.jpg",
+    "stationIconUrl": "/images/bursa-karadeniz-fm-100x100.webp",
     "stationCategories": [
       "Halk Müziği"
     ],
@@ -3702,7 +3702,7 @@
   },
   {
     "stationName": "Radyo Bir",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-bir.jpg",
+    "stationIconUrl": "/images/radyo-bir.webp",
     "stationCategories": [
       "Slow"
     ],
@@ -3713,7 +3713,7 @@
   },
   {
     "stationName": "Radyo Karadeniz",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/radyo-karadeniz.jpg",
+    "stationIconUrl": "/images/radyo-karadeniz.webp",
     "stationCategories": [
       "Halk Müziği"
     ],
@@ -3724,7 +3724,7 @@
   },
   {
     "stationName": "Esas Radyo",
-    "stationIconUrl": "https://www.canliradyodinle.fm/wp-content/uploads/esas-radyo.jpg",
+    "stationIconUrl": "/images/esas-radyo.webp",
     "stationCategories": [
       "Diğer"
     ],

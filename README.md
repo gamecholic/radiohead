@@ -10,6 +10,7 @@ A modern, sleek online radio application built with Next.js 15 and shadcn/ui. Li
 - Volume control
 - Station favorites
 - Resume playback - Remembers your last played station and continues from where you left off
+- Optimized images - All station logos are downloaded, resized, compressed, and converted to WebP format
 
 ## Tech Stack
 
@@ -19,6 +20,7 @@ A modern, sleek online radio application built with Next.js 15 and shadcn/ui. Li
 - [Tailwind CSS](https://tailwindcss.com/)
 - [shadcn/ui](https://ui.shadcn.com/)
 - [Lucide React](https://lucide.dev/)
+- [Sharp](https://sharp.pixelplumbing.com/) - For image processing
 
 ## Getting Started
 
@@ -47,6 +49,21 @@ bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the app.
+
+## Image Optimization
+
+All radio station images have been optimized for web use. The process includes:
+
+1. Downloading images from external sources
+2. Resizing to a maximum of 256x256 pixels
+3. Compressing with 80% quality
+4. Converting to WebP format for better performance
+
+To run the image optimization process:
+
+```bash
+node downloadAndOptimizeImages.js
+```
 
 ## Git Hooks
 
