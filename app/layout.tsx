@@ -86,6 +86,7 @@ export default async function RootLayout({
           name="viewport"
           content="width=device-width, initial-scale=1, viewport-fit=cover"
         />
+        <meta name="google-site-verification" content="HPFbkvmbrpAfsWT8hdFNl_HTwVjVM04WjQxUoBhvmMY" />  
         <link rel="manifest" href="/manifest.json" />
         <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
       </head>
