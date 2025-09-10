@@ -32,8 +32,7 @@ export function FeaturedSection() {
               )
             : featured
         );
-        // Delay setting loading to false to ensure smooth transition
-        setTimeout(() => setLoading(false), 300);
+        setLoading(false);
       } catch (error) {
         console.error("Error fetching featured stations:", error);
         setLoading(false);
