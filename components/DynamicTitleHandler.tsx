@@ -3,6 +3,7 @@
 import { useAudio } from "@/contexts/AudioContext";
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
+import { getAbsoluteImageUrl } from "@/lib/utils/imageUtils";
 
 export function DynamicTitleHandler() {
   const { currentStation } = useAudio();
@@ -29,10 +30,12 @@ export function DynamicTitleHandler() {
       const ogDescription = document.querySelector(
         'meta[property="og:description"]'
       );
+      const ogImage = document.querySelector('meta[property="og:image"]');
       const twitterTitle = document.querySelector('meta[name="twitter:title"]');
       const twitterDescription = document.querySelector(
         'meta[name="twitter:description"]'
       );
+      const twitterImage = document.querySelector('meta[name="twitter:image"]');
 
       if (ogTitle)
         ogTitle.setAttribute(
@@ -44,6 +47,11 @@ export function DynamicTitleHandler() {
           "content",
           `Şu anda ${currentStation.stationName} radyo istasyonunu dinliyorsunuz. Harika müzik keyfi için doğru yerdesiniz!`
         );
+      if (ogImage && currentStation.stationIconUrl)
+        ogImage.setAttribute(
+          "content",
+          getAbsoluteImageUrl(currentStation.stationIconUrl)
+        );
       if (twitterTitle)
         twitterTitle.setAttribute(
           "content",
@@ -53,6 +61,11 @@ export function DynamicTitleHandler() {
         twitterDescription.setAttribute(
           "content",
           `Şu anda ${currentStation.stationName} radyo istasyonunu dinliyorsunuz. Harika müzik keyfi için doğru yerdesiniz!`
+        );
+      if (twitterImage && currentStation.stationIconUrl)
+        twitterImage.setAttribute(
+          "content",
+          getAbsoluteImageUrl(currentStation.stationIconUrl)
         );
     } else {
       // Reset to default when no station is playing
@@ -73,10 +86,12 @@ export function DynamicTitleHandler() {
       const ogDescription = document.querySelector(
         'meta[property="og:description"]'
       );
+      const ogImage = document.querySelector('meta[property="og:image"]');
       const twitterTitle = document.querySelector('meta[name="twitter:title"]');
       const twitterDescription = document.querySelector(
         'meta[name="twitter:description"]'
       );
+      const twitterImage = document.querySelector('meta[name="twitter:image"]');
 
       if (ogTitle)
         ogTitle.setAttribute(
@@ -88,6 +103,11 @@ export function DynamicTitleHandler() {
           "content",
           "RadioHead ile favori radyolarını kendi listeni oluşturarak dinleyebilirsin. İstediğin anda bir radyodan diğerine geç, durdur, tekrar başlat. Radyon, senin frekansında. Modern ve kullanımı kolay arayüzü ile favori radyo istasyonlarınızı dinleyin."
         );
+      if (ogImage)
+        ogImage.setAttribute(
+          "content",
+          "https://radiohead-one.vercel.app/icons/icon-512x512.png"
+        );
       if (twitterTitle)
         twitterTitle.setAttribute(
           "content",
@@ -97,6 +117,11 @@ export function DynamicTitleHandler() {
         twitterDescription.setAttribute(
           "content",
           "RadioHead ile favori radyolarını kendi listeni oluşturarak dinleyebilirsin. İstediğin anda bir radyodan diğerine geç, durdur, tekrar başlat. Radyon, senin frekansında. Modern ve kullanımı kolay arayüzü ile favori radyo istasyonlarınızı dinleyin."
+        );
+      if (twitterImage)
+        twitterImage.setAttribute(
+          "content",
+          "https://radiohead-one.vercel.app/icons/icon-512x512.png"
         );
     }
   }, [currentStation, pathname]);

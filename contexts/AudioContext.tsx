@@ -340,7 +340,12 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
       },
       () => setIsPlaying(false),
       playNext,
-      playPrevious
+      playPrevious,
+      () => {
+        // Stop playback and clear current station
+        setIsPlaying(false);
+        setCurrentStation(null);
+      }
     );
 
     // Clean up media session when component unmounts or station changes
