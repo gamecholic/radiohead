@@ -5,6 +5,8 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { StationCard } from "@/components/station-grid/station-card";
 import { Station } from "@/lib/types";
+import Script from "next/script";
+import { generateStationsStructuredData } from "@/lib/utils/structuredDataGenerators";
 
 interface CarouselProps {
   title: string;
@@ -75,6 +77,9 @@ export function Carousel({ title, stations }: CarouselProps) {
     };
   }, [stations]);
 
+  // Structured data for stations in this carousel
+  const stationsStructuredData = generateStationsStructuredData(stations);
+
   // Don't render if no stations
   if (stations.length === 0) {
     return null;
@@ -136,6 +141,17 @@ export function Carousel({ title, stations }: CarouselProps) {
           <ChevronRight className="h-6 w-6 text-white" />
         </Button>
       </div>
+
+      {/* Structured Data for SEO - Stations in Carousel */}
+      {stationsStructuredData.length > 0 && (
+        <Script
+          id={`carousel-${title.replace(/\s+/g, '-').toLowerCase()}-structured-data`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(stationsStructuredData),
+          }}
+        />
+      )}
     </div>
   );
 }

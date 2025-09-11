@@ -2,8 +2,13 @@ import { Header } from "@/components/layout";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { FeaturedSection } from "./components";
 import { CategorySection } from "./components";
+import Script from "next/script";
+import { generateAppStructuredData } from "@/lib/utils/structuredDataGenerators";
 
 export default function Home() {
+  // Structured data for the RadioHead application
+  const structuredData = generateAppStructuredData();
+
   return (
     <div className="flex flex-col h-[100dvh]">
       <Header />
@@ -20,6 +25,15 @@ export default function Home() {
           </div>
         </ScrollArea>
       </div>
+
+      {/* Structured Data for SEO */}
+      <Script
+        id="radiohead-structured-data"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData),
+        }}
+      />
     </div>
   );
 }

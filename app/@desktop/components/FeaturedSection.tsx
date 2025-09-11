@@ -5,6 +5,8 @@ import { FeaturedStation } from "@/components/layout";
 import { FeaturedStationsGrid } from "@/components/featured-stations-grid";
 import { getFeaturedStations } from "@/lib/api";
 import { Station } from "@/lib/types";
+import Script from "next/script";
+import { generateStationsStructuredData } from "@/lib/utils/structuredDataGenerators";
 
 export function FeaturedSection() {
   const [featuredStations, setFeaturedStations] = useState<Station[]>([]);
@@ -41,6 +43,11 @@ export function FeaturedSection() {
 
     fetchFeaturedStations();
   }, []);
+
+  // Structured data for featured stations
+  const featuredStationsStructuredData = generateStationsStructuredData(
+    [featuredStation, ...featuredStations].filter(Boolean) as Station[]
+  );
 
   // Skeleton loader for featured station
   const FeaturedStationSkeleton = () => (
@@ -127,6 +134,17 @@ export function FeaturedSection() {
           )
         )}
       </div>
+
+      {/* Structured Data for SEO - Featured Stations */}
+      {featuredStationsStructuredData.length > 0 && (
+        <Script
+          id="featured-stations-structured-data"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(featuredStationsStructuredData),
+          }}
+        />
+      )}
     </div>
   );
 }
