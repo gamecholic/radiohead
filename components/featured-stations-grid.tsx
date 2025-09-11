@@ -79,7 +79,7 @@ export function FeaturedStationsGrid({ stations }: FeaturedStationsGridProps) {
                 )}
 
                 <div className="text-center">
-                  <h3 className="text-sm font-medium text-white truncate group-hover:text-white transition-colors">
+                  <h3 className="text-sm font-medium text-white group-hover:text-white transition-colors text-balance line-clamp-2">
                     {station.stationName}
                   </h3>
                   <p className="text-xs text-white/70 truncate">
