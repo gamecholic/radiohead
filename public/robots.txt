@@ -2,6 +2,3 @@ User-agent: *
 Allow: /
 
 Sitemap: https://radiohead-one.vercel.app/sitemap.xml
-
-User-agent: *
-Disallow: /offline.html

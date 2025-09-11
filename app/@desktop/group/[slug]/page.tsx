@@ -26,8 +26,9 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${group.groupName} Radyo İstasyonları - RadioHead`,
-    description: `RadioHead'de tüm ${group.groupName} radyo istasyonlarını dinleyin`,
+    title: `${group.groupName} Radyo İstasyonları - Canlı Radyo Dinle`,
+    description: `RadioHead'de tüm ${group.groupName} radyo istasyonlarını canlı radyo dinle. ${group.groupName} ve daha fazlası için radyo dinleme deneyimini hemen yaşayın.`,
+    keywords: [`radyo dinle`, `canlı radyo dinle`, `canlı radyo`, `${group.groupName.toLowerCase()} radyo`],
   };
 }
 

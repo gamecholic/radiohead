@@ -22,23 +22,37 @@ const pages = [
   { path: '/browse', priority: '0.9', changefreq: 'monthly' },
   { path: '/favorites', priority: '0.7', changefreq: 'monthly' },
   { path: '/library', priority: '0.7', changefreq: 'monthly' },
+  { path: '/radyo-dinle', priority: '0.9', changefreq: 'weekly' },
   // Add more pages here as they are created
 ];
+
+// Read radio groups data
+const radioGroupsPath = path.join(__dirname, 'lib', 'data', 'radio-groups.json');
+const radioGroups = JSON.parse(fs.readFileSync(radioGroupsPath, 'utf8'));
+
+// Add radio group pages to the sitemap
+radioGroups.forEach(group => {
+  pages.push({
+    path: `/group/${group.slug}`,
+    priority: '0.8',
+    changefreq: 'monthly'
+  });
+});
 
 // Generate the sitemap XML
 const generateSitemap = () => {
   const currentDate = getCurrentDate();
   
-  let sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n';
-  sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
+  let sitemap = '<?xml version="1.0" encoding="UTF-8"?>' + '\n';
+  sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + '\n';
   
   pages.forEach(page => {
-    sitemap += `  <url>\n`;
-    sitemap += `    <loc>${BASE_URL}${page.path}</loc>\n`;
-    sitemap += `    <lastmod>${currentDate}</lastmod>\n`;
-    sitemap += `    <changefreq>${page.changefreq}</changefreq>\n`;
-    sitemap += `    <priority>${page.priority}</priority>\n`;
-    sitemap += `  </url>\n`;
+    sitemap += '  <url>' + '\n';
+    sitemap += `    <loc>${BASE_URL}${page.path}</loc>` + '\n';
+    sitemap += `    <lastmod>${currentDate}</lastmod>` + '\n';
+    sitemap += `    <changefreq>${page.changefreq}</changefreq>` + '\n';
+    sitemap += `    <priority>${page.priority}</priority>` + '\n';
+    sitemap += '  </url>' + '\n';
   });
   
   sitemap += '</urlset>';

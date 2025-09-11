@@ -3,8 +3,13 @@
 import { Header } from "@/components/layout";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Script from "next/script";
+import { generateAppStructuredData } from "@/lib/utils/structuredDataGenerators";
 
 export default function AboutPage() {
+  // Structured data for the RadioHead application
+  const structuredData = generateAppStructuredData();
+  
   return (
     <div className="flex flex-col h-[100dvh]">
       <Header />
@@ -27,7 +32,8 @@ export default function AboutPage() {
               </p>
               <p className="text-gray-300 mb-4">
                 Uygulama, Next.js 15, ShadCN UI ve modern web teknolojileri
-                kullanılarak geliştirilmiştir.
+                kullanılarak geliştirilmiştir. Canlı radyo dinleme deneyimi sunar ve
+                kullanıcıların favori radyolarını kaydetmelerine olanak tanır.
               </p>
             </section>
 
@@ -150,6 +156,15 @@ export default function AboutPage() {
           </div>
         </div>
       </div>
+      
+      {/* Structured Data for SEO */}
+      <Script
+        id="radiohead-structured-data"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData),
+        }}
+      />
     </div>
   );
 }

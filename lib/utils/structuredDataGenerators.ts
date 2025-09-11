@@ -16,7 +16,7 @@ export function generateAppStructuredData() {
     applicationCategory: "MusicApplication",
     operatingSystem: "Web",
     description:
-      "RadioHead ile favori radyolarını kendi listeni oluşturarak dinleyebilirsin. İstediğin anda bir radyodan diğerine geç, durdur, tekrar başlat. Radyon, senin frekansında. Modern ve kullanımı kolay arayüzü ile favori radyo istasyonlarınızı dinleyin. RadioHead, Türkiye'nin en popüler radyo istasyonlarını bir arada sunan online bir radyo uygulamasıdır.",
+      "RadioHead ile canlı radyo dinle. Favori radyoların ile kendi listeni oluşturarak dinleyebilirsin. İstediğin anda bir radyodan diğerine geç, durdur, tekrar başlat. Radyon, senin frekansında. Modern ve kullanımı kolay arayüzü ile radyo dinleyin.",
     url: baseUrl,
     offers: {
       "@type": "Offer",
@@ -25,6 +25,8 @@ export function generateAppStructuredData() {
     },
     availableLanguage: "tr",
     countryOfOrigin: "TR",
+    keywords:
+      "radyo dinle, canlı radyo dinle, canlı radyo, çevrimiçi radyo, türk radyo, müzik radyo",
   };
 }
 
