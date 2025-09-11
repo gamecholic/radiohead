@@ -7,20 +7,24 @@ import { getBaseUrl, getGroupUrl } from "@/lib/utils/structuredDataHelpers";
  */
 export function generateAppStructuredData() {
   const baseUrl = getBaseUrl();
-  
+
   return {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    "name": "RadioHead",
-    "applicationCategory": "MusicApplication",
-    "operatingSystem": "Web",
-    "description": "A modern online radio application with a Spotify/Youtube Music-inspired interface",
-    "url": baseUrl,
-    "offers": {
+    name: "RadioHead",
+    alternateName: "RadioHead Türkiye",
+    applicationCategory: "MusicApplication",
+    operatingSystem: "Web",
+    description:
+      "RadioHead ile favori radyolarını kendi listeni oluşturarak dinleyebilirsin. İstediğin anda bir radyodan diğerine geç, durdur, tekrar başlat. Radyon, senin frekansında. Modern ve kullanımı kolay arayüzü ile favori radyo istasyonlarınızı dinleyin. RadioHead, Türkiye'nin en popüler radyo istasyonlarını bir arada sunan online bir radyo uygulamasıdır.",
+    url: baseUrl,
+    offers: {
       "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
-    }
+      price: "0",
+      priceCurrency: "USD",
+    },
+    availableLanguage: "tr",
+    countryOfOrigin: "TR",
   };
 }
 
@@ -31,15 +35,21 @@ export function generateAppStructuredData() {
  */
 export function generateStationStructuredData(station: Station) {
   const baseUrl = getBaseUrl();
-  
+
   return {
     "@context": "https://schema.org",
     "@type": "RadioStation",
-    "name": station.stationName,
-    "description": `${station.stationName} - ${station.stationCategories[0] || "Music"} radio station`,
-    "image": station.stationIconUrl ? `${baseUrl}${station.stationIconUrl}` : undefined,
-    "url": `${baseUrl}${getGroupUrl(station.radioGroups[0] || "radio")}`,
-    "genre": station.stationCategories[0] || "Music"
+    name: station.stationName,
+    description: `${station.stationName} - ${
+      station.stationCategories[0] || "Müzik"
+    } Türkçe radyo istasyonu`,
+    image: station.stationIconUrl
+      ? `${baseUrl}${station.stationIconUrl}`
+      : undefined,
+    url: `${baseUrl}${getGroupUrl(station.radioGroups[0] || "radio")}`,
+    genre: station.stationCategories[0] || "Müzik",
+    availableLanguage: "tr",
+    countryOfOrigin: "TR",
   };
 }
 
