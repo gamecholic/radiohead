@@ -124,9 +124,7 @@ export function Header() {
             />
           </div>
         </div>
-        <div className="flex items-center space-x-4">
-          <div className="h-8 w-8 rounded-full bg-gradient-to-br from-pink-500 to-amber-500"></div>
-        </div>
+        <div className="flex items-center space-x-4"></div>
       </header>
 
       {/* Search Overlay for Mobile */}
