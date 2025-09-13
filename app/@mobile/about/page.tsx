@@ -76,7 +76,7 @@ export default function MobileAbout() {
                 iletişime geçin:
               </p>
               <p className="text-center text-white my-4">
-                radyozen.destek@gamil.com
+                radyozen.destek@gmail.com
               </p>
               <p className="text-gray-400 text-sm">
                 İlgili telif hakkı sahipleri tarafından talep edilmesi

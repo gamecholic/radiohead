@@ -75,10 +75,10 @@ export default function AboutPage() {
               </p>
               <p className="text-center text-lg font-semibold text-white my-6">
                 <a
-                  href="mailto:radyozen.destek@gamil.com"
+                  href="mailto:radyozen.destek@gmail.com"
                   className="text-blue-400 hover:text-blue-300 transition-colors"
                 >
-                  radyozen.destek@gamil.com
+                  radyozen.destek@gmail.com
                 </a>
               </p>
               <p className="text-gray-300 mb-4">
