@@ -69,7 +69,7 @@ export function DynamicTitleHandler() {
         );
     } else {
       // Reset to default when no station is playing
-      document.title = "RadyoZen - Çevrimiçi Radyo Uygulaması";
+      document.title = "RadyoZen - Online Radyo Uygulaması";
 
       const metaDescription = document.querySelector(
         'meta[name="description"]'
@@ -94,10 +94,7 @@ export function DynamicTitleHandler() {
       const twitterImage = document.querySelector('meta[name="twitter:image"]');
 
       if (ogTitle)
-        ogTitle.setAttribute(
-          "content",
-          "RadyoZen - Çevrimiçi Radyo Uygulaması"
-        );
+        ogTitle.setAttribute("content", "RadyoZen - Online Radyo Uygulaması");
       if (ogDescription)
         ogDescription.setAttribute(
           "content",
@@ -111,7 +108,7 @@ export function DynamicTitleHandler() {
       if (twitterTitle)
         twitterTitle.setAttribute(
           "content",
-          "RadyoZen - Çevrimiçi Radyo Uygulaması"
+          "RadyoZen - Online Radyo Uygulaması"
         );
       if (twitterDescription)
         twitterDescription.setAttribute(

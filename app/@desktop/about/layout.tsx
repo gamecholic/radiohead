@@ -1,10 +1,10 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Hakkında | RadyoZen - Çevrimiçi Radyo Uygulaması",
+  title: "Hakkında | RadyoZen - Online Radyo Uygulaması",
   description: "RadyoZen uygulaması hakkında bilgiler, yasal uyarılar, telif hakkı bildirimi ve sorumluluk reddi beyanı",
   openGraph: {
-    title: "Hakkında | RadyoZen - Çevrimiçi Radyo Uygulaması",
+    title: "Hakkında | RadyoZen - Online Radyo Uygulaması",
     description: "RadyoZen uygulaması hakkında bilgiler, yasal uyarılar, telif hakkı bildirimi ve sorumluluk reddi beyanı",
     url: "https://radyozen.com/about",
     siteName: "RadyoZen",
