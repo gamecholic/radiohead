@@ -1,8 +1,8 @@
-# RadioHead - Online Radio Application Documentation
+# RadyoZen - Online Radio Application Documentation
 
 ## Overview
 
-RadioHead is a modern online radio application built with Next.js 15 and shadcn/ui. It provides a Spotify/Youtube Music-inspired interface for listening to various radio stations with features like favorites, playlists, and listening history.
+RadyoZen is a modern online radio application built with Next.js 15 and shadcn/ui. It provides a Spotify/Youtube Music-inspired interface for listening to various radio stations with features like favorites, playlists, and listening history.
 
 ## Tech Stack
 

@@ -2,7 +2,7 @@ import { Station, RadioGroup } from "@/lib/types";
 import { getBaseUrl, getGroupUrl } from "@/lib/utils/structuredDataHelpers";
 
 /**
- * Generates structured data for the RadioHead application
+ * Generates structured data for the RadyoZen application
  * @returns Structured data object for WebApplication
  */
 export function generateAppStructuredData() {
@@ -11,12 +11,12 @@ export function generateAppStructuredData() {
   return {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    name: "RadioHead",
-    alternateName: "RadioHead Türkiye",
+    name: "RadyoZen",
+    alternateName: "RadyoZen Türkiye",
     applicationCategory: "MusicApplication",
     operatingSystem: "Web",
     description:
-      "RadioHead ile canlı radyo dinle. Favori radyoların ile kendi listeni oluşturarak dinleyebilirsin. İstediğin anda bir radyodan diğerine geç, durdur, tekrar başlat. Radyon, senin frekansında. Modern ve kullanımı kolay arayüzü ile radyo dinleyin.",
+      "RadyoZen ile canlı radyo dinle. Favori radyoların ile kendi listeni oluşturarak dinleyebilirsin. İstediğin anda bir radyodan diğerine geç, durdur, tekrar başlat. Radyon, senin frekansında. Modern ve kullanımı kolay arayüzü ile radyo dinleyin.",
     url: baseUrl,
     offers: {
       "@type": "Offer",

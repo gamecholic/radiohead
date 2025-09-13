@@ -87,13 +87,13 @@ export function Header() {
           <div className="relative h-8 w-8">
             <Image
               src="/icons/icon-192x192.png"
-              alt="RadioHead Logo"
+              alt="RadyoZen Logo"
               width={32}
               height={32}
               className="object-contain"
             />
           </div>
-          <span className="text-xl font-bold text-white">RadioHead</span>
+          <span className="text-xl font-bold text-white">RadyoZen</span>
         </Link>
         <Button
           variant="ghost"

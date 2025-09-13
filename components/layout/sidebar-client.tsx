@@ -28,13 +28,13 @@ export function SidebarClient({ radioGroups }: SidebarClientProps) {
           <div className="relative h-8 w-8">
             <Image
               src="/icons/icon-192x192.png"
-              alt="RadioHead Logo"
+              alt="RadyoZen Logo"
               width={32}
               height={32}
               className="object-contain"
             />
           </div>
-          <h1 className="text-2xl font-bold text-white">RadioHead</h1>
+          <h1 className="text-2xl font-bold text-white">RadyoZen</h1>
         </Link>
       </div>
       <nav className="px-4 py-2">

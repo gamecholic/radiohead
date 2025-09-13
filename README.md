@@ -1,4 +1,4 @@
-# RadioHead - Online Radio App
+# RadyoZen - Online Radio App
 
 A modern, sleek online radio application built with Next.js 15 and shadcn/ui. Listen to your favorite radio stations with a Spotify/Youtube Music-inspired interface.
 

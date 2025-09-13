@@ -7,7 +7,7 @@ import Script from "next/script";
 import { generateAppStructuredData } from "@/lib/utils/structuredDataGenerators";
 
 export default function AboutPage() {
-  // Structured data for the RadioHead application
+  // Structured data for the RadyoZen application
   const structuredData = generateAppStructuredData();
   
   return (
@@ -21,11 +21,9 @@ export default function AboutPage() {
 
           <div className="bg-black/30 backdrop-blur-md rounded-xl p-6 border border-gray-800">
             <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-white mb-4">
-                RadioHead Uygulaması
-              </h2>
-              <p className="text-gray-300 mb-4">
-                RadioHead, bireysel, kar amacı gütmeyen bir projedir ve yalnızca
+              <h2 className="text-xl font-semibold mb-2">RadyoZen Nedir?</h2>
+              <p className="mb-4">
+                RadyoZen, bireysel, kar amacı gütmeyen bir projedir ve yalnızca
                 radyo yayınlarına bağlantılar sağlar. Bu uygulama eğitim amaçlı
                 olarak geliştirilmiştir ve hiçbir ticari kazanç amacı
                 güdülmemektedir.
@@ -43,7 +41,7 @@ export default function AboutPage() {
               </h2>
               <p className="text-gray-300 mb-4">
                 Bu site, kar amacı gütmeyen bir bireysel geliştirici tarafından
-                oluşturulmuştur. RadioHead radyo yayını üretmez; yalnızca mevcut
+                oluşturulmuştur. RadyoZen radyo yayını üretmez; yalnızca mevcut
                 Türk radyo kanallarına erişim sağlayan bağlantılar sunar.
               </p>
               <p className="text-gray-300 mb-4">
@@ -132,7 +130,7 @@ export default function AboutPage() {
                 Sorumluluk Reddi
               </h2>
               <p className="text-gray-300 mb-4">
-                RadioHead, bireysel, kar amacı gütmeyen bir projedir ve yalnızca
+                RadyoZen, bireysel, kar amacı gütmeyen bir projedir ve yalnızca
                 radyo yayınlarına bağlantılar sağlar. Yayın kesintileri,
                 linklerin çalışmaması veya teknik sorunlardan doğabilecek
                 herhangi bir doğrudan ya da dolaylı zarar, kullanıcıya aittir.
@@ -159,7 +157,7 @@ export default function AboutPage() {
       
       {/* Structured Data for SEO */}
       <Script
-        id="radiohead-structured-data"
+        id="radyozen-structured-data"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(structuredData),

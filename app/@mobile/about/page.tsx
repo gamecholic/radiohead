@@ -10,8 +10,8 @@ export default function MobileAbout() {
       <ScrollArea className="flex-1">
         <div className="px-4 pb-16">
           <div className="mt-4 mb-6">
-            <h1 className="text-2xl font-bold">RadioHead</h1>
-            <p className="text-gray-400">Çevrimiçi Radyo Uygulaması</p>
+            <h1 className="text-2xl font-bold">RadyoZen</h1>
+            <p className="text-gray-400">Online Radyo Uygulaması</p>
           </div>
 
           <div className="bg-white/5 backdrop-blur-sm rounded-xl p-5 border border-white/10 mb-6">
@@ -19,19 +19,19 @@ export default function MobileAbout() {
               <div className="relative w-16 h-16 mr-4">
                 <Image
                   src="/icons/icon-192x192.png"
-                  alt="RadioHead Logo"
+                  alt="RadyoZen Logo"
                   fill
                   className="object-contain rounded-xl"
                 />
               </div>
               <div>
-                <h2 className="text-lg font-bold">RadioHead</h2>
+                <h2 className="text-lg font-bold">RadyoZen</h2>
                 <p className="text-gray-400 text-sm">Modern Radyo Deneyimi</p>
               </div>
             </div>
 
             <p className="text-gray-300 mb-4">
-              RadioHead, bireysel, kar amacı gütmeyen bir projedir ve yalnızca
+              RadyoZen, bireysel, kar amacı gütmeyen bir projedir ve yalnızca
               radyo yayınlarına bağlantılar sağlar. Bu uygulama eğitim amaçlı
               olarak geliştirilmiştir ve hiçbir ticari kazanç amacı
               güdülmemektedir.
@@ -45,7 +45,7 @@ export default function MobileAbout() {
               </h3>
               <p className="text-gray-400 text-sm mb-4">
                 Bu site, kar amacı gütmeyen bir bireysel geliştirici tarafından
-                oluşturulmuştur. RadioHead radyo yayını üretmez; yalnızca mevcut
+                oluşturulmuştur. RadyoZen radyo yayını üretmez; yalnızca mevcut
                 Türk radyo kanallarına erişim sağlayan bağlantılar sunar.
               </p>
               <p className="text-gray-400 text-sm">
@@ -117,7 +117,7 @@ export default function MobileAbout() {
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-5 border border-white/10">
               <h3 className="font-bold mb-2">Sorumluluk Reddi</h3>
               <p className="text-gray-400 text-sm mb-4">
-                RadioHead, bireysel, kar amacı gütmeyen bir projedir ve yalnızca
+                RadyoZen, bireysel, kar amacı gütmeyen bir projedir ve yalnızca
                 radyo yayınlarına bağlantılar sağlar. Yayın kesintileri,
                 linklerin çalışmaması veya teknik sorunlardan doğabilecek
                 herhangi bir doğrudan ya da dolaylı zarar, kullanıcıya aittir.

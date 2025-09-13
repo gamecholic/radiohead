@@ -1,19 +1,19 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Hakkında | RadioHead - Çevrimiçi Radyo Uygulaması",
-  description: "RadioHead uygulaması hakkında bilgiler, yasal uyarılar, telif hakkı bildirimi ve sorumluluk reddi beyanı",
+  title: "Hakkında | RadyoZen - Çevrimiçi Radyo Uygulaması",
+  description: "RadyoZen uygulaması hakkında bilgiler, yasal uyarılar, telif hakkı bildirimi ve sorumluluk reddi beyanı",
   openGraph: {
-    title: "Hakkında | RadioHead - Çevrimiçi Radyo Uygulaması",
-    description: "RadioHead uygulaması hakkında bilgiler, yasal uyarılar, telif hakkı bildirimi ve sorumluluk reddi beyanı",
-    url: "https://radiohead-one.vercel.app/about",
-    siteName: "RadioHead",
+    title: "Hakkında | RadyoZen - Çevrimiçi Radyo Uygulaması",
+    description: "RadyoZen uygulaması hakkında bilgiler, yasal uyarılar, telif hakkı bildirimi ve sorumluluk reddi beyanı",
+    url: "https://radyozen.com/about",
+    siteName: "RadyoZen",
     images: [
       {
         url: "/icons/icon-512x512.png",
         width: 512,
         height: 512,
-        alt: "RadioHead Logo",
+        alt: "RadyoZen Logo",
       },
     ],
     locale: "tr_TR",
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hakkında | RadioHead - Çevrimiçi Radyo Uygulaması",
-    description: "RadioHead uygulaması hakkında bilgiler, yasal uyarılar, telif hakkı bildirimi ve sorumluluk reddi beyanı",
+    title: "Hakkında | RadyoZen - Online Radyo Uygulaması",
+    description: "RadyoZen uygulaması hakkında bilgiler, yasal uyarılar, telif hakkı bildirimi ve sorumluluk reddi beyanı",
     images: ["/icons/icon-512x512.png"],
   },
 };

@@ -1,19 +1,19 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Favoriler | RadioHead - Çevrimiçi Radyo Uygulaması",
+  title: "Favoriler | RadyoZen - Online Radyo Uygulaması",
   description: "Favori radyo istasyonlarınızı kaydedin ve kolayca erişin",
   openGraph: {
-    title: "Favoriler | RadioHead - Çevrimiçi Radyo Uygulaması",
+    title: "Favoriler | RadyoZen - Online Radyo Uygulaması",
     description: "Favori radyo istasyonlarınızı kaydedin ve kolayca erişin",
-    url: "https://radiohead-one.vercel.app/favorites",
-    siteName: "RadioHead",
+    url: "https://radyozen.com/favorites",
+    siteName: "RadyoZen",
     images: [
       {
         url: "/icons/icon-512x512.png",
         width: 512,
         height: 512,
-        alt: "RadioHead Logo",
+        alt: "RadyoZen Logo",
       },
     ],
     locale: "tr_TR",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Favoriler | RadioHead - Çevrimiçi Radyo Uygulaması",
+    title: "Favoriler | RadyoZen - Online Radyo Uygulaması",
     description: "Favori radyo istasyonlarınızı kaydedin ve kolayca erişin",
     images: ["/icons/icon-512x512.png"],
   },

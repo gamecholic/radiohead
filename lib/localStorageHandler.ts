@@ -2,10 +2,10 @@
 
 // Keys used in the application
 const STORAGE_KEYS = {
-  VOLUME: 'radiohead-volume',
-  CURRENT_STATION: 'radiohead-current-station',
-  STATION_LIST: 'radiohead-station-list',
-  STATION_LIST_SOURCE: 'radiohead-station-list-source',
+  VOLUME: 'radyozen-volume',
+  CURRENT_STATION: 'radyozen-current-station',
+  STATION_LIST: 'radyozen-station-list',
+  STATION_LIST_SOURCE: 'radyozen-station-list-source',
   USER_FAVORITES: (userId: string) => `favorites_${userId ?? "temp-user"}`,
   USER_PLAYLISTS: (userId: string) => `playlists_${userId ?? "temp-user"}`,
   USER_HISTORY: (userId: string) => `history_${userId ?? "temp-user"}`

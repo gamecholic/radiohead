@@ -6,7 +6,7 @@ import Script from "next/script";
 import { generateAppStructuredData } from "@/lib/utils/structuredDataGenerators";
 
 export default function Home() {
-  // Structured data for the RadioHead application
+  // Structured data for the RadyoZen application
   const structuredData = generateAppStructuredData();
 
   return (
@@ -28,7 +28,7 @@ export default function Home() {
 
       {/* Structured Data for SEO */}
       <Script
-        id="radiohead-structured-data"
+        id="radyozen-structured-data"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(structuredData),

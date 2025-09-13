@@ -1,6 +1,6 @@
-# RadioHead Design Guide
+# RadyoZen Design Guide
 
-This design guide describes the visual and structural specifications for building the RadioHead app UI in **Next.js** using **shadcn/ui** and **Tailwind CSS**.
+This design guide describes the visual and structural specifications for building the RadyoZen app UI in **Next.js** using **shadcn/ui** and **Tailwind CSS**.
 
 ## 🎨 Color Palette
 
@@ -143,5 +143,5 @@ This design guide describes the visual and structural specifications for buildin
 
 ---
 
-This guide ensures the RadioHead app maintains a clean, cohesive, and responsive aesthetic across desktop and mobile while being easy to implement with Next.js + shadcn/ui + Tailwind.
+This guide ensures the RadyoZen app maintains a clean, cohesive, and responsive aesthetic across desktop and mobile while being easy to implement with Next.js + shadcn/ui + Tailwind.
 

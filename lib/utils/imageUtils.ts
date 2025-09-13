@@ -18,7 +18,7 @@ export function getAbsoluteImageUrl(relativePath: string): string {
     
     // For server-side rendering, we need to use the NEXT_PUBLIC_BASE_URL environment variable
     // or fallback to a default
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://radiohead-one.vercel.app';
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://radyozen.com';
     return `${baseUrl}${relativePath}`;
   }
   

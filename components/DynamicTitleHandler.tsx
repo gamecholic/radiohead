@@ -12,7 +12,7 @@ export function DynamicTitleHandler() {
   useEffect(() => {
     // Update title when station changes or when pathname changes
     if (currentStation) {
-      document.title = `${currentStation.stationName} | RadioHead`;
+      document.title = `${currentStation.stationName} | RadyoZen`;
 
       // Update meta description for better SEO when playing a station
       const metaDescription = document.querySelector(
@@ -40,7 +40,7 @@ export function DynamicTitleHandler() {
       if (ogTitle)
         ogTitle.setAttribute(
           "content",
-          `${currentStation.stationName} | RadioHead`
+          `${currentStation.stationName} | RadyoZen`
         );
       if (ogDescription)
         ogDescription.setAttribute(
@@ -55,7 +55,7 @@ export function DynamicTitleHandler() {
       if (twitterTitle)
         twitterTitle.setAttribute(
           "content",
-          `${currentStation.stationName} | RadioHead`
+          `${currentStation.stationName} | RadyoZen`
         );
       if (twitterDescription)
         twitterDescription.setAttribute(
@@ -69,7 +69,7 @@ export function DynamicTitleHandler() {
         );
     } else {
       // Reset to default when no station is playing
-      document.title = "RadioHead - Çevrimiçi Radyo Uygulaması";
+      document.title = "RadyoZen - Çevrimiçi Radyo Uygulaması";
 
       const metaDescription = document.querySelector(
         'meta[name="description"]'
@@ -77,7 +77,7 @@ export function DynamicTitleHandler() {
       if (metaDescription) {
         metaDescription.setAttribute(
           "content",
-          "RadioHead ile favori radyolarını kendi listeni oluşturarak dinleyebilirsin. İstediğin anda bir radyodan diğerine geç, durdur, tekrar başlat. Radyon, senin frekansında. Modern ve kullanımı kolay arayüzü ile favori radyo istasyonlarınızı dinleyin."
+          "RadyoZen ile favori radyolarını kendi listeni oluşturarak dinleyebilirsin. İstediğin anda bir radyodan diğerine geç, durdur, tekrar başlat. Radyon, senin frekansında. Modern ve kullanımı kolay arayüzü ile favori radyo istasyonlarınızı dinleyin."
         );
       }
 
@@ -96,32 +96,32 @@ export function DynamicTitleHandler() {
       if (ogTitle)
         ogTitle.setAttribute(
           "content",
-          "RadioHead - Çevrimiçi Radyo Uygulaması"
+          "RadyoZen - Çevrimiçi Radyo Uygulaması"
         );
       if (ogDescription)
         ogDescription.setAttribute(
           "content",
-          "RadioHead ile favori radyolarını kendi listeni oluşturarak dinleyebilirsin. İstediğin anda bir radyodan diğerine geç, durdur, tekrar başlat. Radyon, senin frekansında. Modern ve kullanımı kolay arayüzü ile favori radyo istasyonlarınızı dinleyin."
+          "RadyoZen ile favori radyolarını kendi listeni oluşturarak dinleyebilirsin. İstediğin anda bir radyodan diğerine geç, durdur, tekrar başlat. Radyon, senin frekansında. Modern ve kullanımı kolay arayüzü ile favori radyo istasyonlarınızı dinleyin."
         );
       if (ogImage)
         ogImage.setAttribute(
           "content",
-          "https://radiohead-one.vercel.app/icons/icon-512x512.png"
+          "https://radyozen.com/icons/icon-512x512.png"
         );
       if (twitterTitle)
         twitterTitle.setAttribute(
           "content",
-          "RadioHead - Çevrimiçi Radyo Uygulaması"
+          "RadyoZen - Çevrimiçi Radyo Uygulaması"
         );
       if (twitterDescription)
         twitterDescription.setAttribute(
           "content",
-          "RadioHead ile favori radyolarını kendi listeni oluşturarak dinleyebilirsin. İstediğin anda bir radyodan diğerine geç, durdur, tekrar başlat. Radyon, senin frekansında. Modern ve kullanımı kolay arayüzü ile favori radyo istasyonlarınızı dinleyin."
+          "RadyoZen ile favori radyolarını kendi listeni oluşturarak dinleyebilirsin. İstediğin anda bir radyodan diğerine geç, durdur, tekrar başlat. Radyon, senin frekansında. Modern ve kullanımı kolay arayüzü ile favori radyo istasyonlarınızı dinleyin."
         );
       if (twitterImage)
         twitterImage.setAttribute(
           "content",
-          "https://radiohead-one.vercel.app/icons/icon-512x512.png"
+          "https://radyozen.com/icons/icon-512x512.png"
         );
     }
   }, [currentStation, pathname]);

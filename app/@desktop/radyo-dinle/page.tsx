@@ -10,7 +10,7 @@ import { generateAppStructuredData } from "@/lib/utils/structuredDataGenerators"
 export default async function RadyoDinlePage() {
   const radioGroups = await getRadioGroupsWithSlugs();
 
-  // Structured data for the RadioHead application
+  // Structured data for the RadyoZen application
   const structuredData = generateAppStructuredData();
 
   return (
@@ -26,7 +26,7 @@ export default async function RadyoDinlePage() {
                 Canlı Radyo Dinle - Radyo Dinle
               </h1>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                RadioHead ile canlı radyo dinle. Favori radyoların ile kendi
+                RadyoZen ile canlı radyo dinle. Favori radyoların ile kendi
                 listeni oluşturarak dinleyebilirsin. Radyon, senin frekansında.
                 Modern ve kullanımı kolay arayüzü ile radyo dinleyin. İstediğin
                 anda bir radyodan diğerine geç, durdur, tekrar başlat.
@@ -93,7 +93,7 @@ export default async function RadyoDinlePage() {
 
             <div className="bg-black/30 backdrop-blur-md rounded-xl p-6 border border-gray-800">
               <h2 className="text-2xl font-semibold text-white mb-4">
-                Neden RadioHead?
+                Neden RadyoZen?
               </h2>
               <ul className="text-gray-300 space-y-2">
                 <li className="flex items-start">
@@ -124,7 +124,7 @@ export default async function RadyoDinlePage() {
 
       {/* Structured Data for SEO */}
       <Script
-        id="radiohead-structured-data"
+        id="radyozen-structured-data"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(structuredData),
@@ -136,9 +136,9 @@ export default async function RadyoDinlePage() {
 
 export async function generateMetadata() {
   return {
-    title: "Canlı Radyo Dinle | Radyo Dinle | RadioHead",
+    title: "Canlı Radyo Dinle | Radyo Dinle | RadyoZen",
     description:
-      "RadioHead ile canlı radyo dinle, radyo dinle ve favori radyolarını kendi listeni oluşturarak dinleyebilirsin. İstediğin anda bir radyodan diğerine geç, durdur, tekrar başlat.",
+      "RadyoZen ile canlı radyo dinle, radyo dinle ve favori radyolarını kendi listeni oluşturarak dinleyebilirsin. İstediğin anda bir radyodan diğerine geç, durdur, tekrar başlat.",
     keywords: [
       "radyo dinle",
       "canlı radyo dinle",
