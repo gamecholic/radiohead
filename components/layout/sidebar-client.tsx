@@ -41,6 +41,7 @@ export function SidebarClient({ radioGroups }: SidebarClientProps) {
         {mainNavItems.map((item) => (
           <Link
             key={item.name}
+            title={item.name}
             href={item.href}
             className={`block rounded-lg px-4 py-2 transition-colors ${
               pathname === item.href
@@ -61,6 +62,7 @@ export function SidebarClient({ radioGroups }: SidebarClientProps) {
             {radioGroups.map((group) => (
               <Link
                 key={group.slug}
+                title={group.groupName}
                 href={`/group/${group.slug}`}
                 className={`block rounded-lg px-4 py-2 text-sm transition-colors ${
                   pathname === `/group/${group.slug}`
