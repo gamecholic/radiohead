@@ -2,10 +2,11 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Hakkında | RadyoZen - Online Radyo Uygulaması",
-  description: "RadyoZen uygulaması hakkında bilgiler, yasal uyarılar, telif hakkı bildirimi ve sorumluluk reddi beyanı",
+  description: "RadyoZen uygulaması hakkında bilgiler, yasal uyarılar, telif hakkı bildirimi ve sorumluluk reddi beyanı. Canlı radyo dinle uygulaması.",
+  keywords: ["radyo dinle", "canlı radyo dinle", "radyo uygulaması", "radyozen hakkında", "ücretsiz radyo"],
   openGraph: {
     title: "Hakkında | RadyoZen - Online Radyo Uygulaması",
-    description: "RadyoZen uygulaması hakkında bilgiler, yasal uyarılar, telif hakkı bildirimi ve sorumluluk reddi beyanı",
+    description: "RadyoZen uygulaması hakkında bilgiler, yasal uyarılar, telif hakkı bildirimi ve sorumluluk reddi beyanı. Canlı radyo dinle uygulaması.",
     url: "https://radyozen.com/about",
     siteName: "RadyoZen",
     images: [
@@ -22,8 +23,14 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Hakkında | RadyoZen - Online Radyo Uygulaması",
-    description: "RadyoZen uygulaması hakkında bilgiler, yasal uyarılar, telif hakkı bildirimi ve sorumluluk reddi beyanı",
+    description: "RadyoZen uygulaması hakkında bilgiler, yasal uyarılar, telif hakkı bildirimi ve sorumluluk reddi beyanı. Canlı radyo dinle uygulaması.",
     images: ["/icons/icon-512x512.png"],
+  },
+  alternates: {
+    canonical: "https://radyozen.com/about",
+    languages: {
+      "tr-TR": "https://radyozen.com/about",
+    },
   },
 };
 

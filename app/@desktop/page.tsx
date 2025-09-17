@@ -4,6 +4,41 @@ import { FeaturedSection } from "../../components/desktop/sections";
 import { CategorySection } from "../../components/desktop/sections";
 import Script from "next/script";
 import { generateAppStructuredData } from "@/lib/utils/structuredDataGenerators";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "RadyoZen - Canlı Radyo Dinle | Radyo Dinle",
+  description: "RadyoZen ile canlı radyo dinle. Favori radyoların ile kendi listeni oluşturarak dinleyebilirsin. İstediğin anda bir radyodan diğerine geç, durdur, tekrar başlat. Radyon, senin frekansında. Modern ve kullanımı kolay arayüzü ile radyo dinleyin.",
+  keywords: ["radyo dinle", "canlı radyo dinle", "canlı radyo", "çevrimiçi radyo", "türk radyo", "müzik radyo"],
+  openGraph: {
+    title: "RadyoZen - Canlı Radyo Dinle | Radyo Dinle",
+    description: "RadyoZen ile canlı radyo dinle. Favori radyoların ile kendi listeni oluşturarak dinleyebilirsin. İstediğin anda bir radyodan diğerine geç, durdur, tekrar başlat. Radyon, senin frekansında. Modern ve kullanımı kolay arayüzü ile radyo dinleyin.",
+    url: "https://radyozen.com",
+    siteName: "RadyoZen",
+    images: [
+      {
+        url: "/icons/icon-512x512.png",
+        width: 512,
+        height: 512,
+        alt: "RadyoZen Logo",
+      },
+    ],
+    locale: "tr_TR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "RadyoZen - Canlı Radyo Dinle | Radyo Dinle",
+    description: "RadyoZen ile canlı radyo dinle. Favori radyoların ile kendi listeni oluşturarak dinleyebilirsin. İstediğin anda bir radyodan diğerine geç, durdur, tekrar başlat. Radyon, senin frekansında. Modern ve kullanımı kolay arayüzü ile radyo dinleyin.",
+    images: ["/icons/icon-512x512.png"],
+  },
+  alternates: {
+    canonical: "https://radyozen.com",
+    languages: {
+      "tr-TR": "https://radyozen.com",
+    },
+  },
+};
 
 export default function Home() {
   // Structured data for the RadyoZen application

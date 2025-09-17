@@ -1,5 +1,7 @@
 'use client';
 
+import { OptimizedImage } from './optimized-image';
+
 interface StationIconProps {
   stationIconUrl?: string;
   stationName: string;
@@ -42,9 +44,11 @@ export function StationIcon({
         <div className="relative h-full w-full flex items-center justify-center">
           {/* Subtle inner glow */}
           <div className="absolute inset-0 rounded-xl shadow-[inset_0_0_10px_rgba(255,255,255,0.1)]"></div>
-          <img 
-            src={stationIconUrl} 
-            alt={stationName} 
+          <OptimizedImage
+            src={stationIconUrl}
+            alt={stationName}
+            width={size === 'xxs' ? 24 : size === 'xs' ? 32 : size === 'sm' ? 56 : size === 'md' ? 80 : 96}
+            height={size === 'xxs' ? 24 : size === 'xs' ? 32 : size === 'sm' ? 56 : size === 'md' ? 80 : 96}
             className={`h-full w-full object-contain ${paddingClasses[size]} filter brightness-110 contrast-125`}
           />
         </div>

@@ -50,6 +50,12 @@ export const metadata: Metadata = {
     images: ["/icons/icon-512x512.png"],
   },
   keywords: ["radyo dinle", "canlı radyo dinle", "canlı radyo", "çevrimiçi radyo", "türk radyo", "müzik radyo"],
+  alternates: {
+    canonical: "https://radyozen.com",
+    languages: {
+      "tr-TR": "https://radyozen.com",
+    },
+  },
 };
 
 export const viewport: Viewport = {
@@ -87,9 +93,11 @@ export default async function RootLayout({
           name="viewport"
           content="width=device-width, initial-scale=1, viewport-fit=cover"
         />
-        <meta name="google-site-verification" content="HPFbkvmbrpAfsWT8hdFNl_HTwVjVM04WjQxUoBhvmMY" />  
         <link rel="manifest" href="/manifest.json" />
         <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
+        <link rel="canonical" href="https://radyozen.com" />
+        <link rel="alternate" hrefLang="tr-TR" href="https://radyozen.com" />
+        <link rel="alternate" hrefLang="x-default" href="https://radyozen.com" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased h-full relative text-foreground bg-gradient-to-b from-gray-900 to-black`}

@@ -44,7 +44,7 @@ export function generateStationStructuredData(station: Station) {
     name: station.stationName,
     description: `${station.stationName} - ${
       station.stationCategories[0] || "Müzik"
-    } Türkçe radyo istasyonu`,
+    } Türkçe radyo istasyonu. Canlı radyo dinle ve favori radyolarınızı keşfedin.`,
     image: station.stationIconUrl
       ? `${baseUrl}${station.stationIconUrl}`
       : undefined,
@@ -52,6 +52,9 @@ export function generateStationStructuredData(station: Station) {
     genre: station.stationCategories[0] || "Müzik",
     availableLanguage: "tr",
     countryOfOrigin: "TR",
+    keywords: `radyo dinle, canlı radyo dinle, ${station.stationName.toLowerCase()}, ${
+      station.stationCity ? station.stationCity.toLowerCase() + " radyo," : ""
+    } ${station.stationCategories[0]?.toLowerCase() || "müzik"} radyo`,
   };
 }
 

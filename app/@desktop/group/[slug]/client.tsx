@@ -29,8 +29,12 @@ export function GroupPageClient({
             {/* Header with group name (desktop) */}
             <div className="mb-8">
               <h1 className="text-3xl font-bold text-white mb-2">
-                {group.groupName}
+                {group.groupName} Radyo İstasyonları
               </h1>
+              <p className="text-gray-400 mb-4">
+                {group.groupName} grubuna ait {stations.length} adet radyo istasyonu. 
+                Canlı radyo dinle ve favori istasyonlarını keşfet.
+              </p>
               <div className="h-1 w-24 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full"></div>
             </div>
 
