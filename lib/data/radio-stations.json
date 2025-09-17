@@ -428,7 +428,7 @@
     "stationCategories": [
       "Pop"
     ],
-    "stationPlaybackUrl": "",
+    "stationPlaybackUrl": "https://moondigitaledge.radyotvonline.net/karadenizfm/playlist.m3u8",
     "radioGroups": [
       "Other",
       "Karadeniz Radyoları"
@@ -2653,9 +2653,9 @@
     "stationName": "Blue Karadeniz Radyo",
     "stationIconUrl": "/images/blue-karadeniz-radyo.webp",
     "stationCategories": [
-      "Web Radyo"
+      "Halk Müziği"
     ],
-    "stationPlaybackUrl": "",
+    "stationPlaybackUrl": "https://sslyayin.netyayin.net/bluekaradeniz/stream?/;stream.mp3",
     "radioGroups": [
       "Other",
       "Karadeniz Radyoları"
@@ -2720,9 +2720,9 @@
     "stationName": "Karadeniz Radyo",
     "stationIconUrl": "/images/karadeniz-radyo.webp",
     "stationCategories": [
-      "Web Radyo"
+      "Halk Müziği"
     ],
-    "stationPlaybackUrl": "",
+    "stationPlaybackUrl": "https://27913.live.streamtheworld.com/KARADENIZ128AAC.aac?/;stream.mp3",
     "radioGroups": [
       "Other",
       "Karadeniz Radyoları"
@@ -3607,7 +3607,7 @@
     "stationCategories": [
       "Halk Müziği"
     ],
-    "stationPlaybackUrl": "",
+    "stationPlaybackUrl": "https://dinle.radyokaradeniz.com/stream?",
     "radioGroups": [
       "Karadeniz Radyoları"
     ]
@@ -3618,7 +3618,7 @@
     "stationCategories": [
       "Halk Müziği"
     ],
-    "stationPlaybackUrl": "",
+    "stationPlaybackUrl": "https://sslyayin.radyoyayini.com:7092/;stream.mp3",
     "radioGroups": [
       "Karadeniz Radyoları"
     ]
@@ -3629,18 +3629,7 @@
     "stationCategories": [
       "Halk Müziği"
     ],
-    "stationPlaybackUrl": "",
-    "radioGroups": [
-      "Karadeniz Radyoları"
-    ]
-  },
-  {
-    "stationName": "Radyo Bordo Mavi FM",
-    "stationIconUrl": "/images/bordo-mavi-radyo.webp",
-    "stationCategories": [
-      "Halk Müziği"
-    ],
-    "stationPlaybackUrl": "",
+    "stationPlaybackUrl": "https://karadenizakustik.radyotvonline.net/;stream.mp3",
     "radioGroups": [
       "Karadeniz Radyoları"
     ]
@@ -3651,7 +3640,7 @@
     "stationCategories": [
       "Halk Müziği"
     ],
-    "stationPlaybackUrl": "",
+    "stationPlaybackUrl": "https://vitaminfm.80.yayin.com.tr/stream?",
     "radioGroups": [
       "Karadeniz Radyoları"
     ]
@@ -3662,29 +3651,7 @@
     "stationCategories": [
       "Halk Müziği"
     ],
-    "stationPlaybackUrl": "",
-    "radioGroups": [
-      "Karadeniz Radyoları"
-    ]
-  },
-  {
-    "stationName": "Karadenizin Sesi Radyosu",
-    "stationIconUrl": "/images/karadenizin-sesi-dinle-100x100.webp",
-    "stationCategories": [
-      "Halk Müziği"
-    ],
-    "stationPlaybackUrl": "",
-    "radioGroups": [
-      "Karadeniz Radyoları"
-    ]
-  },
-  {
-    "stationName": "Trabzon Taka FM",
-    "stationIconUrl": "/images/taka-fm.webp",
-    "stationCategories": [
-      "Halk Müziği"
-    ],
-    "stationPlaybackUrl": "",
+    "stationPlaybackUrl": "https://sssx.radyosfer.com/kemencefm/stream?/;stream.mp3",
     "radioGroups": [
       "Karadeniz Radyoları"
     ]
@@ -3695,7 +3662,7 @@
     "stationCategories": [
       "Halk Müziği"
     ],
-    "stationPlaybackUrl": "",
+    "stationPlaybackUrl": "https://sssx.radyosfer.com/bursakaradenizfm/stream?/;stream.mp3",
     "radioGroups": [
       "Karadeniz Radyoları"
     ]
@@ -3717,7 +3684,7 @@
     "stationCategories": [
       "Halk Müziği"
     ],
-    "stationPlaybackUrl": "",
+    "stationPlaybackUrl": "https://radyo1.radyo-dinle.tc/8138/stream?/;stream.mp3",
     "radioGroups": [
       "Karadeniz Radyoları"
     ]
