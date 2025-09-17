@@ -1,11 +1,51 @@
 // Audio playback utilities
-import Hls from 'hls.js';
 import { isHLSNative } from '@/lib/utils/browser';
 import { Station } from '@/lib/types';
 
+// Type definition for Hls.js
+interface HlsConfig {
+  enableWorker: boolean;
+  lowLatencyMode: boolean;
+  backBufferLength: number;
+}
+
+// Event callback types
+type HlsManifestParsedCallback = () => void;
+type HlsErrorCallback = (event: string, data: HlsErrorData) => void;
+
+interface HlsInstance {
+  destroy: () => void;
+  loadSource: (url: string) => void;
+  attachMedia: (element: HTMLMediaElement) => void;
+  on(event: 'hlsManifestParsed', callback: HlsManifestParsedCallback): void;
+  on(event: 'hlsError', callback: HlsErrorCallback): void;
+  startLoad: () => void;
+  recoverMediaError: () => void;
+}
+
+interface HlsErrorData {
+  fatal: boolean;
+  type: string;
+}
+
+interface HlsStatic {
+  new(config: HlsConfig): HlsInstance;
+  isSupported: () => boolean;
+  Events: {
+    MANIFEST_PARSED: 'hlsManifestParsed';
+    ERROR: 'hlsError';
+  };
+  ErrorTypes: {
+    NETWORK_ERROR: string;
+    MEDIA_ERROR: string;
+  };
+}
+
+let Hls: HlsStatic | null = null;
+
 export class AudioPlayer {
   private audioRef: HTMLAudioElement | null = null;
-  private hlsRef: Hls | null = null;
+  private hlsRef: HlsInstance | null = null;
   private isIOSSafari: boolean;
 
   constructor(isIOSSafari: boolean) {
@@ -30,6 +70,12 @@ export class AudioPlayer {
 
     try {
       if (isHLS && !isHLSNative()) {
+        // Dynamically import hls.js only when needed
+        if (!Hls) {
+          const HlsModule = await import('hls.js');
+          Hls = HlsModule.default as HlsStatic;
+        }
+        
         // Use hls.js for browsers that don't support HLS natively
         if (Hls.isSupported()) {
           this.hlsRef = new Hls({
@@ -47,36 +93,38 @@ export class AudioPlayer {
           }
 
           return new Promise((resolve) => {
-            this.hlsRef!.on(Hls.Events.MANIFEST_PARSED, () => {
-              if (this.audioRef) {
-                const playPromise = this.audioRef.play();
-                if (playPromise !== undefined) {
-                  playPromise.then(() => resolve(true)).catch(() => resolve(false));
-                } else {
-                  resolve(true);
+            if (Hls) {
+              this.hlsRef!.on(Hls.Events.MANIFEST_PARSED, () => {
+                if (this.audioRef) {
+                  const playPromise = this.audioRef.play();
+                  if (playPromise !== undefined) {
+                    playPromise.then(() => resolve(true)).catch(() => resolve(false));
+                  } else {
+                    resolve(true);
+                  }
                 }
-              }
-            });
-            
-            this.hlsRef!.on(Hls.Events.ERROR, (event, data) => {
-              console.error('HLS error:', event, data);
-              if (data.fatal) {
-                switch (data.type) {
-                  case Hls.ErrorTypes.NETWORK_ERROR:
-                    console.log('Trying to recover network error...');
-                    this.hlsRef?.startLoad();
-                    break;
-                  case Hls.ErrorTypes.MEDIA_ERROR:
-                    console.log('Trying to recover media error...');
-                    this.hlsRef?.recoverMediaError();
-                    break;
-                  default:
-                    console.error('Unrecoverable HLS error');
-                    resolve(false);
-                    break;
+              });
+              
+              this.hlsRef!.on(Hls.Events.ERROR, (event, data: HlsErrorData) => {
+                console.error('HLS error:', event, data);
+                if (data.fatal) {
+                  switch (data.type) {
+                    case Hls!.ErrorTypes.NETWORK_ERROR:
+                      console.log('Trying to recover network error...');
+                      this.hlsRef?.startLoad();
+                      break;
+                    case Hls!.ErrorTypes.MEDIA_ERROR:
+                      console.log('Trying to recover media error...');
+                      this.hlsRef?.recoverMediaError();
+                      break;
+                    default:
+                      console.error('Unrecoverable HLS error');
+                      resolve(false);
+                      break;
+                  }
                 }
-              }
-            });
+              });
+            }
           });
         } else {
           console.error('HLS is not supported in this browser');
