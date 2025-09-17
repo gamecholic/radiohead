@@ -8,6 +8,7 @@ import { useFavorites } from "@/contexts/FavoritesContext";
 import { Station } from "@/lib/types";
 import { Play, Pause, Star } from "lucide-react";
 import { motion } from "framer-motion";
+import { getAbsoluteImageUrl } from "@/lib/utils/imageUtils";
 
 interface FeaturedStationProps {
   station: Station;
@@ -57,6 +58,7 @@ export function FeaturedStation({
             <StationIcon
               stationIconUrl={station.stationIconUrl}
               stationName={station.stationName}
+              priority={true}
               size="lg"
             />
           </div>

@@ -6,12 +6,14 @@ interface StationIconProps {
   stationIconUrl?: string;
   stationName: string;
   size?: 'xxs' | 'xs' | 'sm' | 'md' | 'lg';
+  priority?: boolean;
 }
 
 export function StationIcon({ 
   stationIconUrl, 
   stationName, 
-  size = 'md' 
+  size = 'md',
+  priority = false
 }: StationIconProps) {
   // Define sizes
   const sizeClasses = {
@@ -47,6 +49,7 @@ export function StationIcon({
           <OptimizedImage
             src={stationIconUrl}
             alt={stationName}
+            priority={priority}
             width={size === 'xxs' ? 24 : size === 'xs' ? 32 : size === 'sm' ? 56 : size === 'md' ? 80 : 96}
             height={size === 'xxs' ? 24 : size === 'xs' ? 32 : size === 'sm' ? 56 : size === 'md' ? 80 : 96}
             className={`h-full w-full object-contain ${paddingClasses[size]} filter brightness-110 contrast-125`}
