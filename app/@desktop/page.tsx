@@ -1,7 +1,7 @@
 import { Header } from "@/components/layout";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { FeaturedSection } from "./components";
-import { CategorySection } from "./components";
+import { FeaturedSection } from "../../components/desktop/sections";
+import { CategorySection } from "../../components/desktop/sections";
 import Script from "next/script";
 import { generateAppStructuredData } from "@/lib/utils/structuredDataGenerators";
 
@@ -19,7 +19,7 @@ export default function Home() {
           <div className="w-full max-w-6xl mx-auto p-4 md:p-6 pb-24 md:pb-24">
             {/* Featured Section - Client Component */}
             <FeaturedSection />
-            
+
             {/* Netflix-style Carousels - Client Component */}
             <CategorySection />
           </div>

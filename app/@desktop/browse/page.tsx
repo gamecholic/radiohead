@@ -1,12 +1,12 @@
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { BrowseSection } from "../components/BrowseSection";
+import { BrowseSection } from "../../../components/desktop/sections/BrowseSection";
 import Script from "next/script";
 import { generateAppStructuredData } from "@/lib/utils/structuredDataGenerators";
 
 export default function BrowsePage() {
   // Structured data for the RadyoZen application
   const structuredData = generateAppStructuredData();
-  
+
   // For now, we'll use a temporary user ID
   // In the future, this should come from the actual user context
   const userId = "temp-user";
@@ -34,7 +34,7 @@ export default function BrowsePage() {
           </div>
         </ScrollArea>
       </div>
-      
+
       {/* Structured Data for SEO */}
       <Script
         id="radyozen-structured-data"
