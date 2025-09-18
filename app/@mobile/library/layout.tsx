@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Kütüphane | RadyoZen - Canlı Radyo Dinle",
     description: "RadyoZen kütüphanenizde favori radyo istasyonlarınızı ve çalma geçmişinizi görüntüleyin. Canlı radyo dinle ve çalma listelerinizi yönetin.",
-    url: "https://radyozen.com/library",
+    url: "https://www.radyozen.com/library",
     siteName: "RadyoZen",
     images: [
       {
@@ -27,9 +27,9 @@ export const metadata: Metadata = {
     images: ["/icons/icon-512x512.png"],
   },
   alternates: {
-    canonical: "https://radyozen.com/library",
+    canonical: "https://www.radyozen.com/library",
     languages: {
-      "tr-TR": "https://radyozen.com/library",
+      "tr-TR": "https://www.radyozen.com/library",
     },
   },
 };

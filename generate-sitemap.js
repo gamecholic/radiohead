@@ -12,7 +12,7 @@ const getCurrentDate = () => {
 };
 
 // Define the base URL (update this to your actual domain)
-const BASE_URL = 'https://radyozen.com';
+const BASE_URL = 'https://www.radyozen.com';
 
 // Define the pages with their priorities and change frequencies
 // changefreq values can be "always", "hourly", "daily", "weekly", "monthly", "yearly", or "never"

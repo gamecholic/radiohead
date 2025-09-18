@@ -20,7 +20,7 @@ export async function generateMetadata({
       openGraph: {
         title: "Grup Bulunamadı | RadyoZen",
         description: "Aradığınız radyo grubu bulunamadı.",
-        url: `https://radyozen.com/group/${resolvedParams.slug}`,
+        url: `https://www.radyozen.com/group/${resolvedParams.slug}`,
         siteName: "RadyoZen",
         images: [
           {
@@ -43,6 +43,12 @@ export async function generateMetadata({
         icon: "/favicon.ico",
         apple: "/icons/icon-192x192.png",
       },
+      alternates: {
+        canonical: `https://www.radyozen.com/group/${resolvedParams.slug}`,
+        languages: {
+          "tr-TR": `https://www.radyozen.com/group/${resolvedParams.slug}`,
+        },
+      },
     };
   }
 
@@ -56,7 +62,7 @@ export async function generateMetadata({
     openGraph: {
       title,
       description,
-      url: `https://radyozen.com/group/${resolvedParams.slug}`,
+      url: `https://www.radyozen.com/group/${resolvedParams.slug}`,
       siteName: "RadyoZen",
       images: [
         {
@@ -78,6 +84,12 @@ export async function generateMetadata({
     icons: {
       icon: "/favicon.ico",
       apple: "/icons/icon-192x192.png",
+    },
+    alternates: {
+      canonical: `https://www.radyozen.com/group/${resolvedParams.slug}`,
+      languages: {
+        "tr-TR": `https://www.radyozen.com/group/${resolvedParams.slug}`,
+      },
     },
   };
 }

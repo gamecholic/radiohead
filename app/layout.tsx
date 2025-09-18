@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "RadyoZen - Canlı Radyo Dinle | Radyo Dinle",
     description: "RadyoZen ile canlı radyo dinle. Favori radyoların ile kendi listeni oluşturarak dinleyebilirsin. İstediğin anda bir radyodan diğerine geç, durdur, tekrar başlat. Radyon, senin frekansında. Modern ve kullanımı kolay arayüzü ile radyo dinleyin.",
-    url: "https://radyozen.com",
+    url: "https://www.radyozen.com",
     siteName: "RadyoZen",
     images: [
       {
@@ -51,9 +51,9 @@ export const metadata: Metadata = {
   },
   keywords: ["radyo dinle", "canlı radyo dinle", "canlı radyo", "çevrimiçi radyo", "türk radyo", "müzik radyo"],
   alternates: {
-    canonical: "https://radyozen.com",
+    canonical: "https://www.radyozen.com",
     languages: {
-      "tr-TR": "https://radyozen.com",
+      "tr-TR": "https://www.radyozen.com",
     },
   },
 };
@@ -95,9 +95,9 @@ export default async function RootLayout({
         />
         <link rel="manifest" href="/manifest.json" />
         <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
-        <link rel="canonical" href="https://radyozen.com" />
-        <link rel="alternate" hrefLang="tr-TR" href="https://radyozen.com" />
-        <link rel="alternate" hrefLang="x-default" href="https://radyozen.com" />
+        <link rel="canonical" href="https://www.radyozen.com" />
+        <link rel="alternate" hrefLang="tr-TR" href="https://www.radyozen.com" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.radyozen.com" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased h-full relative text-foreground bg-gradient-to-b from-gray-900 to-black`}

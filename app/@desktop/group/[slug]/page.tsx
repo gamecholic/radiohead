@@ -22,13 +22,21 @@ export async function generateMetadata({
   );
 
   if (!group) {
-    return { title: "Grup Bulunamadı" };
+    return { 
+      title: "Grup Bulunamadı",
+      alternates: {
+        canonical: `https://www.radyozen.com/group/${resolvedParams.slug}`,
+      },
+    };
   }
 
   return {
     title: `${group.groupName} Radyo İstasyonları - Canlı Radyo Dinle`,
     description: `RadyoZen'de tüm ${group.groupName} radyo istasyonlarını canlı radyo dinle. ${group.groupName} ve daha fazlası için radyo dinleme deneyimini hemen yaşayın.`,
     keywords: [`radyo dinle`, `canlı radyo dinle`, `canlı radyo`, `${group.groupName.toLowerCase()} radyo`],
+    alternates: {
+      canonical: `https://www.radyozen.com/group/${resolvedParams.slug}`,
+    },
   };
 }
 

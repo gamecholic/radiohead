@@ -133,9 +133,9 @@ export default function MobileHome() {
         <meta name="keywords" content="radyo dinle, canlı radyo dinle, canlı radyo, çevrimiçi radyo, türk radyo, müzik radyo" />
         <meta property="og:title" content="RadyoZen - Canlı Radyo Dinle | Radyo Dinle" />
         <meta property="og:description" content="RadyoZen ile canlı radyo dinle. Favori radyoların ile kendi listeni oluşturarak dinleyebilirsin. İstediğin anda bir radyodan diğerine geç, durdur, tekrar başlat. Radyon, senin frekansında. Modern ve kullanımı kolay arayüzü ile radyo dinleyin." />
-        <meta property="og:url" content="https://radyozen.com" />
+        <meta property="og:url" content="https://www.radyozen.com" />
         <meta property="og:site_name" content="RadyoZen" />
-        <meta property="og:image" content="https://radyozen.com/icons/icon-512x512.png" />
+        <meta property="og:image" content="https://www.radyozen.com/icons/icon-512x512.png" />
         <meta property="og:image:width" content="512" />
         <meta property="og:image:height" content="512" />
         <meta property="og:locale" content="tr_TR" />
@@ -143,10 +143,10 @@ export default function MobileHome() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="RadyoZen - Canlı Radyo Dinle | Radyo Dinle" />
         <meta name="twitter:description" content="RadyoZen ile canlı radyo dinle. Favori radyoların ile kendi listeni oluşturarak dinleyebilirsin. İstediğin anda bir radyodan diğerine geç, durdur, tekrar başlat. Radyon, senin frekansında. Modern ve kullanımı kolay arayüzü ile radyo dinleyin." />
-        <meta name="twitter:image" content="https://radyozen.com/icons/icon-512x512.png" />
-        <link rel="canonical" href="https://radyozen.com" />
-        <link rel="alternate" hrefLang="tr-TR" href="https://radyozen.com" />
-        <link rel="alternate" hrefLang="x-default" href="https://radyozen.com" />
+        <meta name="twitter:image" content="https://www.radyozen.com/icons/icon-512x512.png" />
+        <link rel="canonical" href="https://www.radyozen.com" />
+        <link rel="alternate" hrefLang="tr-TR" href="https://www.radyozen.com" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.radyozen.com" />
       </Head>
       <div className="flex flex-col h-full bg-gradient-to-b from-gray-900 to-black text-white relative">
         {/* Search Modal */}

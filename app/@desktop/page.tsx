@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "RadyoZen - Canlı Radyo Dinle | Radyo Dinle",
     description: "RadyoZen ile canlı radyo dinle. Favori radyoların ile kendi listeni oluşturarak dinleyebilirsin. İstediğin anda bir radyodan diğerine geç, durdur, tekrar başlat. Radyon, senin frekansında. Modern ve kullanımı kolay arayüzü ile radyo dinleyin.",
-    url: "https://radyozen.com",
+    url: "https://www.radyozen.com",
     siteName: "RadyoZen",
     images: [
       {
@@ -33,9 +33,9 @@ export const metadata: Metadata = {
     images: ["/icons/icon-512x512.png"],
   },
   alternates: {
-    canonical: "https://radyozen.com",
+    canonical: "https://www.radyozen.com",
     languages: {
-      "tr-TR": "https://radyozen.com",
+      "tr-TR": "https://www.radyozen.com",
     },
   },
 };
