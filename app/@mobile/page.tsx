@@ -129,24 +129,52 @@ export default function MobileHome() {
     <>
       <Head>
         <title>RadyoZen - Canlı Radyo Dinle | Radyo Dinle</title>
-        <meta name="description" content="RadyoZen ile canlı radyo dinle. Favori radyoların ile kendi listeni oluşturarak dinleyebilirsin. İstediğin anda bir radyodan diğerine geç, durdur, tekrar başlat. Radyon, senin frekansında. Modern ve kullanımı kolay arayüzü ile radyo dinleyin." />
-        <meta name="keywords" content="radyo dinle, canlı radyo dinle, canlı radyo, çevrimiçi radyo, türk radyo, müzik radyo" />
-        <meta property="og:title" content="RadyoZen - Canlı Radyo Dinle | Radyo Dinle" />
-        <meta property="og:description" content="RadyoZen ile canlı radyo dinle. Favori radyoların ile kendi listeni oluşturarak dinleyebilirsin. İstediğin anda bir radyodan diğerine geç, durdur, tekrar başlat. Radyon, senin frekansında. Modern ve kullanımı kolay arayüzü ile radyo dinleyin." />
-        <meta property="og:url" content="https://www.radyozen.com" />
+        <meta
+          name="description"
+          content="RadyoZen ile canlı radyo dinle. Favori radyoların ile kendi listeni oluşturarak dinleyebilirsin. İstediğin anda bir radyodan diğerine geç, durdur, tekrar başlat. Radyon, senin frekansında. Modern ve kullanımı kolay arayüzü ile radyo dinleyin."
+        />
+        <meta
+          name="keywords"
+          content="radyo dinle, canlı radyo dinle, canlı radyo, çevrimiçi radyo, türk radyo, müzik radyo"
+        />
+        <meta
+          property="og:title"
+          content="RadyoZen - Canlı Radyo Dinle | Radyo Dinle"
+        />
+        <meta
+          property="og:description"
+          content="RadyoZen ile canlı radyo dinle. Favori radyoların ile kendi listeni oluşturarak dinleyebilirsin. İstediğin anda bir radyodan diğerine geç, durdur, tekrar başlat. Radyon, senin frekansında. Modern ve kullanımı kolay arayüzü ile radyo dinleyin."
+        />
+        <meta property="og:url" content="https://radyozen.com" />
         <meta property="og:site_name" content="RadyoZen" />
-        <meta property="og:image" content="https://www.radyozen.com/icons/icon-512x512.png" />
+        <meta
+          property="og:image"
+          content="https://radyozen.com/icons/icon-512x512.png"
+        />
         <meta property="og:image:width" content="512" />
         <meta property="og:image:height" content="512" />
         <meta property="og:locale" content="tr_TR" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="RadyoZen - Canlı Radyo Dinle | Radyo Dinle" />
-        <meta name="twitter:description" content="RadyoZen ile canlı radyo dinle. Favori radyoların ile kendi listeni oluşturarak dinleyebilirsin. İstediğin anda bir radyodan diğerine geç, durdur, tekrar başlat. Radyon, senin frekansında. Modern ve kullanımı kolay arayüzü ile radyo dinleyin." />
-        <meta name="twitter:image" content="https://www.radyozen.com/icons/icon-512x512.png" />
-        <link rel="canonical" href="https://www.radyozen.com" />
-        <link rel="alternate" hrefLang="tr-TR" href="https://www.radyozen.com" />
-        <link rel="alternate" hrefLang="x-default" href="https://www.radyozen.com" />
+        <meta
+          name="twitter:title"
+          content="RadyoZen - Canlı Radyo Dinle | Radyo Dinle"
+        />
+        <meta
+          name="twitter:description"
+          content="RadyoZen ile canlı radyo dinle. Favori radyoların ile kendi listeni oluşturarak dinleyebilirsin. İstediğin anda bir radyodan diğerine geç, durdur, tekrar başlat. Radyon, senin frekansında. Modern ve kullanımı kolay arayüzü ile radyo dinleyin."
+        />
+        <meta
+          name="twitter:image"
+          content="https://radyozen.com/icons/icon-512x512.png"
+        />
+        <link rel="canonical" href="https://radyozen.com" />
+        <link rel="alternate" hrefLang="tr-TR" href="https://radyozen.com" />
+        <link
+          rel="alternate"
+          hrefLang="x-default"
+          href="https://radyozen.com"
+        />
       </Head>
       <div className="flex flex-col h-full bg-gradient-to-b from-gray-900 to-black text-white relative">
         {/* Search Modal */}
@@ -194,7 +222,11 @@ export default function MobileHome() {
                           className="flex items-center p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10"
                           whileTap={{ scale: 0.98 }}
                           onClick={() => {
-                            togglePlay(station, searchResults, "Arama Sonuçları");
+                            togglePlay(
+                              station,
+                              searchResults,
+                              "Arama Sonuçları"
+                            );
                             setIsSearchOpen(false);
                           }}
                         >
@@ -228,7 +260,8 @@ export default function MobileHome() {
                             <Heart
                               className={`h-4 w-4 ${
                                 favorites.some(
-                                  (fav) => fav.stationName === station.stationName
+                                  (fav) =>
+                                    fav.stationName === station.stationName
                                 )
                                   ? "fill-red-500 text-red-500"
                                   : "text-gray-400"
@@ -340,7 +373,8 @@ export default function MobileHome() {
                             <Heart
                               className={`h-4 w-4 ${
                                 favorites.some(
-                                  (fav) => fav.stationName === station.stationName
+                                  (fav) =>
+                                    fav.stationName === station.stationName
                                 )
                                   ? "fill-red-500 text-red-500"
                                   : "text-gray-400"
@@ -410,11 +444,15 @@ export default function MobileHome() {
                           className="absolute bottom-0 right-0 h-6 w-6 rounded-full bg-white text-black shadow-lg"
                           onClick={(e) => {
                             e.stopPropagation();
-                            togglePlay(station, recentlyPlayed, "Son Çalınanlar");
+                            togglePlay(
+                              station,
+                              recentlyPlayed,
+                              "Son Çalınanlar"
+                            );
                           }}
                         >
-                          {currentStation?.stationName === station.stationName &&
-                          isPlaying ? (
+                          {currentStation?.stationName ===
+                            station.stationName && isPlaying ? (
                             <Pause className="h-3 w-3" />
                           ) : (
                             <Play className="h-3 w-3" />
@@ -437,7 +475,9 @@ export default function MobileHome() {
                 <Button
                   variant="ghost"
                   className="text-sm text-blue-400"
-                  onClick={() => handleShowAll(featuredStations, "Öne Çıkanlar")}
+                  onClick={() =>
+                    handleShowAll(featuredStations, "Öne Çıkanlar")
+                  }
                 >
                   Tümünü Gör
                 </Button>

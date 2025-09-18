@@ -8,12 +8,21 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "RadyoZen - Canlı Radyo Dinle | Radyo Dinle",
-  description: "RadyoZen ile canlı radyo dinle. Favori radyoların ile kendi listeni oluşturarak dinleyebilirsin. İstediğin anda bir radyodan diğerine geç, durdur, tekrar başlat. Radyon, senin frekansında. Modern ve kullanımı kolay arayüzü ile radyo dinleyin.",
-  keywords: ["radyo dinle", "canlı radyo dinle", "canlı radyo", "çevrimiçi radyo", "türk radyo", "müzik radyo"],
+  description:
+    "RadyoZen ile canlı radyo dinle. Favori radyoların ile kendi listeni oluşturarak dinleyebilirsin. İstediğin anda bir radyodan diğerine geç, durdur, tekrar başlat. Radyon, senin frekansında. Modern ve kullanımı kolay arayüzü ile radyo dinleyin.",
+  keywords: [
+    "radyo dinle",
+    "canlı radyo dinle",
+    "canlı radyo",
+    "çevrimiçi radyo",
+    "türk radyo",
+    "müzik radyo",
+  ],
   openGraph: {
     title: "RadyoZen - Canlı Radyo Dinle | Radyo Dinle",
-    description: "RadyoZen ile canlı radyo dinle. Favori radyoların ile kendi listeni oluşturarak dinleyebilirsin. İstediğin anda bir radyodan diğerine geç, durdur, tekrar başlat. Radyon, senin frekansında. Modern ve kullanımı kolay arayüzü ile radyo dinleyin.",
-    url: "https://www.radyozen.com",
+    description:
+      "RadyoZen ile canlı radyo dinle. Favori radyoların ile kendi listeni oluşturarak dinleyebilirsin. İstediğin anda bir radyodan diğerine geç, durdur, tekrar başlat. Radyon, senin frekansında. Modern ve kullanımı kolay arayüzü ile radyo dinleyin.",
+    url: "https://radyozen.com",
     siteName: "RadyoZen",
     images: [
       {
@@ -29,13 +38,14 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "RadyoZen - Canlı Radyo Dinle | Radyo Dinle",
-    description: "RadyoZen ile canlı radyo dinle. Favori radyoların ile kendi listeni oluşturarak dinleyebilirsin. İstediğin anda bir radyodan diğerine geç, durdur, tekrar başlat. Radyon, senin frekansında. Modern ve kullanımı kolay arayüzü ile radyo dinleyin.",
+    description:
+      "RadyoZen ile canlı radyo dinle. Favori radyoların ile kendi listeni oluşturarak dinleyebilirsin. İstediğin anda bir radyodan diğerine geç, durdur, tekrar başlat. Radyon, senin frekansında. Modern ve kullanımı kolay arayüzü ile radyo dinleyin.",
     images: ["/icons/icon-512x512.png"],
   },
   alternates: {
-    canonical: "https://www.radyozen.com",
+    canonical: "https://radyozen.com",
     languages: {
-      "tr-TR": "https://www.radyozen.com",
+      "tr-TR": "https://radyozen.com",
     },
   },
 };

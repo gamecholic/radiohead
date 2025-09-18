@@ -2,12 +2,20 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Kütüphane | RadyoZen - Canlı Radyo Dinle",
-  description: "RadyoZen kütüphanenizde favori radyo istasyonlarınızı ve çalma geçmişinizi görüntüleyin. Canlı radyo dinle ve çalma listelerinizi yönetin.",
-  keywords: ["radyo dinle", "canlı radyo dinle", "çalma listesi", "favori radyolar", "radyo geçmişi"],
+  description:
+    "RadyoZen kütüphanenizde favori radyo istasyonlarınızı ve çalma geçmişinizi görüntüleyin. Canlı radyo dinle ve çalma listelerinizi yönetin.",
+  keywords: [
+    "radyo dinle",
+    "canlı radyo dinle",
+    "çalma listesi",
+    "favori radyolar",
+    "radyo geçmişi",
+  ],
   openGraph: {
     title: "Kütüphane | RadyoZen - Canlı Radyo Dinle",
-    description: "RadyoZen kütüphanenizde favori radyo istasyonlarınızı ve çalma geçmişinizi görüntüleyin. Canlı radyo dinle ve çalma listelerinizi yönetin.",
-    url: "https://www.radyozen.com/library",
+    description:
+      "RadyoZen kütüphanenizde favori radyo istasyonlarınızı ve çalma geçmişinizi görüntüleyin. Canlı radyo dinle ve çalma listelerinizi yönetin.",
+    url: "https://radyozen.com/library",
     siteName: "RadyoZen",
     images: [
       {
@@ -23,13 +31,14 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Kütüphane | RadyoZen - Canlı Radyo Dinle",
-    description: "RadyoZen kütüphanenizde favori radyo istasyonlarınızı ve çalma geçmişinizi görüntüleyin. Canlı radyo dinle ve çalma listelerinizi yönetin.",
+    description:
+      "RadyoZen kütüphanenizde favori radyo istasyonlarınızı ve çalma geçmişinizi görüntüleyin. Canlı radyo dinle ve çalma listelerinizi yönetin.",
     images: ["/icons/icon-512x512.png"],
   },
   alternates: {
-    canonical: "https://www.radyozen.com/library",
+    canonical: "https://radyozen.com/library",
     languages: {
-      "tr-TR": "https://www.radyozen.com/library",
+      "tr-TR": "https://radyozen.com/library",
     },
   },
 };

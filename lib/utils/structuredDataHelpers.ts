@@ -42,5 +42,5 @@ export function getGroupUrl(groupName: string): string {
 export function getBaseUrl(): string {
   // In production, this should be set to your actual domain
   // For now, we'll use a placeholder
-  return process.env.NEXT_PUBLIC_SITE_URL || "https://www.radyozen.com";
+  return process.env.NEXT_PUBLIC_SITE_URL || "https://radyozen.com";
 }
