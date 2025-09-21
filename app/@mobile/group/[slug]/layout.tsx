@@ -43,6 +43,9 @@ export async function generateMetadata({
         icon: "/favicon.ico",
         apple: "/icons/icon-192x192.png",
       },
+      alternates: {
+        canonical: `https://radyozen.com/group/${resolvedParams.slug}`,
+      },
     };
   }
 
@@ -78,6 +81,9 @@ export async function generateMetadata({
     icons: {
       icon: "/favicon.ico",
       apple: "/icons/icon-192x192.png",
+    },
+    alternates: {
+      canonical: `https://radyozen.com/group/${resolvedParams.slug}`,
     },
   };
 }

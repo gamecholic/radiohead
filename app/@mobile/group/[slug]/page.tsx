@@ -12,7 +12,6 @@ import { Station, RadioGroup } from "@/lib/types";
 import { motion } from "framer-motion";
 import { useParams } from "next/navigation";
 import { AddToPlaylist } from "@/components/add-to-playlist";
-import Head from "next/head";
 
 export default function MobileGroup() {
   const params = useParams();
@@ -67,81 +66,6 @@ export default function MobileGroup() {
 
   return (
     <>
-      <Head>
-        <title>
-          {groupName ? `${groupName} Radyo İstasyonları` : "Radyo Grubu"} -
-          RadyoZen
-        </title>
-        <meta
-          name="description"
-          content={
-            groupDescription ||
-            `RadyoZen'de ${
-              groupName || "bu"
-            } radyo grubuna ait istasyonları keşfedin. Canlı radyo dinle.`
-          }
-        />
-        <meta
-          name="keywords"
-          content={`radyo dinle, canlı radyo dinle, ${
-            groupName?.toLowerCase() || "radyo"
-          } istasyonları, müzik radyo`}
-        />
-        <meta
-          property="og:title"
-          content={`${
-            groupName ? `${groupName} Radyo İstasyonları` : "Radyo Grubu"
-          } - RadyoZen`}
-        />
-        <meta
-          property="og:description"
-          content={
-            groupDescription ||
-            `RadyoZen'de ${
-              groupName || "bu"
-            } radyo grubuna ait istasyonları keşfedin. Canlı radyo dinle.`
-          }
-        />
-        <meta
-          property="og:url"
-          content={`https://radyozen.com/group/${slug}`}
-        />
-        <meta property="og:site_name" content="RadyoZen" />
-        <meta
-          property="og:image"
-          content="https://radyozen.com/icons/icon-512x512.png"
-        />
-        <meta property="og:image:width" content="512" />
-        <meta property="og:image:height" content="512" />
-        <meta property="og:locale" content="tr_TR" />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content={`${
-            groupName ? `${groupName} Radyo İstasyonları` : "Radyo Grubu"
-          } - RadyoZen`}
-        />
-        <meta
-          name="twitter:description"
-          content={
-            groupDescription ||
-            `RadyoZen'de ${
-              groupName || "bu"
-            } radyo grubuna ait istasyonları keşfedin. Canlı radyo dinle.`
-          }
-        />
-        <meta
-          name="twitter:image"
-          content="https://radyozen.com/icons/icon-512x512.png"
-        />
-        <link rel="canonical" href={`https://radyozen.com/group/${slug}`} />
-        <link
-          rel="alternate"
-          hrefLang="tr-TR"
-          href={`https://radyozen.com/group/${slug}`}
-        />
-      </Head>
       <div className="flex flex-col bg-gradient-to-b from-gray-900 to-black text-white">
         <ScrollArea className="flex-1">
           <div className="px-4 pb-4">
