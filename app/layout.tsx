@@ -60,7 +60,9 @@ export const metadata: Metadata = {
     "türk radyo",
     "müzik radyo",
   ],
-  
+  alternates: {
+    canonical: "https://radyozen.com",
+  },
 };
 
 export const viewport: Viewport = {
