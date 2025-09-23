@@ -21,7 +21,6 @@ export interface StationDetails {
   "station-slug": string;
   description?: string;
   frequencies?: string[];
-  categories?: string[];
   contact?: {
     address?: string;
     phone?: string;
@@ -37,7 +36,6 @@ export interface StationDetails {
     city?: string;
     region?: string;
   };
-  similarStations?: string[];
   additionalInfo?: {
     foundedDate?: string;
     owner?: string;
