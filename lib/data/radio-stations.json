@@ -1,5 +1,6 @@
 [
   {
+    "slug": "alem-fm",
     "stationName": "Alem FM",
     "stationIconUrl": "/images/alem-fm.webp",
     "stationCategories": [
@@ -19,7 +20,8 @@
     "stationPlaybackUrl": "https://eustr73.mediatriple.net/videoonlylive/mtikoimxnztxlive/broadcast_5e3c1171d7d2a.smil/playlist.m3u8",
     "radioGroups": [
       "Radyo Home"
-    ]
+    ],
+    "slug": "diyanet-radyo"
   },
   {
     "stationName": "Efkar FM",
@@ -30,7 +32,8 @@
     "stationPlaybackUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/EFKAR128AAC.aac",
     "radioGroups": [
       "Karnaval"
-    ]
+    ],
+    "slug": "efkar-fm"
   },
   {
     "stationName": "Joy Türk",
@@ -41,7 +44,8 @@
     "stationPlaybackUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/JOY_TURK128AAC.aac?",
     "radioGroups": [
       "Karnaval"
-    ]
+    ],
+    "slug": "joy-turk"
   },
   {
     "stationName": "Kafa Radyo",
@@ -52,7 +56,8 @@
     "stationPlaybackUrl": "https://moondigitaledge2.radyotvonline.net/kafaradyo/playlist.m3u8",
     "radioGroups": [
       "Radyo Home"
-    ]
+    ],
+    "slug": "kafa-radyo"
   },
   {
     "stationName": "Kiss FM",
@@ -63,7 +68,8 @@
     "stationPlaybackUrl": "https://kiss.radyotvonline.net/kissfm",
     "radioGroups": [
       "Karnaval"
-    ]
+    ],
+    "slug": "kiss-fm"
   },
   {
     "stationName": "Number One Türk",
@@ -74,7 +80,8 @@
     "stationPlaybackUrl": "https://n10101m.mediatriple.net/numberoneturk",
     "radioGroups": [
       "Number One"
-    ]
+    ],
+    "slug": "number-one-turk"
   },
   {
     "stationName": "Pal Doğa",
@@ -85,7 +92,8 @@
     "stationPlaybackUrl": "https://stream.rcast.net/200259?/;stream.mp3",
     "radioGroups": [
       "Pal Group"
-    ]
+    ],
+    "slug": "pal-doga"
   },
   {
     "stationName": "Pal FM",
@@ -96,7 +104,8 @@
     "stationPlaybackUrl": "https://moondigitaledge.radyotvonline.net/palfm/playlist.m3u8",
     "radioGroups": [
       "Pal Group"
-    ]
+    ],
+    "slug": "pal-fm"
   },
   {
     "stationName": "Pal Nostalji",
@@ -108,7 +117,8 @@
     "radioGroups": [
       "Pal Group",
       "Nostalji Radyoları"
-    ]
+    ],
+    "slug": "pal-nostalji"
   },
   {
     "stationName": "Power FM",
@@ -119,7 +129,8 @@
     "stationPlaybackUrl": "https://live.powerapp.com.tr/powerfmadver/abr/powerfmadver/256/chunks.m3u8",
     "radioGroups": [
       "Power App"
-    ]
+    ],
+    "slug": "power-fm"
   },
   {
     "stationName": "Radyo 7",
@@ -130,7 +141,8 @@
     "stationPlaybackUrl": "https://radyo7icecast.radyotvonline.net/radyo7?",
     "radioGroups": [
       "Number One"
-    ]
+    ],
+    "slug": "radyo-7"
   },
   {
     "stationName": "Radyo D",
@@ -141,7 +153,8 @@
     "stationPlaybackUrl": "https://moondigitaledge2.radyotvonline.net/radyod/playlist.m3u8?",
     "radioGroups": [
       "Radyo Home"
-    ]
+    ],
+    "slug": "radyo-d"
   },
   {
     "stationName": "Radyo Fenomen",
@@ -152,7 +165,8 @@
     "stationPlaybackUrl": "https://live.radyofenomen.com/fenomen/128/icecast.audio?",
     "radioGroups": [
       "Karnaval"
-    ]
+    ],
+    "slug": "radyo-fenomen"
   },
   {
     "stationName": "Radyo Spor",
@@ -163,7 +177,8 @@
     "stationPlaybackUrl": "https://wowza1.radyotvonline.com/saran/radyospor.stream/playlist.m3u8",
     "radioGroups": [
       "Radyo Home"
-    ]
+    ],
+    "slug": "radyo-spor"
   },
   {
     "stationName": "Show Radyo",
@@ -174,7 +189,8 @@
     "stationPlaybackUrl": "https://showradyo.radyotvonline.net/showradyo?/;stream.mp3",
     "radioGroups": [
       "Show & Viva"
-    ]
+    ],
+    "slug": "show-radyo"
   },
   {
     "stationName": "Slow 7",
@@ -185,7 +201,8 @@
     "stationPlaybackUrl": "https://moondigitaledge2.radyotvonline.net/radyo7slow/playlist.m3u8",
     "radioGroups": [
       "Number One"
-    ]
+    ],
+    "slug": "slow-7"
   },
   {
     "stationName": "Slow Türk",
@@ -196,7 +213,8 @@
     "stationPlaybackUrl": "https://radyo.duhnet.tv/ak_dtvh_slowturk?",
     "radioGroups": [
       "Pal Group"
-    ]
+    ],
+    "slug": "slow-turk"
   },
   {
     "stationName": "Power Türk",
@@ -207,7 +225,8 @@
     "stationPlaybackUrl": "https://live.powerapp.com.tr/powerturk/mpeg/icecast.audio?/;stream.mp3",
     "radioGroups": [
       "Power App"
-    ]
+    ],
+    "slug": "power-turk"
   },
   {
     "stationName": "Süper FM",
@@ -218,7 +237,8 @@
     "stationPlaybackUrl": "https://23543.live.streamtheworld.com/SUPER_FM128AAC.aac?",
     "radioGroups": [
       "Show & Viva"
-    ]
+    ],
+    "slug": "super-fm"
   },
   {
     "stationName": "Kral FM",
@@ -229,7 +249,8 @@
     "stationPlaybackUrl": "https://dygedge2.radyotvonline.net/kralfm/playlist.m3u8",
     "radioGroups": [
       "Number One"
-    ]
+    ],
+    "slug": "kral-fm"
   },
   {
     "stationName": "Metro FM",
@@ -240,7 +261,8 @@
     "stationPlaybackUrl": "https://27873.live.streamtheworld.com/METRO_FM128AAC.aac?",
     "radioGroups": [
       "Karnaval"
-    ]
+    ],
+    "slug": "metro-fm"
   },
   {
     "stationName": "Virgin Radio Türkiye",
@@ -251,7 +273,8 @@
     "stationPlaybackUrl": "https://25653.live.streamtheworld.com/VIRGIN_RADIO128AAC.aac?/;stream.mp3",
     "radioGroups": [
       "Karnaval"
-    ]
+    ],
+    "slug": "virgin-radio-turkiye"
   },
   {
     "stationName": "CNN Türk Radyo",
@@ -262,7 +285,8 @@
     "stationPlaybackUrl": "https://moondigitaledge2.radyotvonline.net/cnnturk/playlist.m3u8",
     "radioGroups": [
       "Karnaval"
-    ]
+    ],
+    "slug": "cnn-turk-radyo"
   },
   {
     "stationName": "Power Love",
@@ -273,7 +297,8 @@
     "stationPlaybackUrl": "https://live.powerapp.com.tr/powerlove/mpeg/icecast.audio?/;stream.mp3",
     "radioGroups": [
       "Power App"
-    ]
+    ],
+    "slug": "power-love"
   },
   {
     "stationName": "Best FM",
@@ -284,7 +309,8 @@
     "stationPlaybackUrl": "https://officialbestfm.radyotvonline.net/bestfmofficial?/;stream.mp3",
     "radioGroups": [
       "Pal Group"
-    ]
+    ],
+    "slug": "best-fm"
   },
   {
     "stationName": "Aşk FM",
@@ -295,7 +321,8 @@
     "stationPlaybackUrl": "https://stream.netradyom.com/radio/8000/radio.mp3?/;stream.mp3",
     "radioGroups": [
       "Radyo Home"
-    ]
+    ],
+    "slug": "ask-fm"
   },
   {
     "stationName": "Ankara Radyo Banko",
@@ -307,7 +334,8 @@
     "radioGroups": [
       "Other",
       "Ankara Havaları"
-    ]
+    ],
+    "slug": "ankara-radyo-banko"
   },
   {
     "stationName": "Avrasya Türk 107.1 Ankara",
@@ -318,7 +346,8 @@
     "stationPlaybackUrl": "https://sslyayin.netyayin.net:10909/;/;stream.mp3",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "avrasya-turk-107-1-ankara"
   },
   {
     "stationName": "Baba Radyo",
@@ -329,7 +358,8 @@
     "stationPlaybackUrl": "https://officialbabaradyo.radyotvonline.net/babaofficial?/;stream.mp3",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "baba-radyo"
   },
   {
     "stationName": "Bayram FM",
@@ -340,7 +370,8 @@
     "stationPlaybackUrl": "https://sslyayin.netyayin.net/3442/stream/;stream.mp3",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "bayram-fm"
   },
   {
     "stationName": "Damar FM",
@@ -351,7 +382,8 @@
     "stationPlaybackUrl": "https://moondigitaledge2.radyotvonline.net/radyo7arabesk/playlist.m3u8",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "damar-fm"
   },
   {
     "stationName": "Habertürk Radyo",
@@ -362,7 +394,8 @@
     "stationPlaybackUrl": "https://haberturkradyo.radyotvonline.net/haberturkradyo?/;stream.mp3",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "haberturk-radyo"
   },
   {
     "stationName": "İstanbul Radyo Seymen",
@@ -374,7 +407,8 @@
     "radioGroups": [
       "Other",
       "Ankara Havaları"
-    ]
+    ],
+    "slug": "istanbul-radyo-seymen"
   },
   {
     "stationName": "İzmir İmbat Fm",
@@ -385,7 +419,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "izmir-imbat-fm"
   },
   {
     "stationName": "Joy FM",
@@ -397,7 +432,8 @@
     "radioGroups": [
       "Other",
       "Karnaval"
-    ]
+    ],
+    "slug": "joy-fm"
   },
   {
     "stationName": "Joy Türk Akustik",
@@ -409,7 +445,8 @@
     "radioGroups": [
       "Other",
       "Karnaval"
-    ]
+    ],
+    "slug": "joy-turk-akustik"
   },
   {
     "stationName": "Kalp FM",
@@ -420,9 +457,11 @@
     "stationPlaybackUrl": "https://yayin.kalpfm.com:8080/stream?/;stream.mp3",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "kalp-fm"
   },
   {
+    "slug": "karadeniz-fm-98-2",
     "stationName": "Karadeniz Fm 98.2",
     "stationIconUrl": "/images/karadeniz-fm.webp",
     "stationCategories": [
@@ -443,7 +482,8 @@
     "stationPlaybackUrl": "https://dygedge.radyotvonline.net/kralpop/playlist.m3u8",
     "radioGroups": [
       "Karnaval"
-    ]
+    ],
+    "slug": "kral-pop-radyo"
   },
   {
     "stationName": "Ntv Radyo",
@@ -454,7 +494,8 @@
     "stationPlaybackUrl": "https://dygedge.radyotvonline.net/ntvradyo/playlist.m3u8",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "ntv-radyo"
   },
   {
     "stationName": "Number 1 Fm",
@@ -466,7 +507,8 @@
     "radioGroups": [
       "Other",
       "Number One"
-    ]
+    ],
+    "slug": "number-1-fm"
   },
   {
     "stationName": "Number One Türk Doksanlar",
@@ -478,7 +520,8 @@
     "radioGroups": [
       "Number One",
       "Nostalji Radyoları"
-    ]
+    ],
+    "slug": "number-one-turk-doksanlar"
   },
   {
     "stationName": "Pal Station",
@@ -489,7 +532,8 @@
     "stationPlaybackUrl": "https://moondigitaledge.radyotvonline.net/palstation/playlist.m3u8",
     "radioGroups": [
       "Pal Group"
-    ]
+    ],
+    "slug": "pal-station"
   },
   {
     "stationName": "Park FM",
@@ -501,7 +545,8 @@
     "radioGroups": [
       "Other",
       "Ankara Havaları"
-    ]
+    ],
+    "slug": "park-fm"
   },
   {
     "stationName": "Polis Radyosu",
@@ -512,7 +557,8 @@
     "stationPlaybackUrl": "https://m.egm.gov.tr:8093/;",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "polis-radyosu"
   },
   {
     "stationName": "Power Love Fm",
@@ -523,7 +569,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Power App"
-    ]
+    ],
+    "slug": "power-love-fm"
   },
   {
     "stationName": "Power Pop",
@@ -534,7 +581,8 @@
     "stationPlaybackUrl": "https://listen.powerapp.com.tr/powerpop/abr/playlist.m3u8",
     "radioGroups": [
       "Power App"
-    ]
+    ],
+    "slug": "power-pop"
   },
   {
     "stationName": "Radio Mydonose",
@@ -546,7 +594,8 @@
     "radioGroups": [
       "Other",
       "Karnaval"
-    ]
+    ],
+    "slug": "radio-mydonose"
   },
   {
     "stationName": "Radyo 2000",
@@ -557,7 +606,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "radyo-2000"
   },
   {
     "stationName": "Radyo 45lik",
@@ -569,7 +619,8 @@
     "radioGroups": [
       "Other",
       "Nostalji Radyoları"
-    ]
+    ],
+    "slug": "radyo-45lik"
   },
   {
     "stationName": "Radyo 7 Nostalji",
@@ -581,7 +632,8 @@
     "radioGroups": [
       "Other",
       "Nostalji Radyoları"
-    ]
+    ],
+    "slug": "radyo-7-nostalji"
   },
   {
     "stationName": "Radyo 7 Türkü",
@@ -592,7 +644,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "radyo-7-turku"
   },
   {
     "stationName": "Radyo Alaturka",
@@ -603,7 +656,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "radyo-alaturka"
   },
   {
     "stationName": "Radyo Arabesk",
@@ -614,7 +668,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "radyo-arabesk"
   },
   {
     "stationName": "Radyo Ekin",
@@ -625,7 +680,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "radyo-ekin"
   },
   {
     "stationName": "Radyo Megasite",
@@ -636,7 +692,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "radyo-megasite"
   },
   {
     "stationName": "Radyo Ostim",
@@ -647,7 +704,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "radyo-ostim"
   },
   {
     "stationName": "Radyo Viva",
@@ -658,7 +716,8 @@
     "stationPlaybackUrl": "https://master2.radyotvonline.net/Media/hls/59/1658687.aac",
     "radioGroups": [
       "Show & Viva"
-    ]
+    ],
+    "slug": "radyo-viva"
   },
   {
     "stationName": "Radyo Voyage",
@@ -669,7 +728,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "radyo-voyage"
   },
   {
     "stationName": "TGRT FM",
@@ -680,7 +740,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "tgrt-fm"
   },
   {
     "stationName": "Başka Radyo",
@@ -692,7 +753,8 @@
     "radioGroups": [
       "Other",
       "Karnaval"
-    ]
+    ],
+    "slug": "baska-radyo"
   },
   {
     "stationName": "Dada Radyo",
@@ -703,7 +765,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "dada-radyo"
   },
   {
     "stationName": "Doksanlar FM",
@@ -715,7 +778,8 @@
     "radioGroups": [
       "Other",
       "Nostalji Radyoları"
-    ]
+    ],
+    "slug": "doksanlar-fm"
   },
   {
     "stationName": "Fenomen Türk",
@@ -726,7 +790,8 @@
     "stationPlaybackUrl": "https://live.radyofenomen.com/fenomenturk/abr/playlist.m3u8",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "fenomen-turk"
   },
   {
     "stationName": "FG Türk Radyo",
@@ -738,7 +803,8 @@
     "radioGroups": [
       "Other",
       "Future Generation"
-    ]
+    ],
+    "slug": "fg-turk-radyo"
   },
   {
     "stationName": "Gençlik Radyosu",
@@ -749,7 +815,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "genclik-radyosu"
   },
   {
     "stationName": "İstanbul Fm",
@@ -760,7 +827,8 @@
     "stationPlaybackUrl": "https://yayin.istanbulfm.com.tr/istanbulfm?/;stream.mp3",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "istanbul-fm"
   },
   {
     "stationName": "İstanbul Küpe FM",
@@ -771,7 +839,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "istanbul-kupe-fm"
   },
   {
     "stationName": "Karma Türk",
@@ -782,7 +851,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "karma-turk"
   },
   {
     "stationName": "Kiss Genç",
@@ -793,7 +863,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Number One"
-    ]
+    ],
+    "slug": "kiss-genc"
   },
   {
     "stationName": "Kiss Gold Türk",
@@ -804,7 +875,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Number One"
-    ]
+    ],
+    "slug": "kiss-gold-turk"
   },
   {
     "stationName": "Kiss Türk",
@@ -816,7 +888,8 @@
     "radioGroups": [
       "Number One",
       "Karnaval"
-    ]
+    ],
+    "slug": "kiss-turk"
   },
   {
     "stationName": "Mydonose Türk",
@@ -828,7 +901,8 @@
     "radioGroups": [
       "Other",
       "Karnaval"
-    ]
+    ],
+    "slug": "mydonose-turk"
   },
   {
     "stationName": "Number 1 Eller Havaya",
@@ -840,7 +914,8 @@
     "radioGroups": [
       "Other",
       "Number One"
-    ]
+    ],
+    "slug": "number-1-eller-havaya"
   },
   {
     "stationName": "Ordu FM",
@@ -851,7 +926,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "ordu-fm"
   },
   {
     "stationName": "Best Slow",
@@ -862,7 +938,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "best-slow"
   },
   {
     "stationName": "FG Slow",
@@ -874,7 +951,8 @@
     "radioGroups": [
       "Other",
       "Future Generation"
-    ]
+    ],
+    "slug": "fg-slow"
   },
   {
     "stationName": "Karma Türk Slow",
@@ -885,7 +963,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "karma-turk-slow"
   },
   {
     "stationName": "Number One Türk Slow",
@@ -896,7 +975,8 @@
     "stationPlaybackUrl": "https://n10101m.mediatriple.net/numberoneturkslow",
     "radioGroups": [
       "Number One"
-    ]
+    ],
+    "slug": "number-one-turk-slow"
   },
   {
     "stationName": "Pal Slow",
@@ -907,7 +987,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Pal Group"
-    ]
+    ],
+    "slug": "pal-slow"
   },
   {
     "stationName": "Power XL Fm",
@@ -918,7 +999,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Power App"
-    ]
+    ],
+    "slug": "power-xl-fm"
   },
   {
     "stationName": "PowerTürk Akustik",
@@ -929,7 +1011,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Power App"
-    ]
+    ],
+    "slug": "powerturk-akustik"
   },
   {
     "stationName": "PowerTürk Slow",
@@ -940,7 +1023,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Power App"
-    ]
+    ],
+    "slug": "powerturk-slow"
   },
   {
     "stationName": "Radyo 34 İstanbul",
@@ -951,7 +1035,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "radyo-34-istanbul"
   },
   {
     "stationName": "Radyo Romantik Türk",
@@ -962,7 +1047,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "radyo-romantik-turk"
   },
   {
     "stationName": "Romantik Ses Isparta",
@@ -973,7 +1059,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "romantik-ses-isparta"
   },
   {
     "stationName": "Romantik Ses Sakarya",
@@ -984,7 +1071,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "romantik-ses-sakarya"
   },
   {
     "stationName": "Show Slow",
@@ -995,7 +1083,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Show & Viva"
-    ]
+    ],
+    "slug": "show-slow"
   },
   {
     "stationName": "Slow Hits",
@@ -1007,7 +1096,8 @@
     "radioGroups": [
       "Other",
       "Karnaval"
-    ]
+    ],
+    "slug": "slow-hits"
   },
   {
     "stationName": "Slow Home",
@@ -1019,7 +1109,8 @@
     "radioGroups": [
       "Other",
       "Radyo Home"
-    ]
+    ],
+    "slug": "slow-home"
   },
   {
     "stationName": "Yeni Slow",
@@ -1030,7 +1121,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "yeni-slow"
   },
   {
     "stationName": "Arabesk Radyo",
@@ -1041,7 +1133,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "arabesk-radyo"
   },
   {
     "stationName": "Bor FM",
@@ -1052,7 +1145,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "bor-fm"
   },
   {
     "stationName": "Can FM",
@@ -1063,7 +1157,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "can-fm"
   },
   {
     "stationName": "Denizli Art FM",
@@ -1074,7 +1169,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "denizli-art-fm"
   },
   {
     "stationName": "Elbistan Yöre FM",
@@ -1085,7 +1181,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "elbistan-yore-fm"
   },
   {
     "stationName": "Gerçek Radyo",
@@ -1096,7 +1193,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "gercek-radyo"
   },
   {
     "stationName": "Hatay Dost FM",
@@ -1107,7 +1205,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "hatay-dost-fm"
   },
   {
     "stationName": "Karesi Radyo",
@@ -1118,7 +1217,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "karesi-radyo"
   },
   {
     "stationName": "Kralım FM 99.3",
@@ -1129,7 +1229,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Karnaval"
-    ]
+    ],
+    "slug": "kralim-fm-99-3"
   },
   {
     "stationName": "Melankolik Home",
@@ -1141,7 +1242,8 @@
     "radioGroups": [
       "Other",
       "Radyo Home"
-    ]
+    ],
+    "slug": "melankolik-home"
   },
   {
     "stationName": "Number One Türk Damar",
@@ -1152,7 +1254,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Number One"
-    ]
+    ],
+    "slug": "number-one-turk-damar"
   },
   {
     "stationName": "Pal Besk",
@@ -1163,7 +1266,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Pal Group"
-    ]
+    ],
+    "slug": "pal-besk"
   },
   {
     "stationName": "Radyo 11",
@@ -1174,7 +1278,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "radyo-11"
   },
   {
     "stationName": "Radyo 2000 Elazığ",
@@ -1185,7 +1290,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "radyo-2000-elazig"
   },
   {
     "stationName": "Radyo 2000 Fm",
@@ -1196,7 +1302,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "radyo-2000-fm"
   },
   {
     "stationName": "Radyo 7 – Müslüm, Ferdi, Orhan",
@@ -1207,7 +1314,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "radyo-7-muslum-ferdi-orhan"
   },
   {
     "stationName": "Radyo 7 Arabesk",
@@ -1218,7 +1326,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "radyo-7-arabesk"
   },
   {
     "stationName": "Radyo Durak",
@@ -1229,7 +1338,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "radyo-durak"
   },
   {
     "stationName": "Radyo Efsane 4 lu",
@@ -1241,7 +1351,8 @@
     "radioGroups": [
       "Other",
       "Radyo Home"
-    ]
+    ],
+    "slug": "radyo-efsane-4-lu"
   },
   {
     "stationName": "Adana Radyo Güney",
@@ -1252,7 +1363,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "adana-radyo-guney"
   },
   {
     "stationName": "Batı Radyo",
@@ -1263,7 +1375,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "bati-radyo"
   },
   {
     "stationName": "Best Kına",
@@ -1275,7 +1388,8 @@
     "radioGroups": [
       "Other",
       "Ankara Havaları"
-    ]
+    ],
+    "slug": "best-kina"
   },
   {
     "stationName": "Cem Radyo",
@@ -1286,7 +1400,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "cem-radyo"
   },
   {
     "stationName": "Dadaş FM",
@@ -1297,7 +1412,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "dadas-fm"
   },
   {
     "stationName": "Derya FM",
@@ -1308,7 +1424,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "derya-fm"
   },
   {
     "stationName": "Elazığ Mavi Radyo",
@@ -1319,7 +1436,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "elazig-mavi-radyo"
   },
   {
     "stationName": "Erzincan Radyo 2000",
@@ -1330,7 +1448,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "erzincan-radyo-2000"
   },
   {
     "stationName": "Erzincan Radyo Cem",
@@ -1341,7 +1460,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "erzincan-radyo-cem"
   },
   {
     "stationName": "Fırat FM",
@@ -1352,7 +1472,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "firat-fm"
   },
   {
     "stationName": "Hatay Asya Radyo",
@@ -1363,7 +1484,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "hatay-asya-radyo"
   },
   {
     "stationName": "Kent Radyo Mersin",
@@ -1374,7 +1496,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "kent-radyo-mersin"
   },
   {
     "stationName": "Kocaeli Tempo FM",
@@ -1385,7 +1508,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "kocaeli-tempo-fm"
   },
   {
     "stationName": "Konya FM",
@@ -1396,7 +1520,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "konya-fm"
   },
   {
     "stationName": "Muhteşem Dörtlü Radyosu",
@@ -1408,7 +1533,8 @@
     "radioGroups": [
       "Other",
       "Radyo Home"
-    ]
+    ],
+    "slug": "muhtesem-dortlu-radyosu"
   },
   {
     "stationName": "Radyo 7 Ankara Havaları",
@@ -1420,7 +1546,8 @@
     "radioGroups": [
       "Other",
       "Ankara Havaları"
-    ]
+    ],
+    "slug": "radyo-7-ankara-havalari"
   },
   {
     "stationName": "Radyo Gönül FM",
@@ -1432,7 +1559,8 @@
     "radioGroups": [
       "Other",
       "Karnaval"
-    ]
+    ],
+    "slug": "radyo-gonul-fm"
   },
   {
     "stationName": "Radyo Gün",
@@ -1443,7 +1571,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "radyo-gun"
   },
   {
     "stationName": "Radyo Harman FM",
@@ -1454,7 +1583,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "radyo-harman-fm"
   },
   {
     "stationName": "Radyo Manavgat",
@@ -1465,7 +1595,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "radyo-manavgat"
   },
   {
     "stationName": "Radyo Tezene",
@@ -1477,7 +1608,8 @@
     "radioGroups": [
       "Other",
       "Radyo Home"
-    ]
+    ],
+    "slug": "radyo-tezene"
   },
   {
     "stationName": "Radyo Türkülerle Türkiye",
@@ -1489,7 +1621,8 @@
     "radioGroups": [
       "Other",
       "Radyo Home"
-    ]
+    ],
+    "slug": "radyo-turkulerle-turkiye"
   },
   {
     "stationName": "Gaziantep GRT FM",
@@ -1500,7 +1633,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "gaziantep-grt-fm"
   },
   {
     "stationName": "Genç Radyo",
@@ -1511,7 +1645,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "genc-radyo"
   },
   {
     "stationName": "Kiss Musiki",
@@ -1522,7 +1657,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Number One"
-    ]
+    ],
+    "slug": "kiss-musiki"
   },
   {
     "stationName": "Makam Radyo",
@@ -1534,7 +1670,8 @@
     "radioGroups": [
       "Other",
       "Karnaval"
-    ]
+    ],
+    "slug": "makam-radyo"
   },
   {
     "stationName": "Maziden Bir Demet",
@@ -1546,7 +1683,8 @@
     "radioGroups": [
       "Other",
       "Radyo Home"
-    ]
+    ],
+    "slug": "maziden-bir-demet"
   },
   {
     "stationName": "Pal Alaturka",
@@ -1557,7 +1695,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Pal Group"
-    ]
+    ],
+    "slug": "pal-alaturka"
   },
   {
     "stationName": "Polis Radyosu TSM",
@@ -1568,7 +1707,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "polis-radyosu-tsm"
   },
   {
     "stationName": "Radyo 7 Tsm",
@@ -1579,7 +1719,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "radyo-7-tsm"
   },
   {
     "stationName": "Radyo Ahenk",
@@ -1590,7 +1731,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "radyo-ahenk"
   },
   {
     "stationName": "Radyo Han Kayseri",
@@ -1601,7 +1743,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "radyo-han-kayseri"
   },
   {
     "stationName": "Radyo Kordelya",
@@ -1612,7 +1755,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "radyo-kordelya"
   },
   {
     "stationName": "Radyo Nihavent – KKTC",
@@ -1623,7 +1767,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "radyo-nihavent-kktc"
   },
   {
     "stationName": "Radyo Viva Turka",
@@ -1634,7 +1779,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Show & Viva"
-    ]
+    ],
+    "slug": "radyo-viva-turka"
   },
   {
     "stationName": "Uludağ Fm 91.7",
@@ -1645,7 +1791,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "uludag-fm-91-7"
   },
   {
     "stationName": "Ulusal Radyo – Sanat",
@@ -1656,7 +1803,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "ulusal-radyo-sanat"
   },
   {
     "stationName": "Üsküdar Musiki Cemiyeti Radyosu",
@@ -1668,7 +1816,8 @@
     "radioGroups": [
       "Other",
       "Number One"
-    ]
+    ],
+    "slug": "uskudar-musiki-cemiyeti-radyosu"
   },
   {
     "stationName": "Arkadaş FM",
@@ -1679,7 +1828,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "arkadas-fm"
   },
   {
     "stationName": "Barış Radyo",
@@ -1690,7 +1840,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "baris-radyo"
   },
   {
     "stationName": "Berat FM",
@@ -1701,7 +1852,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "berat-fm"
   },
   {
     "stationName": "Bizim İller Radyo",
@@ -1712,7 +1864,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "bizim-iller-radyo"
   },
   {
     "stationName": "Bizim Radyo",
@@ -1723,7 +1876,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "bizim-radyo"
   },
   {
     "stationName": "Çorum Çağrı FM",
@@ -1734,7 +1888,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "corum-cagri-fm"
   },
   {
     "stationName": "Davet Radyo",
@@ -1745,7 +1900,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "davet-radyo"
   },
   {
     "stationName": "Diyanet Kur’an Radyosu",
@@ -1756,7 +1912,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "diyanet-kur-an-radyosu"
   },
   {
     "stationName": "Dolunay FM",
@@ -1767,7 +1924,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "dolunay-fm"
   },
   {
     "stationName": "Dost Fm",
@@ -1778,7 +1936,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "dost-fm"
   },
   {
     "stationName": "Enderun FM",
@@ -1789,7 +1948,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "enderun-fm"
   },
   {
     "stationName": "Erkam Radyo",
@@ -1800,7 +1960,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "erkam-radyo"
   },
   {
     "stationName": "Furkan Radyo Kayseri",
@@ -1811,7 +1972,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "furkan-radyo-kayseri"
   },
   {
     "stationName": "Gonca FM",
@@ -1822,7 +1984,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "gonca-fm"
   },
   {
     "stationName": "Hak Radyo",
@@ -1834,7 +1997,8 @@
     "radioGroups": [
       "Other",
       "Pal Group"
-    ]
+    ],
+    "slug": "hak-radyo"
   },
   {
     "stationName": "Kocaeli Radyo Gül",
@@ -1845,7 +2009,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "kocaeli-radyo-gul"
   },
   {
     "stationName": "Konya İsra FM",
@@ -1856,7 +2021,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "konya-isra-fm"
   },
   {
     "stationName": "Konya Radyo En",
@@ -1867,7 +2033,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "konya-radyo-en"
   },
   {
     "stationName": "Lalegül FM",
@@ -1878,7 +2045,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "lalegul-fm"
   },
   {
     "stationName": "Mesaj Fm",
@@ -1889,7 +2057,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "mesaj-fm"
   },
   {
     "stationName": "Moral Fm",
@@ -1900,7 +2069,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "moral-fm"
   },
   {
     "stationName": "Nur FM",
@@ -1911,7 +2081,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "nur-fm"
   },
   {
     "stationName": "Nur Radyo",
@@ -1922,7 +2093,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "nur-radyo"
   },
   {
     "stationName": "Özel Fm",
@@ -1933,7 +2105,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "ozel-fm"
   },
   {
     "stationName": "Pal Mina",
@@ -1944,7 +2117,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Pal Group"
-    ]
+    ],
+    "slug": "pal-mina"
   },
   {
     "stationName": "24 Radyo",
@@ -1955,7 +2129,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "24-radyo"
   },
   {
     "stationName": "Bloomberg HT Radyo",
@@ -1966,7 +2141,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "bloomberg-ht-radyo"
   },
   {
     "stationName": "Lig Radyo",
@@ -1977,7 +2153,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "lig-radyo"
   },
   {
     "stationName": "Meteorolojinin Sesi",
@@ -1988,7 +2165,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "meteorolojinin-sesi"
   },
   {
     "stationName": "NTV Spor Radyo",
@@ -1999,7 +2177,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "ntv-spor-radyo"
   },
   {
     "stationName": "Radyo Fenerbahçe",
@@ -2010,7 +2189,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "radyo-fenerbahce"
   },
   {
     "stationName": "Radyo Gol",
@@ -2022,7 +2202,8 @@
     "radioGroups": [
       "Other",
       "Future Generation"
-    ]
+    ],
+    "slug": "radyo-gol"
   },
   {
     "stationName": "Radyo Trafik",
@@ -2033,7 +2214,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "radyo-trafik"
   },
   {
     "stationName": "Samsun Haber Radyo",
@@ -2044,7 +2226,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "samsun-haber-radyo"
   },
   {
     "stationName": "ST Endüstri Radyo",
@@ -2055,7 +2238,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "st-endustri-radyo"
   },
   {
     "stationName": "Sun Radyo",
@@ -2066,7 +2250,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "sun-radyo"
   },
   {
     "stationName": "Ülke Radyo",
@@ -2077,7 +2262,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "ulke-radyo"
   },
   {
     "stationName": "Ulusal Radyo",
@@ -2088,7 +2274,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "ulusal-radyo"
   },
   {
     "stationName": "Best Rap",
@@ -2099,7 +2286,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "best-rap"
   },
   {
     "stationName": "Fenomen Rap",
@@ -2110,7 +2298,8 @@
     "stationPlaybackUrl": "https://live.radyofenomen.com/fenomenrap/abr/playlist.m3u8",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "fenomen-rap"
   },
   {
     "stationName": "Fenomen Türkçe Rap",
@@ -2121,7 +2310,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "fenomen-turkce-rap"
   },
   {
     "stationName": "İTÜ Radyosu Rock",
@@ -2133,7 +2323,8 @@
     "radioGroups": [
       "Other",
       "Kampüs Radyoları"
-    ]
+    ],
+    "slug": "itu-radyosu-rock"
   },
   {
     "stationName": "Joy Türk Rock",
@@ -2145,7 +2336,8 @@
     "radioGroups": [
       "Other",
       "Karnaval"
-    ]
+    ],
+    "slug": "joy-turk-rock"
   },
   {
     "stationName": "Kiss Beatbox",
@@ -2156,7 +2348,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Number One"
-    ]
+    ],
+    "slug": "kiss-beatbox"
   },
   {
     "stationName": "Max Fm",
@@ -2167,7 +2360,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "max-fm"
   },
   {
     "stationName": "Number 1 R&B",
@@ -2179,7 +2373,8 @@
     "radioGroups": [
       "Other",
       "Number One"
-    ]
+    ],
+    "slug": "number-1-r-b"
   },
   {
     "stationName": "Number 1 Rock",
@@ -2191,7 +2386,8 @@
     "radioGroups": [
       "Other",
       "Number One"
-    ]
+    ],
+    "slug": "number-1-rock"
   },
   {
     "stationName": "Number One Türk Rap",
@@ -2202,7 +2398,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Number One"
-    ]
+    ],
+    "slug": "number-one-turk-rap"
   },
   {
     "stationName": "Pal Rap",
@@ -2213,7 +2410,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Pal Group"
-    ]
+    ],
+    "slug": "pal-rap"
   },
   {
     "stationName": "Power Earth",
@@ -2224,7 +2422,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Power App"
-    ]
+    ],
+    "slug": "power-earth"
   },
   {
     "stationName": "Power HipHop R&B",
@@ -2235,7 +2434,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Power App"
-    ]
+    ],
+    "slug": "power-hiphop-r-b"
   },
   {
     "stationName": "Power Plus",
@@ -2246,7 +2446,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Power App"
-    ]
+    ],
+    "slug": "power-plus"
   },
   {
     "stationName": "PowerTürk Rap",
@@ -2257,7 +2458,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Power App"
-    ]
+    ],
+    "slug": "powerturk-rap"
   },
   {
     "stationName": "Radyo BoomBox",
@@ -2269,7 +2471,8 @@
     "radioGroups": [
       "Other",
       "Power App"
-    ]
+    ],
+    "slug": "radyo-boombox"
   },
   {
     "stationName": "Radyo Duble Rap",
@@ -2280,7 +2483,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "radyo-duble-rap"
   },
   {
     "stationName": "Radyo Mars",
@@ -2291,7 +2495,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "radyo-mars"
   },
   {
     "stationName": "Rap Home",
@@ -2303,7 +2508,8 @@
     "radioGroups": [
       "Other",
       "Radyo Home"
-    ]
+    ],
+    "slug": "rap-home"
   },
   {
     "stationName": "Rock FM",
@@ -2314,7 +2520,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "rock-fm"
   },
   {
     "stationName": "Rock Station",
@@ -2326,7 +2533,8 @@
     "radioGroups": [
       "Other",
       "Karnaval"
-    ]
+    ],
+    "slug": "rock-station"
   },
   {
     "stationName": "The Rock Radio",
@@ -2338,7 +2546,8 @@
     "radioGroups": [
       "Other",
       "Radyo Home"
-    ]
+    ],
+    "slug": "the-rock-radio"
   },
   {
     "stationName": "X Radio",
@@ -2349,7 +2558,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "x-radio"
   },
   {
     "stationName": "Yeni Rap",
@@ -2360,7 +2570,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "yeni-rap"
   },
   {
     "stationName": "Best Hit",
@@ -2371,7 +2582,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "best-hit"
   },
   {
     "stationName": "Dalkas FM",
@@ -2382,7 +2594,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "dalkas-fm"
   },
   {
     "stationName": "Dance FM – KKTC",
@@ -2393,7 +2606,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "dance-fm-kktc"
   },
   {
     "stationName": "Fenomen 2010’lar",
@@ -2404,7 +2618,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "fenomen-2010-lar"
   },
   {
     "stationName": "Fenomen Pop",
@@ -2415,7 +2630,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "fenomen-pop"
   },
   {
     "stationName": "Greatest Hits of All Time",
@@ -2427,7 +2643,8 @@
     "radioGroups": [
       "Other",
       "Karnaval"
-    ]
+    ],
+    "slug": "greatest-hits-of-all-time"
   },
   {
     "stationName": "Heart FM",
@@ -2438,7 +2655,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "heart-fm"
   },
   {
     "stationName": "İTÜ Radyosu Jazz Blues",
@@ -2450,7 +2668,8 @@
     "radioGroups": [
       "Other",
       "Caz Radyoları"
-    ]
+    ],
+    "slug": "itu-radyosu-jazz-blues"
   },
   {
     "stationName": "Joy Jazz",
@@ -2462,7 +2681,8 @@
     "radioGroups": [
       "Other",
       "Caz Radyoları"
-    ]
+    ],
+    "slug": "joy-jazz"
   },
   {
     "stationName": "Kiss Dance",
@@ -2473,7 +2693,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Number One"
-    ]
+    ],
+    "slug": "kiss-dance"
   },
   {
     "stationName": "Kiss Ege’nin Sesi",
@@ -2484,7 +2705,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Number One"
-    ]
+    ],
+    "slug": "kiss-ege-nin-sesi"
   },
   {
     "stationName": "Kiss FK",
@@ -2495,7 +2717,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Number One"
-    ]
+    ],
+    "slug": "kiss-fk"
   },
   {
     "stationName": "Kiss Gold",
@@ -2506,7 +2729,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Number One"
-    ]
+    ],
+    "slug": "kiss-gold"
   },
   {
     "stationName": "Kore Pop",
@@ -2517,7 +2741,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "kore-pop"
   },
   {
     "stationName": "Literal Radio",
@@ -2529,7 +2754,8 @@
     "radioGroups": [
       "Other",
       "Karnaval"
-    ]
+    ],
+    "slug": "literal-radio"
   },
   {
     "stationName": "Lounge FM",
@@ -2541,7 +2767,8 @@
     "radioGroups": [
       "Other",
       "Future Generation"
-    ]
+    ],
+    "slug": "lounge-fm"
   },
   {
     "stationName": "Mix Fm Mersin",
@@ -2552,7 +2779,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "mix-fm-mersin"
   },
   {
     "stationName": "NRK Jazz",
@@ -2564,7 +2792,8 @@
     "radioGroups": [
       "Other",
       "Caz Radyoları"
-    ]
+    ],
+    "slug": "nrk-jazz"
   },
   {
     "stationName": "Number 1 Dance",
@@ -2576,7 +2805,8 @@
     "radioGroups": [
       "Other",
       "Number One"
-    ]
+    ],
+    "slug": "number-1-dance"
   },
   {
     "stationName": "Number 1 Deep House",
@@ -2588,7 +2818,8 @@
     "radioGroups": [
       "Other",
       "Number One"
-    ]
+    ],
+    "slug": "number-1-deep-house"
   },
   {
     "stationName": "Number 1 Disco",
@@ -2600,7 +2831,8 @@
     "radioGroups": [
       "Other",
       "Number One"
-    ]
+    ],
+    "slug": "number-1-disco"
   },
   {
     "stationName": "Number 1 Ertuğrul Özkök",
@@ -2612,7 +2844,8 @@
     "radioGroups": [
       "Other",
       "Number One"
-    ]
+    ],
+    "slug": "number-1-ertugrul-ozkok"
   },
   {
     "stationName": "Baby Joy",
@@ -2624,7 +2857,8 @@
     "radioGroups": [
       "Other",
       "Karnaval"
-    ]
+    ],
+    "slug": "baby-joy"
   },
   {
     "stationName": "Berlin Metropol Fm",
@@ -2635,7 +2869,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "berlin-metropol-fm"
   },
   {
     "stationName": "Best of Number 1",
@@ -2647,7 +2882,8 @@
     "radioGroups": [
       "Other",
       "Number One"
-    ]
+    ],
+    "slug": "best-of-number-1"
   },
   {
     "stationName": "Blue Karadeniz Radyo",
@@ -2659,7 +2895,8 @@
     "radioGroups": [
       "Other",
       "Karadeniz Radyoları"
-    ]
+    ],
+    "slug": "blue-karadeniz-radyo"
   },
   {
     "stationName": "Dream Türk",
@@ -2670,7 +2907,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "dream-turk"
   },
   {
     "stationName": "Enerji 93.1 – KKTC",
@@ -2681,7 +2919,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "enerji-93-1-kktc"
   },
   {
     "stationName": "Enerji Slow 106.2 – KKTC",
@@ -2692,7 +2931,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "enerji-slow-106-2-kktc"
   },
   {
     "stationName": "First FM",
@@ -2703,7 +2943,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "first-fm"
   },
   {
     "stationName": "Hit Radyo",
@@ -2714,7 +2955,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "hit-radyo"
   },
   {
     "stationName": "Karadeniz Radyo",
@@ -2726,7 +2968,8 @@
     "radioGroups": [
       "Other",
       "Karadeniz Radyoları"
-    ]
+    ],
+    "slug": "karadeniz-radyo"
   },
   {
     "stationName": "Kent FM",
@@ -2737,7 +2980,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "kent-fm"
   },
   {
     "stationName": "ABC Classic 2 FM",
@@ -2748,7 +2992,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "abc-classic-2-fm"
   },
   {
     "stationName": "Borusan Klasik",
@@ -2760,7 +3005,8 @@
     "radioGroups": [
       "Other",
       "Karnaval"
-    ]
+    ],
+    "slug": "borusan-klasik"
   },
   {
     "stationName": "İTÜ Radyosu Klasik",
@@ -2772,7 +3018,8 @@
     "radioGroups": [
       "Other",
       "Kampüs Radyoları"
-    ]
+    ],
+    "slug": "itu-radyosu-klasik"
   },
   {
     "stationName": "Klasik Home",
@@ -2784,7 +3031,8 @@
     "radioGroups": [
       "Other",
       "Radyo Home"
-    ]
+    ],
+    "slug": "klasik-home"
   },
   {
     "stationName": "NRK Klasik",
@@ -2795,7 +3043,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "nrk-klasik"
   },
   {
     "stationName": "Number 1 Classic",
@@ -2807,7 +3056,8 @@
     "radioGroups": [
       "Other",
       "Number One"
-    ]
+    ],
+    "slug": "number-1-classic"
   },
   {
     "stationName": "Radio Swiss Classic",
@@ -2818,7 +3068,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "radio-swiss-classic"
   },
   {
     "stationName": "Radyo Klasik",
@@ -2829,7 +3080,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Other"
-    ]
+    ],
+    "slug": "radyo-klasik"
   },
   {
     "stationName": "Odea Radyo",
@@ -2840,7 +3092,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Karnaval"
-    ]
+    ],
+    "slug": "odea-radyo"
   },
   {
     "stationName": "Pop Hits",
@@ -2851,7 +3104,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Karnaval"
-    ]
+    ],
+    "slug": "pop-hits"
   },
   {
     "stationName": "Popbesk",
@@ -2862,7 +3116,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Karnaval"
-    ]
+    ],
+    "slug": "popbesk"
   },
   {
     "stationName": "Radyo Pop 90",
@@ -2873,7 +3128,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Nostalji Radyoları"
-    ]
+    ],
+    "slug": "radyo-pop-90"
   },
   {
     "stationName": "Radyo Sole",
@@ -2884,7 +3140,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Karnaval"
-    ]
+    ],
+    "slug": "radyo-sole"
   },
   {
     "stationName": "Retro Türk",
@@ -2895,7 +3152,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Nostalji Radyoları"
-    ]
+    ],
+    "slug": "retro-turk"
   },
   {
     "stationName": "Number 1 Greek",
@@ -2906,7 +3164,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Number One"
-    ]
+    ],
+    "slug": "number-1-greek"
   },
   {
     "stationName": "Number 1 Heart",
@@ -2917,7 +3176,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Number One"
-    ]
+    ],
+    "slug": "number-1-heart"
   },
   {
     "stationName": "Number 1 Jazz",
@@ -2928,7 +3188,8 @@
     "stationPlaybackUrl": "https://n10101m.mediatriple.net/jazz",
     "radioGroups": [
       "Caz Radyoları"
-    ]
+    ],
+    "slug": "number-1-jazz"
   },
   {
     "stationName": "Number 1 Lounge",
@@ -2939,7 +3200,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Number One"
-    ]
+    ],
+    "slug": "number-1-lounge"
   },
   {
     "stationName": "Petrol Ofisi Radyosu",
@@ -2950,7 +3212,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Number One"
-    ]
+    ],
+    "slug": "petrol-ofisi-radyosu"
   },
   {
     "stationName": "Pal Ala",
@@ -2961,7 +3224,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Pal Group"
-    ]
+    ],
+    "slug": "pal-ala"
   },
   {
     "stationName": "Pal Legend",
@@ -2972,7 +3236,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Pal Group"
-    ]
+    ],
+    "slug": "pal-legend"
   },
   {
     "stationName": "Pal Orient",
@@ -2983,7 +3248,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Pal Group"
-    ]
+    ],
+    "slug": "pal-orient"
   },
   {
     "stationName": "Pal Rabia",
@@ -2994,7 +3260,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Pal Group"
-    ]
+    ],
+    "slug": "pal-rabia"
   },
   {
     "stationName": "Pal Remix",
@@ -3005,7 +3272,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Pal Group"
-    ]
+    ],
+    "slug": "pal-remix"
   },
   {
     "stationName": "Radyo Furkan",
@@ -3016,7 +3284,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Pal Group"
-    ]
+    ],
+    "slug": "radyo-furkan"
   },
   {
     "stationName": "Power Dance",
@@ -3027,7 +3296,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Power App"
-    ]
+    ],
+    "slug": "power-dance"
   },
   {
     "stationName": "Power Deep",
@@ -3038,7 +3308,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Power App"
-    ]
+    ],
+    "slug": "power-deep"
   },
   {
     "stationName": "Power Gold",
@@ -3049,7 +3320,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Nostalji Radyoları"
-    ]
+    ],
+    "slug": "power-gold"
   },
   {
     "stationName": "Power Greece",
@@ -3060,7 +3332,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Power App"
-    ]
+    ],
+    "slug": "power-greece"
   },
   {
     "stationName": "Power Jazz",
@@ -3071,7 +3344,8 @@
     "stationPlaybackUrl": "https://listen.powerapp.com.tr/powersmoothjazz/abr/playlist.m3u8",
     "radioGroups": [
       "Caz Radyoları"
-    ]
+    ],
+    "slug": "power-jazz"
   },
   {
     "stationName": "Power Smooth",
@@ -3082,7 +3356,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Power App"
-    ]
+    ],
+    "slug": "power-smooth"
   },
   {
     "stationName": "PowerTürk Dans",
@@ -3093,7 +3368,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Power App"
-    ]
+    ],
+    "slug": "powerturk-dans"
   },
   {
     "stationName": "PowerTürk En İyiler",
@@ -3104,7 +3380,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Power App"
-    ]
+    ],
+    "slug": "powerturk-en-iyiler"
   },
   {
     "stationName": "PowerTürk Taptaze",
@@ -3115,7 +3392,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Power App"
-    ]
+    ],
+    "slug": "powerturk-taptaze"
   },
   {
     "stationName": "Pop Home",
@@ -3126,7 +3404,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Radyo Home"
-    ]
+    ],
+    "slug": "pop-home"
   },
   {
     "stationName": "Radyo Altın Şarkılar",
@@ -3137,7 +3416,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Nostalji Radyoları"
-    ]
+    ],
+    "slug": "radyo-altin-sarkilar"
   },
   {
     "stationName": "Radyo Ankara Havaları",
@@ -3148,7 +3428,8 @@
     "stationPlaybackUrl": "https://moondigitaledge.radyotvonline.net/ankarahavalari/playlist.m3u8",
     "radioGroups": [
       "Ankara Havaları"
-    ]
+    ],
+    "slug": "radyo-ankara-havalari"
   },
   {
     "stationName": "Radyo Ege Havaları",
@@ -3159,7 +3440,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Radyo Home"
-    ]
+    ],
+    "slug": "radyo-ege-havalari"
   },
   {
     "stationName": "Relax Home",
@@ -3170,7 +3452,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Radyo Home"
-    ]
+    ],
+    "slug": "relax-home"
   },
   {
     "stationName": "Sarı Tramvay",
@@ -3181,7 +3464,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Nostalji Radyoları"
-    ]
+    ],
+    "slug": "sari-tramvay"
   },
   {
     "stationName": "World Hits",
@@ -3192,7 +3476,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Radyo Home"
-    ]
+    ],
+    "slug": "world-hits"
   },
   {
     "stationName": "ADYÜ FM – Adıyaman Üniversitesi Radyosu",
@@ -3203,7 +3488,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Kampüs Radyoları"
-    ]
+    ],
+    "slug": "adyu-fm-adiyaman-universitesi-radyosu"
   },
   {
     "stationName": "Alev’in Sesi Radyosu",
@@ -3214,7 +3500,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Kampüs Radyoları"
-    ]
+    ],
+    "slug": "alev-in-sesi-radyosu"
   },
   {
     "stationName": "CU Radyo – Cumhuriyet Üniversitesi",
@@ -3225,7 +3512,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Kampüs Radyoları"
-    ]
+    ],
+    "slug": "cu-radyo-cumhuriyet-universitesi"
   },
   {
     "stationName": "Hitit FM – Hitit Üniversitesi Radyosu",
@@ -3236,7 +3524,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Kampüs Radyoları"
-    ]
+    ],
+    "slug": "hitit-fm-hitit-universitesi-radyosu"
   },
   {
     "stationName": "Kampüs FM",
@@ -3247,7 +3536,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Kampüs Radyoları"
-    ]
+    ],
+    "slug": "kampus-fm"
   },
   {
     "stationName": "KURadyo",
@@ -3258,7 +3548,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Kampüs Radyoları"
-    ]
+    ],
+    "slug": "kuradyo"
   },
   {
     "stationName": "Kütahya Radyo Dumlupınar",
@@ -3269,7 +3560,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Kampüs Radyoları"
-    ]
+    ],
+    "slug": "kutahya-radyo-dumlupinar"
   },
   {
     "stationName": "Mersin Üniversitesi Radyosu",
@@ -3280,7 +3572,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Kampüs Radyoları"
-    ]
+    ],
+    "slug": "mersin-universitesi-radyosu"
   },
   {
     "stationName": "OMÜ Radyo",
@@ -3291,7 +3584,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Kampüs Radyoları"
-    ]
+    ],
+    "slug": "omu-radyo"
   },
   {
     "stationName": "Radio Atılım",
@@ -3302,7 +3596,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Kampüs Radyoları"
-    ]
+    ],
+    "slug": "radio-atilim"
   },
   {
     "stationName": "Radyo A Anadolu Üniversitesi",
@@ -3313,7 +3608,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Kampüs Radyoları"
-    ]
+    ],
+    "slug": "radyo-a-anadolu-universitesi"
   },
   {
     "stationName": "Radyo Altınbaş",
@@ -3324,7 +3620,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Kampüs Radyoları"
-    ]
+    ],
+    "slug": "radyo-altinbas"
   },
   {
     "stationName": "Radyo Başkent",
@@ -3335,7 +3632,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Kampüs Radyoları"
-    ]
+    ],
+    "slug": "radyo-baskent"
   },
   {
     "stationName": "Radyo Bilkent",
@@ -3346,7 +3644,8 @@
     "stationPlaybackUrl": "https://stream.netradyom.com/listen/radyobilkent/radio.mp3",
     "radioGroups": [
       "Kampüs Radyoları"
-    ]
+    ],
+    "slug": "radyo-bilkent"
   },
   {
     "stationName": "Radyo Boğaziçi",
@@ -3357,7 +3656,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Kampüs Radyoları"
-    ]
+    ],
+    "slug": "radyo-bogazici"
   },
   {
     "stationName": "Radyo Düet",
@@ -3368,7 +3668,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Kampüs Radyoları"
-    ]
+    ],
+    "slug": "radyo-duet"
   },
   {
     "stationName": "Radyo Ege Üniversitesi (Kampüs)",
@@ -3379,7 +3680,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Kampüs Radyoları"
-    ]
+    ],
+    "slug": "radyo-ege-universitesi-kampus"
   },
   {
     "stationName": "Radyo ESOGÜ",
@@ -3390,7 +3692,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Kampüs Radyoları"
-    ]
+    ],
+    "slug": "radyo-esogu"
   },
   {
     "stationName": "Radyo ESTÜ",
@@ -3401,7 +3704,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Kampüs Radyoları"
-    ]
+    ],
+    "slug": "radyo-estu"
   },
   {
     "stationName": "Radyo Fırat",
@@ -3412,7 +3716,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Kampüs Radyoları"
-    ]
+    ],
+    "slug": "radyo-firat"
   },
   {
     "stationName": "Radyo İlef",
@@ -3423,7 +3728,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Kampüs Radyoları"
-    ]
+    ],
+    "slug": "radyo-ilef"
   },
   {
     "stationName": "Radyo İletişim",
@@ -3434,7 +3740,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Kampüs Radyoları"
-    ]
+    ],
+    "slug": "radyo-iletisim"
   },
   {
     "stationName": "Radyo Ki",
@@ -3445,7 +3752,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Kampüs Radyoları"
-    ]
+    ],
+    "slug": "radyo-ki"
   },
   {
     "stationName": "Radyo KTÜ",
@@ -3456,7 +3764,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Kampüs Radyoları"
-    ]
+    ],
+    "slug": "radyo-ktu"
   },
   {
     "stationName": "Radyo Viva Trend Pop",
@@ -3467,7 +3776,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Show & Viva"
-    ]
+    ],
+    "slug": "radyo-viva-trend-pop"
   },
   {
     "stationName": "Radyo Viva Club",
@@ -3478,7 +3788,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Show & Viva"
-    ]
+    ],
+    "slug": "radyo-viva-club"
   },
   {
     "stationName": "Show Trend",
@@ -3489,7 +3800,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Show & Viva"
-    ]
+    ],
+    "slug": "show-trend"
   },
   {
     "stationName": "Show Eller Havaya",
@@ -3500,7 +3812,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Show & Viva"
-    ]
+    ],
+    "slug": "show-eller-havaya"
   },
   {
     "stationName": "Show Akustik",
@@ -3511,7 +3824,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Show & Viva"
-    ]
+    ],
+    "slug": "show-akustik"
   },
   {
     "stationName": "Show 90’lar",
@@ -3522,7 +3836,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Nostalji Radyoları"
-    ]
+    ],
+    "slug": "show-90-lar"
   },
   {
     "stationName": "Radyo Viva Türkü",
@@ -3533,7 +3848,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Show & Viva"
-    ]
+    ],
+    "slug": "radyo-viva-turku"
   },
   {
     "stationName": "Radyo Viva Efkar",
@@ -3544,7 +3860,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Show & Viva"
-    ]
+    ],
+    "slug": "radyo-viva-efkar"
   },
   {
     "stationName": "Radyo FG",
@@ -3555,7 +3872,8 @@
     "stationPlaybackUrl": "https://edge1.radyotvonline.net/shoutcast/play/fg",
     "radioGroups": [
       "Future Generation"
-    ]
+    ],
+    "slug": "radyo-fg"
   },
   {
     "stationName": "Radyo Ankara",
@@ -3566,7 +3884,8 @@
     "stationPlaybackUrl": "https://radyoankara.ozelip.net:8152/;stream.mp3",
     "radioGroups": [
       "Ankara Havaları"
-    ]
+    ],
+    "slug": "radyo-ankara"
   },
   {
     "stationName": "Radyo Tuzgölü",
@@ -3577,7 +3896,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Ankara Havaları"
-    ]
+    ],
+    "slug": "radyo-tuzgolu"
   },
   {
     "stationName": "Yörük FM",
@@ -3588,7 +3908,8 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Ankara Havaları"
-    ]
+    ],
+    "slug": "yoruk-fm"
   },
   {
     "stationName": "Radyo 06 Ankara",
@@ -3599,7 +3920,8 @@
     "stationPlaybackUrl": "https://radyo.yayin.com.tr:5132/stream?",
     "radioGroups": [
       "Ankara Havaları"
-    ]
+    ],
+    "slug": "radyo-06-ankara"
   },
   {
     "stationName": "Karadeniz Dalga FM",
@@ -3610,7 +3932,8 @@
     "stationPlaybackUrl": "https://dinle.radyokaradeniz.com/stream?",
     "radioGroups": [
       "Karadeniz Radyoları"
-    ]
+    ],
+    "slug": "karadeniz-dalga-fm"
   },
   {
     "stationName": "Raks FM",
@@ -3621,7 +3944,8 @@
     "stationPlaybackUrl": "https://sslyayin.radyoyayini.com:7092/;stream.mp3",
     "radioGroups": [
       "Karadeniz Radyoları"
-    ]
+    ],
+    "slug": "raks-fm"
   },
   {
     "stationName": "Karadeniz Akustik FM",
@@ -3632,7 +3956,8 @@
     "stationPlaybackUrl": "https://karadenizakustik.radyotvonline.net/;stream.mp3",
     "radioGroups": [
       "Karadeniz Radyoları"
-    ]
+    ],
+    "slug": "karadeniz-akustik-fm"
   },
   {
     "stationName": "Vitamin FM",
@@ -3643,7 +3968,8 @@
     "stationPlaybackUrl": "https://vitaminfm.80.yayin.com.tr/stream?",
     "radioGroups": [
       "Karadeniz Radyoları"
-    ]
+    ],
+    "slug": "vitamin-fm"
   },
   {
     "stationName": "Kemençe FM",
@@ -3654,7 +3980,8 @@
     "stationPlaybackUrl": "https://sssx.radyosfer.com/kemencefm/stream?/;stream.mp3",
     "radioGroups": [
       "Karadeniz Radyoları"
-    ]
+    ],
+    "slug": "kemence-fm"
   },
   {
     "stationName": "Karadeniz Fm Bursa",
@@ -3665,7 +3992,8 @@
     "stationPlaybackUrl": "https://sssx.radyosfer.com/bursakaradenizfm/stream?/;stream.mp3",
     "radioGroups": [
       "Karadeniz Radyoları"
-    ]
+    ],
+    "slug": "karadeniz-fm-bursa"
   },
   {
     "stationName": "Radyo Bir",
@@ -3676,7 +4004,8 @@
     "stationPlaybackUrl": "https://canli.radyobir.com.tr:7002/stream?",
     "radioGroups": [
       "Karadeniz Radyoları"
-    ]
+    ],
+    "slug": "radyo-bir"
   },
   {
     "stationName": "Radyo Karadeniz",
@@ -3687,7 +4016,8 @@
     "stationPlaybackUrl": "https://radyo1.radyo-dinle.tc/8138/stream?/;stream.mp3",
     "radioGroups": [
       "Karadeniz Radyoları"
-    ]
+    ],
+    "slug": "radyo-karadeniz"
   },
   {
     "stationName": "Esas Radyo",
@@ -3698,6 +4028,7 @@
     "stationPlaybackUrl": "",
     "radioGroups": [
       "Nostalji Radyoları"
-    ]
+    ],
+    "slug": "esas-radyo"
   }
 ]
