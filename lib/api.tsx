@@ -1,10 +1,12 @@
 import categories from "@/lib/data/categories.json";
 import radioGroups from "@/lib/data/radio-groups.json";
 import radioStations from "@/lib/data/radio-stations.json";
+import stationDetails from "@/lib/data/radio-station-details.json";
 import {
   RadioGroup,
   Category,
   Station,
+  StationDetails,
   Playlist,
   HistoryItem,
 } from "@/lib/types";
@@ -285,6 +287,31 @@ export const getTopStations = async (): Promise<Station[]> => {
       .sort(() => 0.5 - Math.random())
       .slice(0, 15);
   }
+};
+
+export const getStationBySlug = async (slug: string): Promise<Station | null> => {
+  const station = validStations.find(
+    (s: Station) => s.slug === slug
+  );
+  
+  return station || null;
+};
+
+export const getStationDetailsBySlug = async (slug: string): Promise<StationDetails | null> => {
+  const details = stationDetails.find(
+    (detail: StationDetails) => detail["station-slug"] === slug
+  );
+  
+  return details || null;
+};
+
+export const getStationSlugsWithDetails = async (): Promise<string[]> => {
+  // Get slugs of stations that have details
+  const slugsWithDetails = new Set(
+    stationDetails.map((detail: StationDetails) => detail["station-slug"])
+  );
+
+  return Array.from(slugsWithDetails);
 };
 
 export const getRandomStations = async (

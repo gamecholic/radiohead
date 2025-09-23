@@ -6,7 +6,7 @@ export async function generateMetadata({
   params,
 }: {
   params: Promise<{ slug: string }>;
-}) {
+}): Promise<Metadata> {
   const resolvedParams = await params;
   const radioGroups = await getRadioGroupsWithSlugs();
   const group = radioGroups.find(

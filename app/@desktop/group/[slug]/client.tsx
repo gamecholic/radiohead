@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { StationIcon } from "@/components/station-icon";
 import { useAudio } from "@/contexts/AudioContext";
 import { Play, Pause } from "lucide-react";
@@ -32,8 +33,8 @@ export function GroupPageClient({
                 {group.groupName} Radyo İstasyonları
               </h1>
               <p className="text-gray-400 mb-4">
-                {group.groupName} grubuna ait {stations.length} adet radyo istasyonu. 
-                Canlı radyo dinle ve favori istasyonlarını keşfet.
+                {group.groupName} grubuna ait {stations.length} adet radyo
+                istasyonu. Canlı radyo dinle ve favori istasyonlarını keşfet.
               </p>
               <div className="h-1 w-24 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full"></div>
             </div>
@@ -59,7 +60,17 @@ export function GroupPageClient({
                     />
                     <div className="ml-3 sm:ml-4 overflow-hidden flex-1 min-w-0">
                       <h2 className="truncate text-base sm:text-lg font-semibold text-white">
-                        {station.stationName}
+                        {station.slug ? (
+                          <Link 
+                            href={`/station/${station.slug}`} 
+                            className="hover:text-blue-400 transition-colors"
+                            onClick={(e) => e.stopPropagation()}
+                          >
+                            {station.stationName}
+                          </Link>
+                        ) : (
+                          station.stationName
+                        )}
                       </h2>
                       <p className="truncate text-xs sm:text-sm text-white/80">
                         {station.stationCity}
@@ -71,7 +82,7 @@ export function GroupPageClient({
                       </div>
                     </div>
                     <Button
-                      className="h-8 w-8 rounded-full bg-hero-gradient hover:opacity-90 ml-2 flex-shrink-0"
+                      className="h-8 w-8 rounded-full bg-hero-gradient hover:opacity-90 flex-shrink-0"
                       size="icon"
                       onClick={(e) => {
                         e.stopPropagation();

@@ -39,20 +39,35 @@ radioGroups.forEach(group => {
   });
 });
 
+// Read station details data to get station slugs
+const stationDetailsPath = path.join(__dirname, 'lib', 'data', 'radio-station-details.json');
+const stationDetails = JSON.parse(fs.readFileSync(stationDetailsPath, 'utf8'));
+
+// Add station detail pages to the sitemap
+stationDetails.forEach(station => {
+  if (station["station-slug"]) {
+    pages.push({
+      path: `/station/${station["station-slug"]}`,
+      priority: '0.7',
+      changefreq: 'monthly'
+    });
+  }
+});
+
 // Generate the sitemap XML
 const generateSitemap = () => {
   const currentDate = getCurrentDate();
   
-  let sitemap = '<?xml version="1.0" encoding="UTF-8"?>' + '\n';
-  sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + '\n';
+  let sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n';
+  sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
   
   pages.forEach(page => {
-    sitemap += '  <url>' + '\n';
-    sitemap += `    <loc>${BASE_URL}${page.path}</loc>` + '\n';
-    sitemap += `    <lastmod>${currentDate}</lastmod>` + '\n';
-    sitemap += `    <changefreq>${page.changefreq}</changefreq>` + '\n';
-    sitemap += `    <priority>${page.priority}</priority>` + '\n';
-    sitemap += '  </url>' + '\n';
+    sitemap += '  <url>\n';
+    sitemap += `    <loc>${BASE_URL}${page.path}</loc>\n`;
+    sitemap += `    <lastmod>${currentDate}</lastmod>\n`;
+    sitemap += `    <changefreq>${page.changefreq}</changefreq>\n`;
+    sitemap += `    <priority>${page.priority}</priority>\n`;
+    sitemap += '  </url>\n';
   });
   
   sitemap += '</urlset>';
