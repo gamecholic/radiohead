@@ -370,6 +370,38 @@ export function StationPageClient({
                     </CardContent>
                   </Card>
                 )}
+
+                {/* Information Source Links */}
+                {stationDetails?.informationSourceLinks && 
+                 stationDetails.informationSourceLinks.length > 0 && (
+                  <Card className="bg-white/5 border-white/10">
+                    <CardHeader>
+                      <CardTitle className="text-xl font-semibold text-white">
+                        Kaynaklar
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="space-y-3">
+                        {stationDetails.informationSourceLinks
+                          .filter(link => link !== null && link.trim() !== "")
+                          .map((link, index) => (
+                            <div key={index} className="flex items-center">
+                              <Globe className="h-5 w-5 text-gray-400 mr-3 flex-shrink-0" />
+                              <a
+                                href={link || ""}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-blue-400 hover:underline truncate"
+                              >
+                                {link}
+                              </a>
+                            </div>
+                          ))
+                        }
+                      </div>
+                    </CardContent>
+                  </Card>
+                )}
               </div>
             </div>
 

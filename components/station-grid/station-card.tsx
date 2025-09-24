@@ -6,18 +6,17 @@ import { useAudio } from "@/contexts/AudioContext";
 import { Station } from "@/lib/types";
 import { Button } from "@/components/ui/button";
 import { Play, Pause } from "lucide-react";
+import Link from "next/link";
 
 interface StationCardProps {
   station: Station;
   stationList?: Station[];
-  layout?: "vertical" | "horizontal";
   source?: string;
 }
 
 export function StationCard({
   station,
   stationList = [],
-  layout = "vertical",
   source = "İstasyonlar",
 }: StationCardProps) {
   const { isPlaying, currentStation, togglePlay } = useAudio();
@@ -28,43 +27,6 @@ export function StationCard({
   const handlePlay = () => {
     togglePlay(station, stationList, source);
   };
-
-  if (layout === "horizontal") {
-    return (
-      <div
-        className={`group relative flex flex-row items-center rounded-xl bg-white/5 p-4 backdrop-blur-md transition-all hover:bg-white/10 hover:cursor-pointer w-64 md:w-72 ${
-          isActive ? "ring-hero-gradient bg-white/10" : ""
-        }`}
-        onClick={handlePlay}
-      >
-        {/* Station image container */}
-        <div className="mr-4">
-          <StationIcon
-            stationIconUrl={station.stationIconUrl}
-            stationName={station.stationName}
-            size="md"
-          />
-        </div>
-
-        {/* Station info */}
-        <div className="flex-1 overflow-hidden">
-          <h3 className="truncate text-base font-semibold text-white">
-            {station.stationName}
-          </h3>
-          <p className="truncate text-sm text-white/80">
-            {station.radioGroups[0] || "Radyo İstasyonu"}
-          </p>
-
-          {/* Genre tag */}
-          <div className="mt-2">
-            <span className="rounded bg-white/10 px-2 py-1 text-xs">
-              {station.stationCategories[0] || "Müzik"}
-            </span>
-          </div>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <div
@@ -117,7 +79,17 @@ export function StationCard({
       {/* Station info */}
       <div className="flex-1 overflow-hidden text-center relative z-10">
         <h3 className="truncate text-sm font-semibold text-white">
-          {station.stationName}
+          {station.slug ? (
+            <Link
+              href={`/station/${station.slug}`}
+              className="hover:text-blue-400 transition-colors"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {station.stationName}
+            </Link>
+          ) : (
+            station.stationName
+          )}
         </h3>
         <p className="truncate text-xs text-white/80">
           {station.radioGroups[0] || "Radyo İstasyonu"}
