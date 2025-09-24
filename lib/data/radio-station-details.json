@@ -1,21 +1,27 @@
 [
     {
         "station-slug": "efkar-fm",
-        "description": "Türkiye'nin En İyi Arabesk Radyosu. Efkarınız dağıtan tek radyo olarak tanınan bu radyo, arabesk müzik türünde yayın yapmaktadır.",
+        "description": "Efkar FM, Türkiye'de faaliyet gösteren ve arabeşk müzik türünde yayın yapan bir radyo istasyonudur. Dinleyicilerine gönülden gelen arabeşk eserleriyle hizmet vermektedir.",
         "frequencies": [
-            "102.5 FM (Tam Doz, Tam Damar)"
+            "102.5 FM"
         ],
         "contact": {
             "phone": "0 312 911 16 67",
             "website": "https://www.radyoefkar.com"
         },
-        "socialMedia": {},
+        "socialMedia": {
+            "facebook": null,
+            "twitter": null,
+            "instagram": null
+        },
         "location": {
             "city": "Ankara",
             "region": "Türkiye"
         },
         "additionalInfo": {
-            "slogan": "EFKARINIZI DAGITAN TEK RADYO"
+            "foundedDate": null,
+            "owner": "Efkar Radyo",
+            "slogan": "Efkarınız Dağıtan Tek Radyo"
         },
         "informationSourceLinks": [
             "https://www.radyoefkar.com"
@@ -23,33 +29,35 @@
     },
     {
         "station-slug": "metro-fm",
-        "description": "Metro FM, Türkiye'de uluslararası müzik ağırlıklı yayın yapan ve 14 Temmuz 1992'de kurulan radyo istasyonudur. İstanbul merkezli olup ülke genelinde yayın yapmaktadır. Türkiye'nin ilk özel radyolarından biri ve ilk yabancı müzik radyosudur.",
+        "description": "Metro FM, 14 Temmuz 1992 tarihinde faaliyete geçen ve Türkiye'nin ilk yabancı müzik radyosu olan.Metro FM, Karnaval Radyo grubuna bağlı olarak hizmet vermektedir. Geniş bir dinleyici kitlesine sahip olan radyo, özellikle yabancı müzik severler arasında popülerdir.",
         "frequencies": [
             "91.2 (Diyarbakır, Sakarya)",
-            "92.4 (Çeşitli konumlar)",
-            "92.7 (Çeşitli konumlar)",
-            "93.6 (Çeşitli konumlar)",
-            "94.0 (Çeşitli konumlar)",
+            "92.4 (Kocaeli)",
+            "92.7 (Bodrum)",
+            "93.6 (Osmaniye)",
+            "94.0 (Kuşadası)",
             "96.0 (Adana, Denizli, Tekirdağ, Türkbükü)",
             "96.1 (Marmaris)",
             "96.4 (Fethiye)",
             "97.2 (Ankara, Bursa, Çeşme, Eskişehir, İstanbul, İzmir, Kars, Kütahya)",
-            "98.0 (Çeşitli konumlar)",
-            "98.8 (Çeşitli konumlar)",
-            "98.9 (Çeşitli konumlar)",
-            "100.7 (Çeşitli konumlar)",
+            "98.0 (Alanya)",
+            "98.8 (Ankara)",
+            "98.9 (Samsun)",
+            "100.7 (Samsun)",
             "101.7 (Konya, Malatya)",
             "102.6 (Antalya, Edirne)",
-            "103.3 (Çeşitli konumlar)",
-            "103.5 (Çeşitli konumlar)",
-            "103.7 (Çeşitli konumlar)"
+            "103.3 (Erzurum)",
+            "103.5 (Göcek)",
+            "103.7 (Gaziantep)"
         ],
         "contact": {
-            "website": "https://metrofm.com.tr"
+            "address": null,
+            "phone": null,
+            "fax": null,
+            "website": "https://www.metrofm.com.tr"
         },
         "socialMedia": {
-            "facebook": null,
-            "twitter": null
+            "facebook": "https://www.facebook.com/metrofm"
         },
         "location": {
             "city": "İstanbul",
@@ -57,16 +65,17 @@
         },
         "additionalInfo": {
             "foundedDate": "14 Temmuz 1992",
-            "owner": "Karnaval Medya Grubu (Actera)",
+            "owner": "Karnaval Radyo",
             "slogan": "Limitsiz Hit Müzik"
         },
         "informationSourceLinks": [
+            "https://www.metrofm.com.tr",
             "https://tr.wikipedia.org/wiki/Metro_FM_(Türkiye)"
         ]
     },
     {
         "station-slug": "virgin-radio-turkiye",
-        "description": "Virgin Radio Türkiye, gençliğin radyosu olarak tanımlanmaktadır. Türkiye'nin enerjik gençlik radyosu olup, Türkçe rap'ten hip-hop'a kadar yerel popüler parçalar ve radyo programlarıyla müzik kültürünün nabzını tutar. Her zaman güncel ve enerjik içerik sunar.",
+        "description": "Virgin Radio Türkiye, 1993 yılında İngiltere'de kurulan Virgin Radio markasının Türkiye şubesidir. Türkçe rap, hip hop ve R&B ağırlıklı müziklerle hizmet vermektedir. Genç kitlelere hitap eden radyo, güncel müziklerin yanı sıra birçok farklı programı ile dikkat çekmektedir.",
         "frequencies": [
             "106.2 FM (İstanbul)",
             "94.8 FM (Ankara)",
@@ -86,24 +95,31 @@
         "contact": {
             "address": "Maslak Mah. A.O.S. 55. Sok. No:2 İç Kapı No:51, 52, 53, 54 Sarıyer / İstanbul",
             "phone": "0212 368 62 00",
-            "website": "https://virginradio.com.tr"
+            "fax": null,
+            "website": "https://www.virginradio.com.tr"
         },
-        "socialMedia": {},
+        "socialMedia": {
+            "facebook": "https://www.facebook.com/VirginRadioTR",
+            "twitter": "https://twitter.com/VirginRadioTR",
+            "instagram": "https://www.instagram.com/virginradiotr"
+        },
         "location": {
             "city": "İstanbul",
             "region": "Türkiye"
         },
         "additionalInfo": {
-            "owner": "Karnaval Medya Grubu",
-            "slogan": "Gençliğin Radyosu, En Hit Müzikler Burada! / Virgin Rap, HipHop ve R&B"
+            "foundedDate": "1993",
+            "owner": "Karnaval Radyo",
+            "slogan": "Virgin Rap, HipHop ve R&B"
         },
         "informationSourceLinks": [
-            "https://virginradio.com.tr"
+            "https://www.virginradio.com.tr",
+            "https://tr.wikipedia.org/wiki/Virgin_Radio_Türkiye"
         ]
     },
     {
         "station-slug": "cnn-turk-radyo",
-        "description": "CNN Türk Radyo, haber içerikli yayın yapan Türkçe bir radyo istasyonudur. Canlı radyo yayınları ile haber programları ve podcast içerikleri sunar. Güncel gelişmeler, Türkiye, dünya, ekonomi, spor, magazin ve yaşam gibi konuları kapsar.",
+        "description": "CNN TÜRK Radyo, 24 saat haber ağırlıklı yayın yapan bilgi ve yorum radyosudur. Türkiye ve dünyadan son dakika gelişmeleri, siyaset, ekonomi, spor, hava durumu gibi konuların yanı sıra trafik ve program içerikleriyle hizmet sunmaktadır.",
         "frequencies": [
             "92.6 (İstanbul)",
             "89.0 (Ankara)",
@@ -131,17 +147,51 @@
             "phone": "0530 918 69 18",
             "website": "https://www.cnnturk.com/radyo"
         },
-        "socialMedia": {},
+        "socialMedia": {
+            "facebook": "https://www.facebook.com/cnn.turk",
+            "twitter": "https://twitter.com/CNNTURK",
+            "instagram": "https://www.instagram.com/cnnturk"
+        },
         "location": {
             "city": "İstanbul",
             "region": "Türkiye"
         },
         "additionalInfo": {
-            "owner": "Demirören Tv Holding A.Ş.",
-            "slogan": null
+            "foundedDate": null,
+            "owner": "Demirören Tv ve Radyo A.Ş.",
+            "slogan": "Haberlerde Öncü"
         },
         "informationSourceLinks": [
-            "https://www.cnnturk.com/radyo"
+            "https://www.cnnturk.com/radyo",
+            "https://tr.wikipedia.org/wiki/CNN_Türk_Radyo"
+        ]
+    },
+    {
+        "station-slug": "joy-fm",
+        "description": "Joy FM, Karnaval Radyo grubuna bağlı olarak hizmet veren ve yabancı müzik ağırlıklı program yapan bir radyo istasyonudur. 1990'ların sonunda faaliyete girmiştir ve dinleyicilerine enerjik yabancı müzikler sunmaktadır.",
+        "frequencies": [],
+        "contact": {
+            "address": null,
+            "phone": null,
+            "fax": null,
+            "website": "https://www.karnaval.com"
+        },
+        "socialMedia": {
+            "facebook": null,
+            "twitter": null,
+            "instagram": null
+        },
+        "location": {
+            "city": "İstanbul",
+            "region": "Marmara"
+        },
+        "additionalInfo": {
+            "foundedDate": "1990'lar",
+            "owner": "Karnaval Radyo",
+            "slogan": "Biz Bize Müzik"
+        },
+        "informationSourceLinks": [
+            "https://www.karnaval.com"
         ]
     },
     {
