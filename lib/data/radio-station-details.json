@@ -316,9 +316,7 @@
     {
         "station-slug": "joy-turk",
         "description": "Joy Türk, Türkçe Pop ve Türkçe Slow müzik türlerinde yayın yapan, Karnaval Radyo grubuna ait bir radyo istasyonudur. Joy Türk Akustik, Radyo Joy Türk FM'in bir kardeş frekansı olarak tanımlanmaktadır ve popüler slow ve pop parçaları akustik müzik şeklinde yayınlamaktadır. Ana kanal olan Joy Türk FM ise geleneksel formatında Türkçe pop müzik ağırlıklı yayın yapmaktadır.",
-        "frequencies": [
-            "İnternet üzerinden yayınlanmaktadır"
-        ],
+        "frequencies": [],
         "contact": {
             "address": "Büyükdere Cad. C.E.M. İş Merkezi No:23/4 Şişli/İstanbul Türkiye",
             "phone": "+90 212 368 62 00",
@@ -347,9 +345,7 @@
     {
         "station-slug": "kafa-radyo",
         "description": "Kafa Radyo, Türkiye'de slow müzik ağırlıklı yayın yapan, Radyo Home grubuna ait bir radyo istasyonudur. Türkçe slow ve romantik müzikler ile dinleyicilerine müzikal bir deneyim sunmaktadır.",
-        "frequencies": [
-            "İnternet üzerinden yayın yapmaktadır"
-        ],
+        "frequencies": [],
         "contact": {
             "address": null,
             "phone": null,
@@ -414,8 +410,7 @@
             "fax": null,
             "website": "https://www.numberone.com.tr"
         },
-        "socialMedia": {
-        },
+        "socialMedia": {},
         "location": {
             "city": "İstanbul",
             "region": "Marmara"
@@ -579,8 +574,7 @@
             "fax": null,
             "website": "https://www.slow7.com.tr"
         },
-        "socialMedia": {
-        },
+        "socialMedia": {},
         "location": {
             "city": "İstanbul",
             "region": "Marmara"
@@ -650,8 +644,7 @@
             "fax": null,
             "website": "https://www.radyod.com"
         },
-        "socialMedia": {
-        },
+        "socialMedia": {},
         "location": {
             "city": "İstanbul",
             "region": "Marmara"
