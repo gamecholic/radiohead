@@ -1,5 +1,150 @@
 [
     {
+        "station-slug": "efkar-fm",
+        "description": "Türkiye'nin En İyi Arabesk Radyosu. Efkarınız dağıtan tek radyo olarak tanınan bu radyo, arabesk müzik türünde yayın yapmaktadır.",
+        "frequencies": [
+            "102.5 FM (Tam Doz, Tam Damar)"
+        ],
+        "contact": {
+            "phone": "0 312 911 16 67",
+            "website": "https://www.radyoefkar.com"
+        },
+        "socialMedia": {},
+        "location": {
+            "city": "Ankara",
+            "region": "Türkiye"
+        },
+        "additionalInfo": {
+            "slogan": "EFKARINIZI DAGITAN TEK RADYO"
+        },
+        "informationSourceLinks": [
+            "https://www.radyoefkar.com"
+        ]
+    },
+    {
+        "station-slug": "metro-fm",
+        "description": "Metro FM, Türkiye'de uluslararası müzik ağırlıklı yayın yapan ve 14 Temmuz 1992'de kurulan radyo istasyonudur. İstanbul merkezli olup ülke genelinde yayın yapmaktadır. Türkiye'nin ilk özel radyolarından biri ve ilk yabancı müzik radyosudur.",
+        "frequencies": [
+            "91.2 (Diyarbakır, Sakarya)",
+            "92.4 (Çeşitli konumlar)",
+            "92.7 (Çeşitli konumlar)",
+            "93.6 (Çeşitli konumlar)",
+            "94.0 (Çeşitli konumlar)",
+            "96.0 (Adana, Denizli, Tekirdağ, Türkbükü)",
+            "96.1 (Marmaris)",
+            "96.4 (Fethiye)",
+            "97.2 (Ankara, Bursa, Çeşme, Eskişehir, İstanbul, İzmir, Kars, Kütahya)",
+            "98.0 (Çeşitli konumlar)",
+            "98.8 (Çeşitli konumlar)",
+            "98.9 (Çeşitli konumlar)",
+            "100.7 (Çeşitli konumlar)",
+            "101.7 (Konya, Malatya)",
+            "102.6 (Antalya, Edirne)",
+            "103.3 (Çeşitli konumlar)",
+            "103.5 (Çeşitli konumlar)",
+            "103.7 (Çeşitli konumlar)"
+        ],
+        "contact": {
+            "website": "https://metrofm.com.tr"
+        },
+        "socialMedia": {
+            "facebook": null,
+            "twitter": null
+        },
+        "location": {
+            "city": "İstanbul",
+            "region": "Türkiye"
+        },
+        "additionalInfo": {
+            "foundedDate": "14 Temmuz 1992",
+            "owner": "Karnaval Medya Grubu (Actera)",
+            "slogan": "Limitsiz Hit Müzik"
+        },
+        "informationSourceLinks": [
+            "https://tr.wikipedia.org/wiki/Metro_FM_(Türkiye)"
+        ]
+    },
+    {
+        "station-slug": "virgin-radio-turkiye",
+        "description": "Virgin Radio Türkiye, gençliğin radyosu olarak tanımlanmaktadır. Türkiye'nin enerjik gençlik radyosu olup, Türkçe rap'ten hip-hop'a kadar yerel popüler parçalar ve radyo programlarıyla müzik kültürünün nabzını tutar. Her zaman güncel ve enerjik içerik sunar.",
+        "frequencies": [
+            "106.2 FM (İstanbul)",
+            "94.8 FM (Ankara)",
+            "103.1 FM (İzmir)",
+            "102.7 FM (Adana)",
+            "98.0 FM (Antalya)",
+            "91.5 FM (Bursa)",
+            "101.5 FM (Gaziantep)",
+            "89.1 FM (Balıkesir)",
+            "94.7 FM (Eskişehir)",
+            "90.5 FM (Kayseri)",
+            "91.1 FM (Konya)",
+            "90.8 FM (Mersin)",
+            "96.0 FM (Samsun)",
+            "89.3 FM (Sakarya)"
+        ],
+        "contact": {
+            "address": "Maslak Mah. A.O.S. 55. Sok. No:2 İç Kapı No:51, 52, 53, 54 Sarıyer / İstanbul",
+            "phone": "0212 368 62 00",
+            "website": "https://virginradio.com.tr"
+        },
+        "socialMedia": {},
+        "location": {
+            "city": "İstanbul",
+            "region": "Türkiye"
+        },
+        "additionalInfo": {
+            "owner": "Karnaval Medya Grubu",
+            "slogan": "Gençliğin Radyosu, En Hit Müzikler Burada! / Virgin Rap, HipHop ve R&B"
+        },
+        "informationSourceLinks": [
+            "https://virginradio.com.tr"
+        ]
+    },
+    {
+        "station-slug": "cnn-turk-radyo",
+        "description": "CNN Türk Radyo, haber içerikli yayın yapan Türkçe bir radyo istasyonudur. Canlı radyo yayınları ile haber programları ve podcast içerikleri sunar. Güncel gelişmeler, Türkiye, dünya, ekonomi, spor, magazin ve yaşam gibi konuları kapsar.",
+        "frequencies": [
+            "92.6 (İstanbul)",
+            "89.0 (Ankara)",
+            "89.0 (İzmir)",
+            "88.1 (Bursa)",
+            "88.1 (Kocaeli)",
+            "103.6 (Adana)",
+            "97.4 (Antalya)",
+            "103.3 (Diyarbakır)",
+            "99.7 (Erzurum)",
+            "95.5 (Eskişehir)",
+            "95.8 (Gaziantep)",
+            "97.3 (Konya)",
+            "98.6 (Malatya)",
+            "101.5 (Mersin)",
+            "95.5 (Samsun)",
+            "106.5 (Trabzon)",
+            "106.7 (Aydın)",
+            "106.2 (Denizli)",
+            "95.5 (Edirne)",
+            "90.7 (Kayseri)",
+            "97.4 (Balıkesir)"
+        ],
+        "contact": {
+            "phone": "0530 918 69 18",
+            "website": "https://www.cnnturk.com/radyo"
+        },
+        "socialMedia": {},
+        "location": {
+            "city": "İstanbul",
+            "region": "Türkiye"
+        },
+        "additionalInfo": {
+            "owner": "Demirören Tv Holding A.Ş.",
+            "slogan": null
+        },
+        "informationSourceLinks": [
+            "https://www.cnnturk.com/radyo"
+        ]
+    },
+    {
         "station-slug": "super-fm",
         "description": "Süper FM - Türkiye'nin İlk Özel Radyosu, Sınırsız Hit Müzik Burada! Sahip olduğu 5 ulusal, 30 dijital radyo kanalı ve 100'e yakın podcast yayınıyla Türkiye'nin en büyük ses platformu olan Karnaval bünyesindeki Süper FM, Türkiye'nin ulusal yayın yapan ilk özel radyosu olma özelliğiyle öne çıkıyor. Geniş yayın ağı sayesinde Türkiye'nin dört bir yanından canlı olarak dinlenebilen Süper FM, Karnaval App ve karnaval.com üzerinden online, kesintisiz ve yüksek kaliteli yayın sunuyor.",
         "frequencies": [
