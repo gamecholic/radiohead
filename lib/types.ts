@@ -19,28 +19,29 @@ export interface Station {
 
 export interface StationDetails {
   "station-slug": string;
-  description?: string;
-  frequencies?: string[];
+  description?: string | null;
+  frequencies?: (string | null)[];
   contact?: {
-    address?: string;
-    phone?: string;
-    fax?: string;
-    website?: string;
+    address?: string | null;
+    phone?: string | null;
+    fax?: string | null;
+    website?: string | null;
   };
   socialMedia?: {
-    facebook?: string;
-    twitter?: string;
-    instagram?: string;
+    facebook?: string | null;
+    twitter?: string | null;
+    instagram?: string | null;
   };
   location?: {
-    city?: string;
-    region?: string;
+    city?: string | null;
+    region?: string | null;
   };
   additionalInfo?: {
-    foundedDate?: string;
-    owner?: string;
-    slogan?: string;
+    foundedDate?: string | null;
+    owner?: string | null;
+    slogan?: string | null;
   };
+  informationSourceLinks?: (string | null)[];
 }
 
 export interface Playlist {

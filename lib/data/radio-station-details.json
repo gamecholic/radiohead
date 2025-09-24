@@ -1,7 +1,75 @@
 [
     {
+        "station-slug": "super-fm",
+        "description": "Süper FM - Türkiye'nin İlk Özel Radyosu, Sınırsız Hit Müzik Burada! Sahip olduğu 5 ulusal, 30 dijital radyo kanalı ve 100'e yakın podcast yayınıyla Türkiye'nin en büyük ses platformu olan Karnaval bünyesindeki Süper FM, Türkiye'nin ulusal yayın yapan ilk özel radyosu olma özelliğiyle öne çıkıyor. Geniş yayın ağı sayesinde Türkiye'nin dört bir yanından canlı olarak dinlenebilen Süper FM, Karnaval App ve karnaval.com üzerinden online, kesintisiz ve yüksek kaliteli yayın sunuyor.",
+        "frequencies": [
+            "90.8 FM (İstanbul)",
+            "92.0 FM (Adana)",
+            "90.8 FM (Ankara)",
+            "94.2 FM (Antalya)",
+            "103.0 FM (Kuşadası)",
+            "105.2 FM (Ayvalık)",
+            "100.8 FM (Balıkesir)",
+            "104.8 FM (Bolu)",
+            "104.8 FM (Gerede)",
+            "90.8 FM (Bursa)",
+            "93.3 FM (Çeşme)",
+            "90.8 FM (Denizli)",
+            "97.5 FM (Diyarbakır)",
+            "96.3 FM (Düzce)",
+            "98.4 FM (Edirne)",
+            "97.8 FM (Eskişehir)",
+            "89.8 FM (Erzurum)",
+            "99.3 FM (Gaziantep)",
+            "100.8 FM (Mersin)",
+            "90.8 FM (Kocaeli)",
+            "90.8 FM (İzmir)",
+            "96.2 FM (Kayseri)",
+            "93.4 FM (Konya)",
+            "90.8 FM (Kütahya)",
+            "94.5 FM (Malatya)",
+            "105.4 FM (Manisa)",
+            "90.1 FM (Muğla)",
+            "93.0 FM (Marmaris)",
+            "89.0 FM (Bodrum)",
+            "92.3 FM (Göcek)",
+            "93.2 FM (Fethiye)",
+            "100.5 FM (Osmaniye)",
+            "105.4 FM (Şanlıurfa)",
+            "97.8 FM (Sakarya)",
+            "96.3 FM (Samsun)",
+            "90.8 FM (Tekirdağ)",
+            "90.3 FM (Trabzon)",
+            "91.0 FM (Zonguldak)"
+        ],
+        "contact": {
+            "address": "Maslak Mah. A.O.S. 55. Sok. No: 2 Aksoy Plaza Kat: 2 34398 Sarıyer / İstanbul, Türkiye",
+            "phone": "+90 212 368 6200",
+            "fax": "+90 212 368 6299",
+            "website": "https://www.superfm.com.tr"
+        },
+        "socialMedia": {
+            "facebook": "https://www.facebook.com/superfm/",
+            "twitter": "https://twitter.com/super_fm",
+            "instagram": "https://www.instagram.com/superfm/"
+        },
+        "location": {
+            "city": "İstanbul",
+            "region": "Marmara"
+        },
+        "additionalInfo": {
+            "foundedDate": "1994",
+            "owner": "Karnaval Media Group",
+            "slogan": "Sınırsız Hit Müzik Burada!"
+        },
+        "informationSourceLinks": [
+            "https://www.superfm.com.tr",
+            "https://karnaval.com/radyolar/superfm"
+        ]
+    },
+    {
         "station-slug": "alem-fm",
-        "description": "Alem FM – \"Cümle alem burada.\" Türkiye’de ulusal yayın yapan bir radyo istasyonudur. İstanbul’da 89.2 frekansında yayın yapmaktadır. Türkiye'nin ilk özel radyolarından birisi olan Radyo Alem FM, 89.2 bandından yayın hayatına devam etmektedir. İlk olarak 14 Mart 1994 yılında yayın hayatına merhaba diyen canlı radyo Alem FM, ilk olarak Marmara Bölgesine yayın gerçekleştirmiş olsa da, şuanda Marmara Bölgesinde 89.2 ve çoğunlukla 89.3 frekansı üzerinden, tüm Türkiye'ye eşsiz radyo keyfi sunmaktadır. Türkü pop anlamında mükemmel bir öncülükle hareket eden, ilklerin yaşandığı ve kaliteli bir yayıncılık anlayışının benimsenmesiyle birlikte gerçek manada radyoculuğu hissettiren Alem FM frekansı, içerisinde birçok programı da barındırmaktadır. Alem FM dinleyerek birlikte ulaşabileceğiniz programların konuları, içerikleri; spor, siyaset, ekonomi, sanat ve magazin gibi geniş bir yelpazeyi kapsamaktadır. İnternete üzerinden de dünyanın her yerine yayın olanakları sunulan Alem FM mobil dinleme seçenekleri ile de sahip olduğu teknolojik ekipmanlar ve kaliteli ekibiyle birlikte, özellikle Canlı yayın olanaklarının tam olarak mobil dinleyenlerine sunmasıyla tanınmaktadır.",
+        "description": "Alem FM – \"Cümle alem burada.\" Türkiye' de ulusal yayın yapan bir radyo istasyonudur. İstanbul' da 89.2 frekansında yayın yapmaktadır. Türkiye' nin ilk özel radyolarından birisi olan Radyo Alem FM, 89.2 bandından yayın hayatına devam etmektedir. İlk olarak 14 Mart 1994 yılında yayın hayatına merhaba diyen canlı radyo Alem FM, ilk olarak Marmara Bölgesine yayın gerçekleştirmiş olsa da, şuanda Marmara Bölgesinde 89.2 ve çoğunlukla 89.3 frekansı üzerinden, tüm Türkiye' ye eşsiz radyo keyfi sunmaktadır. Türkü pop anlamında mükemmel bir öncülükle hareket eden, ilklerin yaşandığı ve kaliteli bir yayıncılık anlayışının benimsenmesiyle birlikte gerçek manada radyoculuğu hissettiren Alem FM frekansı, içerisinde birçok programı da barındırmaktadır. Alem FM dinleyerek birlikte ulaşabileceğiniz programların konuları, içerikleri; spor, siyaset, ekonomi, sanat ve magazin gibi geniş bir yelpazeyi kapsamaktadır. İnternete üzerinden de dünyanın her yerine yayın olanakları sunulan Alem FM mobil dinleme seçenekleri ile de sahip olduğu teknolojik ekipmanlar ve kaliteli ekibiyle birlikte, özellikle Canlı yayın olanaklarının tam olarak mobil dinleyenlerine sunmasıyla tanınmaktadır.",
         "frequencies": [
             "89.2 (İstanbul)",
             "105.3 (Ankara)",
@@ -33,7 +101,7 @@
         },
         "socialMedia": {
             "facebook": "https://www.facebook.com/alemfm/",
-            "twitter": "https://twitter.com/alemfm",
+            "twitter": "https://twitter.com/alemfm/",
             "instagram": "https://www.instagram.com/alemfm/"
         },
         "location": {
@@ -48,6 +116,781 @@
         "informationSourceLinks": [
             "https://tr.wikipedia.org/wiki/Alem_FM",
             "https://www.canliradyodinle.fm/alem-fm-dinle.html"
+        ]
+    },
+    {
+        "station-slug": "diyanet-radyo",
+        "description": "Diyanet Radyo – Diyanet Radyo started as a live broadcast radio under the Diyanet İşleri Başkanlığı (Presidency of Religious Affairs) in Turkey on July 8, 2013. The opening ceremony was attended by Diyanet İşleri Başkanı Prof. Dr. Mehmet Görmez as the first guest. Diyanet Radyo focuses on religious content, answering religious questions that listeners have. It broadcasts Islamic knowledge based on reliable and authentic sources. Programming includes religious discussions and sermons, Quran recitation and interpretation, Hadith (sayings of Prophet Muhammad) programs based on authentic sources (Kütüb-üs Sitte), Asr-ı Saadet (Golden Age of Islam) theater programs, youth programs with Islamic moral focus, news about religious events and current affairs, religious book library program, and Sohbet (conversation) programs where listeners can participate live and ask questions. The radio operates as a national radio frequency under the Diyanet İşleri Başkanlığı and broadcasts across 50+ provinces in Turkey, including Northern Cyprus. The station aims to provide trusted and appealing broadcasts for listeners seeking Islamic knowledge from authentic sources, addressing religious information pollution with verified content.",
+        "frequencies": [
+            "88.4 (Ankara)",
+            "95.5 (İstanbul)",
+            "99.5 (Kocaeli)",
+            "91.5 (Sakarya)",
+            "98.7 (İzmir)",
+            "105.8 (Samsun)",
+            "97.9 (Bursa)",
+            "101.9 (Antalya)",
+            "89.6 (Eskişehir)",
+            "96.1 (Konya)",
+            "106.7 (Kayseri)",
+            "91.3 (Malatya)",
+            "92.3 (Sivas)",
+            "89.6 (Erzurum)",
+            "88.0 (Gaziantep)",
+            "103.6 (Şanlıurfa)",
+            "88.0 (Diyarbakır)",
+            "103.5 (Mersin)",
+            "104.0 (Adana)",
+            "90.5 (Denizli)",
+            "94.3 (Manisa)",
+            "95.2 (Tekirdağ)",
+            "92.5 (Trabzon)",
+            "93.4 (Bolu)"
+        ],
+        "contact": {
+            "address": "Üniversiteler Mah. Dumlupınar Bulv. No: 147/A 06800 Çankaya/Ankara, Turkey",
+            "phone": "0(312) 295 74 43",
+            "fax": null,
+            "website": "http://www.diyanetradyo.com/"
+        },
+        "socialMedia": {
+            "facebook": null,
+            "twitter": null,
+            "instagram": null
+        },
+        "location": {
+            "city": "Ankara",
+            "region": "Turkey"
+        },
+        "additionalInfo": {
+            "foundedDate": "July 8, 2013",
+            "owner": "Diyanet İşleri Başkanlığı (Presidency of Religious Affairs)"
+        },
+        "informationSourceLinks": [
+            "https://www.canliradyodinle.fm/diyanet-radyo-dinle.html",
+            "https://www.diyanet.gov.tr/tr-TR/Radyo",
+            "https://www.diyanetradyo.com/"
+        ]
+    },
+    {
+        "station-slug": "joy-turk",
+        "description": "Joy Türk, Türkçe Pop ve Türkçe Slow müzik türlerinde yayın yapan, Karnaval Radyo grubuna ait bir radyo istasyonudur. Joy Türk Akustik, Radyo Joy Türk FM'in bir kardeş frekansı olarak tanımlanmaktadır ve popüler slow ve pop parçaları akustik müzik şeklinde yayınlamaktadır. Ana kanal olan Joy Türk FM ise geleneksel formatında Türkçe pop müzik ağırlıklı yayın yapmaktadır.",
+        "frequencies": [
+            "İnternet üzerinden yayınlanmaktadır"
+        ],
+        "contact": {
+            "address": "Büyükdere Cad. C.E.M. İş Merkezi No:23/4 Şişli/İstanbul Türkiye",
+            "phone": "+90 212 368 62 00",
+            "fax": null,
+            "website": "http://karnaval.com"
+        },
+        "socialMedia": {
+            "facebook": null,
+            "twitter": null,
+            "instagram": null
+        },
+        "location": {
+            "city": "İstanbul",
+            "region": "Marmara"
+        },
+        "additionalInfo": {
+            "foundedDate": null,
+            "owner": "Karnaval Radyoları",
+            "slogan": "Biz bize müzik."
+        },
+        "informationSourceLinks": [
+            "http://karnaval.com",
+            "https://www.canliradyodinle.fm/joy-turk-akustik-dinle.html"
+        ]
+    },
+    {
+        "station-slug": "kafa-radyo",
+        "description": "Kafa Radyo, Türkiye'de slow müzik ağırlıklı yayın yapan, Radyo Home grubuna ait bir radyo istasyonudur. Türkçe slow ve romantik müzikler ile dinleyicilerine müzikal bir deneyim sunmaktadır.",
+        "frequencies": [
+            "İnternet üzerinden yayın yapmaktadır"
+        ],
+        "contact": {
+            "address": null,
+            "phone": null,
+            "fax": null,
+            "website": "https://www.kafaradyo.com.tr"
+        },
+        "socialMedia": {
+            "facebook": null,
+            "twitter": null,
+            "instagram": null
+        },
+        "location": {
+            "city": "İstanbul",
+            "region": "Marmara"
+        },
+        "additionalInfo": {
+            "foundedDate": null,
+            "owner": "Radyo Home",
+            "slogan": null
+        },
+        "informationSourceLinks": [
+            "https://www.canliradyodinle.fm/kafa-radyo-dinle.html"
+        ]
+    },
+    {
+        "station-slug": "kiss-fm",
+        "description": "Kiss FM, 4 Temmuz 1994'te kurulan ve 2003 yılında iflas nedeniyle kapanan, ardından 7 Ocak 2017'de internet üzerinden yeniden yayınlanmaya başlayan Türkiye merkezli bir radyo istasyonudur. Eski formatında yabancı pop müzik ağırlıklı yayın yaparken, günümüzde Türkçe pop müzik ağırlıklı yayın yapan 'Kiss Türk' formatıyla da hizmet vermektedir. İstanbul'da 91.6 MHz frekansında yayın yapmaktadır. 1994-2000, 2001-2002 yılları arasında Medya Holding'e, 2017'den günümüze kadar Dijimedya Grup'a aittir. Radyo 2003 yılında iflas nedeniyle kapanmış, ancak internet üzerinden yeniden yayına başlamıştır. TuneIn gibi platformlardan dinlenebilir.",
+        "frequencies": [
+            "91.6 MHz (İstanbul)"
+        ],
+        "contact": {
+            "address": "İstanbul",
+            "phone": null,
+            "fax": null,
+            "website": "http://www.kissfm.com.tr"
+        },
+        "socialMedia": {
+            "facebook": "https://www.facebook.com/kissfmtr",
+            "twitter": "https://twitter.com/kissfmtr",
+            "instagram": "https://www.instagram.com/kissfmtr"
+        },
+        "location": {
+            "city": "İstanbul",
+            "region": "Marmara"
+        },
+        "additionalInfo": {
+            "foundedDate": "4 Temmuz 1994 (ilk kurulma), 7 Ocak 2017 (internet üzerinden yeniden açılış)",
+            "owner": "Dijimedya Grup",
+            "slogan": "Kiss FM kalitesiyle Türkçe Pop"
+        },
+        "informationSourceLinks": [
+            "https://tr.wikipedia.org/wiki/Kiss_FM",
+            "http://www.kissfm.com.tr"
+        ]
+    },
+    {
+        "station-slug": "number-one-turk",
+        "description": "Number One Türk, Türkiye genelinde yayın yapan ve Number One Radyo Grubu'na ait olan pop müzik ağırlıklı bir radyo istasyonudur. Türkçe pop müzik ve güncel yurt içi yurt dışı müzikleriyle dinleyicilerine hit parçalar sunmaktadır. Radyo, internet üzerinden 7/24 yayın yapmakta olup mobil uygulaması ve internet sitesi üzerinden de kolayca erişilebilmektedir. Number One Türk, gitar ve davul logosuyla tanınan Number One Radyo Grubu'nun Türkçe müzik ağırlıklı kanalıdır ve Türkiye genelinde geniş bir dinleyici kitlesine sahiptir.",
+        "frequencies": [],
+        "contact": {
+            "address": "İstanbul",
+            "phone": null,
+            "fax": null,
+            "website": "https://www.numberone.com.tr"
+        },
+        "socialMedia": {
+            "facebook": "https://www.facebook.com/numberoneturk",
+            "twitter": "https://twitter.com/numberoneturk",
+            "instagram": "https://www.instagram.com/numberoneturk"
+        },
+        "location": {
+            "city": "İstanbul",
+            "region": "Marmara"
+        },
+        "additionalInfo": {
+            "foundedDate": null,
+            "owner": "Number One Radyo Grubu",
+            "slogan": "Hit Parçalar Burada"
+        },
+        "informationSourceLinks": [
+            "https://www.numberone.com.tr",
+            "https://tr.wikipedia.org/wiki/Number_One_(radyo)"
+        ]
+    },
+    {
+        "station-slug": "pal-fm",
+        "description": "Pal FM, Türkiye'de faaliyet gösteren ve Pal Group'a ait pop müzik ağırlıklı bir radyo istasyonudur. Türkiye genelinde internet üzerinden 7/24 yayın yapan radyo, genç dinleyici kitlesine hit ve pop müzikler sunmaktadır. Pal Group'un dijital platformlar aracılığıyla ulaşımına olanak tanıyan radyo istasyonlarından biridir.",
+        "frequencies": [],
+        "contact": {
+            "website": "https://www.palfm.com.tr"
+        },
+        "socialMedia": {
+            "facebook": null,
+            "twitter": null,
+            "instagram": null
+        },
+        "location": {
+            "city": "İstanbul",
+            "region": "Marmara"
+        },
+        "additionalInfo": {
+            "owner": "Pal Group",
+            "slogan": null
+        },
+        "informationSourceLinks": [
+            "https://www.palfm.com.tr"
+        ]
+    },
+    {
+        "station-slug": "pal-nostalji",
+        "description": "Pal Nostalji, Türkiye'nin Nostalji Radyosu olarak tanımlanan ve Pal Group'a ait nostaljik müzik ağırlıklı bir radyo istasyonudur. Türkiye genelinde yayınlanan radyo, unutulmaz şarkılarla dinleyicilerine nostaljik bir müzik deneyimi sunmaktadır.",
+        "frequencies": [
+            "99.20 MHz (İstanbul)",
+            "99.20 MHz (Kocaeli)",
+            "99.30 MHz (İzmir)",
+            "99.30 MHz (Konya)",
+            "99.30 MHz (Kütahya)",
+            "99.30 MHz (Malatya)",
+            "91.4 MHz (Ankara)",
+            "105.80 MHz (Kastamonu)",
+            "90.30 MHz (Kayseri)",
+            "106.20 MHz (Tekirdağ)",
+            "101.00 MHz (Trabzon)",
+            "106.00 MHz (Zonguldak)",
+            "90.30 MHz (Malatya)"
+        ],
+        "contact": {
+            "address": "Esenşehir Mahallesi Füsun Sokak No:34 34776 Ümraniye Istanbul / TÜRKIYE",
+            "phone": "0216 909 37 45",
+            "fax": null,
+            "website": "https://www.palnostalji.com.tr"
+        },
+        "socialMedia": {
+            "facebook": null,
+            "twitter": null,
+            "instagram": null
+        },
+        "location": {
+            "city": "İstanbul",
+            "region": "Marmara"
+        },
+        "additionalInfo": {
+            "foundedDate": "10 Ağustos 2016",
+            "owner": "Pal Media Group",
+            "slogan": "Bu Şarkılar Unutulmaz"
+        },
+        "informationSourceLinks": [
+            "https://www.palnostalji.com.tr",
+            "https://tr.linkedin.com/showcase/pal-nostalji̇"
+        ]
+    },
+    {
+        "station-slug": "power-fm",
+        "description": "Power FM, Türkiye genelinde yayınlanan ve Power App şirketinin sahip olduğu pop müzik ağırlıklı bir radyo istasyonudur. 24 saat boyunca dinleyicilerine Türkçe ve yabancı pop müzikler sunmaktadır. Radyo, internet üzerinden yayın yapmakta olup mobil uygulaması ve internet sitesi üzerinden kolayca erişilebilmektedir. Power FM, genç dinleyici kitlesine hit ve pop müziklerle müzikal bir deneyim sunmaktadır.",
+        "frequencies": [],
+        "contact": {
+            "website": "https://www.powerapp.com.tr"
+        },
+        "socialMedia": {
+            "facebook": null,
+            "twitter": null,
+            "instagram": null
+        },
+        "location": {
+            "city": "İstanbul",
+            "region": "Marmara"
+        },
+        "additionalInfo": {
+            "foundedDate": null,
+            "owner": "Power App",
+            "slogan": "Power FM - Türkiye'nin en güçlü radyosu"
+        },
+        "informationSourceLinks": [
+            "https://www.powerapp.com.tr",
+            "https://tr.wikipedia.org/wiki/Power_FM"
+        ]
+    },
+    {
+        "station-slug": "radyo-fenomen",
+        "description": "Radyo Fenomen, 'Maksimum Hit Müzik' mottosuyla hareket eden Türkiye'nin en çok dinlenen yabancı müzik kanalıdır. 2006 yılında bölgesel bir radyo olarak yayın hayatına başlamıştır. Yerli ve yabancı hit müzik türlerinde, özellikle pop, R&B ve elektronik müzik gibi kategorilerde öncü bir platformdur. Dinleyicilerine sadece müzik değil, aynı zamanda sanatçıları ve sanatseverleri buluşturan programlar, podcastler, röportajlar ve müzik videoları gibi içerikler de sunar.",
+        "frequencies": [
+            "87.5 MHz (Balıkesir)",
+            "92.4 MHz (Kocaeli)",
+            "95.0 MHz (Eskişehir)",
+            "96.0 MHz (Antalya)",
+            "98.0 MHz (İzmir)",
+            "98.8 MHz (Ankara)",
+            "100.4 MHz (İstanbul)",
+            "100.4 MHz (Bursa)",
+            "102.5 MHz (Konya)"
+        ],
+        "contact": {
+            "address": "Power Group Media Center - Altunizade Mah. Kuşbakışı Cd. No: 35/1, 34662, Üsküdar, İstanbul",
+            "phone": "0(216) 474 6060",
+            "fax": "0(216) 474 1515",
+            "website": "https://www.radyofenomen.com"
+        },
+        "socialMedia": {
+            "facebook": "https://www.facebook.com/radyofenomen",
+            "twitter": "https://twitter.com/radyofenomen",
+            "instagram": "https://www.instagram.com/radyofenomen/"
+        },
+        "location": {
+            "city": "İstanbul",
+            "region": "Marmara"
+        },
+        "additionalInfo": {
+            "foundedDate": "2006",
+            "owner": "Ataköy FM İletişim Hizmetleri Sanayi ve Ticaret Anonim Şirketi",
+            "slogan": "Maksimum Hit Müzik"
+        },
+        "informationSourceLinks": [
+            "https://www.canliradyodinle.fm/radyo-fenomen-dinle.html",
+            "https://www.radyofenomen.com"
+        ]
+    },
+    {
+        "station-slug": "slow-7",
+        "description": "Slow 7, Number One Radyo Grubu'na ait olan ve Türkiye'nin önde gelen slow müzik ağıdır. Radyo, Türkçe slow ve romantik müzikleri 7 gün 24 saat boyunca dinleyicileriyle buluşturur. Genellikle gece yarısına kadar FM frekanslarda, daha sonra internet üzerinden yayın yapmaktadır. Slow 7, hem geleneksel slow şarkıları hem de yeni çıkan slow müzikleriyle dinleyicilerine nostaljik ve romantik bir atmosfer sunar.",
+        "frequencies": [
+            "99.9 FM (İstanbul)",
+            "95.0 FM (Ankara)",
+            "88.0 FM (İzmir)",
+            "90.1 FM (Bursa)",
+            "89.5 FM (Antalya)",
+            "100.0 FM (Trabzon)"
+        ],
+        "contact": {
+            "address": "Zemin İstanbul, Göztepe Mahallesi, Mimar Sinan Bulvarı No:46, 34732 Kadıköy / İstanbul",
+            "phone": "+90 216 400 8787",
+            "fax": null,
+            "website": "https://www.slow7.com.tr"
+        },
+        "socialMedia": {
+            "facebook": "https://www.facebook.com/slow7radyo",
+            "twitter": "https://twitter.com/slow7radyo",
+            "instagram": "https://www.instagram.com/slow7radyo"
+        },
+        "location": {
+            "city": "İstanbul",
+            "region": "Marmara"
+        },
+        "additionalInfo": {
+            "foundedDate": "2004",
+            "owner": "Number One Radyo Televizyon Yayıncılık A.Ş. (Dünya Medya Grubu)",
+            "slogan": "Her slow, her yerde"
+        },
+        "informationSourceLinks": [
+            "https://www.slow7.com.tr",
+            "https://tr.wikipedia.org/wiki/Number_One_(radyo)",
+            "https://www.numberone.com.tr"
+        ]
+    },
+    {
+        "station-slug": "pal-doga",
+        "description": "Pal Doğa Radyo, 1996 yılında yayın hayatına başlamış, Türk Halk Müziği severlerin ilk tercihi olmaya devam eden bir radyo istasyonudur. \"Türkülerin Hayat Bulduğu Radyo\" olarak tanımlanan Pal Doğa, kültür-sanat faaliyetleri yürüten kuruluşların tanıtımıyla halk kültürünün yaygınlaşmasında açık bir köprü görevi gören, sorumlu yayıncılık anlayışını benimsemiş bir yayın kuruluşudur. Pal Doğa, bir halkın gerçek tarihini yansıtan, nice sevdalı yürekleri türkülerde buluşturan ve dilimizin tadı tuzu olmuştur. Sloganı: \"PAL DOĞA seni anlatan radyo! PAL DOĞA Türkülerin Kalbi!\"",
+        "frequencies": [
+            "104.8 FM (İstanbul)",
+            "100.9 FM (Ankara)"
+        ],
+        "contact": {
+            "phone": "0312 384 4375, 0312 231 1226",
+            "website": "https://www.paldoga.com.tr"
+        },
+        "socialMedia": {
+            "facebook": null,
+            "twitter": null,
+            "instagram": null
+        },
+        "location": {
+            "city": "Ankara",
+            "region": "İç Anadolu"
+        },
+        "additionalInfo": {
+            "foundedDate": "1996",
+            "owner": "Çam Grup",
+            "slogan": "PAL DOĞA seni anlatan radyo! PAL DOĞA Türkülerin Kalbi!"
+        },
+        "informationSourceLinks": [
+            "https://www.paldoga.com.tr"
+        ]
+    },
+    {
+        "station-slug": "radyo-d",
+        "description": "Radyo D, 9 Eylül 1994'te kurulan ve Türkiye genelinde yayın yapan Türkçe pop müzik ağırlıklı bir radyo istasyonudur. Eski adı Radyo Kulüp olup 1994-1996 yılları arasında bu isimle yayın yapmıştır. 2018 yılına kadar Doğan Holding'e, 2018'den günümüze kadar ise Demirören Holding'e aittir. Radyo D'nin sloganı \"D Bana D Bana Radyo D Bana\"dır. Türkiye'nin önde gelen pop müzik radyolarından biridir ve 31 farklı merkezde FM frekansları üzerinden yayın yapmaktadır.",
+        "frequencies": [
+            "88.3 (Denizli)",
+            "88.7 (Bozüyük)",
+            "92.2 (Güvercinlik, Bodrum)",
+            "96.0 (Kayseri)",
+            "96.3 (Ayvalık)",
+            "100.4 (Zonguldak)",
+            "103.8 (Alanya)",
+            "103.9 (Çeşme)",
+            "104.0 (Ankara, Antalya, Balıkesir, Bursa, Çorlu, Diyarbakır, Edirne, Erzurum, Eskişehir, Gaziantep, İstanbul, İzmir, Kemer, Kocaeli, Konya, Kütahya, Malatya, Marmaris, Mersin, Osmaniye, Trabzon, Yalova)",
+            "104.1 (Kuşadası)",
+            "104.4 (Adana, Samsun)",
+            "104.5 (Edirne)",
+            "104.8 (Tekirdağ)",
+            "106.1 (Bodrum)"
+        ],
+        "contact": {
+            "address": "Yüzyıl, Bağcılar, İstanbul, Türkiye",
+            "phone": null,
+            "fax": null,
+            "website": "https://www.radyod.com"
+        },
+        "socialMedia": {
+            "facebook": "https://www.facebook.com/radyod",
+            "twitter": "https://twitter.com/radyod",
+            "instagram": "https://www.instagram.com/radyod"
+        },
+        "location": {
+            "city": "İstanbul",
+            "region": "Marmara"
+        },
+        "additionalInfo": {
+            "foundedDate": "9 Eylül 1994",
+            "owner": "Demirören Holding (2018-günümüz), Doğan Holding (1994-2018)",
+            "slogan": null
+        },
+        "informationSourceLinks": [
+            "https://tr.wikipedia.org/wiki/Radyo_D",
+            "https://www.canliradyodinle.fm/radyo-d-dinle.html",
+            "https://www.radyod.com"
+        ]
+    },
+    {
+        "station-slug": "radyo-spor",
+        "description": "Radyo Spor, 15 Mayıs 2005'te kurulan Türkiye'nin ilk spor radyosudur. Radyo, 2007'den beri resmi araştırma sonuçlarına göre Türkiye'nin en çok dinlenen spor radyosu olarak kalmıştır. Spor haberleri, yorumlar ve spor dünyasının önde gelen isimlerinin yer aldığı programlar sunmaktadır. Sabah Sporu, Spor Kazanı, Üçleme, Yeşil Koltuk, Soyunma Odası, Ters Köşe, Atilla Türker Markaj, Anadolu Ateşi ve Hattrick gibi programlarıyla tanınmaktadır.",
+        "frequencies": [
+            "107.2 FM (İstanbul)",
+            "97.7 FM (Ankara)",
+            "91.5 FM (İzmir)",
+            "94.0 FM (Bursa)",
+            "107.2 FM (Kocaeli)",
+            "96.4 FM (Eskişehir)",
+            "88.0 FM (Antalya)",
+            "97.2 FM (Adana)",
+            "89.0 FM (Mersin)",
+            "93.3 FM (Gaziantep)",
+            "87.9 FM (Kayseri)",
+            "97.7 FM (Konya)",
+            "97.5 FM (Trabzon)",
+            "104.2 FM (Denizli)"
+        ],
+        "contact": {
+            "address": "PTT Evleri Mahallesi, Hacıosman Bayırı Caddesi, No:16, 34453, Sarıyer / İstanbul",
+            "phone": "0 212 363 04 04",
+            "fax": "0 212 363 04 00",
+            "website": "https://www.radyospor.com"
+        },
+        "socialMedia": {
+            "facebook": "https://www.facebook.com/radyospor",
+            "twitter": "https://twitter.com/radyospor",
+            "instagram": "https://www.instagram.com/radyospor"
+        },
+        "location": {
+            "city": "İstanbul",
+            "region": "Türkiye"
+        },
+        "additionalInfo": {
+            "foundedDate": "15 Mayıs 2005",
+            "owner": "Saran Holding",
+            "slogan": "Sporun Tek Adresi!"
+        },
+        "informationSourceLinks": [
+            "https://tr.wikipedia.org/wiki/Radyo_Spor",
+            "https://www.radyospor.com"
+        ]
+    },
+    {
+        "station-slug": "show-radyo",
+        "description": "Show Radyo, 1992 Ağustos'ta Erol Aksoy tarafından Show TV ile birlikte kurulan ve Türkiye'nin önde gelen özel radyo istasyonlarındandır. Türkiye'nin ilk özel radyo istasyonlarından biri olan istasyon, Türkçe pop müzik ağırlıklı yayın yapmaktadır. 1990'lardan beri distinctive jingle'larıyla tanınmaktadır. Başlangıçta İngilizce ve Fransızca yayın yaparken daha sonra sadece Türkçe müzikleri yayın yapma politikasına geçmiştir. Ayrıca müzik yayınlarının yanı sıra haber, kültürel ve magazin programları da sunmaktadır. 2013'e kadar 'Türk Popunun Lideri' sloganını kullanmış olup günümüzde 'Türkiye'nin Show Radyosu' sloganını kullanmaktadır. 2018 yılında 3N Medya'ya devredilen radyo, halen Şişli, İstanbul merkezli olarak hizmet vermektedir.",
+        "frequencies": [
+            "89.6 FM (Adana)",
+            "88.8 FM (Ankara)",
+            "89.7 FM (Antalya)",
+            "88.8 FM (Balıkesir)",
+            "103.5 FM (Bodrum)",
+            "88.9 FM (Bolu)",
+            "89.8 FM (Bursa)",
+            "88.8 FM (Denizli)",
+            "89.8 FM (Diyarbakır)",
+            "90.4 FM (Erzurum)",
+            "100.0 FM (Eskişehir)",
+            "92.4 FM (Gaziantep)",
+            "89.8 FM (İstanbul)",
+            "89.6 FM (İzmir)",
+            "105.0 FM (Kayseri)",
+            "89.8 FM (Kocaeli)",
+            "89.9 FM (Konya)",
+            "89.9 FM (Malatya)",
+            "105.5 FM (Marmaris)",
+            "93.5 FM (Mersin)",
+            "88.0 FM (Sakarya)",
+            "106.2 FM (Samsun)",
+            "100.4 FM (Trabzon)"
+        ],
+        "contact": {
+            "website": "https://www.showradyo.com.tr"
+        },
+        "socialMedia": {
+            "facebook": "https://www.facebook.com/showradyo",
+            "twitter": "https://twitter.com/showradyo",
+            "instagram": "https://www.instagram.com/showradyo"
+        },
+        "location": {
+            "city": "İstanbul",
+            "region": "Türkiye"
+        },
+        "additionalInfo": {
+            "foundedDate": "Ağustos 1992",
+            "owner": "3N Medya (2018-günümüz), Erol Aksoy (1992-2004, 2006-2008), TMSF (2004-2006, 2008-2013), Satış Ofisi Medya (2013-2018)",
+            "slogan": "Türkiye'nin Show Radyosu"
+        },
+        "informationSourceLinks": [
+            "https://tr.wikipedia.org/wiki/Show_Radyo",
+            "https://www.showradyo.com.tr"
+        ]
+    },
+    {
+        "station-slug": "slow-turk",
+        "description": "Slow Türk, İstanbul merkezli olarak 95.4 FM frekansında yayınlanan ve \"Aşkın Frekansı\" sloganıyla tanınan ulusal bir radyo istasyonudur. Türkçe yavaş müzik formatında yayın yapmaktadır. 4. Magic Mikrofon Radyo Ödülleri'nde 2015 yılında Yılın En İyi Yavaş Müzik Radyosu seçildi.",
+        "frequencies": [
+            "87.7 FM (İzmir)",
+            "89.6 FM (Balıkesir)",
+            "90.0 FM (Samsun)",
+            "91.1 FM (Gebze)",
+            "94.0 FM (Trabzon)",
+            "94.2 FM (Adana)",
+            "94.2 FM (Kocaeli)",
+            "91.0 FM (Çorlu)",
+            "96.0 FM (Kayseri)",
+            "98.2 FM (Gaziantep)",
+            "100.9 FM (Kütahya)",
+            "101.0 FM (Antalya)",
+            "102.6 FM (Eskişehir)",
+            "102.6 FM (Bursa)",
+            "95.0 FM (Erzurum)",
+            "95.3 FM (Ankara)",
+            "95.4 FM (İstanbul)"
+        ],
+        "contact": {
+            "address": "Doğan Holding A.Ş 34696 Üsküdar / İstanbul",
+            "phone": "0 (216) 556 90 00",
+            "website": "https://www.slowturk.com.tr"
+        },
+        "socialMedia": {
+            "facebook": "https://www.facebook.com/slowturk/",
+            "twitter": "https://twitter.com/slowturk",
+            "instagram": "https://www.instagram.com/slowturk/"
+        },
+        "location": {
+            "city": "İstanbul",
+            "region": "Türkiye"
+        },
+        "additionalInfo": {
+            "foundedDate": "30 Kasım 2005",
+            "owner": "Rapsodi Radyo ve TV Yayıncılık A.Ş",
+            "slogan": "Aşkın Frekansı!"
+        },
+        "informationSourceLinks": [
+            "https://tr.wikipedia.org/wiki/Slow_Türk",
+            "https://www.slowturk.com.tr"
+        ]
+    },
+    {
+        "station-slug": "power-turk",
+        "description": "Power Türk, 1 Şubat 2001'de kurulan ve Türkiye genelinde yayın yapan pop müzik ağırlıklı bir radyo istasyonudur. Power App şirketinin sahip olduğu radyo, Türkçe ve yabancı pop müzikleri 7 gün 24 saat boyunca dinleyicilerine sunmaktadır. Radyo, 2007 Magic Mikrofon Radyo Ödülleri'nde Yılın En İyi Yabancı Müzik Radyosu seçildi. Power Türk, hem klasik pop müzik hem de güncel hit parçalarla dinleyicilerine müzikal bir deneyim sunmaktadır. Radyo, internet üzerinden 7/24 yayın yapmakta olup mobil uygulaması ve internet sitesi üzerinden de kolayca erişilebilmektedir. Power Türk, genç dinleyici kitlesine hit ve pop müziklerle müzikal bir deneyim sunmaktadır.",
+        "frequencies": [
+            "87.7 FM (İzmir)",
+            "88.0 FM (Samsun)",
+            "88.8 FM (Ankara)",
+            "89.0 FM (Bodrum)",
+            "89.6 FM (Bursa)",
+            "89.8 FM (İstanbul)",
+            "89.8 FM (Kocaeli)",
+            "89.9 FM (Konya)",
+            "90.0 FM (Samsun)",
+            "90.1 FM (Çorlu)",
+            "90.4 FM (Erzurum)",
+            "91.1 FM (Gebze)",
+            "92.4 FM (Gaziantep)",
+            "93.5 FM (Mersin)",
+            "94.0 FM (Trabzon)",
+            "95.0 FM (Eskişehir)",
+            "96.0 FM (Antalya)",
+            "96.3 FM (Ayvalık)",
+            "97.7 FM (Adana)",
+            "98.2 FM (Gaziantep)",
+            "100.9 FM (Kütahya)",
+            "101.0 FM (Antalya)",
+            "102.6 FM (Eskişehir)",
+            "102.6 FM (Bursa)",
+            "103.8 FM (Adana)",
+            "104.0 FM (Zonguldak)",
+            "105.0 FM (Bodrum)",
+            "105.5 FM (Marmaris)",
+            "106.2 FM (Samsun)"
+        ],
+        "contact": {
+            "address": "Power App, Esenşehir Mahallesi, Füsun Caddesi, No: 34, 34776 Ümraniye, İstanbul, Türkiye",
+            "phone": "+90 216 474 60 60",
+            "fax": "+90 216 474 15 15",
+            "website": "https://www.powerturk.com.tr"
+        },
+        "socialMedia": {
+            "facebook": "https://www.facebook.com/powerturk/",
+            "twitter": "https://twitter.com/powerturk",
+            "instagram": "https://www.instagram.com/powerturk/"
+        },
+        "location": {
+            "city": "İstanbul",
+            "region": "Marmara"
+        },
+        "additionalInfo": {
+            "foundedDate": "1 Şubat 2001",
+            "owner": "Power App",
+            "slogan": "Önce Müzik"
+        },
+        "informationSourceLinks": [
+            "https://tr.wikipedia.org/wiki/Power_Türk",
+            "https://www.powerturk.com.tr",
+            "https://www.canliradyodinle.fm/power-turk-dinle.html"
+        ]
+    },
+    {
+        "station-slug": "radyo-7",
+        "description": "Radyo 7, merkezi İstanbul'da bulunan ulusal radyo istasyonudur. Karma Müzik formatında yayın yapmaktadır ve internet ile uydu üzerinden tüm dünyada dinlenebilmektedir. Türkiye çapında 53 vericisi ve 41 ilde yayın ağı bulunmaktadır. \"İyi Müzik Doğru Haber\", \"Her An Yanınızda!\" ve \"Hayata Müzik Katın\" sloganlarıyla bilinen istasyon, müzik, haber, yaşam ve kültürel içerikler sunmaktadır. Radyo 7, müzik severlere \"En İyi 20\" listesi, program tekrarları ve podcast içerikleriyle de hizmet vermektedir.",
+        "frequencies": [
+            "104.6 FM (İstanbul)",
+            "89.8 FM (Ankara)",
+            "101.3 FM (İzmir)",
+            "104.6 FM (Bursa)",
+            "92.1 FM (Konya)",
+            "93.0 FM (Trabzon)",
+            "106.3 FM (Adana)",
+            "107.7 FM (Adana/Ceyhan)",
+            "97.2 FM (Aksaray)",
+            "106.5 FM (Amasya)",
+            "101.2 FM (Antalya)",
+            "89.9 FM (Antalya/Alanya)",
+            "97.2 FM (Balıkesir)",
+            "106.2 FM (Balıkesir/Bandırma)",
+            "90.7 FM (Balıkesir/Edremit)",
+            "89.2 FM (Bolu)",
+            "102.7 FM (Bolu/Gerede)",
+            "88.0 FM (Burdur)",
+            "96.8 FM (Bursa/Mustafa Kemal Paşa)",
+            "91.3 FM (Çorum)",
+            "90.5 FM (Çanakkale)",
+            "107.7 FM (Denizli)",
+            "98.0 FM (Diyarbakır)",
+            "92.4 FM (Elazığ)",
+            "91.5 FM (Erzurum)",
+            "106.3 FM (Eskişehir)",
+            "107.0 FM (Gaziantep)",
+            "106.7 FM (Hatay)",
+            "94.6 FM (Hatay/İskenderun)",
+            "103.0 FM (Mersin)",
+            "101.3 FM (İzmir/Çeşme)",
+            "98.6 FM (İzmir/Çeşme)",
+            "98.2 FM (Kahramanmaraş)",
+            "100.2 FM (Kayseri)",
+            "89.8 FM (Kırklareli)",
+            "104.6 FM (Kocaeli)",
+            "104.5 FM (Konya/Akşehir)",
+            "107.0 FM (Konya/Ereğli)",
+            "107.0 FM (Kütahya)",
+            "104.6 FM (Malatya)",
+            "101.3 FM (Manisa)",
+            "104.0 FM (Mardin)",
+            "104.6 FM (Muğla)",
+            "96.8 FM (Muğla/Bodrum)",
+            "98.9 FM (Muğla/Fethiye)",
+            "97.3 FM (Muğla/Marmaris)",
+            "99.9 FM (Osmaniye)",
+            "104.6 FM (Sakarya)",
+            "94.0 FM (Samsun)",
+            "101.0 FM (Samsun/Bafra)",
+            "91.0 FM (Sivas)",
+            "92.0 FM (Şanlıurfa)",
+            "104.6 FM (Tekirdağ)",
+            "104.6 FM (Van)",
+            "102.0 FM (Yozgat)",
+            "104.6 FM (Zonguldak)",
+            "104.6 FM (Kars)"
+        ],
+        "contact": {
+            "website": "https://www.radyo7.com"
+        },
+        "socialMedia": {
+            "facebook": "https://www.facebook.com/radyo7",
+            "twitter": "https://twitter.com/radyo7"
+        },
+        "location": {
+            "city": "İstanbul",
+            "region": "Türkiye"
+        },
+        "additionalInfo": {
+            "foundedDate": "Test yayını 7 Eylül 1998'de başlamıştır. Normal yayın 1 Şubat 1999'da başlamıştır.",
+            "owner": "Kanal 7 Medya Grubu",
+            "slogan": "İyi Müzik Doğru Haber, Her An Yanınızda! ve Hayata Müzik Katın"
+        },
+        "informationSourceLinks": [
+            "https://www.radyo7.com",
+            "https://tr.wikipedia.org/wiki/Radyo_7"
+        ]
+    },
+    {
+        "station-slug": "kral-fm",
+        "description": "Kral FM, Türkiye'de yayınlanan pop müzik odaklı bir radyo istasyonudur. Doğuş Yayın Grubu'na bağlı olarak hizmet vermektedir. Özellikle Türk pop müziği ve yabancı müzikleri dinleyicileriyle buluşturmaktadır.",
+        "frequencies": [
+            "92.0 FM (İstanbul)",
+            "102.4 FM (Ankara)"
+        ],
+        "contact": {
+            "website": "https://www.kralmuzik.com.tr"
+        },
+        "socialMedia": {
+            "facebook": "https://www.facebook.com/kralmuzik",
+            "twitter": "https://twitter.com/kralmuzik",
+            "instagram": "https://www.instagram.com/kralmuzik"
+        },
+        "location": {
+            "city": "İstanbul",
+            "region": "Türkiye"
+        },
+        "additionalInfo": {
+            "owner": "Doğuş Yayın Grubu"
+        },
+        "informationSourceLinks": [
+            "https://www.kralmuzik.com.tr",
+            "https://tr.wikipedia.org/wiki/List_of_radio_stations_in_Turkey"
+        ]
+    },
+    {
+        "station-slug": "radyo-viva",
+        "description": "Radyo Viva, Türkçe müzik severler için keyifli bir müzik deneyimi sunan bir radyo istasyonudur. Dinleyicilerine en güncel Türkçe müzikleri ve nostaljik eserleri sunmaktadır.",
+        "frequencies": [
+            "101.4 MHz (Adana)",
+            "93.6 MHz (Ankara)",
+            "103.8 MHz (Antalya)",
+            "100.8 MHz (Bolu)",
+            "90.0 MHz (Bursa)",
+            "93.7 MHz (Denizli)",
+            "93.3 MHz (Eskişehir)",
+            "90.0 MHz (Fethiye)",
+            "105.6 MHz (Gaziantep)",
+            "90.0 MHz (İstanbul)",
+            "105.5 MHz (İzmir)",
+            "94.6 MHz (Kayseri)",
+            "90.0 MHz (Kocaeli)",
+            "106.0 MHz (Konya)",
+            "89.7 MHz (Marmaris)",
+            "101.6 MHz (Muğla)"
+        ],
+        "contact": {
+            "address": "Esentepe Mah. Salih Tozan Sok. Gülseven Medya Center No:16 İç Kapı No:1 Şişli/İstanbul",
+            "phone": "(+90) 212 352 05 56",
+            "website": "https://www.radyoviva.com.tr"
+        },
+        "socialMedia": {
+            "facebook": "https://www.facebook.com/RadyoViva/",
+            "twitter": "https://x.com/RadyoViva",
+            "instagram": "https://www.instagram.com/radyoviva/",
+            "whatsapp": "https://wa.me/905345210906",
+            "youtube": "https://www.youtube.com/@show-radyo-viva",
+            "soundcloud": "https://soundcloud.com/radyopodcast",
+            "spotify": "https://open.spotify.com/show/5nya1BTiKCva5Cfb8RKHZH",
+            "youtubeMusic": "https://music.youtube.com/channel/UCJ5ynFDS8WHnE8AJNiv3VAA"
+        },
+        "location": {
+            "city": "İstanbul",
+            "region": "Türkiye"
+        },
+        "additionalInfo": {
+            "slogan": "Türkçe Müziğin Keyfi"
+        },
+        "informationSourceLinks": [
+            "https://www.radyoviva.com.tr"
         ]
     }
 ]
