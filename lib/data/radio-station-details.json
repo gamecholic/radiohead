@@ -1,5 +1,372 @@
 [
     {
+        "station-slug": "mydonose-turk",
+        "description": "Mydonose Türk, 2002 yılında Mydonose Türk Pop adıyla yayına başlayan ve 2010 yılında Spectrum Medya yönetimine geçen bir radyo istasyonudur. 2015 yılında yeniden yayına başlamış ve Karnaval Medya Grubu'na katılmıştır. Enerjik Türkçe pop müzikleriyle dinleyicilerine hitap etmektedir.",
+        "frequencies": [
+            "106.5 MHz (Ankara)"
+        ],
+        "contact": {
+            "address": "Maslak Mah. A.O.S. 55. Sok, No:2 Aksoy Plaza Kat:2 Sarıyer / İSTANBUL",
+            "phone": "0212 368 62 00",
+            "website": "https://karnaval.com/radyolar/mydonoseturk",
+            "email": "info@karnaval.com"
+        },
+        "socialMedia": {},
+        "location": {
+            "city": "İstanbul",
+            "region": "Marmara"
+        },
+        "additionalInfo": {
+            "foundedDate": "2002",
+            "owner": "Karnaval Medya Grubu",
+            "slogan": "Sadece Hit Müzik"
+        },
+        "informationSourceLinks": [
+            "https://tr.wikipedia.org/wiki/Mydonose_T%C3%BCrk",
+            "https://karnaval.com/radyolar/mydonoseturk"
+        ]
+    },
+    {
+        "station-slug": "fg-slow",
+        "description": "FG Slow, Future Generation Media Group'un bir parçası olarak 1 Ocak 2025 tarihinde yayın hayatına başlamıştır. 100.8 MHz frekansıyla İstanbul ve çevresinde dinleyicilerine ulaşan bu radyo, Türkçe slow müzikleri modern bir sunumla dinleyicilerine sunmaktadır.",
+        "frequencies": [
+            "100.8 MHz (İstanbul)"
+        ],
+        "contact": {
+            "address": null,
+            "phone": null,
+            "website": "https://www.fgplay.com/radios/fg-slow/",
+            "email": null
+        },
+        "socialMedia": {},
+        "location": {
+            "city": "İstanbul",
+            "region": "Marmara"
+        },
+        "additionalInfo": {
+            "foundedDate": "2025",
+            "owner": "Future Generation Media Group",
+            "slogan": "Türkçe Slow Müzik"
+        },
+        "informationSourceLinks": [
+            "https://www.canliradyodinle.fm/fg-slow-dinle.html"
+        ]
+    },
+    {
+        "station-slug": "number-one-turk-slow",
+        "description": "Number One Türk Slow, Number One Medya Grubu'na ait bir dijital radyo istasyonudur. 1994 yılından bu yana faaliyet gösteren bu kanal, Türkçe slow müzikleriyle dinleyicilerine duygusal bir müzik deneyimi sunmaktadır.",
+        "frequencies": [],
+        "contact": {
+            "address": null,
+            "phone": null,
+            "website": "https://www.numberone.com.tr/2015/12/20/nr1-turk-slow-canli-radyo-dinle/",
+            "email": null
+        },
+        "socialMedia": {},
+        "location": {
+            "city": "İstanbul",
+            "region": "Marmara"
+        },
+        "additionalInfo": {
+            "foundedDate": "1994",
+            "owner": "NumberOne Medya Grubu",
+            "slogan": "Türkçe Slow Müzik"
+        },
+        "informationSourceLinks": [
+            "https://www.numberone.com.tr/2015/12/20/nr1-turk-slow-canli-radyo-dinle/",
+            "https://www.canliradyodinle.fm/number-one-turk-slow-dinle.html"
+        ]
+    },
+    {
+        "station-slug": "fenomen-rap",
+        "description": "Fenomen Rap, Radyo Fenomen'in bir parçası olarak yayın yapan bir radyo istasyonudur. Türkçe rap müzikleriyle dinleyicilerine hitap eden bu kanal, enerjik ve dinamik yayınlarıyla öne çıkmaktadır.",
+        "frequencies": [],
+        "contact": {
+            "address": null,
+            "phone": null,
+            "website": "https://www.radyofenomen.com/",
+            "email": null
+        },
+        "socialMedia": {},
+        "location": {
+            "city": "İstanbul",
+            "region": "Marmara"
+        },
+        "additionalInfo": {
+            "foundedDate": null,
+            "owner": "Radyo Fenomen",
+            "slogan": "Türkçe Rap Müzik"
+        },
+        "informationSourceLinks": [
+            "https://www.radyofenomen.com/",
+            "https://zeno.fm/radio/radyo-fenomen-fenomen-rap/"
+        ]
+    },
+    {
+        "station-slug": "damar-fm",
+        "description": "Damar FM, 21 Mayıs 2002 tarihinde Almanya'nın Baden-Württemberg eyaletinde kurulan ve 'Jilet Gibi Radyo' sloganıyla yayın yapan bir internet radyo istasyonudur. Almanya'da GEMA'ya bağlı olarak lisanslıdır ve 24 saat kesintisiz yayın yapmaktadır.",
+        "frequencies": [
+            "Radyo 7 bünyesinde dijital yayın",
+            "Henüz karasal frekansı bulunmamaktadır"
+        ],
+        "contact": {
+            "address": "Baden-Württemberg, Almanya",
+            "phone": null,
+            "website": "https://www.damarfm.com",
+            "email": null
+        },
+        "socialMedia": {
+            "twitter": "https://twitter.com/damarfmtr",
+            "instagram": "https://www.instagram.com/damarfmtr"
+        },
+        "location": {
+            "city": "Baden-Württemberg",
+            "region": "Almanya"
+        },
+        "additionalInfo": {
+            "foundedDate": "2002",
+            "owner": "İlyas Küçük",
+            "slogan": "Jilet Gibi Radyo"
+        },
+        "informationSourceLinks": [
+            "https://www.damarfm.com/hakkimizda/",
+            "https://www.damarfm.com/"
+        ]
+    },
+    {
+        "station-slug": "haberturk-radyo",
+        "description": "Habertürk Radyo, 6 Temmuz 2017 tarihinde kurulan ve Boğaziçi Radyo Televizyon Yayıncılığı ve Reklamcılık A.Ş.'ye ait bir radyo kanalıdır. Tüm Türkiye'de ve Türksat 4A Uydusu üzerinden dinlenebilmektedir. 24 saat haber ağırlıklı yayın yapmaktadır.",
+        "frequencies": [
+            "90.4 MHz (İstanbul)",
+            "105.4 MHz (İstanbul)",
+            "Türksat 4A Uydusu"
+        ],
+        "contact": {
+            "address": "Abdülhakhamit Cad. No:25 Beyoğlu/İstanbul",
+            "phone": "+90 212 313 60 00",
+            "website": "https://www.haberturkradyo.com.tr",
+            "email": null
+        },
+        "socialMedia": {
+            "facebook": "https://www.facebook.com/haberturkradyo",
+            "instagram": "https://www.instagram.com/haberturkradyo"
+        },
+        "location": {
+            "city": "İstanbul",
+            "region": "Marmara"
+        },
+        "additionalInfo": {
+            "foundedDate": "2017",
+            "owner": "Ciner Yayın Holding",
+            "slogan": "Haber Denince Habertürk"
+        },
+        "informationSourceLinks": [
+            "https://www.haberturkradyo.com.tr/kunye/",
+            "https://www.haberturkradyo.com.tr/"
+        ]
+    },
+    {
+        "station-slug": "istanbul-radyo-seymen",
+        "description": "Radyo Seymen, 2010 yılında İstanbul merkezli olarak kuruldu ve Türkiye'nin dört bir yanına yayın yapmaya başladı. Hareketli oyun havaları ve Ankara havası müzikleriyle öne çıkan Radyo Seymen, kısa sürede geniş bir dinleyici kitlesine ulaştı.",
+        "frequencies": [
+            "107.0 MHz (İstanbul)",
+            "93.0 MHz (İzmir)",
+            "103.8 MHz (Ankara)"
+        ],
+        "contact": {
+            "address": "Pendik Kaynarca, İstanbul",
+            "phone": null,
+            "website": "https://radyoseymen.com.tr",
+            "email": null
+        },
+        "socialMedia": {
+            "twitter": "https://twitter.com/radyoseymen"
+        },
+        "location": {
+            "city": "İstanbul",
+            "region": "Marmara"
+        },
+        "additionalInfo": {
+            "foundedDate": "2010",
+            "owner": null,
+            "slogan": "Hareketli Oyun Havaları"
+        },
+        "informationSourceLinks": [
+            "https://radyoseymen.com.tr/index.php/hakkimizda/",
+            "https://radyoseymen.com.tr/"
+        ]
+    },
+    {
+        "station-slug": "joy-turk-akustik",
+        "description": "JoyTurk Akustik, Karnaval Medya Grubu'na ait bir dijital radyo istasyonudur. Türkçe pop ve slow müziklerin akustik versiyonlarını dinleyicileriyle buluşturur. Karnaval mobil uygulaması ve internet sitesi üzerinden canlı ve kesintisiz olarak dinlenebilir.",
+        "frequencies": [],
+        "contact": {
+            "address": "Maslak Mah. A.O.S. 55. Sok, No:2 Aksoy Plaza Kat:2 Sarıyer / İSTANBUL",
+            "phone": "0212 368 62 00",
+            "website": "https://karnaval.com/radyolar/joyturkakustik",
+            "email": null
+        },
+        "socialMedia": {
+            "facebook": "https://www.facebook.com/joyturkakustik",
+            "twitter": "https://twitter.com/joyturkakustik",
+            "instagram": "https://www.instagram.com/joyturkakustik"
+        },
+        "location": {
+            "city": "İstanbul",
+            "region": "Marmara"
+        },
+        "additionalInfo": {
+            "foundedDate": null,
+            "owner": "Karnaval Medya Grubu",
+            "slogan": "Akustik Türkçe Pop"
+        },
+        "informationSourceLinks": [
+            "https://karnaval.com/radyolar/joyturkakustik",
+            "https://tr.wikipedia.org/wiki/JoyTurk"
+        ]
+    },
+    {
+        "station-slug": "kral-pop-radyo",
+        "description": "Kral Pop Radyo, Türkiye'nin en çok dinlenen pop müzik radyolarından biridir. 2008 yılında yayın hayatına başlamış olan kanal, popüler Türkçe pop şarkılarını dinleyicileriyle buluşturuyor.",
+        "frequencies": [
+            "99.5 MHz (İstanbul)"
+        ],
+        "contact": {
+            "address": "Ahi Evran Cad. No:4 Maslak-İstanbul",
+            "phone": "0212 335 00 00",
+            "fax": "0212 335 00 88",
+            "website": "https://www.kralpop.com.tr",
+            "email": "info@kralpop.com.tr"
+        },
+        "socialMedia": {},
+        "location": {
+            "city": "İstanbul",
+            "region": "Marmara"
+        },
+        "additionalInfo": {
+            "foundedDate": "2008",
+            "owner": "Startv Medya Hizmetleri A.Ş.",
+            "slogan": "Popun Kralı"
+        },
+        "informationSourceLinks": [
+            "https://www.kralmuzik.com.tr/kunye",
+            "https://www.kralmuzik.com.tr/radyo/kral-pop"
+        ]
+    },
+    {
+        "station-slug": "park-fm",
+        "description": "Park FM, Ankara merkezli bir radyo istasyonudur. 96.8 MHz frekansından yayın yapmaktadır ve Türk halk müziği ile Türk sanat müziği şarkılarını dinleyicilerine sunmaktadır.",
+        "frequencies": [
+            "96.8 MHz (Ankara)"
+        ],
+        "contact": {
+            "address": "Ayaş yolu 23.km 201/A, Sincan, Ankara",
+            "phone": "0312 276 03 02",
+            "website": "https://parkfm.net"
+        },
+        "socialMedia": {},
+        "location": {
+            "city": "Ankara",
+            "region": "İç Anadolu"
+        },
+        "additionalInfo": {
+            "foundedDate": "2007",
+            "owner": "Park FM Medya",
+            "slogan": "Türkülerle Dolu"
+        },
+        "informationSourceLinks": [
+            "https://parkfm.net",
+            "https://www.canliradyodinle.fm/park-fm-dinle.html"
+        ]
+    },
+    {
+        "station-slug": "power-pop",
+        "description": "Power Pop, Türkiye'nin en sevilen pop müzik radyolarından biridir. 1992 yılında yayın hayatına başlamış olan kanal, güncel popüler şarkıları dinleyicileriyle buluşturuyor.",
+        "frequencies": [
+            "101.0 MHz (İstanbul)"
+        ],
+        "contact": {
+            "address": "Ahi Evran Cad. No:4 Maslak-İstanbul",
+            "phone": "0212 335 00 00",
+            "website": "https://www.powerpop.com.tr"
+        },
+        "socialMedia": {},
+        "location": {
+            "city": "İstanbul",
+            "region": "Marmara"
+        },
+        "additionalInfo": {
+            "foundedDate": "1992",
+            "owner": "Power Medya",
+            "slogan": "Pop Müziğin Gücü"
+        },
+        "informationSourceLinks": [
+            "https://www.powerpop.com.tr",
+            "https://www.canliradyodinle.fm/power-pop-dinle.html"
+        ]
+    },
+    {
+        "station-slug": "radio-mydonose",
+        "description": "1998 yılında kurulan Radyo Mydonose, yüksek tempolu yabancı pop ve dans müzikleriyle tanınan bir radyo istasyonudur. 'Pozitif Müzik' sloganıyla, enerjik bir müzik deneyimi sunar. Karnaval Medya Grubu'na ait olan bu kanal, 7/24 kesintisiz yayın yapmaktadır.",
+        "frequencies": [
+            "107.0 MHz (Mersin)",
+            "Diğer şehirlerde yerel frekanslar"
+        ],
+        "contact": {
+            "address": "Maslak Mah. A.O.S. 55. Sok, No:2 Aksoy Plaza Kat:2 Sarıyer / İSTANBUL",
+            "phone": "(212) 368 62 00",
+            "website": "https://karnaval.com/radyolar/radiomydonose",
+            "email": "info@karnaval.com"
+        },
+        "socialMedia": {
+            "facebook": "https://www.facebook.com/radyomydonose",
+            "twitter": "https://twitter.com/radiomydonose"
+        },
+        "location": {
+            "city": "İstanbul",
+            "region": "Marmara"
+        },
+        "additionalInfo": {
+            "foundedDate": "1998",
+            "owner": "Karnaval Medya Grubu",
+            "slogan": "Pozitif Müzik"
+        },
+        "informationSourceLinks": [
+            "https://karnaval.com/radyolar/radiomydonose",
+            "https://tr.wikipedia.org/wiki/Radio_Mydonose",
+            "https://www.canliradyodinle.fm/radio-mydonose-dinle.html"
+        ]
+    },
+    {
+        "station-slug": "radyo-45lik",
+        "description": "Radyo 45'lik, 1970'ler, 1980'ler ve 1990'lar dönemi Türkçe pop müzik şarkılarını yayınlayan bir radyo istasyonudur. 2015 yılında yayın hayatına başlamıştır.",
+        "frequencies": [
+            "91.2 MHz (İstanbul)"
+        ],
+        "contact": {
+            "address": "Beyoğlu, İstanbul",
+            "phone": "0212 335 00 00",
+            "website": "https://radyo45lik.com"
+        },
+        "socialMedia": {
+            "facebook": "https://www.facebook.com/radyo45lik",
+            "instagram": "https://www.instagram.com/radyo45lik"
+        },
+        "location": {
+            "city": "İstanbul",
+            "region": "Marmara"
+        },
+        "additionalInfo": {
+            "foundedDate": "2015",
+            "owner": "Gitassi Medya Grubu",
+            "slogan": "Nostalji Radyosu"
+        },
+        "informationSourceLinks": [
+            "https://radyo45lik.com/kurumsal/",
+            "https://www.canliradyodinle.fm/radyo-45lik-dinle.html"
+        ]
+    },
+    {
         "station-slug": "power-love",
         "description": "Power Love; PowerApp ağına bağlı, genellikle pop ve çağdaş hit müzik yayınlayan bir radyo kanalidir. İstanbul merkezli yayın yaptığı ve 100.2 MHz frekansında bilinen bir yayını olduğu çeşitli radyo dizinlerinde belirtilmiştir. İnternet üzerinden PowerApp platformu üzerinden de yayın yapmaktadır.",
         "frequencies": [
