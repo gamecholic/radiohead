@@ -99,11 +99,7 @@
             "fax": "0212 473 20 94",
             "website": "http://www.alemfm.com"
         },
-        "socialMedia": {
-            "facebook": "https://www.facebook.com/alemfm/",
-            "twitter": "https://twitter.com/alemfm/",
-            "instagram": "https://www.instagram.com/alemfm/"
-        },
+        "socialMedia": {},
         "location": {
             "city": "İstanbul",
             "region": "Marmara"
@@ -247,8 +243,7 @@
         },
         "socialMedia": {
             "facebook": "https://www.facebook.com/kissfmtr",
-            "twitter": "https://twitter.com/kissfmtr",
-            "instagram": "https://www.instagram.com/kissfmtr"
+            "twitter": "https://twitter.com/kissfmtr"
         },
         "location": {
             "city": "İstanbul",
@@ -275,9 +270,6 @@
             "website": "https://www.numberone.com.tr"
         },
         "socialMedia": {
-            "facebook": "https://www.facebook.com/numberoneturk",
-            "twitter": "https://twitter.com/numberoneturk",
-            "instagram": "https://www.instagram.com/numberoneturk"
         },
         "location": {
             "city": "İstanbul",
@@ -443,9 +435,6 @@
             "website": "https://www.slow7.com.tr"
         },
         "socialMedia": {
-            "facebook": "https://www.facebook.com/slow7radyo",
-            "twitter": "https://twitter.com/slow7radyo",
-            "instagram": "https://www.instagram.com/slow7radyo"
         },
         "location": {
             "city": "İstanbul",
@@ -517,9 +506,6 @@
             "website": "https://www.radyod.com"
         },
         "socialMedia": {
-            "facebook": "https://www.facebook.com/radyod",
-            "twitter": "https://twitter.com/radyod",
-            "instagram": "https://www.instagram.com/radyod"
         },
         "location": {
             "city": "İstanbul",
@@ -659,8 +645,7 @@
         },
         "socialMedia": {
             "facebook": "https://www.facebook.com/slowturk/",
-            "twitter": "https://twitter.com/slowturk",
-            "instagram": "https://www.instagram.com/slowturk/"
+            "twitter": "https://twitter.com/slowturk"
         },
         "location": {
             "city": "İstanbul",
@@ -717,9 +702,7 @@
             "website": "https://www.powerturk.com.tr"
         },
         "socialMedia": {
-            "facebook": "https://www.facebook.com/powerturk/",
-            "twitter": "https://twitter.com/powerturk",
-            "instagram": "https://www.instagram.com/powerturk/"
+            "facebook": "https://www.facebook.com/powerturk/"
         },
         "location": {
             "city": "İstanbul",
@@ -831,7 +814,6 @@
         },
         "socialMedia": {
             "facebook": "https://www.facebook.com/kralmuzik",
-            "twitter": "https://twitter.com/kralmuzik",
             "instagram": "https://www.instagram.com/kralmuzik"
         },
         "location": {
