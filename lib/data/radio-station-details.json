@@ -1,5 +1,339 @@
 [
     {
+        "station-slug": "power-love",
+        "description": "Power Love; PowerApp ağına bağlı, genellikle pop ve çağdaş hit müzik yayınlayan bir radyo kanalidir. İstanbul merkezli yayın yaptığı ve 100.2 MHz frekansında bilinen bir yayını olduğu çeşitli radyo dizinlerinde belirtilmiştir. İnternet üzerinden PowerApp platformu üzerinden de yayın yapmaktadır.",
+        "frequencies": [
+            "100.2 MHz (İstanbul)"
+        ],
+        "contact": {
+            "address": "Gümüşyolu Caddesi Kuşbakışı Sokak No:43 Altunizade, Üsküdar, İstanbul",
+            "phone": "+90 216 554 04 00",
+            "fax": null,
+            "website": "https://www.powerapp.com.tr/radios/powerlove"
+        },
+        "socialMedia": {
+            "facebook": null,
+            "twitter": null,
+            "instagram": "https://www.instagram.com/powerappmusic/"
+        },
+        "location": {
+            "city": "İstanbul",
+            "region": "Marmara"
+        },
+        "additionalInfo": {
+            "foundedDate": null,
+            "owner": "PowerApp / Power Group",
+            "slogan": null
+        },
+        "informationSourceLinks": [
+            "https://mytuner-radio.com/radio/power-love-1002-fm-420859/",
+            "https://onlineradiobox.com/tr/powerlove/?lang=en",
+            "https://www.powerapp.com.tr/radios/powerlove",
+            "https://www.radio.net/s/powerlove"
+        ]
+    },
+    {
+        "station-slug": "best-fm",
+        "description": "Türkiye’nin ilk özel radyo kanallarından biri olan Best FM, 5 Şubat 1993 tarihinde Ajda Pekkan’ın “Kimler Geldi, Kimler Geçti” şarkısıyla yayın hayatına başladı. Best FM; bağımsız, dürüst ve güvenilir habercilik anlayışı, seçkin programcıları, yayın ilkeleri ve teknolojik donanımı ile, Türkiye’nin en çok dinlenen ulusal radyoları arasında ilk sıralarda yerini aldı. Bugüne kadar yayın hayatında dinleyicileriyle samimi bir iletişim kuran Best FM, zamanla yayın yaptığı her yerde toplumun sesi oldu.",
+        "frequencies": [
+            "98.4 MHz (İstanbul)",
+            "98.3 MHz (Ankara)",
+            "98.4 MHz (İzmir)",
+            "98.4 MHz (Bursa)",
+            "87.8 MHz (Adana)"
+        ],
+        "contact": {
+            "address": "Dümen Sok. Gümüşsuyu İş Merkezi No:11 Kat:5 PK:34427 Beyoğlu, İstanbul",
+            "phone": "+90 212 251 76 77",
+            "fax": null,
+            "website": "https://www.bestfm.com.tr"
+        },
+        "socialMedia": {
+            "facebook": null,
+            "twitter": null,
+            "instagram": null
+        },
+        "location": {
+            "city": "İstanbul",
+            "region": "Marmara"
+        },
+        "additionalInfo": {
+            "foundedDate": "1993",
+            "owner": "Best Medya",
+            "slogan": "Radyonuz Açık Olsun"
+        },
+        "informationSourceLinks": [
+            "https://www.bestfm.com.tr/",
+            "https://tr.wikipedia.org/wiki/Best_FM",
+            "https://www.canliradyodinle.fm/best-fm-dinle.html"
+        ]
+    },
+    {
+        "station-slug": "ask-fm",
+        "description": "AŞK FM (Aşk FM) merkezi Ankara olan, 1994'ten beri bölgesel/İç Anadolu yayını yapan bir radyo istasyonudur. Çoğu kaynağa göre 102.1 MHz civarında yayını vardır ve ASY Medya Grup ile ilişkili olarak anılmaktadır. Programları yerel ve bölgesel dinleyici kitlesine yöneliktir.",
+        "frequencies": [
+            "102.1 MHz"
+        ],
+        "contact": {
+            "address": "Muhsin Yazıcıoğlu Cd. 43/2, Çukurambar, Ankara",
+            "phone": "0312 425 3535",
+            "fax": "0312 417 0679",
+            "website": "https://askfm.com.tr"
+        },
+        "socialMedia": {
+            "facebook": null,
+            "twitter": null,
+            "instagram": "https://www.instagram.com/askfm102.1/"
+        },
+        "location": {
+            "city": "Ankara",
+            "region": "İç Anadolu"
+        },
+        "additionalInfo": {
+            "foundedDate": "1994",
+            "owner": "ASY Medya Grup",
+            "slogan": null
+        },
+        "informationSourceLinks": [
+            "https://askfm.com.tr/",
+            "https://askfm.com.tr/iletisim.aspx",
+            "https://www.canliradyodinle.fm/ask-fm-dinle.html"
+        ]
+    },
+    {
+        "station-slug": "ankara-radyo-banko",
+        "description": "Radyo Banko, Ankara merkezli yöresel/yerel yayın yapan bir radyo kanalıdır; Ankara'ya has oyun havası ve yöresel müzik türleriyle bilinir. Web sitesinde program, frekans ve iletişim bilgileri paylaşılmaktadır.",
+        "frequencies": [
+            "99.1 MHz (Ankara)"
+        ],
+        "contact": {
+            "address": "Ayaş yolu 23.km 201/A Sincan, Ankara",
+            "phone": "0312 276 03 02",
+            "fax": null,
+            "website": "https://radyobanko.com/"
+        },
+        "socialMedia": {
+            "facebook": null,
+            "twitter": null,
+            "instagram": null
+        },
+        "location": {
+            "city": "Ankara",
+            "region": "İç Anadolu"
+        },
+        "additionalInfo": {
+            "foundedDate": null,
+            "owner": null,
+            "slogan": null
+        },
+        "informationSourceLinks": [
+            "https://radyobanko.com/",
+            "https://www.canliradyodinle.fm/radyo-banko-ankara-dinle.html",
+            "https://streema.com/radios/RADYO_BANKO"
+        ]
+    },
+    {
+        "station-slug": "ntv-radyo",
+        "description": "NTV Radyo, haber, ekonomi, kültür ve güncel konulara odaklanan yayın yapan bir radyo kanalıdır. 13 Kasım 2000 tarihinde yayın hayatına başlamıştır.",
+        "frequencies": [
+            "102.8 MHz (İstanbul)",
+            "104.7 MHz (Ankara)",
+            "95.7 MHz (İzmir)",
+            "102.8 MHz (Bursa)",
+            "97.0 MHz (Adana)"
+        ],
+        "contact": {
+            "address": "Ahi Evran Cad. No: 4, Maslak, Sarıyer, İstanbul",
+            "phone": "+90 (212) 335 00 00",
+            "fax": "+90 (212) 330 00 50",
+            "website": "https://www.ntvradyo.com.tr"
+        },
+        "socialMedia": {
+            "facebook": "https://www.facebook.com/ntvradyo",
+            "twitter": "https://twitter.com/ntvradyo",
+            "instagram": "https://www.instagram.com/ntvradyo"
+        },
+        "location": {
+            "city": "İstanbul",
+            "region": "Marmara"
+        },
+        "additionalInfo": {
+            "foundedDate": "13 Kasım 2000",
+            "owner": "Doğuş Grubu",
+            "slogan": null
+        },
+        "informationSourceLinks": [
+            "https://tr.wikipedia.org/wiki/NTV_Radyo",
+            "https://www.ntvradyo.com.tr",
+            "https://www.ntvradyo.com.tr/kunye"
+        ]
+    },
+    {
+        "station-slug": "number-1-fm",
+        "description": "Number 1 FM, merkezi İstanbul’da bulunan bir radyo istasyonudur; hem karasal FM yayını hem de uydu ve internet yayıncılığı yapar. 6 Temmuz 1992’de kurulmuştur.",
+        "frequencies": [
+            "102.4 MHz (İstanbul)",
+            "101.5 MHz (Ankara)",
+            "90.5 MHz (İzmir)",
+            "107.7 MHz (Adana)",
+            "90.4 MHz (Antalya)",
+            "102.5 MHz (Eskişehir)"
+        ],
+        "contact": {
+            "address": null,
+            "phone": "(216) 425 36 40",
+            "fax": null,
+            "website": "https://www.numberone.com.tr"
+        },
+        "socialMedia": {
+            "facebook": "https://www.facebook.com/Number1FM",
+            "twitter": null,
+            "instagram": null
+        },
+        "location": {
+            "city": "İstanbul",
+            "region": "Marmara"
+        },
+        "additionalInfo": {
+            "foundedDate": "6 Temmuz 1992",
+            "owner": "Ali Karacan",
+            "slogan": "Türkiye’nin Bir Numarası"
+        },
+        "informationSourceLinks": [
+            "https://tr.wikipedia.org/wiki/Number_1_FM",
+            "https://www.numberone.com.tr",
+            "https://www.canliradyodinle.fm/number-1-fm-dinle.html"
+        ]
+    },
+    {
+        "station-slug": "avrasya-turk-107-1-ankara",
+        "description": "Radyo Avrasya Türk, Türk halk müziği ve türkü yayıncılığı yapan Ankara merkezli bir radyo kanalıdır. 2006 yılında yayın hayatına başlamıştır. Kavacık Subayevleri, Keçiören adresli stüdyosu ile hem karasal FM (107.1 MHz) hem de internet yayınıyla dinleyicilerine ulaşmaktadır.",
+        "frequencies": [
+            "107.1 MHz (Ankara)"
+        ],
+        "contact": {
+            "address": "Kavacık Subayevleri Mah. Şht. Ömer Halisdemir Blv No:57/A 06135 Keçiören, Ankara",
+            "phone": "0(312) 347 74 32",
+            "fax": "0(312) 429 09 29 (bir iletişim hattı olarak belirtilmiş)",
+            "website": "https://www.avrasyaturk.com.tr"
+        },
+        "socialMedia": {
+            "facebook": null,
+            "twitter": null,
+            "instagram": null
+        },
+        "location": {
+            "city": "Ankara",
+            "region": "İç Anadolu"
+        },
+        "additionalInfo": {
+            "foundedDate": "2006",
+            "owner": null,
+            "slogan": "Türkiye’nin Türkü Radyosu"
+        },
+        "informationSourceLinks": [
+            "https://www.avrasyaturk.com.tr",
+            "https://mytuner-radio.com/tr/radyo/radyo-avrasya-turk-405322/",
+            "https://www.canliradyodinle.fm/avrasya-turk-107-1-ankara-dinle.html",
+            "https://www.avrasyaturk.com.tr/canli.html"
+        ]
+    },
+    {
+        "station-slug": "baba-radyo",
+        "description": "Baba Radyo, Best Medya çatısı altında yayın yapan; Arabesk, fantezi, taverna gibi türlerde içerikler sunan bir radyo kanalıdır. 4 Mayıs 2011’de yayın hayatına başlamıştır. İstanbul 105.6 MHz frekansıyla karasal yayın yapmakta, ayrıca uydu (Digiturk, Türksat) ve internet üzerinden erişilebilir.",
+        "frequencies": [
+            "105.6 MHz (İstanbul)"
+        ],
+        "contact": {
+            "address": "Dümen Sok. Gümüşsuyu İş Merkezi No:11 Kat:5 PK:34427 Beyoğlu, İstanbul",
+            "phone": "+90 212 251 76 77",
+            "fax": null,
+            "website": "https://www.babaradyo.com/"
+        },
+        "socialMedia": {
+            "facebook": null,
+            "twitter": null,
+            "instagram": "https://www.instagram.com/babaradyo/"
+        },
+        "location": {
+            "city": "İstanbul",
+            "region": "Marmara"
+        },
+        "additionalInfo": {
+            "foundedDate": "4 Mayıs 2011",
+            "owner": "Best Medya / Hat Medya Yayıncılık A.Ş.",
+            "slogan": "Babanı Dinle (resmi site sloganı)"
+        },
+        "informationSourceLinks": [
+            "https://www.babaradyo.com/",
+            "https://www.canliradyodinle.fm/baba-radyo-105-6-dinle.html",
+            "https://muzikonair.com/baba-radyo-artik-turksat-4ada/",
+            "https://digiturkpaketler.com/kanal/baba-radyo"
+        ]
+    },
+    {
+        "station-slug": "pal-station",
+        "description": "Yabancı müzik yayını yapan ulusal radyolar kategorisindeki başarısının yanısıra genel değerlendirmelerde de gittikçe başarısını arttıran radyoların başında gelir Pal Station… 2008 den bu yana ‘Sadece Hit Müzik’ sloganıyla geçmişten günümüze sadece hit olmuş şarkılara gün boyu kulak verebilirsiniz. Pal Station’da Rihanna’dan Lady Gaga’ya Justin Bieber’dan Bruno Mars’a tüm dünyanın takip ettiği starların hitlerini kesintisiz ve canlı olarak dinleyebilirsiniz. Pal Station genç ve ilkleri yapan tarzıyla eğlencenin adresi olmaya devam ediyor.",
+        "frequencies": [
+            "106.0 MHz (İstanbul)"
+        ],
+        "contact": {
+            "address": "Ebulula Cad. 4, Gazeteciler Sitesi No:127, Akatlar, İstanbul",
+            "phone": "(212) 283 55 01",
+            "fax": null,
+            "website": "https://www.palstation106.com"
+        },
+        "socialMedia": {
+            "facebook": null,
+            "twitter": "https://twitter.com/palstation106",
+            "instagram": "https://www.instagram.com/palstation"
+        },
+        "location": {
+            "city": "İstanbul",
+            "region": "Marmara"
+        },
+        "additionalInfo": {
+            "foundedDate": "2008",
+            "owner": "Pal Media Televizyon Radyo Prodüksiyon Reklam ve Yayıncılık A.Ş.",
+            "slogan": "Sadece Hit Müzik"
+        },
+        "informationSourceLinks": [
+            "https://www.palstation106.com/uygulama/hakkimizda/",
+            "https://www.palstation106.com/kurumsal.php",
+            "https://www.palstation106.com/"
+        ]
+    },
+    {
+        "station-slug": "polis-radyosu",
+        "description": "1948 yılında alınan Bakanlar Kurulu kararı ile ilk kez 5 Ekim 1952 tarihinde kısa dalga üzerinden yayınlarına başlayan Türkiye Polis Radyosu, 2000 yılında uydu yayın sistemine geçilmesiyle birlikte merkez stüdyolarının yayınlarını diğer illerimizde de yansıtmaya başlamış ve ulusal yayıncılıkta önemli bir konuma yükselmiştir. Anayasa ve Cumhuriyet ilkeleri doğrultusunda yayın yapmak suretiyle suç ve suçluluğu önlemek, can ve mal güvenliğinin korunmasını sağlamak, trafik kaza ve ihlallerinin azaltılmasına yardımcı olmak, polis hizmetlerini halka daha iyi duyurmak ve polis-halk ilişkilerinin en üst düzeye getirilmesine yardımcı olmak amacıyla kurulan Türkiye Polis Radyosu, yapmış olduğu programlarla Emniyet hizmetlerinin en iyi şekilde tanıtılmasına katkı sunmakta ve halkı bilgilendirerek suç ve suçlularla mücadelede önemli bir misyon üstlenmektedir. “Halkın Sesi Güvenin Simgesi” sloganıyla yola çıkan Türkiye Polis Radyosu, yayın ağını her geçen gün artırmakta; tarafsız, adil, birleştirici ve ilkelerinden taviz vermeksizin yayınlarını sürdürmektedir.",
+        "frequencies": [],
+        "contact": {
+            "address": null,
+            "phone": null,
+            "fax": null,
+            "website": "https://www.polisradyosu.pol.tr"
+        },
+        "socialMedia": {
+            "facebook": null,
+            "twitter": null,
+            "instagram": null
+        },
+        "location": {
+            "city": null,
+            "region": null
+        },
+        "additionalInfo": {
+            "foundedDate": null,
+            "owner": "İçişleri Bakanlığı / Emniyet Genel Müdürlüğü",
+            "slogan": "Halkın Sesi Güvenin Simgesi"
+        },
+        "informationSourceLinks": [
+            "https://www.polisradyosu.pol.tr/hakkimizda",
+            "https://www.polisradyosu.pol.tr/",
+            "https://www.polisradyosu.pol.tr/frekanslar"
+        ]
+    },
+    {
         "station-slug": "efkar-fm",
         "description": "Efkar FM, Türkiye'de faaliyet gösteren ve arabeşk müzik türünde yayın yapan bir radyo istasyonudur. Dinleyicilerine gönülden gelen arabeşk eserleriyle hizmet vermektedir.",
         "frequencies": [
