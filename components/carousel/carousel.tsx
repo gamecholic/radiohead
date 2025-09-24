@@ -121,7 +121,6 @@ export function Carousel({ title, stations }: CarouselProps) {
               <StationCard
                 station={station}
                 stationList={stations}
-                layout="vertical"
                 source={title}
               />
             </div>
